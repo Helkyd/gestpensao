@@ -7,7 +7,7 @@ frappe.listview_settings['QUARTOS'] = {
 
 	get_indicator: function(doc) {
 
-		console.log(doc.status)
+
 		if (doc.status_quarto== "Livre" ) {
 			return [__("Livre - " + doc.tipo_quarto), "green"]
 		} else if (doc.status_quarto== "Ocupado" ) {

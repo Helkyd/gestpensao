@@ -1,7 +1,8 @@
 // Copyright (c) 2016, Helio de Jesus and contributors
 // For license information, please see license.txt
 
-//var dd=cur_frm.call({method:"empresa_load",args:{"start":"moeda"}})
+
+cur_frm.call({method:"empresa_load",args:{"start":"moeda"}})
 
 frappe.ui.form.on('GESTAO_QUARTOS', {
 	onload: function(frm) {
@@ -19,6 +20,8 @@ frappe.ui.form.on('GESTAO_QUARTOS', {
 			cur_frm.toggle_enable("status_reserva",false)	
 			cur_frm.set_df_property("reserva_numero","hidden",true)
 			cur_frm.set_df_property("servico_pago_por","hidden",true)
+			cur_frm.toggle_enable("hora_saida",false)
+			cur_frm.toggle_enable("total",false)
 
 		}else if (frm.doc.status_reserva=="Fechado"){
 			cur_frm.toggle_enable("numero_quarto",false)
@@ -57,20 +60,11 @@ frappe.ui.form.on('GESTAO_QUARTOS', {
 		}
 		calculate_totals(frm);
 		
-//		if (dd.readyState==4){
-//			show_alert("Moeda : " + dd.responseJSON.message,2)
-//			alert("carrega o Simbolo moeda ")
-			
-//		}
-
 		if (cur_frm.doc.status_reserva=="Ocupado"){
 			frm.set_df_property("status_reserva","options","Ocupado\nFechado")
 		}else if (cur_frm.doc.status_reserva=="Ativo"){
 			frm.set_df_property("status_reserva","options","Ativo\nFechado")
 		}
-
-
-
 
 	}
 });
@@ -78,16 +72,13 @@ frappe.ui.form.on('GESTAO_QUARTOS', {
 
 frappe.ui.form.on('GESTAO_QUARTOS','numero_quarto',function(frm,cdt,cdn){
 
-//	if (frm.doc.numero_quarto !=""){
-		quartos_('QUARTOS',frm.doc.numero_quarto)
-//	}
+	quartos_('QUARTOS',frm.doc.numero_quarto)
+
 	cur_frm.refresh_fields('preco','tipo_quarto');
-	
 
 });
 
 frappe.ui.form.on('GESTAO_QUARTOS','horas',function(frm,cdt,cdn){
-
 
 	frappe.model.set_value(cdt,cdn,'hora_saida',moment(cur_frm.doc.hora_entrada).add(cur_frm.doc.horas,'hours'))
 	frappe.model.set_value(cdt,cdn,'total',frm.doc.preco*frm.doc.horas)
@@ -96,11 +87,25 @@ frappe.ui.form.on('GESTAO_QUARTOS','horas',function(frm,cdt,cdn){
 });
 
 
+frappe.ui.form.on('GESTAO_QUARTOS','hora_entrada',function(frm,cdt,cdn){
+
+	frappe.model.set_value(cdt,cdn,'hora_saida',moment(cur_frm.doc.hora_entrada).add(cur_frm.doc.horas,'hours'))
+	frappe.model.set_value(cdt,cdn,'total',frm.doc.preco*frm.doc.horas)
+	cur_frm.refresh_fields('total','hora_saida');	
+
+});
+
+
+
 frappe.ui.form.on("RESERVAS_Services","nome_servico",function(frm,cdt,cdn){
 
 
 	var d =locals[cdt][cdn];
 	cur_frm.add_fetch('nome_servico','preco','preco_servico')	
+
+	servicos_('SERVICOS',d.nome_servico)
+
+	cur_frm.refresh_fields('preco_servico')
 
 	if (frm.doc.status_reserva=="Fechado"){
 		//frappe.model.set_value(cdt,cdn,'nome_servico',"")
@@ -111,7 +116,7 @@ frappe.ui.form.on("RESERVAS_Services","nome_servico",function(frm,cdt,cdn){
 	
 	}else{
 
-		cur_frm.refresh_fields('preco_servico')
+//		cur_frm.refresh_fields('preco_servico')
 
 		frappe.model.set_value(cdt,cdn,'total',d.preco_servico*d.quantidade)
 		frappe.utils.filter_dict(frm.fields_dict["servicos"].grid.docfields, {"fieldname": "preco_servico"})[0].read_only = true;
@@ -124,8 +129,9 @@ frappe.ui.form.on("RESERVAS_Services","nome_servico",function(frm,cdt,cdn){
 frappe.ui.form.on("RESERVAS_Services","quantidade",function(frm,cdt,cdn){
 
 	var d =locals[cdt][cdn];
-//	var item = frappe.get_doc(cdt,cdn)
 	cur_frm.add_fetch('nome_servico','preco','preco_servico')
+
+	servicos_('SERVICOS',d.nome_servico)
 
 	frappe.model.set_value(cdt,cdn,'total',d.preco_servico*d.quantidade)
 	frappe.utils.filter_dict(frm.fields_dict["servicos"].grid.docfields, {"fieldname": "preco_servico"})[0].read_only = true;
@@ -253,3 +259,13 @@ var quartos_ = function(frm,cdt,cdn){
 	});
 }
 
+var servicos_ = function(frm,cdt,cdn){
+	frappe.model.with_doc(frm, cdt, function() { 
+		var d = frappe.model.get_doc(frm,cdt)
+//		cur_frm.doc.preco_servico = d.preco
+		frappe.model.set_value(cdt,cdn,frappe.utils.filter_dict(cur_frm.fields_dict["servicos"].grid.docfields, {"fieldname": "preco_servico"}),d.preco)
+		cur_frm.refresh_fields()
+
+
+	});
+}

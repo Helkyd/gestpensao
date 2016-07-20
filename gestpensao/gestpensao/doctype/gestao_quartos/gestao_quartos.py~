@@ -36,13 +36,13 @@ class GESTAO_QUARTOS(Document):
 		quarto = frappe.get_doc("QUARTOS", self.numero_quarto)
 		
 		if self.status_reserva == "Ocupado":
-			quarto.status = "Ocupado"
+			quarto.status_quarto = "Ocupado"
 		elif self.status_reserva == "Ativo":
-			quarto.status = "Ocupado"
+			quarto.status_quarto = "Ocupado"
 		elif self.status_reserva == "Livre":
-			quarto.status = "Livre"
+			quarto.status_quarto = "Livre"
 		elif self.status_reserva == "Fechado":
-			quarto.status = "Livre"
+			quarto.status_quarto = "Livre"
 
 		quarto.save()		
 

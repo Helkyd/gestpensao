@@ -8,9 +8,9 @@ frappe.ui.form.on('QUARTOS', {
 
 		if (frm.doc.name != (frm.doc.numero + "-" + frm.doc.nome_quarto)){
 
-			cur_frm.toggle_enable("status",false)
-		}else if ((frm.doc.status=="Ocupado") || (frm.doc.status=="Reservado")){
-			cur_frm.toggle_enable("status",false)
+			cur_frm.toggle_enable("status_quarto",false)
+		}else if ((frm.doc.status_quarto=="Ocupado") || (frm.doc.status_quarto=="Reservado")){
+			cur_frm.toggle_enable("status_quarto",false)
 		}
 
 	}

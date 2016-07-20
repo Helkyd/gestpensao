@@ -47,7 +47,7 @@ frappe.ui.form.on('RESERVAS', {
 		cur_frm.fields_dict['numero_quarto'].get_query = function(doc){
 			return{
 				filters:{
-					"numero_quarto":"Livre"
+					"status_quarto":"Livre"
 				}
 			}
 		}

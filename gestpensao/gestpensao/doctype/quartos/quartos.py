@@ -11,9 +11,9 @@ class QUARTOS(Document):
 	def autoname(self):
 		
 		self.name = self.numero + "-" + self.nome_quarto
-		self.nome_empresa= frappe.db.get_value("EMPRESA",None,"nome_empresa")
+		self.nome_empresa= frappe.db.get_value("Empresa",None,"nome_empresa")
 
 @frappe.whitelist()
 def empresa_load():
-	return frappe.db.get_value("EMPRESA",None,"moeda_default")
+	return frappe.db.get_value("Empresa",None,"moeda_default")
 

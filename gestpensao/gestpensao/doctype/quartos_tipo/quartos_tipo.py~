@@ -10,5 +10,5 @@ class QUARTOS_TIPO(Document):
 
 	def autoname(self):		
 		self.name = self.descricao
-		self.nome_empresa= frappe.db.get_value("Empresa",None,"nome_empresa")
+		self.nome_empresa= frappe.db.get_value("EMPRESA",None,"nome_empresa")
 

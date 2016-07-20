@@ -39,7 +39,7 @@ class RESERVAS(Document):
 		if (self.reservation_status=="Nova"):
 			# Change Quarto status 
 			quarto = frappe.get_doc("QUARTOS", self.numero_quarto)			
-			quarto.status = "Reservado"
+			quarto.status_quarto = "Reservado"
 
 			quarto.save()		
 		elif (self.reservation_status=="Ativo"):
@@ -63,7 +63,7 @@ class RESERVAS(Document):
 
 			# Change Quarto status 
 			quarto = frappe.get_doc("QUARTOS", self.numero_quarto)		
-			quarto.status = "Ocupado"
+			quarto.status_quarto = "Ocupado"
 
 			quarto.save()
 
@@ -72,7 +72,7 @@ class RESERVAS(Document):
 
 			# Change Quarto status 
 			quarto = frappe.get_doc("QUARTOS", self.numero_quarto)		
-			quarto.status = "Livre"
+			quarto.status_quarto = "Livre"
 
 			quarto.save()
 
