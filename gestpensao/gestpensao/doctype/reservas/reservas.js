@@ -54,6 +54,9 @@ frappe.ui.form.on('RESERVAS', {
 		if (cur_frm.doc.reservation_status=="Ativo"){
 			frm.set_df_property("reservation_status","options","Ativo\nPago")
 		}
+		frappe.model.set_value(cdt,cdn,'number_days',frappe.datetime.get_day_diff(frm.doc.check_out , frm.doc.check_in))
+		frappe.model.set_value(cdt,cdn,'total_reserva',(frm.doc.preco_quarto*frm.doc.number_days))
+		cur_frm.refresh_fields()
 		
 
 	}
