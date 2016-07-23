@@ -10,5 +10,14 @@ def get_data():
 			"icon": "octicon octicon-file-directory",
 			"type": "module",
 			"label": _("Gest Pensao")
+
+			{
+			"module_name":"QUARTOS",
+			"doctype": "QUARTOS",
+			"color": "#f39c12",
+			"icon": "octicon octicon-package",
+			"type": "link",
+			"link": "List/QUARTOS"
+			},
 		}
 	]

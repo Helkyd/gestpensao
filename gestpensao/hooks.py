@@ -52,7 +52,7 @@ app_license = "MIT"
 # ------------------
 # See frappe.core.notifications.get_notification_config
 
-# notification_config = "gestpensao.notifications.get_notification_config"
+notification_config = "gestpensao.notifications.get_notification_config"
 
 # Permissions
 # -----------
@@ -81,23 +81,12 @@ app_license = "MIT"
 # Scheduled Tasks
 # ---------------
 
-# scheduler_events = {
-# 	"all": [
-# 		"gestpensao.tasks.all"
-# 	],
-# 	"daily": [
-# 		"gestpensao.tasks.daily"
-# 	],
-# 	"hourly": [
-# 		"gestpensao.tasks.hourly"
-# 	],
-# 	"weekly": [
-# 		"gestpensao.tasks.weekly"
-# 	]
-# 	"monthly": [
-# 		"gestpensao.tasks.monthly"
-# 	]
-# }
+scheduler_events = {
+ 	"all": [
+ 		"gestpensao.gestpensao.doctype.reservas.reservas.verifica_check_in"
+ 	]
+
+}
 
 # Testing
 # -------

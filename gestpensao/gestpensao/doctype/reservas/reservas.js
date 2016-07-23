@@ -23,6 +23,8 @@ frappe.ui.form.on('RESERVAS', {
 			cur_frm.toggle_enable("numero_cliente",false)	
 			cur_frm.toggle_enable("reservation_status",false)
 			cur_frm.toggle_enable("pay_advance",false)		
+			cur_frm.toggle_enable("number_days",false)
+			cur_frm.toggle_enable("preco_quarto",false)
 		
 		}else if (frm.doc.reservation_status=="Ativo"){
 			cur_frm.toggle_enable("booked_by",false)	
@@ -34,6 +36,8 @@ frappe.ui.form.on('RESERVAS', {
 			cur_frm.toggle_enable("numero_quarto",false)	
 			cur_frm.toggle_enable("numero_cliente",false)	
 			cur_frm.toggle_enable("pay_advance",false)
+			cur_frm.toggle_enable("number_days",false)
+			cur_frm.toggle_enable("preco_quarto",false)
 
 		}
 
@@ -54,8 +58,6 @@ frappe.ui.form.on('RESERVAS', {
 		if (cur_frm.doc.reservation_status=="Ativo"){
 			frm.set_df_property("reservation_status","options","Ativo\nPago")
 		}
-		frappe.model.set_value(cdt,cdn,'number_days',frappe.datetime.get_day_diff(frm.doc.check_out , frm.doc.check_in))
-		frappe.model.set_value(cdt,cdn,'total_reserva',(frm.doc.preco_quarto*frm.doc.number_days))
 		cur_frm.refresh_fields()
 		
 
