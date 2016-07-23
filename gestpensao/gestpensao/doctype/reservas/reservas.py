@@ -75,23 +75,17 @@ class RESERVAS(Document):
 			quarto.status_quarto = "Livre"
 
 			quarto.save()
-
 @frappe.whitelist()
 def verifica_check_in():
-
 	def __unicode__(self):
-
-		exception_list = []
+		
 		# loop no Doc a procura de quartos com limite da DATA de ENTRADA.
-		Reserv = frappe.db.sql("""SELECT codigo,numero_quarto,check_in,check_out,reservation_status 
-			FROM `tabRESERVAS` WHERE reservation_status = "Nova" 
-			and check_in >=%s """, frappe.utils.today())
-
-#		if len(Reserv) >0:
-		for d in Reserv:
-#			d = unicode(Reserv[0][0]) + ";" + d
-			exception_list.append(unicode(Reserv[0][0]))
-			exception_message = "\n\n".join([cstr(d) for d in exception_list])
-			frappe.throw(exception_message)
-#			msgprint(_("O seguintes Quartos {0} seram liberados dentro de 5 minutos senao forem ocupados").format(d))
+		Reserv = "RESULTADO " + frappe.db.sql("""SELECT codigo,numero_quarto,check_in,check_out,reservation_status 
+				FROM `tabRESERVAS` WHERE reservation_status = "Nova" 
+				and check_in >=%s """, utils.today())
+		frappe.msgprint (_("asdfsafsfsadfsdafsfsfsdaaasdfsafsfsfasfsaf " + len(Reserv)))
+		if len(Reserv) >0:
+			for d in Reserv:
+				d = unicode(Reserv[0][0]) + ";" + d
+				frappe.msgprint(_("O seguintes Quartos {0} seram liberados dentro de 5 minutos senao forem ocupados").format(d))
 
