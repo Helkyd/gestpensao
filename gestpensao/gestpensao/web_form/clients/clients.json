@@ -1,0 +1,77 @@
+{
+ "allow_comments": 0, 
+ "allow_delete": 0, 
+ "allow_edit": 0, 
+ "allow_multiple": 0, 
+ "creation": "2016-07-25 19:08:09.920667", 
+ "doc_type": "CLIENTES", 
+ "docstatus": 0, 
+ "doctype": "Web Form", 
+ "idx": 0, 
+ "is_standard": 1, 
+ "login_required": 0, 
+ "modified": "2016-07-26 01:15:16.488531", 
+ "modified_by": "Administrator", 
+ "module": "Gestpensao", 
+ "name": "clients", 
+ "owner": "Administrator", 
+ "published": 1, 
+ "route": "clientes", 
+ "success_url": "/clients", 
+ "title": "CLIENTES", 
+ "web_form_fields": [
+  {
+   "fieldname": "nome_cliente", 
+   "fieldtype": "Data", 
+   "hidden": 0, 
+   "label": "Nome", 
+   "read_only": 0, 
+   "reqd": 1
+  }, 
+  {
+   "default": "N\u00e3o-Membro", 
+   "fieldname": "cliente_tipo", 
+   "fieldtype": "Select", 
+   "hidden": 0, 
+   "label": "Tipo de Cliente", 
+   "options": "Membro\nN\u00e3o-Membro", 
+   "read_only": 0, 
+   "reqd": 1
+  }, 
+  {
+   "fieldname": "empresa", 
+   "fieldtype": "Data", 
+   "hidden": 0, 
+   "label": "Empresa", 
+   "read_only": 0, 
+   "reqd": 0
+  }, 
+  {
+   "fieldname": "telefone", 
+   "fieldtype": "HTML", 
+   "hidden": 0, 
+   "label": "Telefone", 
+   "options": "eval(var emailField = document.getElementById(\"emailField\");\nemailField.setCustomValidity(emailField.value + \" is invalid! Please try again.\");)", 
+   "read_only": 0, 
+   "reqd": 0
+  }, 
+  {
+   "fieldname": "email", 
+   "fieldtype": "HTML", 
+   "hidden": 0, 
+   "label": "Email", 
+   "read_only": 0, 
+   "reqd": 0
+  }, 
+  {
+   "default": "Ativo", 
+   "fieldname": "status_cliente", 
+   "fieldtype": "Select", 
+   "hidden": 0, 
+   "label": "Status", 
+   "options": "Ativo\nN\u00e3o Ativo\nStandby", 
+   "read_only": 0, 
+   "reqd": 1
+  }
+ ]
+}

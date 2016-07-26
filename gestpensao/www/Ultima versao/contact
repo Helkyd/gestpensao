@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<!-- Built on Frappe. https://frappe.io/ -->
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Contact Us</title>
+	<meta name="generator" content="frappe">
+
+    
+	<link rel="shortcut icon"
+		href="/files/favicon.ico"
+		type="image/x-icon">
+	<link rel="icon"
+		href="/files/favicon.ico"
+		type="image/x-icon">
+    
+
+		
+		<link type="text/css" rel="stylesheet" href="https://bootswatch.com/simplex/bootstrap.min.css">
+		<link type="text/css" rel="stylesheet" href="/website_theme.css">
+		<link type="text/css" rel="stylesheet" href="/assets/frappe/css/font/open-sans/open-sans.css">
+		<link type="text/css" rel="stylesheet" href="/assets/css/frappe-web.css">
+		<link type="text/css" rel="stylesheet" href="/assets/erpnext/css/website.css"><script>
+    window.frappe = {
+    	page_ready_events: {},
+    	ready: function(fn) {
+    		if (!frappe.page_ready_events[location.pathname]) {
+    			frappe.page_ready_events[location.pathname] = []
+    		}
+    		frappe.page_ready_events[location.pathname].push(fn);
+    	}
+    }
+    window.dev_server = 0;
+    </script>
+</head>
+<body data-path="contact">
+	<div class="main-section">
+		<div>
+				<header>
+	<nav class="navbar navbar-default navbar-main" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<!-- <a class="navbar-brand ellipsis" href="/"> -->
+				<a class="navbar-brand ellipsis"
+					 href="/">
+					<span><img src="/files/castlecraft-word.png" style="max-height: 20px;"></span>
+				</a>
+				<!-- <a class="pull-right visible-xs navbar-toggle toggle-sidebar">
+					<i class="octicon octicon-three-bars"></i>
+				</a> -->
+				<div class="dropdown">
+					<button class="btn btn-default navbar-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+						<i class="octicon octicon-three-bars"></i>
+					</button>
+					<ul class="dropdown-menu dropdown-menu-right">
+<li data-label='About Us' >
+	<a href="/about"
+		
+		>
+	About Us</a></li><li data-label='Products' >
+	<a href="/products"
+		
+		>
+	Products</a></li><li data-label='Structural Services' >
+	<a href="/services"
+		
+		>
+	Structural Services</a></li><li data-label='Blog' >
+	<a href="/blog"
+		
+		>
+	Blog</a></li><li data-label='Clients' >
+	<a href="/clients"
+		
+		>
+	Clients</a></li><li data-label='Jobs' >
+	<a href="/jobs"
+		
+		>
+	Jobs</a></li><li data-label='Contact' >
+	<a href="/contact"
+		
+		>
+	Contact</a></li>
+
+<li class="divider"></li>
+<!-- post login tools -->
+<li data-label="My Account" 
+ class=" logged-in" ><a href="/me" 
+	rel="nofollow">
+	My Account
+	</a></li><li data-label="Logout" 
+ class=" logged-in" ><a href="/?cmd=web_logout" 
+	rel="nofollow">
+	Logout
+	</a></li>
+<li class="btn-login-area"><a href="/login">Login</a></li>
+
+
+</ul>
+				</div>
+			</div>
+			<div class="hidden-xs">
+				
+				<ul class="nav navbar-nav navbar-left"><li data-label='About Us' >
+	<a href="/about"
+		
+		>
+	About Us</a></li><li data-label='Products' >
+	<a href="/products"
+		
+		>
+	Products</a></li><li data-label='Structural Services' >
+	<a href="/services"
+		
+		>
+	Structural Services</a></li><li data-label='Blog' >
+	<a href="/blog"
+		
+		>
+	Blog</a></li><li data-label='Clients' >
+	<a href="/clients"
+		
+		>
+	Clients</a></li><li data-label='Jobs' >
+	<a href="/jobs"
+		
+		>
+	Jobs</a></li>
+</ul>
+<ul class="nav navbar-nav navbar-right"><li data-label='Contact' >
+	<a href="/contact"
+		
+		>
+	Contact</a></li>
+	
+		
+	<li class="shopping-cart">
+		<div class="cart-icon small">
+			<a class="dropdown-toggle" href="#" data-toggle="dropdown" id="navLogin">
+				Cart <span class="badge-wrapper" id="cart-count"></span>
+			</a>
+			<div id="cart-overlay" class="dropdown-menu shopping-cart-menu"></div>
+		</div>
+	 </li>
+
+	
+	<!-- post login tools -->
+
+<li class="dropdown logged-in" id="website-post-login"
+	data-label="website-post-login" style="display: none">
+	<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+		<span class="user-image-wrapper"></span>
+		<span class="full-name"></span>
+		<b class="caret"></b>
+	</a>
+    <ul class="dropdown-menu" role="menu"><li data-label="My Account" 
+			><a href="/me" 
+					rel="nofollow">
+					My Account
+				</a></li><li data-label="Logout" 
+			><a href="/?cmd=web_logout" 
+					rel="nofollow">
+					Logout
+				</a></li></ul>
+</li>
+
+<li class="btn-login-area"><a href="/login">Login</a></li>
+
+
+</ul>
+				
+			</div>
+		</div>
+	</nav>
+</header><div class="hero-and-content">
+                <div data-html-block="hero"></div>
+                <div class="container" data-html-block="content">
+                
+<div class="page-container" id="page-Contact Us Settings" data-path="contact"
+	>
+			<div class="row ">
+				
+				<div class=" page-content col-sm-12 ">
+					<div class="page-content-wrapper">
+						<div class="row page-head">
+							<div class="col-sm-8 col-xs-6">
+								
+								
+							</div>
+							<div class="col-sm-4 col-xs-6">
+								
+
+								
+							</div>
+						</div>
+					</div>
+					<div class="page_content">
+
+<div class="contact-content">
+	<div class="row">
+		<div class="col-md-8">
+			<div class="embed-responsive embed-responsive-4by3">
+    <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d942.9607140123475!2d72.841928!3d19.026645!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7ced04c6dbd61%3A0x8d15b700a4221cd4!2sGanesh+Roh+Bldg%2C+Sakharam+Keer+Marg%2C+Kasaravadi%2C+Mumbai%2C+Maharashtra+400028!5e0!3m2!1sen!2sin!4v1414318951540" frameborder="0"></iframe>
+</div>
+<div class="row-fluid" style="text-align: center;"><b><br></b></div><div class="row-fluid" style="text-align: center;"><b>Phone</b>: +91-22-24314445</div><div class="row-fluid" style="text-align: center;"><br></div><br>
+			<p id="contact-alert" class="alert alert-warning"
+				style="display: none;">&nbsp;</p>
+			<div class="form-group">
+				<select name="subject" class="form-control">
+				<option value="Project Management Consultancy">Project Management Consultancy</option><option value="Structural Audit">Structural Audit</option><option value="Execution">Execution</option><option value="Structural Design/Consultancy">Structural Design/Consultancy</option><option value="Other">Other</option>
+				
+				</select>
+			</div>
+			<div class="form-group">
+				<input class="form-control" name="email" type="text"
+				placeholder="Your Email Address" />
+			</div>
+			<div class="form-group">
+				<textarea rows="10" name="message" class="form-control"></textarea>
+			</div>
+			<div class="form-group">
+				<button class="btn btn-primary btn-send">Send</button>
+			</div>
+		</div>
+		
+		<div class="col-md-3 col-md-offset-1 alert alert-warning"
+				itemscope itemtype="http://schema.org/PostalAddress">
+			<h4><i class="icon-map-marker"></i> Castlecraft Properties and Engineering Services Pvt. Ltd.</h4>
+			
+				<span itemprop="streetAddress">101, Sunflower </span><br>
+			
+			
+				<span itemprop="streetAddress">Sakharam Keer Road, Shivaji Park, Mahim,</span><br>
+			
+			
+				<span itemprop="addressLocality">Mumbai</span><br>
+			
+			
+				<span itemprop="addressRegion">Maharashtra</span><br>
+			
+			
+				<span itemprop="postalCode">400016</span><br>
+			
+			
+				<span itemprop="addressCountry">India</span><br>
+			
+		</div>
+		
+	</div>
+</div>
+<script>
+	// Copyright (c) 2015, Frappe Technologies Pvt. Ltd. and Contributors
+// MIT License. See license.txt
+
+frappe.ready(function() {
+
+	$('.btn-send').off("click").on("click", function() {
+		var email = $('[name="email"]').val();
+		var message = $('[name="message"]').val();
+
+		if(!(email && message)) {
+			msgprint(__("Please enter both your email and message so that we \
+				can get back to you. Thanks!"));
+			return false;
+		}
+
+		if(!valid_email(email)) {
+				msgprint(__("You seem to have written your name instead of your email. \
+					Please enter a valid email address so that we can get back."));
+				$('[name="email"]').focus();
+				return false;
+		}
+
+		$("#contact-alert").toggle(false);
+		frappe.send_message({
+			subject: $('[name="subject"]').val(),
+			sender: email,
+			message: message,
+			callback: function(r) {
+				if(r.message==="okay") {
+					msgprint(__("Thank you for your message"));
+				} else {
+					msgprint(__("There were errors"));
+					console.log(r.exc);
+				}
+				$(':input').val('');
+			}
+		}, this);
+	return false;
+	});
+
+});
+
+var msgprint = function(txt) {
+	if(txt) $("#contact-alert").html(txt).toggle(true);
+}
+</script>
+</div>
+				</div>
+			</div>
+</div>
+
+                </div>
+            </div></div>
+		<div><footer class="web-footer">
+	<section class="footer-links">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6 text-left">
+					<div class="row">
+					
+					</div>
+				</div>
+
+				<div class="col-sm-6 text-right">
+					
+<div class='input-group input-group-sm pull-right footer-subscribe'>
+	<input class="form-control" type="text" id="footer-subscribe-email"
+		placeholder="Your email address...">
+	<span class='input-group-btn'>
+		<button class="btn btn-default" type="button"
+			id="footer-subscribe-button">Get Updates</button>
+	</span>
+</div>
+
+<script>
+frappe.ready(function() {
+	$("#footer-subscribe-button").click(function() {
+
+		if($("#footer-subscribe-email").val()) {
+			$("#footer-subscribe-email").attr('disabled', true);
+			$("#footer-subscribe-button").html("Sending...")
+				.attr("disabled", true);
+			erpnext.subscribe_to_newsletter({
+				email: $("#footer-subscribe-email").val(),
+				callback: function(r) {
+					if(!r.exc) {
+						$("#footer-subscribe-button").html(__("Added"))
+							.attr("disabled", true);
+					} else {
+						$("#footer-subscribe-button").html(__("Error: Not a valid id?"))
+							.addClass("btn-danger").attr("disabled", false);
+						$("#footer-subscribe-email").val("").attr('disabled', false);
+					}
+				}
+			});
+		}
+		else
+			frappe.msgprint(frappe._("Please enter email address"))
+	});
+});
+</script>
+
+
+				</div>
+			</div>
+			<div class="row footer-bottom-line">
+				<div class="text-muted small col-sm-6">
+					
+						&copy; Castlecraft Properties and Engineering Services Pvt Ltd
+					
+				</div>
+				
+				<div class="text-muted small col-sm-6 text-right footer-powered">
+					
+						<a href="https://erpnext.com?source=website_footer" target="_blank" class="text-muted">
+		Powered by ERPNext</a>
+					
+				</div>
+			</div>
+		</div>
+	</section>
+</footer></div>
+	</div>
+
+	<!-- js should be loaded in body! -->
+	<script type="text/javascript"
+		src="/assets/frappe/js/lib/jquery/jquery.min.js"></script>
+	<script type="text/javascript"
+		src="/assets/js/frappe-web.min.js"></script>
+	<script type="text/javascript" src="/website_script.js"></script>
+	<script type="text/javascript" src="/assets/js/erpnext-web.min.js"></script>
+
+	<script>frappe.csrf_token = "None";</script></body>
+</html>

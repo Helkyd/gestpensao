@@ -1,0 +1,50 @@
+{
+ "allow_comments": 0, 
+ "allow_delete": 0, 
+ "allow_edit": 0, 
+ "allow_multiple": 0, 
+ "creation": "2016-07-25 19:20:04.508792", 
+ "doc_type": "SERVICOS", 
+ "docstatus": 0, 
+ "doctype": "Web Form", 
+ "idx": 0, 
+ "is_standard": 1, 
+ "login_required": 0, 
+ "modified": "2016-07-26 00:21:24.295981", 
+ "modified_by": "Administrator", 
+ "module": "Gestpensao", 
+ "name": "services", 
+ "owner": "Administrator", 
+ "published": 1, 
+ "route": "servicos", 
+ "success_url": "/services", 
+ "title": "SERVICOS", 
+ "web_form_fields": [
+  {
+   "fieldname": "descricao_servico", 
+   "fieldtype": "Data", 
+   "hidden": 0, 
+   "label": "Descricao", 
+   "read_only": 0, 
+   "reqd": 1
+  }, 
+  {
+   "fieldname": "tipo_servico", 
+   "fieldtype": "Select", 
+   "hidden": 0, 
+   "label": "Tipo de Servico", 
+   "options": "Frutas\nAlcool\nPetiscos\nRefei\u00e7\u00f5es\nAgua/Sumo/Gasosa\nServi\u00e7o de Quarto", 
+   "read_only": 0, 
+   "reqd": 1
+  }, 
+  {
+   "fieldname": "preco", 
+   "fieldtype": "Data", 
+   "hidden": 0, 
+   "label": "Preco", 
+   "options": "Empresa:nome_empresa:moeda_default", 
+   "read_only": 0, 
+   "reqd": 1
+  }
+ ]
+}

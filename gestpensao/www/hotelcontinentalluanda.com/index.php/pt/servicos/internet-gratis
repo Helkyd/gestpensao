@@ -1,0 +1,599 @@
+  
+<!DOCTYPE html>
+<html lang="pt-pt" dir="ltr"
+	  class='com_content view-article itemid-778 j34 mm-hover'>
+
+<head>
+	  <base href="http://hotelcontinentalluanda.com/index.php/pt/servicos/internet-gratis" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="keywords" content="83 Quartos, incluindo 8 suites climatizadas
+    Telefone digital directo com acesso à rede telefónica Internacional
+    Internet wireless
+    Mini-bar
+    Cofre individual
+    Restaurante “Caravela” (buffet, cozinha internacional e regional - Sala Baía (serviço “a la carte”)
+    Serviço de Cocktails e Banquetes
+    Room Service (24 horas)
+    Bar “Equador
+    Esplanada “O Navio”
+    Tabacaria Coqueiros
+    Salas de Reunião (Chicala e Mussulo)
+    Sala Polivalente (Kianda)
+    Business Lounge
+    Telefax
+    Lavandaria
+    Ginásio
+
+
+Powered by CONFORTURIS" />
+  <meta name="rights" content="Todos os direitos reservados." />
+  <meta name="description" content="Hotel de referência na hotelaria Angolana!
+83 rooms with wireless internet, including 8 suites (4 senior and 4 junior) and also a room for guests with reduced mobility. It also has a Gym, two meeting rooms (Mussulos and Chicals Rooms, with seating capacity for 35 people), a business lounge, a bar seating 26, a terrace Bar, 2 restaurants (one restaurant seating 100, and other seating 20) and the Kianda Multipurpose room in the last floor." />
+  <meta name="generator" content="Joomla! - Open Source Content Management" />
+  <title>Internet grátis</title>
+  <link href="/templates/ja_hotel/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+  <link href="http://hotelcontinentalluanda.com/index.php/pt/component/search/?Itemid=778&amp;format=opensearch" rel="search" title="Pesquisar Hotel Continental" type="application/opensearchdescription+xml" />
+  <link rel="stylesheet" href="/templates/ja_hotel/local/css/themes/continental/bootstrap.css" type="text/css" />
+  <link rel="stylesheet" href="http://hotelcontinentalluanda.com//plugins/system/jatypo/jatypo/assets/style.css" type="text/css" />
+  <link rel="stylesheet" href="http://hotelcontinentalluanda.com//plugins/system/jatypo/jatypo/typo/typo.css" type="text/css" />
+  <link rel="stylesheet" href="http://hotelcontinentalluanda.com//plugins/content/bt_socialshare/assets/bt_socialshare.css" type="text/css" />
+  <link rel="stylesheet" href="/templates/system/css/system.css" type="text/css" />
+  <link rel="stylesheet" href="/templates/ja_hotel/local/css/themes/continental/template.css" type="text/css" />
+  <link rel="stylesheet" href="/templates/ja_hotel/local/css/themes/continental/megamenu.css" type="text/css" />
+  <link rel="stylesheet" href="/templates/ja_hotel/local/css/themes/continental/off-canvas.css" type="text/css" />
+  <link rel="stylesheet" href="/templates/ja_hotel/fonts/font-awesome/css/font-awesome.min.css" type="text/css" />
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,400italic,100,300,500,700,900italic" type="text/css" />
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Pacifico" type="text/css" />
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Ubuntu" type="text/css" />
+  <link rel="stylesheet" href="/templates/ja_hotel/css/custom.css" type="text/css" />
+  <link rel="stylesheet" href="http://hotelcontinentalluanda.com/modules/mod_weather_gk4/style/style.css" type="text/css" />
+  <link rel="stylesheet" href="/media/com_acymailing/css/module_default.css?v=1466512185" type="text/css" />
+  <script src="/media/system/js/mootools-core.js" type="text/javascript"></script>
+  <script src="/media/system/js/core.js" type="text/javascript"></script>
+  <script src="/media/system/js/mootools-more.js" type="text/javascript"></script>
+  <script src="http://hotelcontinentalluanda.com//plugins/system/jatypo/jatypo/assets/script.js" type="text/javascript"></script>
+  <script src="/media/jui/js/jquery.min.js" type="text/javascript"></script>
+  <script src="/media/jui/js/jquery-noconflict.js" type="text/javascript"></script>
+  <script src="/media/jui/js/jquery-migrate.min.js" type="text/javascript"></script>
+  <script src="/plugins/system/t3/base-bs3/bootstrap/js/bootstrap.js" type="text/javascript"></script>
+  <script src="/plugins/system/t3/base-bs3/js/jquery.tap.min.js" type="text/javascript"></script>
+  <script src="/plugins/system/t3/base-bs3/js/off-canvas.js" type="text/javascript"></script>
+  <script src="/plugins/system/t3/base-bs3/js/script.js" type="text/javascript"></script>
+  <script src="/plugins/system/t3/base-bs3/js/menu.js" type="text/javascript"></script>
+  <script src="/templates/ja_hotel/js/script.js" type="text/javascript"></script>
+  <script src="/plugins/system/t3/base-bs3/js/nav-collapse.js" type="text/javascript"></script>
+  <script src="/media/system/js/html5fallback.js" type="text/javascript"></script>
+  <script src="/media/com_acymailing/js/acymailing_module.js?v=550" type="text/javascript" async="async"></script>
+  <script type="text/javascript">
+	if(typeof acymailing == 'undefined'){
+					var acymailing = Array();
+				}
+				acymailing['NAMECAPTION'] = 'nome';
+				acymailing['NAME_MISSING'] = 'Por favor, insira o seu nome';
+				acymailing['EMAILCAPTION'] = 'email';
+				acymailing['VALID_EMAIL'] = 'Por favor, insira um endereço de e-mail válido';
+				acymailing['ACCEPT_TERMS'] = 'Por favor, verifique os Termos e Condições';
+				acymailing['CAPTCHA_MISSING'] = 'Por favor, insira o código de segurança apresentado na imagem';
+				acymailing['NO_LIST_SELECTED'] = 'Por favor, selecione as listas que deseja subscrever';
+		
+			function refreshCaptchaModule(formName){
+				var captchaLink = document.getElementById('captcha_picture_'+formName).src;
+				myregexp = new RegExp('val[-=]([0-9]+)');
+				valToChange=captchaLink.match(myregexp)[1];
+				document.getElementById('captcha_picture_'+formName).src = captchaLink.replace(valToChange,valToChange+'0');
+			}
+			
+  </script>
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Internet grátis" />
+  <meta property="og:url" content="http://hotelcontinentalluanda.com/index.php/pt/servicos/internet-gratis" />
+  <meta property="og:description" content="" />
+  <meta property="og:image" content="http://hotelcontinentalluanda.com/images/geral/internet_gratis.jpg" />
+
+	
+<!-- META FOR IOS & HANDHELD -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+	<style type="text/stylesheet">
+		@-webkit-viewport   { width: device-width; }
+		@-moz-viewport      { width: device-width; }
+		@-ms-viewport       { width: device-width; }
+		@-o-viewport        { width: device-width; }
+		@viewport           { width: device-width; }
+	</style>
+	<script type="text/javascript">
+		//<![CDATA[
+		if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+			var msViewportStyle = document.createElement("style");
+			msViewportStyle.appendChild(
+				document.createTextNode("@-ms-viewport{width:auto!important}")
+			);
+			document.getElementsByTagName("head")[0].appendChild(msViewportStyle);
+		}
+		//]]>
+	</script>
+<meta name="HandheldFriendly" content="true"/>
+<meta name="apple-mobile-web-app-capable" content="YES"/>
+<!-- //META FOR IOS & HANDHELD -->
+
+
+
+
+<!-- Le HTML5 shim and media query for IE8 support -->
+<!--[if lt IE 9]>
+<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<script type="text/javascript" src="/plugins/system/t3/base-bs3/js/respond.min.js"></script>
+<![endif]-->
+
+<!-- You can add Google Analytics here or use T3 Injection feature -->
+ 
+<script type="text/javascript" src="/media/jfbalbum/modernizr.js"></script>
+<script type="text/javascript" src="/media/jfbalbum/srizonjq1.8.min.js"></script>
+<script type="text/javascript" src="/media/jfbalbum/srizonjq.easing.1.3.min.js"></script>
+<link rel="stylesheet" href="/media/jfbalbum/sb/srzsb.css" type="text/css" />
+<script type="text/javascript" src="/media/jfbalbum/sb/srzsb2.js"></script>
+<script type="text/javascript" src="/media/jfbalbum/mag-popup.js"></script>
+<link rel="stylesheet" href="/media/jfbalbum/mag-popup.css" type="text/css" />
+<script type="text/javascript" src="/media/jfbalbum/srz-mag-init.js"></script>
+<script type="text/javascript" src="/media/jfbalbum/elastislide.js"></script>
+<link rel="stylesheet" href="/media/jfbalbum/elastislide.css" type="text/css" />
+<script type="text/javascript" src="/media/jfbalbum/jfbalbumslider.js"></script>
+<link rel="stylesheet" href="/media/jfbalbum/jfbstyles.css" type="text/css" />
+</head>
+
+<body>
+
+<div class="t3-wrapper"> <!-- Need this wrapper for off-canvas menu. Remove if you don't use of-canvas -->
+	 
+ <!-- TOPBAR -->
+  <!-- //TOPBAR -->	
+  
+<!-- HEADER -->
+<header id="t3-header" class="wrap t3-header">
+<div class="container">
+	<div class="row">
+
+		<!-- LOGO -->
+		<div class="col-xs-4 col-sm-2 logo">
+			<div class="logo-image">
+				<a href="/" title="Hotel Continental Luanda">
+											<img class="logo-img" src="/templates/ja_hotel/images/logo.png" alt="Hotel Continental Luanda" />
+															<span>Hotel Continental Luanda</span>
+				</a>
+				<small class="site-slogan"></small>
+			</div>
+		</div>
+		<!-- //LOGO -->
+		
+		
+<!-- MAIN NAVIGATION -->
+<nav id="t3-mainnav" class="navbar navbar-default t3-mainnav col-sm-10 pull-right">
+	<!-- Brand and toggle get grouped for better mobile display -->
+	<div class="navbar-header">
+	
+								<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".t3-navbar-collapse">
+				MENU <i class="fa fa-bars"></i>
+			</button>
+		
+					
+<button class="btn btn-primary off-canvas-toggle  hidden-lg hidden-md hidden-sm hidden-xs" type="button" data-pos="right" data-nav="#t3-off-canvas" data-effect="off-canvas-effect-4">
+  <i class="fa fa-bars"></i>
+</button>
+
+<!-- OFF-CANVAS SIDEBAR -->
+<div id="t3-off-canvas" class="t3-off-canvas  hidden-lg hidden-md hidden-sm hidden-xs">
+
+  <div class="t3-off-canvas-header">
+    <h2 class="t3-off-canvas-header-title">Sidebar</h2>
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+  </div>
+
+  <div class="t3-off-canvas-body">
+    
+  </div>
+
+</div>
+<!-- //OFF-CANVAS SIDEBAR -->
+		
+	</div>
+
+			<div class="t3-navbar-collapse navbar-collapse collapse"></div>
+	
+	<div class="t3-navbar navbar-collapse collapse">
+		<div  class="t3-megamenu"  data-responsive="true">
+<ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="nav navbar-nav level0">
+<li itemprop='name'  data-id="435" data-level="1">
+<a itemprop='url' class="" href="/index.php/pt/"   data-target="#"><img src="/images/icons/home-l.png" alt="Hotel Continental Luanda" /> </a>
+
+</li>
+<li itemprop='name' class="dropdown mega" data-id="466" data-level="1">
+<a itemprop='url' class=" dropdown-toggle" href="/index.php/pt/o-hotel"   data-target="#" data-toggle="dropdown">O Hotel <em class="caret"></em></a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  style="width: 120px"  data-width="120"><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-12 mega-col-nav" data-width="12"><div class="mega-inner">
+<ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="mega-nav level1">
+<li itemprop='name'  data-id="771" data-level="2">
+<a itemprop='url' class="" href="/index.php/pt/o-hotel/historia-do-hotel-continental"   data-target="#">História do Hotel </a>
+
+</li>
+<li itemprop='name'  data-id="772" data-level="2">
+<a itemprop='url' class="" href="/index.php/pt/o-hotel/instalacoes"   data-target="#">Instalações </a>
+
+</li>
+<li itemprop='name'  data-id="773" data-level="2">
+<a itemprop='url' class="" href="/index.php/pt/o-hotel/filosofia"   data-target="#">Filosofia </a>
+
+</li>
+<li itemprop='name'  data-id="775" data-level="2">
+<a itemprop='url' class="" href="/index.php/pt/o-hotel/reconhecimento"   data-target="#">Reconhecimento </a>
+
+</li>
+<li itemprop='name'  data-id="776" data-level="2">
+<a itemprop='url' class="" href="/index.php/pt/o-hotel/escolha-acertada"   data-target="#">Escolha acertada </a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li itemprop='name' class="active dropdown mega" data-id="611" data-level="1">
+<a itemprop='url' class=" dropdown-toggle" href="/index.php/pt/servicos"   data-target="#" data-toggle="dropdown">Serviços <em class="caret"></em></a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  ><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-12 mega-col-nav" data-width="12"><div class="mega-inner">
+<ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="mega-nav level1">
+<li itemprop='name'  data-id="777" data-level="2">
+<a itemprop='url' class="" href="/index.php/pt/servicos/bares-e-restaurante"   data-target="#">Bares e Restaurante </a>
+
+</li>
+<li itemprop='name' class="current active" data-id="778" data-level="2">
+<a itemprop='url' class="" href="/index.php/pt/servicos/internet-gratis"   data-target="#">Internet grátis </a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li itemprop='name'  data-id="656" data-level="1">
+<a itemprop='url' class="" href="/index.php/pt/quartos"   data-target="#">Quartos </a>
+
+</li>
+<li itemprop='name'  data-id="635" data-level="1">
+<a itemprop='url' class="" href="/index.php/pt/galeria"   data-target="#">Galeria </a>
+
+</li>
+<li itemprop='name'  data-id="636" data-level="1">
+<a itemprop='url' class="" href="https://continental.angolatrip.com/" target="_blank"   data-target="#">Reservas</a>
+
+</li>
+<li itemprop='name'  data-id="616" data-level="1">
+<a itemprop='url' class="" href="/index.php/pt/contactos"   data-target="#">Contactos </a>
+
+</li>
+<li itemprop='name'  data-id="770" data-level="1">
+<a itemprop='url' class="" href="/index.php/pt/noticias"   data-target="#">Notícias </a>
+
+</li>
+</ul>
+</div>
+
+	</div>
+	
+	</nav>
+<!-- //MAIN NAVIGATION -->
+
+	</div>
+</div>
+</header>
+<!-- //HEADER -->
+
+  
+
+  
+   
+<!-- SECTION -->
+<!-- //SECTION -->
+  
+<div id="t3-mainbody" class="container t3-mainbody">
+	<div class="row">
+
+		<!-- MAIN CONTENT -->
+		<div id="t3-content" class="t3-content col-xs-12 col-sm-8  col-md-9">
+						
+
+	
+	<div class="item-row row-main">
+		<div class="article-main">
+			<article class="article" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-PT" />
+	<meta itemprop="url" content="/index.php/pt/servicos/internet-gratis" />
+			
+<header class="article-header clearfix">
+	<h1 class="article-title" itemprop="headline">
+					<a href="/index.php/pt/servicos/internet-gratis" itemprop="url" title="Internet grátis">
+				Internet grátis</a>
+			</h1>
+
+			</header>
+				<aside class="article-aside article-aside-full">
+			      			      
+              	<div class="view-tools">
+				<ul>
+							<li class="print-icon"> <a href="/index.php/pt/servicos/internet-gratis?tmpl=component&amp;print=1&amp;page=" title="Imprimir" onclick="window.open(this.href,'win2','status=no,toolbar=no,scrollbars=yes,titlebar=no,menubar=no,resizable=yes,width=640,height=480,directories=no,location=no'); return false;" rel="nofollow"><span class="fa fa-print"></span>&#160;Imprimir&#160;</a> </li>
+										<li class="email-icon"> <a href="/index.php/pt/component/mailto/?tmpl=component&amp;template=ja_hotel&amp;link=8f31a032fa867d6494a153b9509e81e545ecb0c1" title="Email" onclick="window.open(this.href,'win2','width=400,height=350,menubar=yes,resizable=yes'); return false;"><span class="fa fa-envelope"></span> Email</a> </li>
+					</ul>
+	</div>
+					</aside>
+	
+  	<section class="article-intro-media">
+		<div class="pull-left item-image">
+<a href="/">
+
+	 <img src="/images/geral/internet_gratis.jpg" alt="internet grátis" itemprop="thumbnailUrl"/>
+</a>
+</div>
+			</section>
+  
+	<section class="row article-navigation top">
+			</section>
+
+	<section class="article-full">
+
+		<div class="article-content-main">
+		    
+    
+		<section class="article-content" itemprop="articleBody">
+						 
+<p>Esteja onde estiver, esteja ligado &agrave; internet!</p>
+<p>Saiba porqu&ecirc;...</p>
+<p style="text-align: justify;">O Hotel continental Luanda proporciona-lhe, durante toda a sua estadia, tanto no quarto, no lounge, no bar como no terra&ccedil;o, a possibilidade de estar ligado ao mundo. &Eacute; por isso que lhe oferecemos conex&atilde;o &agrave; internet WI-FI, de forma totalmente gr&aacute;tis, em todo o hotel.</p>
+<p style="text-align: justify;">A conex&atilde;o &agrave; internet &eacute; muito simples, e permite ter WI-FI em todos os seus dispositivos ao mesmo tempo. Imprescind&iacute;vel hoje, pois ningu&eacute;m viaja sem um Smartphone, um Tablet, um Notebook, um Ipad,&hellip;&nbsp;</p>
+<p style="text-align: justify;">Poder&aacute; conectar-se ao WI-FI mediante um c&oacute;digo que lhe forneceremos na recep&ccedil;&atilde;o. O mesmo c&oacute;digo &eacute; v&aacute;lido para todos os seus dispositivos e/ou os dos seus amigos. Uma vez introduzido, voc&ecirc; poder&aacute; ter internet durante toda a sua estadia.</p><div class="bt-social-share bt-social-share-below"><div class="bt-social-share-button bt-facebook-share-button"><fb:share-button href="http://hotelcontinentalluanda.com/index.php/pt/servicos/internet-gratis" type="button_count"></fb:share-button></div><div class="bt-social-share-button bt-facebook-like-button"><fb:like send="false" colorscheme="light" font="arial" href="http://hotelcontinentalluanda.com/index.php/pt/servicos/internet-gratis" layout="button_count" width="70" show_faces="true" action="like"></fb:like></div><div class="bt-social-share-button bt-twitter-button" style="width:80px"><a href="http://twitter.com/share" class="twitter-share-button" 
+						  data-via="BowThemes" 
+						  data-url="http://hotelcontinentalluanda.com/index.php/pt/servicos/internet-gratis" 
+						  data-size="medium"
+						  data-lang="pt"
+						  data-count="horizontal" >Twitter</a></div><div class="bt-social-share-button bt-linkedin-button"><script type="IN/share" data-url="http://hotelcontinentalluanda.com/index.php/pt/servicos/internet-gratis"
+						 data-showzero="false"
+						 data-counter="right"></script></div><div class="bt-social-share-button bt-googleplus-button"><div class="g-plus" data-action="share"  data-href="http://hotelcontinentalluanda.com/index.php/pt/servicos/internet-gratis" data-annotation="bubble" data-height="20" ></div></div></div><div class="bt_facebook_comment"><fb:comments colorscheme="light" href="http://hotelcontinentalluanda.com/index.php/pt/servicos/internet-gratis" num_posts="5" width="690"></fb:comments></div><div id="fb-root"></div>
+				<script>(function(d, s, id) {
+				  var js, fjs = d.getElementsByTagName(s)[0];
+				  if (d.getElementById(id)) {return;}
+				  js = d.createElement(s); js.id = id;
+				  js.src = "//connect.facebook.net/pt_PT/all.js#xfbml=1";
+				  fjs.parentNode.insertBefore(js, fjs);
+				}(document, 'script', 'facebook-jssdk'));</script><script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script><script type="text/javascript" src="http://platform.linkedin.com/in.js"></script><script type="text/javascript" src="https://apis.google.com/js/plusone.js">{lang: 'pt-PT'}</script>			
+												</section>
+
+				
+		
+		</div>
+	</section>
+
+	<section class="row article-navigation bottom">
+			</section>
+
+</article>
+
+												</div>
+	</div>
+
+	
+
+		</div>
+		<!-- //MAIN CONTENT -->
+
+		<!-- SIDEBAR RIGHT -->
+		<div class="t3-sidebar t3-sidebar-right col-xs-12 col-sm-4  col-md-3 ">
+			<div class="t3-module module " id="Mod126"><div class="module-inner"><div class="module-ct"><div class="search">
+	<form action="/index.php/pt/servicos/internet-gratis" method="post" class="form-inline form-search">
+		<label for="mod-search-searchword" class="element-invisible">Pesquisar...</label> <input name="searchword" id="mod-search-searchword" maxlength="200"  class="form-control search-query" type="search" size="20" placeholder="Pesquisar..." />		<input type="hidden" name="task" value="search" />
+		<input type="hidden" name="option" value="com_search" />
+		<input type="hidden" name="Itemid" value="778" />
+	</form>
+</div>
+</div></div></div><div class="t3-module module " id="Mod586"><div class="module-inner"><h3 class="module-title "><span>Reserve já</span><span class="module-intro"></span></h3><div class="module-ct">
+
+<div class="custom"  >
+	<p><a href="https://continental.angolatrip.com/" target="_blank"><img src="/images/geral/motor_reservas.jpg" alt="motor reservas" /></a></p></div>
+</div></div></div><div class="t3-module module " id="Mod598"><div class="module-inner"><h3 class="module-title "><span>Newsletter</span><span class="module-intro"></span></h3><div class="module-ct"><div class="acymailing_module" id="acymailing_module_formAcymailing65671">
+	<div class="acymailing_fulldiv" id="acymailing_fulldiv_formAcymailing65671"  >
+		<form id="formAcymailing65671" action="/index.php/pt/servicos/internet-gratis" onsubmit="return submitacymailingform('optin','formAcymailing65671')" method="post" name="formAcymailing65671"  >
+		<div class="acymailing_module_form" >
+			<div class="acymailing_introtext">introduza os seus dados de registo|
+enter your registration data|
+entrez vos données d'inscription</div>			<table class="acymailing_form">
+				<tr>
+												<td class="acyfield_name acy_requiredField">
+								<input id="user_name_formAcymailing65671"  onfocus="if(this.value == 'nome') this.value = '';" onblur="if(this.value=='') this.value='nome';" class="inputbox" type="text" name="user[name]" style="width:50%" value="nome" title="nome"/>
+							</td> </tr><tr>							<td class="acyfield_email acy_requiredField">
+								<input id="user_email_formAcymailing65671"  onfocus="if(this.value == 'email') this.value = '';" onblur="if(this.value=='') this.value='email';" class="inputbox" type="text" name="user[email]" style="width:50%" value="email" title="email"/>
+							</td> </tr><tr>					<td class="captchakeymodule">
+					<img id="captcha_picture_formAcymailing65671" title="Por favor, insira o código de segurança apresentado na imagem" width="60" height="25" class="captchaimagemodule" src="/index.php/pt/component/acymailing/captcha?acyformname=formAcymailing65671&amp;val=3225" alt="captcha" /><span class="refreshCaptchaModule" onclick="refreshCaptchaModule('formAcymailing65671')">&nbsp;</span><input id="user_captcha_formAcymailing65671" title="Por favor, insira o código de segurança apresentado na imagem" class="inputbox captchafield" type="text" name="acycaptcha" style="width:50px" />					</tr><tr>
+					
+					<td  class="acysubbuttons">
+												<input class="button subbutton btn btn-primary" type="submit" value="subscrever" name="Submit" onclick="try{ return submitacymailingform('optin','formAcymailing65671'); }catch(err){alert('The form could not be submitted '+err);return false;}"/>
+											</td>
+				</tr>
+			</table>
+						<input type="hidden" name="ajax" value="0" />
+			<input type="hidden" name="acy_source" value="module_598" />
+			<input type="hidden" name="ctrl" value="sub"/>
+			<input type="hidden" name="task" value="notask"/>
+			<input type="hidden" name="redirect" value="http%3A%2F%2Fhotelcontinentalluanda.com%2Findex.php%2Fpt%2Fservicos%2Finternet-gratis"/>
+			<input type="hidden" name="redirectunsub" value="http%3A%2F%2Fhotelcontinentalluanda.com%2Findex.php%2Fpt%2Fservicos%2Finternet-gratis"/>
+			<input type="hidden" name="option" value="com_acymailing"/>
+						<input type="hidden" name="hiddenlists" value="1"/>
+			<input type="hidden" name="acyformname" value="formAcymailing65671" />
+						<input type="hidden" name="Itemid" value="825"/>			</div>
+		</form>
+	</div>
+	</div>
+</div></div></div><div class="t3-module module " id="Mod105"><div class="module-inner"><div class="module-ct"><iframe src="//www.facebook.com/plugins/page.php?href=facebook.com/121990371313788&amp;width=180&amp;height=760&amp;adapt_container_width=true&amp;show_facepile=true&amp;show_posts=true&amp;hide_cover=false&amp;colorscheme=light&amp;" scrolling="no" frameborder="0" style="overflow:hidden;width:180px;height:760px; allowTransparency: true;"></iframe></div></div></div><div class="t3-module module " id="Mod157"><div class="module-inner"><div class="module-ct"><script type='text/javascript'>
+window.addEventListener('load', function (){
+	if(typeof addthis_conf == 'undefined'){
+		var script = document.createElement('script');
+		script.src = '//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-537f6ff5240ebd2d';
+		document.getElementsByTagName('head')[0].appendChild(script);
+	}
+});
+</script>
+ <div class='joomla_add_this'><!-- AddThis Button BEGIN -->
+<script type='text/javascript'>
+var addthis_product = 'jlm-3.0';
+var addthis_config = {
+ui_hover_direction:false,
+data_track_clickback:true,
+ui_language:'pt'
+}
+</script>
+<div class="addthis_toolbox addthis_default_style addthis_32x32_style ">
+									<a class="addthis_button_facebook"></a>
+									<a class="addthis_button_linkedin"></a>
+									<a class="addthis_button_twitter"></a>
+									<a class="addthis_button_google_plusone_share"></a>
+									<a class="addthis_button_compact"></a>
+									<!--<a class="addthis_counter addthis_bubble_style"></a>-->
+								</div> <!-- AddThis Button END -->
+</div></div></div></div><div class="t3-module module " id="Mod595"><div class="module-inner"><div class="module-ct"> <div id="TA_cdsratingsonlynarrow999" class="TA_cdsratingsonlynarrow">
+<ul id="JRLDIa" class="TA_links TIbZ2gWRu7">
+<li id="NgW6mXfY" class="4qyDer">
+<a target="_blank" href="http://www.tripadvisor.com/"><img src="http://www.tripadvisor.com/img/cdsi/img2/branding/tripadvisor_logo_transp_340x80-18034-2.png" alt="TripAdvisor"/></a>
+</li>
+</ul>
+</div>
+<script src="http://www.jscache.com/wejs?wtype=cdsratingsonlynarrow&amp;uniq=999&amp;locationId=1058544&amp;lang=en_US&amp;border=true&amp;backgroundColor=gray&amp;display_version=2"></script>
+
+</div></div></div>
+		</div>
+		<!-- //SIDEBAR RIGHT -->
+
+	</div>
+</div> 
+
+  
+
+  <!-- BACK TOP TOP BUTTON -->
+<div id="back-to-top" data-spy="affix" data-offset-top="300" class="back-to-top hidden-xs hidden-sm affix-top">
+  <button class="btn btn-primary" title="Back to Top"><i class="fa fa-arrow-up"></i></button>
+</div>
+<script>
+(function($) {
+	// Back to top
+	$('.back-to-top').on('click', function(){
+		$("html, body").animate({scrollTop: 0}, 500);
+		return false;
+	});
+})(jQuery);
+</script>
+<!-- BACK TO TOP BUTTON -->
+
+<!-- FOOTER -->
+<footer id="t3-footer" class="wrap t3-footer">
+
+			<!-- FOOT NAVIGATION -->
+		<div class="container">
+				<!-- SPOTLIGHT -->
+	<div class="t3-spotlight t3-footnav  row">
+					<div class=" col-lg-3 col-md-3 col-sm-3 col-xs-6">
+								<div class="t3-module module " id="Mod118"><div class="module-inner"><h3 class="module-title "><span>Os nossos hoteís</span><span class="module-intro"></span></h3><div class="module-ct">
+
+<div class="custom"  >
+	<p style="text-align: center;"><span style="color: #eeadad;">Hotel Continental</span></p>
+<p style="text-align: center;"><a href="http://hotelcontinentalhorizonte.com/" target="_blank">Hotel Continental Horizonte</a></p></div>
+</div></div></div><div class="t3-module module " id="Mod135"><div class="module-inner"><h3 class="module-title "><span>Informacoes úteis</span><span class="module-intro"></span></h3><div class="module-ct">
+
+<div class="custom"  >
+	<p style="text-align: center;"><a href="/index.php/pt/informacoes-uteis/informacoes-sobre-angola">Informa&ccedil;&otilde;es sobre Angola</a></p>
+<p style="text-align: center;"><a href="/index.php/pt/informacoes-uteis/contactos-uteis">Contactos &uacute;teis</a></p></div>
+</div></div></div>
+							</div>
+					<div class=" col-lg-3 col-md-3 col-sm-3 col-xs-6">
+								<div class="t3-module module " id="Mod89"><div class="module-inner"><h3 class="module-title "><span>Links</span><span class="module-intro"></span></h3><div class="module-ct">
+
+<div class="custom"  >
+	<p style="text-align: center;"><a href="/index.php/pt/o-hotel">Quem somos</a></p>
+<p style="text-align: center;"><a href="/index.php/pt/condicoes-gerais-de-reservas">Condi&ccedil;&otilde;es gerais de reservas</a></p>
+<p style="text-align: center;"><a href="/index.php/pt/politica-de-privacidade">Politica de privacidade</a></p>
+<p style="text-align: center;"><a href="/index.php/pt/termos-e-condicoes">Termos e condi&ccedil;&otilde;es</a></p>
+<p style="text-align: center;"><a href="/index.php/pt/noticia">Not&iacute;cias</a></p>
+<p style="text-align: center;"><a href="/index.php/pt/noticias">Newsletter</a></p></div>
+</div></div></div>
+							</div>
+					<div class=" col-lg-3 col-md-3 col-sm-3  col-xs-12 hidden-xs ">
+								<div class="t3-module module " id="Mod88"><div class="module-inner"><h3 class="module-title "><span>Experimente Angola</span><span class="module-intro"></span></h3><div class="module-ct">
+
+<div class="custom"  >
+	<p style="text-align: center;"><a href="/index.php/pt/experimente-angola/para-conhecer">Para conhecer</a></p>
+<p style="text-align: center;"><a href="/index.php/pt/experimente-angola/luanda-cultural">Luanda Cultural</a></p>
+<p style="text-align: center;"><a href="/index.php/pt/experimente-angola/natureza">Natureza</a></p>
+<p style="text-align: center;"><a href="/index.php/pt/experimente-angola/para-fazer">Para fazer</a></p>
+<p style="text-align: center;"><a href="/index.php/pt/experimente-angola/para-se-divertir">Para se divertir</a></p></div>
+</div></div></div>
+							</div>
+					<div class=" col-lg-3 col-md-3 col-sm-3  col-xs-6 hidden-xs ">
+								<div class="t3-module module " id="Mod596"><div class="module-inner"><h3 class="module-title "><span>Meteorologia</span><span class="module-intro"></span></h3><div class="module-ct"><div class="gkwMain" id="weather1">
+	    <div class="gkwCurrent">
+		<div class="gkwMainLeft">
+							<img src="http://hotelcontinentalluanda.com/modules/mod_weather_gk4/icons/default/64/thunderstorm.png" alt="Heavy Thunderstorm" />
+						<p class="gkwTemp">28&deg;C</p>
+		</div>
+		<div class="gkwMainRight">
+			<h2>Luanda</h2>			<p class="gkwCondition">Heavy Thunderstorm</p>
+			<p class="gkwHumidity">Humidade: 74%</p>			<p class="gkwWind">Vento: 19.31 km/h</p>		</div>
+	</div>
+		
+		<ul class="gkwNextDays">
+        		<li class="gkwItems2">
+			<div class="gkwFday">
+				<span class="gkwDay">11 Apr 2016</span>
+				<p class="gkwDayTemp">
+                	                		<img src="http://hotelcontinentalluanda.com/modules/mod_weather_gk4/icons/default/32/chance_of_storm.png" title="Trovoadas dispersas" alt="Trovoadas dispersas" />
+                						<span class="gkwDayDay">31&deg;C</span>
+					<span class="gkwDayNight">25&deg;C</span>
+				</p>
+			</div>
+		</li>
+        		<li class="gkwItems2">
+			<div class="gkwFday">
+				<span class="gkwDay">12 Apr 2016</span>
+				<p class="gkwDayTemp">
+                	                		<img src="http://hotelcontinentalluanda.com/modules/mod_weather_gk4/icons/default/32/chance_of_storm.png" title="Trovoadas dispersas" alt="Trovoadas dispersas" />
+                						<span class="gkwDayDay">32&deg;C</span>
+					<span class="gkwDayNight">26&deg;C</span>
+				</p>
+			</div>
+		</li>
+        	</ul>
+	</div></div></div></div>
+							</div>
+			</div>
+<!-- SPOTLIGHT -->		</div>
+		<!-- //FOOT NAVIGATION -->
+	
+	<section class="t3-copyright">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 copyright ">
+					<div class="module">
+	<small>Direitos de autor &#169; 2016 Hotel Continental. Todos os direitos reservados. Powered by <a href="http://www.hhsangola.com" target="_blank"><strong>HHS Angola</strong></a>.</small>
+	<!--<small><a href="https://www.joomla.org">Joomla!</a> é um software livre produzido sob a <a href="http://www.gnu.org/licenses/gpl-2.0.html">licença GNU GPL.</a></small>-->
+</div>
+				</div>
+									<div class="col-md-4 poweredby text-hide">
+						<a><img src="/images/geral/selos_certificacoes.jpg"></a>
+					</div>
+							</div>
+		</div>
+	</section>
+
+</footer>
+<!-- //FOOTER -->
+</div>
+
+<noscript><strong>JavaScript is currently disabled.</strong>Please enable it for a better experience of <a href="http://2glux.com/projects/jumi">Jumi</a>.</noscript></body>
+
+</html>

@@ -1,0 +1,1281 @@
+html {
+	-ms-overflow-y: scroll;
+}
+body {
+	margin: 0px; padding: 0px; color: rgb(0, 0, 0); font-family: Trebuchet MS; font-size: 12px;
+}
+a img {
+	border: 0px currentColor; border-image: none;
+}
+textarea {
+	resize: none;
+}
+form {
+	margin: 0px;
+}
+.clearfix::before {
+	height: 0px; display: block; visibility: hidden; content: ".";
+}
+.clearfix::after {
+	height: 0px; display: block; visibility: hidden; content: ".";
+}
+.clearfix::after {
+	clear: both;
+}
+.clearfix {
+	-ms-zoom: 1;
+}
+.clear_float {
+	height: 0px; line-height: 0; overflow: hidden; clear: both; font-size: 0px;
+}
+.fullHeight {
+	height: 100%;
+}
+table {
+	color: rgb(0, 0, 0); font-family: Trebuchet MS; font-size: 12px;
+}
+td {
+	color: rgb(0, 0, 0); font-family: Trebuchet MS; font-size: 12px;
+}
+.cvTbl td {
+	color: rgb(0, 0, 0); line-height: 17px; font-family: Trebuchet MS; font-size: 12px;
+}
+.mainTbl {
+	width: 763px; table-layout: auto;
+}
+.masterTbl {
+	width: 736px; table-layout: auto;
+}
+.topLeftSpace {
+	margin-top: 20px; margin-left: 20px;
+}
+.bygTbl {
+	border: 1px solid rgb(178, 208, 228); border-image: none; width: 100%; table-layout: auto; background-color: rgb(242, 247, 250);
+}
+.bygTbl td {
+	padding: 10px;
+}
+.bygTblShort {
+	width: 665px;
+}
+.uddTblTop {
+	border-width: 1px 1px medium; border-style: solid solid none; border-color: rgb(178, 208, 228) rgb(178, 208, 228) currentColor; border-image: none; width: 106px; table-layout: auto; background-color: rgb(0, 99, 164);
+}
+.uddTblTop td {
+	padding: 10px; color: rgb(255, 255, 255); font-weight: bold;
+}
+.inputByg {
+	border: 1px solid rgb(178, 208, 228); border-image: none; left: 277px; width: 232px; font-family: Trebuchet MS; font-size: 12px; margin-top: -2px; position: absolute; background-color: rgb(255, 255, 255);
+}
+.inputBygWide {
+	border: 1px solid rgb(178, 208, 228); border-image: none; left: 277px; width: 416px; font-family: Trebuchet MS; font-size: 12px; margin-top: -2px; position: absolute; background-color: rgb(255, 255, 255);
+}
+.inputBygMultiLine {
+	border: 1px solid rgb(178, 208, 228); border-image: none; left: 244px; width: 400px; font-family: Trebuchet MS; font-size: 12px; margin-top: -14px; display: block; position: relative; background-color: rgb(255, 255, 255);
+}
+.inputBygValidator {
+	margin: 10px 0px; left: 246px; width: 405px; color: red; font-family: Trebuchet MS; font-size: 12px; display: block; position: relative;
+}
+.inputGaest {
+	border: 1px solid rgb(178, 208, 228); border-image: none; width: 150px; background-color: rgb(255, 255, 255);
+}
+.textareaByg {
+	border: 1px solid rgb(255, 0, 0); border-image: none; padding-bottom: 100px;
+}
+.textareaGaest {
+	border: 1px solid rgb(178, 208, 228); border-image: none; width: 395px; height: 72px; font-family: Trebuchet MS; font-size: 12px; background-color: rgb(255, 255, 255);
+}
+.skabelonTxtTbl {
+	width: 100px;
+}
+.skabelonTxtTbl td {
+	padding: 0px;
+}
+.vinTdRoed {
+	padding: 8px; background-color: rgb(150, 0, 24);
+}
+.vinTdGron {
+	padding: 8px; background-color: rgb(122, 172, 98);
+}
+.familieTbl td {
+	font-family: Times New Roman; font-size: 10px;
+}
+.bifTblSort td {
+	color: rgb(255, 255, 255);
+}
+.billedTbl td {
+	padding: 1px;
+}
+.ditBilledTbl td {
+	padding: 0px;
+}
+.bgGen01 {
+	background-color: rgb(189, 220, 208);
+}
+.bgGen02 {
+	background-color: rgb(255, 162, 0);
+}
+.bgGen03 {
+	background-color: rgb(255, 148, 211);
+}
+.bgGen04 {
+	background-color: rgb(0, 150, 255);
+}
+.babyBrunBgMain {
+	background-color: rgb(200, 164, 110);
+}
+.babyBrunBgContent {
+	background-color: rgb(250, 224, 176);
+}
+.babyBrunBgSpacer {
+	padding-top: 10px; background-color: rgb(195, 175, 150);
+}
+.babyGronBgMain {
+	background-color: rgb(169, 212, 109);
+}
+.babyGronBgContent {
+	background-color: rgb(13, 103, 26);
+}
+.babyGronBgSpacer {
+	padding-top: 10px; background-color: rgb(0, 159, 98);
+}
+.babyBlaaBgMain {
+	background-color: rgb(137, 178, 200);
+}
+.babyBlaaBgContent {
+	background-color: rgb(10, 45, 160);
+}
+.babyBlaaBgSpacer {
+	background-color: rgb(204, 204, 204);
+}
+.babyPinkBgMain {
+	background-color: rgb(255, 152, 208);
+}
+.babyPinkBgContent {
+	background-color: rgb(152, 0, 83);
+}
+.babyPinkBgSpacer {
+	background-color: rgb(226, 0, 127);
+}
+.babyBallonBgMain {
+	background-color: rgb(10, 45, 160);
+}
+.babyBallonBgContent {
+	background-color: rgb(240, 167, 28);
+}
+.babyBallonBgSpacer {
+	background-color: rgb(13, 103, 26);
+}
+.vertSpacer {
+	padding: 5px;
+}
+.havenBgGronTop {
+	background-color: rgb(0, 75, 44);
+}
+.havenBgGronMain {
+	background-color: rgb(211, 234, 206);
+}
+.havenBgGraaMain {
+	background-color: rgb(162, 162, 162);
+}
+.chkboxTxt {
+	left: 540px; position: absolute;
+}
+.inputChkbox {
+	left: 515px; margin-top: -2px; position: absolute;
+}
+.inputBygTxt {
+	color: rgb(0, 99, 164); font-weight: bold;
+}
+.termsAndCondCheckbox {
+	padding-bottom: 20px;
+}
+.termsAndCondCheckbox label {
+	padding-left: 8px;
+}
+.termsAndCondCheckbox input {
+	vertical-align: bottom;
+}
+.termsAndCondMessage {
+	color: red; padding-bottom: 10px; padding-left: 20px;
+}
+.header {
+	font-family: Trebuchet MS; font-size: 26px;
+}
+.headerLarge {
+	font-family: Trebuchet MS; font-size: 36px;
+}
+.inviHeader {
+	font-size: 14px; font-style: italic; font-weight: bold;
+}
+.inviSubHeader {
+	font-size: 12px;
+}
+.menuRetter {
+	font-size: 13px; font-weight: bold;
+}
+.txtLimit {
+	padding-right: 40px;
+}
+.txtLimit20 {
+	padding-right: 20px;
+}
+.menuTxt {
+	font-size: 9px;
+}
+a.menuTxt:link {
+	color: rgb(0, 0, 0); text-decoration: underline;
+}
+a.menuTxt:visited {
+	color: rgb(0, 0, 0); text-decoration: underline;
+}
+a.menuTxt:active {
+	color: rgb(0, 0, 0); text-decoration: underline;
+}
+a.menuTxt:hover {
+	color: rgb(0, 0, 0); text-decoration: none;
+}
+.dagbogTopLine {
+	color: rgb(255, 255, 255); font-size: 18px;
+}
+.dagbogTopOrangeHvid {
+	color: rgb(240, 167, 28); font-size: 18px;
+}
+.dagbogTopPinkLine {
+	color: rgb(255, 255, 255); font-size: 18px; font-style: italic;
+}
+.dagbogTopLineSortGron {
+	font-family: Times New Roman; font-size: 18px;
+}
+.dagbogTopLineOrange {
+	color: rgb(240, 167, 28); font-size: 18px; font-style: italic;
+}
+.dagbogBrunSubheader {
+	color: rgb(109, 77, 46); font-size: 18px;
+}
+.dagbogBrunSubheaderSortGron {
+	color: rgb(13, 103, 26); font-family: Times New Roman; font-size: 18px;
+}
+.dagbogSortSubheader {
+	font-size: 18px;
+}
+.dagbogBordeauxSubheader {
+	color: rgb(150, 0, 24); font-family: Times New Roman; font-size: 18px;
+}
+.dagbogBlomstBordeauxSubheader {
+	color: rgb(150, 0, 24); font-size: 18px;
+}
+.dagbogHvidBordeauxSubheader {
+	color: rgb(150, 0, 24); font-family: Times New Roman; font-size: 18px;
+}
+.dagbogPinkSubheader {
+	color: rgb(226, 0, 127); font-size: 18px;
+}
+.dagbogTxtStart {
+	padding-top: 15px;
+}
+.txtBlok {
+	padding-right: 20px;
+}
+.fontTimes {
+	font-family: Times New Roman;
+}
+.fontTrebuchet {
+	font-family: Trebuchet MS;
+}
+.fontComic {
+	font-family: Comic Sans MS;
+}
+.rejsedagbogArial {
+	color: rgb(240, 167, 28); font-family: Arial; font-size: 18px; font-style: italic;
+}
+.vinHeaderRoed {
+	color: rgb(150, 0, 24); font-weight: bold;
+}
+.vinHeaderGron {
+	color: rgb(69, 123, 43); font-weight: bold;
+}
+.opskriftBrunBg {
+	background-color: rgb(109, 77, 46);
+}
+.opskriftGronBg {
+	background-color: rgb(175, 189, 165);
+}
+.opskriftGronHeader {
+	color: rgb(13, 103, 26); font-size: 18px;
+}
+.opskriftSubHeaderRoed {
+	color: rgb(150, 0, 24); font-style: italic;
+}
+.opskriftRoedTxt {
+	text-align: justify; padding-right: 20px; padding-left: 20px;
+}
+.havenHeaderGron {
+	color: rgb(0, 75, 44); font-size: 18px;
+}
+.havenHeaderGraa {
+	color: rgb(136, 136, 136); font-size: 18px;
+}
+.havenHeaderOrange {
+	color: rgb(240, 167, 28); font-size: 18px;
+}
+.havenHeaderBrun {
+	color: rgb(163, 147, 126); font-size: 18px;
+}
+.barnetTxtBlaa {
+	color: rgb(10, 45, 160);
+}
+.billedTxt {
+	font-size: 10px;
+}
+.billedTxtRevised {
+	font-size: 11px;
+}
+.familieHeaderBrun {
+	color: rgb(250, 224, 176);
+}
+.familieTxtBrun {
+	color: rgb(109, 77, 46);
+}
+.bifLink {
+	color: rgb(248, 194, 1);
+}
+.juleHeader {
+	font-size: 40px; font-style: italic; font-weight: bold;
+}
+.gaesteBogHeader {
+	font-size: 14px; font-weight: bold;
+}
+.builderMenuBtn {
+	top: 4px; position: relative;
+}
+.spacer10 {
+	padding-left: 10px;
+}
+.spacer15 {
+	padding-left: 15px;
+}
+.spacer40 {
+	padding-left: 40px;
+}
+.spacer20 {
+	padding-left: 20px;
+}
+.horVertSpacer20 {
+	padding: 20px;
+}
+.opskriftSpacer {
+	padding-left: 26px;
+}
+.opskriftTxtSpacer {
+	padding-left: 11px;
+}
+.rightSpacer {
+	padding-right: 20px;
+}
+.menuPlace {
+	padding-top: 10px; padding-left: 10px;
+}
+.babyTxt {
+	padding-right: 120px; padding-left: 120px;
+}
+.babyTxtUS {
+	padding-right: 16px; padding-bottom: 10px; padding-left: 16px;
+}
+.onskeTxt {
+	padding-right: 60px; padding-left: 60px;
+}
+.babyTxtBrun {
+	color: rgb(117, 89, 38);
+}
+.babyTxtGroen {
+	color: rgb(169, 212, 109);
+}
+.babyTxtPink {
+	color: rgb(255, 152, 208);
+}
+.babyTxtBallon {
+	color: rgb(226, 0, 127);
+}
+.babyTxtHvid {
+	color: rgb(255, 255, 255);
+}
+.babyTxthvid {
+	color: rgb(255, 255, 255);
+}
+.babyTxtSort {
+	color: rgb(0, 0, 0);
+}
+.babyTxtBlaa {
+	color: rgb(137, 178, 200);
+}
+.picHeaderPlacement {
+	margin-top: -6px;
+}
+.horSpacer {
+	padding-left: 10px;
+}
+.pageSpace {
+	padding: 20px;
+}
+.vinBgColorBrun {
+	background-color: rgb(250, 224, 176);
+}
+.panelPlace {
+	left: 690px; margin-top: -11px; position: absolute;
+}
+.picUplPlace {
+	left: 151px; margin-top: 0px; position: absolute;
+}
+.bobbelPlace {
+	left: 45px; margin-top: 10px; position: absolute;
+}
+.elementSpace {
+	padding-bottom: 40px;
+}
+.halfLineSpace {
+	padding-bottom: 5px;
+}
+.oneLineSpace {
+	padding-bottom: 10px;
+}
+.twoLineSpace {
+	padding-bottom: 20px;
+}
+.oneLineSpaceMargin {
+	margin-bottom: 10px;
+}
+.twoLineSpaceMargin {
+	margin-bottom: 20px;
+}
+.topLeftSpace {
+	padding-top: 5px; padding-left: 5px;
+}
+.mainContentTblSpace {
+	padding-top: 20px; padding-right: 5px; padding-bottom: 10px;
+}
+.input {
+	border: 1px solid rgb(204, 204, 204); border-image: none; width: 130px; color: rgb(0, 0, 0); font-family: Trebuchet MS; font-size: 12px;
+}
+#sortLink {
+	color: rgb(0, 0, 0);
+}
+#orangeLink {
+	color: rgb(240, 167, 28);
+}
+#brunLink {
+	color: rgb(109, 77, 46);
+}
+#hvidLink {
+	color: rgb(255, 255, 255);
+}
+#hvidLinkBlaaBG {
+	color: rgb(255, 255, 255); background-color: rgb(0, 27, 115);
+}
+#hipLink {
+	color: rgb(91, 55, 20);
+}
+.woodHeader {
+	color: rgb(255, 255, 255); font-family: Times New Roman, serif; font-size: 26px;
+}
+.woodSubHeader {
+	color: rgb(255, 255, 255); font-family: Times New Roman, serif; font-size: 20px;
+}
+.greenHeader {
+	color: rgb(187, 187, 47);
+}
+.blueHeader {
+	color: rgb(51, 153, 204);
+}
+.darkOrangeHeader {
+	color: rgb(255, 102, 0);
+}
+.lightOrangeHeader {
+	color: rgb(255, 153, 0);
+}
+.redHeader {
+	color: rgb(215, 0, 0);
+}
+.whiteUnderLine {
+	margin-top: 5px; margin-bottom: 8px; border-bottom-color: rgb(255, 255, 255); border-bottom-width: 2px; border-bottom-style: solid;
+}
+.videoBorder {
+	border: 1px solid rgb(204, 204, 204); border-image: none; width: 320px;
+}
+.videoBorderWhite {
+	border: 10px solid rgb(255, 255, 255); border-image: none; width: 320px;
+}
+.videoBorderWhite .video-messages-block {
+	border: 0px currentColor; border-image: none; width: 316px;
+}
+.videoBorderRed {
+	border: 10px solid rgb(215, 0, 0); border-image: none; width: 320px;
+}
+.videoBorderRed .video-messages-block {
+	border: 0px currentColor; border-image: none; width: 316px;
+}
+.videoBorderBlack {
+	border: 10px solid rgb(0, 0, 0); border-image: none; width: 320px;
+}
+.videoBorderBlack .video-messages-block {
+	border: 0px currentColor; border-image: none; width: 316px;
+}
+.videoBorderGrey {
+	border: 10px solid rgb(166, 166, 166); border-image: none; width: 320px;
+}
+.videoBorderGrey .video-messages-block {
+	border: 0px currentColor; border-image: none; width: 316px;
+}
+.videoBorderBlue {
+	border: 10px solid rgb(0, 105, 179); border-image: none; width: 320px;
+}
+.videoBorderBlue .video-messages-block {
+	border: 0px currentColor; border-image: none; width: 316px;
+}
+.videoBorderPink {
+	border: 10px solid rgb(226, 0, 127); border-image: none; width: 320px;
+}
+.videoBorderPink .video-messages-block {
+	border: 0px currentColor; border-image: none; width: 316px;
+}
+.videoBlok {
+	height: 461px; overflow: hidden;
+}
+.videoPlace {
+	top: -387px; display: block; position: relative;
+}
+a.video:link {
+	color: rgb(0, 0, 0); text-decoration: underline;
+}
+a.video:visited {
+	color: rgb(0, 0, 0); text-decoration: underline;
+}
+a.video:active {
+	color: rgb(0, 0, 0); text-decoration: underline;
+}
+a.video:hover {
+	color: rgb(0, 0, 0); text-decoration: none;
+}
+a.video {
+	font-size: 11px; text-decoration: underline;
+}
+.videoTxt {
+	width: 480px;
+}
+.dyreTop {
+	height: 122px; overflow: hidden;
+}
+.dyreHeader {
+	top: -105px; position: relative;
+}
+.ferieTop {
+	height: 145px; overflow: hidden; margin-bottom: 20px;
+}
+.ferieHeader {
+	top: -130px; position: relative;
+}
+.foedHeader {
+	margin-top: 25px; margin-bottom: 10px;
+}
+.kortTblBlaa {
+	padding: 6px; width: 100%;
+}
+.kortTblBlaa td {
+	border: 1px solid rgb(0, 105, 179); border-image: none; background-color: rgb(255, 255, 255);
+}
+.kortTblPink {
+	padding: 6px; width: 100%;
+}
+.kortTblPink td {
+	border: 1px solid rgb(226, 0, 127); border-image: none; background-color: rgb(255, 255, 255);
+}
+.kortTblBorder {
+	border: 4px solid rgb(255, 255, 255); border-image: none;
+}
+.counterWrap {
+	background: rgb(255, 255, 255); padding: 0px; width: 148px; height: 84px; color: rgb(64, 64, 64); margin-top: 25px; margin-left: 5px;
+}
+.counterPusher {
+	height: 30px;
+}
+.counterSmallPusher {
+	margin-top: 4px; margin-left: 2px;
+}
+.counterHeader {
+	background: rgb(180, 0, 0); height: 33px; text-align: left;
+}
+.counterHeaderText {
+	text-align: left; color: rgb(255, 255, 255); line-height: 1.3em; font-size: 0.8em; font-style: normal; font-weight: 400;
+}
+.counterTopBody {
+	background: rgb(255, 255, 255); margin: 0px; width: 145px; height: 30px; padding-top: 8px; padding-bottom: 0px; padding-left: 3px; float: left;
+}
+.counterBodyText a {
+	color: rgb(255, 0, 0);
+}
+.counterBodyText {
+	margin: 2px; color: rgb(0, 0, 0); line-height: normal; font-size: 0.8em; font-style: normal; font-variant: normal; font-weight: normal;
+}
+.counterLogoBox {
+	padding: 1px; width: 33px; height: 26px; margin-top: 3px; margin-left: 3px; float: left;
+}
+.counterBox {
+	background: rgb(0, 0, 0); margin: 2px; width: 16px; height: 16px; float: left;
+}
+.counterBodyHeader {
+	background: rgb(238, 156, 0); width: 148px; height: 3px; line-height: 1px; font-size: 1px; float: left;
+}
+.counterBodyAbove {
+	background: rgb(255, 255, 255); width: 148px; height: 19px; float: left;
+}
+.counterBodyFooter {
+	background: rgb(238, 156, 0); width: 148px; height: 5px; line-height: 1px; font-size: 1px; float: left;
+}
+.counterLogoSize {
+	width: 30px; height: 23px;
+}
+.supercatchooser td.catlist-area a {
+	line-height: 18px;
+}
+.invisible {
+	display: none;
+}
+.rtbBox {
+	font-size: 12px;
+}
+.rtb1 {
+	font-size: 8px;
+}
+.rtb2 {
+	font-size: 10px;
+}
+.rtb3 {
+	font-size: 12px;
+}
+.rtb4 {
+	font-size: 16px;
+}
+.rtb5 {
+	font-size: 24px;
+}
+.rtb6 {
+	font-size: 36px;
+}
+.rtbBox img {
+	vertical-align: bottom; float: none;
+}
+.tmpMainContent .rtbBox img {
+	margin: 0px; padding: 0px; float: none;
+}
+.portlinkitem {
+	padding-top: 25px; margin-left: 5px;
+}
+.ellipsis {
+	overflow: hidden; display: block; white-space: nowrap; -ms-text-overflow: ellipsis;
+}
+.dropshadow {
+	border: 1px solid rgb(204, 204, 204); border-image: none; box-shadow: 3px 3px 3px #dddddd; -webkit-box-shadow: 3px 3px 3px #dddddd; -moz-box-shadow: #dddddd 3px 3px 3px;
+}
+.youtube_video_container {
+	font-size: 0px;
+}
+.giftnew_header {
+	color: rgb(0, 99, 164); font-size: 19px;
+}
+.giftnew_header div {
+	font-size: 30px; font-weight: bold;
+}
+.rightbannerlink a {
+	color: rgb(136, 136, 136); line-height: 15px; font-size: 9px;
+}
+.bannerlinkdark {
+	color: rgb(255, 255, 255) !important;
+}
+.bannerlinklight {
+	color: rgb(0, 0, 0) !important;
+}
+.candleboxframe {
+	width: 160px; padding-top: 0px; margin-top: 6px; float: right;
+}
+span.rtbBox font {
+	background-color: transparent !important;
+}
+.center_alignment {
+	text-align: center;
+}
+#balloontextplace {
+	color: rgb(0, 0, 0);
+}
+.tmpMainBox {
+	width: 595px; -ms-word-wrap: break-word;
+}
+.userStatusEasterBunnyRadio input {
+	margin: 0px;
+}
+.ui-ssp-loadingIndicator-small {
+	background: url("/images/blog/ajax-loader.gif") no-repeat 0px 0px; width: 16px; height: 16px; vertical-align: middle; display: inline-block;
+}
+#ui-ssp-loadingIndicator-small {
+	background: url("/images/blog/ajax-loader.gif") no-repeat 0px 0px; margin: 0px 0px 0px 8px; padding: 0px; width: 16px; height: 16px; vertical-align: middle; display: inline-block;
+}
+a.Freemium_StatusBanner_UpgradeAds {
+	background: rgb(72, 148, 89); padding: 7px; color: rgb(255, 255, 255); line-height: 18px; font-size: 13px; text-decoration: none; display: block; min-height: 0px; text-shadow: 0px 0px 0px #fff;
+}
+a.Freemium_StatusBanner_UpgradeDomain {
+	background: rgb(72, 148, 89); padding: 7px; color: rgb(255, 255, 255); line-height: 18px; font-size: 13px; text-decoration: none; display: block; min-height: 0px; text-shadow: 0px 0px 0px #fff;
+}
+a.Freemium_StatusBanner_UpgradeAds:hover {
+	color: rgb(255, 255, 255);
+}
+a.Freemium_StatusBanner_UpgradeDomain:hover {
+	color: rgb(255, 255, 255);
+}
+a.Freemium_StatusBanner_UpgradeAds {
+	background: linear-gradient(rgb(46, 132, 192) 0%, rgb(5, 108, 179) 100%);
+}
+a.Freemium_StatusBanner_UpgradeDomain {
+	background: linear-gradient(rgb(105, 167, 119) 0%, rgb(72, 148, 89) 100%);
+}
+.ui-dialog #CategoryForm {
+	display: block !important;
+}
+.upgrade-to-v3 {
+	font-size: 16px;
+}
+.upgrade-to-v3 .content {
+	padding: 0px 12px;
+}
+.upgrade-to-v3 .content .images {
+	
+}
+.upgrade-to-v3 .content .images .col-2.image {
+	width: 50%; text-align: center; float: left;
+}
+.upgrade-to-v3 .content .images .col-2.image img {
+	max-width: 95%;
+}
+.upgrade-to-v3 .content .images .col-1.image {
+	text-align: center;
+}
+.upgrade-to-v3 .content .images .col-1.image img {
+	max-width: 95%;
+}
+.upgrade-to-v3 .content .images .col-1.image p {
+	font-size: 12px; font-style: italic;
+}
+.upgrade-to-v3 .content .section {
+	margin: 0px 0px 16px; clear: both;
+}
+.upgrade-to-v3 .content .button-container {
+	text-align: center;
+}
+.upgrade-to-v3 ul {
+	margin: 0px; padding: 0px 0px 0px 16px;
+}
+.upgrade-to-v3 ul li {
+	margin: 0px; padding: 0px;
+}
+.upgrade-to-v3 .btn-orange {
+	background: linear-gradient(rgb(254, 168, 20) 0%, rgb(241, 153, 25) 100%); padding: 0px 16px; border-radius: 4px; height: 40px; color: rgb(255, 255, 255); line-height: 40px; overflow: hidden; font-size: 18px; text-decoration: none; display: inline-block; box-shadow: 1px 1px 2px #666;
+}
+.btn {
+	border-width: 1px; border-style: solid; border-color: rgb(230, 230, 230) rgb(230, 230, 230) rgb(162, 162, 162); padding: 4px 14px; border-radius: 4px; border-image: none; text-align: center; color: rgb(51, 51, 51); line-height: 20px; font-size: 14px; margin-bottom: 0px; vertical-align: middle; display: inline-block; cursor: pointer; box-shadow: inset 0px 1px 0px rgba(255,255,255,0.2), 0px 1px 2px rgba(0,0,0,0.05); text-shadow: 0px 1px 1px rgba(255,255,255,0.75); background-image: linear-gradient(rgb(255, 255, 255), rgb(230, 230, 230)); background-repeat: repeat-x; background-color: rgb(245, 245, 245); -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05); -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05); -webkit-border-radius: 4px; -moz-border-radius: 4px;
+}
+.btn:hover {
+	color: rgb(51, 51, 51); background-color: rgb(230, 230, 230);
+}
+.btn:active {
+	color: rgb(51, 51, 51); background-color: rgb(230, 230, 230);
+}
+.active.btn {
+	color: rgb(51, 51, 51); background-color: rgb(230, 230, 230);
+}
+.disabled.btn {
+	color: rgb(51, 51, 51); background-color: rgb(230, 230, 230);
+}
+[disabled].btn {
+	color: rgb(51, 51, 51); background-color: rgb(230, 230, 230);
+}
+.btn:active {
+	
+}
+.active.btn {
+	
+}
+:first-child.btn {
+	
+}
+.btn:hover {
+	background-position: 0px -15px; transition:background-position 0.1s linear; color: rgb(51, 51, 51); text-decoration: none; background-color: rgb(230, 230, 230);
+}
+.btn:focus {
+	outline: rgb(51, 51, 51) dotted thin; outline-offset: -2px;
+}
+.active.btn {
+	outline: 0px; box-shadow: inset 0px 2px 4px rgba(0,0,0,0.15), 0px 1px 2px rgba(0,0,0,0.05); background-image: none; background-color: rgb(230, 230, 230);
+}
+.btn:active {
+	outline: 0px; box-shadow: inset 0px 2px 4px rgba(0,0,0,0.15), 0px 1px 2px rgba(0,0,0,0.05); background-image: none; background-color: rgb(230, 230, 230);
+}
+.disabled.btn {
+	cursor: default; opacity: 0.65; box-shadow: none; background-image: none; background-color: rgb(230, 230, 230);
+}
+[disabled].btn {
+	cursor: default; opacity: 0.65; box-shadow: none; background-image: none; background-color: rgb(230, 230, 230);
+}
+.btn-large {
+	padding: 9px 14px; border-radius: 5px; line-height: normal; font-size: 16px;
+}
+.btn-large [class^='icon-'] {
+	margin-top: 2px;
+}
+.btn-small {
+	padding: 3px 9px; line-height: 14px; font-size: 12px;
+}
+.btn-small [class^='icon-'] {
+	margin-top: 0px;
+}
+.btn-mini {
+	padding: 2px 6px; line-height: 16px; font-size: 11px;
+}
+.btn-block {
+	width: 100%; padding-right: 0px; padding-left: 0px; display: block; box-sizing: border-box;
+}
+.btn-block + .btn-block {
+	margin-top: 5px;
+}
+.active.btn-blue {
+	color: rgba(255, 255, 255, 0.75);
+}
+.active.btn-orange {
+	color: rgba(255, 255, 255, 0.75);
+}
+.active.btn-red {
+	color: rgba(255, 255, 255, 0.75);
+}
+.active.btn-green {
+	color: rgba(255, 255, 255, 0.75);
+}
+.active.btn-info {
+	color: rgba(255, 255, 255, 0.75);
+}
+.active.btn-inverse {
+	color: rgba(255, 255, 255, 0.75);
+}
+.btn {
+	border-color: rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.25);
+}
+.btn-blue {
+	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25); color: rgb(255, 255, 255); text-shadow: 0px -1px 0px rgba(0,0,0,0.25); background-image: linear-gradient(rgb(0, 136, 204), rgb(0, 68, 204)); background-repeat: repeat-x; background-color: rgb(0, 109, 204);
+}
+.btn-blue:hover {
+	color: rgb(255, 255, 255); background-color: rgb(0, 68, 204);
+}
+.btn-blue:active {
+	color: rgb(255, 255, 255); background-color: rgb(0, 68, 204);
+}
+.active.btn-blue {
+	color: rgb(255, 255, 255); background-color: rgb(0, 68, 204);
+}
+.disabled.btn-blue {
+	color: rgb(255, 255, 255); background-color: rgb(0, 68, 204);
+}
+[disabled].btn-blue {
+	color: rgb(255, 255, 255); background-color: rgb(0, 68, 204);
+}
+.btn-blue:active {
+	
+}
+.active.btn-blue {
+	
+}
+.btn-orange {
+	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25); color: rgb(255, 255, 255); text-shadow: 0px -1px 0px rgba(0,0,0,0.25); background-image: linear-gradient(rgb(251, 180, 80), rgb(248, 148, 6)); background-repeat: repeat-x; background-color: rgb(250, 167, 50);
+}
+.btn-orange:hover {
+	color: rgb(255, 255, 255); background-color: rgb(248, 148, 6);
+}
+.btn-orange:active {
+	color: rgb(255, 255, 255); background-color: rgb(248, 148, 6);
+}
+.btn-orange:focus {
+	color: rgb(255, 255, 255); background-color: rgb(248, 148, 6);
+}
+.active.btn-orange {
+	color: rgb(255, 255, 255); background-color: rgb(248, 148, 6);
+}
+.disabled.btn-orange {
+	color: rgb(255, 255, 255); background-color: rgb(248, 148, 6);
+}
+[disabled].btn-orange {
+	color: rgb(255, 255, 255); background-color: rgb(248, 148, 6);
+}
+.btn-orange:active {
+	
+}
+.active.btn-orange {
+	
+}
+.btn-red {
+	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25); color: rgb(255, 255, 255); text-shadow: 0px -1px 0px rgba(0,0,0,0.25); background-image: linear-gradient(rgb(238, 95, 91), rgb(189, 54, 47)); background-repeat: repeat-x; background-color: rgb(218, 79, 73);
+}
+.btn-red:hover {
+	color: rgb(255, 255, 255); background-color: rgb(189, 54, 47);
+}
+.btn-red:active {
+	color: rgb(255, 255, 255); background-color: rgb(189, 54, 47);
+}
+.active.btn-red {
+	color: rgb(255, 255, 255); background-color: rgb(189, 54, 47);
+}
+.disabled.btn-red {
+	color: rgb(255, 255, 255); background-color: rgb(189, 54, 47);
+}
+[disabled].btn-red {
+	color: rgb(255, 255, 255); background-color: rgb(189, 54, 47);
+}
+.btn-red:active {
+	
+}
+.active.btn-red {
+	
+}
+.btn-green {
+	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25); color: rgb(255, 255, 255); text-decoration: none; text-shadow: 0px -1px 0px rgba(0,0,0,0.25); background-image: linear-gradient(rgb(98, 196, 98), rgb(81, 163, 81)); background-repeat: repeat-x; background-color: rgb(91, 183, 91);
+}
+.btn-green:hover {
+	color: rgb(255, 255, 255); background-color: rgb(81, 163, 81);
+}
+.btn-green:active {
+	color: rgb(255, 255, 255); background-color: rgb(81, 163, 81);
+}
+.active.btn-green {
+	color: rgb(255, 255, 255); background-color: rgb(81, 163, 81);
+}
+.disabled.btn-green {
+	color: rgb(255, 255, 255); background-color: rgb(81, 163, 81);
+}
+[disabled].btn-green {
+	color: rgb(255, 255, 255); background-color: rgb(81, 163, 81);
+}
+.btn-green:active {
+	
+}
+.active.btn-green {
+	
+}
+.btn-info {
+	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25); color: rgb(255, 255, 255); text-shadow: 0px -1px 0px rgba(0,0,0,0.25); background-image: linear-gradient(rgb(91, 192, 222), rgb(47, 150, 180)); background-repeat: repeat-x; background-color: rgb(73, 175, 205);
+}
+.btn-info:hover {
+	color: rgb(255, 255, 255); background-color: rgb(47, 150, 180);
+}
+.btn-info:active {
+	color: rgb(255, 255, 255); background-color: rgb(47, 150, 180);
+}
+.active.btn-info {
+	color: rgb(255, 255, 255); background-color: rgb(47, 150, 180);
+}
+.disabled.btn-info {
+	color: rgb(255, 255, 255); background-color: rgb(47, 150, 180);
+}
+[disabled].btn-info {
+	color: rgb(255, 255, 255); background-color: rgb(47, 150, 180);
+}
+.btn-info:active {
+	
+}
+.active.btn-info {
+	
+}
+.btn-inverse {
+	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25); color: rgb(255, 255, 255); text-shadow: 0px -1px 0px rgba(0,0,0,0.25); background-image: linear-gradient(rgb(68, 68, 68), rgb(34, 34, 34)); background-repeat: repeat-x; background-color: rgb(54, 54, 54);
+}
+.btn-inverse:hover {
+	color: rgb(255, 255, 255); background-color: rgb(34, 34, 34);
+}
+.btn-inverse:active {
+	color: rgb(255, 255, 255); background-color: rgb(34, 34, 34);
+}
+.active.btn-inverse {
+	color: rgb(255, 255, 255); background-color: rgb(34, 34, 34);
+}
+.disabled.btn-inverse {
+	color: rgb(255, 255, 255); background-color: rgb(34, 34, 34);
+}
+[disabled].btn-inverse {
+	color: rgb(255, 255, 255); background-color: rgb(34, 34, 34);
+}
+.btn-inverse:active {
+	
+}
+.active.btn-inverse {
+	
+}
+.btn-link {
+	box-shadow: none; background-image: none; background-color: transparent;
+}
+.btn-link:active {
+	box-shadow: none; background-image: none; background-color: transparent;
+}
+.btn-link {
+	border-color: transparent; border-radius: 0px; color: rgb(0, 136, 204); cursor: pointer;
+}
+.btn-link:hover {
+	color: rgb(0, 85, 128); text-decoration: underline; background-color: transparent;
+}
+.btn-group {
+	font-size: 0px; white-space: nowrap; position: relative;
+}
+.btn-group + .btn-group {
+	margin-left: 5px;
+}
+.btn-toolbar {
+	font-size: 0px; margin-top: 10px; margin-bottom: 10px;
+}
+.btn-toolbar .btn-group {
+	display: inline-block;
+}
+.btn-toolbar .btn + .btn {
+	margin-left: 5px;
+}
+.btn-toolbar .btn-group + .btn {
+	margin-left: 5px;
+}
+.btn-toolbar .btn + .btn-group {
+	margin-left: 5px;
+}
+.btn-group > .btn {
+	border-radius: 0px; position: relative;
+}
+.btn-group > .btn + .btn {
+	margin-left: -1px;
+}
+.btn-group > .btn {
+	font-size: 14px;
+}
+.btn-group > .dropdown-menu {
+	font-size: 14px;
+}
+.btn-group > .btn-mini {
+	font-size: 11px;
+}
+.btn-group > .btn-small {
+	font-size: 12px;
+}
+.btn-group > .btn-large {
+	font-size: 16px;
+}
+.btn-group > :first-child.btn {
+	margin-left: 0px; border-top-left-radius: 4px; border-bottom-left-radius: 4px; -webkit-border-bottom-left-radius: 4px; -webkit-border-top-left-radius: 4px; -moz-border-radius-bottomleft: 4px; -moz-border-radius-topleft: 4px;
+}
+.btn-group > :last-child.btn {
+	border-top-right-radius: 4px; border-bottom-right-radius: 4px; -webkit-border-top-right-radius: 4px; -webkit-border-bottom-right-radius: 4px; -moz-border-radius-topright: 4px; -moz-border-radius-bottomright: 4px;
+}
+.btn-group > .dropdown-toggle {
+	border-top-right-radius: 4px; border-bottom-right-radius: 4px; -webkit-border-top-right-radius: 4px; -webkit-border-bottom-right-radius: 4px; -moz-border-radius-topright: 4px; -moz-border-radius-bottomright: 4px;
+}
+.btn-group > :first-child.large.btn {
+	margin-left: 0px; border-top-left-radius: 6px; border-bottom-left-radius: 6px; -webkit-border-bottom-left-radius: 6px; -webkit-border-top-left-radius: 6px; -moz-border-radius-bottomleft: 6px; -moz-border-radius-topleft: 6px;
+}
+.btn-group > :last-child.large.btn {
+	border-top-right-radius: 6px; border-bottom-right-radius: 6px; -webkit-border-top-right-radius: 6px; -webkit-border-bottom-right-radius: 6px; -moz-border-radius-topright: 6px; -moz-border-radius-bottomright: 6px;
+}
+.btn-group > .dropdown-toggle.large {
+	border-top-right-radius: 6px; border-bottom-right-radius: 6px; -webkit-border-top-right-radius: 6px; -webkit-border-bottom-right-radius: 6px; -moz-border-radius-topright: 6px; -moz-border-radius-bottomright: 6px;
+}
+.btn-group > .btn:hover {
+	z-index: 2;
+}
+.btn-group > .btn:focus {
+	z-index: 2;
+}
+.btn-group > .btn:active {
+	z-index: 2;
+}
+.btn-group > .active.btn {
+	z-index: 2;
+}
+.btn-group .dropdown-toggle:active {
+	outline: 0px;
+}
+.open.btn-group .dropdown-toggle {
+	outline: 0px;
+}
+.btn-group > .btn + .dropdown-toggle {
+	padding-right: 8px; padding-left: 8px; box-shadow: inset 1px 0px 0px rgba(255,255,255,0.125), inset 0px 1px 0px rgba(255,255,255,0.2), 0px 1px 2px rgba(0,0,0,0.05);
+}
+.btn-group > .btn-mini + .dropdown-toggle {
+	padding-right: 5px; padding-left: 5px;
+}
+.btn-group > .btn-large + .dropdown-toggle {
+	padding-right: 12px; padding-left: 12px;
+}
+.open.btn-group .dropdown-toggle {
+	box-shadow: inset 0px 2px 4px rgba(0,0,0,0.15), 0px 1px 2px rgba(0,0,0,0.05); background-image: none;
+}
+.open.btn-group .dropdown-toggle.btn {
+	background-color: rgb(230, 230, 230);
+}
+.open.btn-group .dropdown-toggle.btn-blue {
+	background-color: rgb(0, 68, 204);
+}
+.open.btn-group .dropdown-toggle.btn-orange {
+	background-color: rgb(248, 148, 6);
+}
+.open.btn-group .dropdown-toggle.btn-red {
+	background-color: rgb(189, 54, 47);
+}
+.open.btn-group .dropdown-toggle.btn-green {
+	background-color: rgb(81, 163, 81);
+}
+.open.btn-group .dropdown-toggle.btn-info {
+	background-color: rgb(47, 150, 180);
+}
+.open.btn-group .dropdown-toggle.btn-inverse {
+	background-color: rgb(34, 34, 34);
+}
+.btn .caret {
+	margin-top: 8px; margin-left: 0px;
+}
+.btn-mini .caret {
+	margin-top: 6px;
+}
+.btn-small .caret {
+	margin-top: 6px;
+}
+.btn-large .caret {
+	margin-top: 6px;
+}
+.btn-large .caret {
+	border-top-width: 5px; border-right-width: 5px; border-left-width: 5px;
+}
+.dropup .btn-large .caret {
+	border-top-color: currentColor; border-bottom-color: rgb(0, 0, 0); border-top-width: 0px; border-bottom-width: 5px; border-top-style: none; border-bottom-style: solid;
+}
+.btn-blue .caret {
+	border-top-color: rgb(255, 255, 255); border-bottom-color: rgb(255, 255, 255);
+}
+.btn-orange .caret {
+	border-top-color: rgb(255, 255, 255); border-bottom-color: rgb(255, 255, 255);
+}
+.btn-red .caret {
+	border-top-color: rgb(255, 255, 255); border-bottom-color: rgb(255, 255, 255);
+}
+.btn-info .caret {
+	border-top-color: rgb(255, 255, 255); border-bottom-color: rgb(255, 255, 255);
+}
+.btn-green .caret {
+	border-top-color: rgb(255, 255, 255); border-bottom-color: rgb(255, 255, 255);
+}
+.btn-inverse .caret {
+	border-top-color: rgb(255, 255, 255); border-bottom-color: rgb(255, 255, 255);
+}
+.btn-group-vertical {
+	display: inline-block;
+}
+.btn-group-vertical .btn {
+	border-radius: 0px; width: 100%; float: none; display: block;
+}
+.btn-group-vertical .btn + .btn {
+	margin-top: -1px; margin-left: 0px;
+}
+.btn-group-vertical :first-child.btn {
+	border-radius: 4px 4px 0px 0px;
+}
+.btn-group-vertical :last-child.btn {
+	border-radius: 0px 0px 4px 4px;
+}
+.btn-group-vertical :first-child.btn-large {
+	border-radius: 6px 6px 0px 0px;
+}
+.btn-group-vertical :last-child.btn-large {
+	border-radius: 0px 0px 6px 6px;
+}
+.fullpagedim {
+	background: rgba(0, 0, 0, 0.6); left: 0px; top: 0px; right: 0px; bottom: 0px; display: block; position: fixed; z-index: 990;
+}
+.ontop {
+	display: block; position: relative; z-index: 1000;
+}
+.domain-purchased {
+	font-size: 14px;
+}
+.domain-purchased .thanks-note {
+	padding: 12px; border-radius: 4px; color: rgb(51, 51, 51); font-weight: bold; background-color: rgb(223, 240, 216);
+}
+.domain-purchased ul li {
+	margin-bottom: 8px;
+}
+.domain-purchased .domain-warning {
+	background: rgb(254, 230, 115); margin: 0px auto 16px; padding: 16px; border-radius: 4px; color: rgb(102, 102, 102); font-size: 12px;
+}
+.domain-purchased .domain-warning .title {
+	font-size: 14px; font-weight: bold; margin-bottom: 16px;
+}
+.domain-purchased .domain-warning .content {
+	background: none; margin: 0px; padding: 0px; text-align: left;
+}
+.domain-purchased .btn {
+	padding: 6px 24px; border-radius: 6px; border: 1px solid rgb(76, 174, 76); transition:0.2s linear; border-image: none; text-align: center; color: rgb(255, 255, 255); line-height: 2; font-size: 14px; font-weight: 400; text-decoration: none; margin-bottom: 0px; vertical-align: middle; display: inline-block; white-space: nowrap; cursor: pointer; box-shadow: 0px 0px 0px; text-shadow: 0px 0px 0px; background-image: none; background-color: rgb(92, 184, 92); -moz-user-select: none;
+}
+.splash-modal {
+	top: 10%; height: 400px;
+}
+.splash-title {
+	line-height: 38px; font-size: 28px;
+}
+.splash-modal-3 {
+	height: 440px;
+}
+.splash-modal-centered {
+	text-align: center; margin-right: auto; margin-left: auto;
+}
+.splash-modal-cancel {
+	top: -30px; right: -2%; font-size: 20px; position: relative;
+}
+.splash-modal-size170 {
+	font-size: 170%; font-weight: 700;
+}
+.splash-modal-size150 {
+	font-size: 150%; font-weight: 700;
+}
+.splash-modal-size140 {
+	font-size: 140%;
+}
+.splash-modal-size130 {
+	font-size: 130%;
+}
+.splash-modal-size130-boldlisting {
+	line-height: 30px; font-size: 130%; font-weight: 700;
+}
+.splash-modal-size120 {
+	font-size: 120%;
+}
+.splash-modal-size110 {
+	font-size: 110%;
+}
+.splash-modal-header {
+	
+}
+.splash-modal-body {
+	
+}
+.splash-modal-footer {
+	width: 100%;
+}
+.splash-dimmed {
+	left: 0px; top: 0px; width: 100%; height: 100%; right: 0px; bottom: 0px; position: fixed; z-index: 1800; background-color: rgba(0, 0, 0, 0.5);
+}
+.in.tooltip {
+	opacity: 1;
+}
+.tooltip-inner {
+	padding: 15px; font-family: "Trebuchet MS"; font-size: 14px; opacity: 1; background-color: rgb(44, 62, 80);
+}
+.left.tooltip .tooltip-arrow {
+	border-width: 5px 0px 5px 5px; top: 50%; right: 0px; margin-top: -5px; border-left-color: rgb(44, 62, 80);
+}
+.add-page-other-templates-align {
+	margin-left: 12px;
+}

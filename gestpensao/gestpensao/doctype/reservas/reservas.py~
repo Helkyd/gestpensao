@@ -17,7 +17,7 @@ class RESERVAS(Document):
 
 	def autoname(self):
 		self.codigo = make_autoname('RESERVA/' + '.#####')
-		self.name = make_autoname('RESERVA/' + '.#####')
+		self.name = self.codigo
 		self.nome_empresa= frappe.db.get_value("Empresa",None,"nome_empresa")
 
 	def validate(self):
@@ -80,12 +80,17 @@ def verifica_check_in():
 	def __unicode__(self):
 		
 		# loop no Doc a procura de quartos com limite da DATA de ENTRADA.
-		Reserv = "RESULTADO " + frappe.db.sql("""SELECT codigo,numero_quarto,check_in,check_out,reservation_status 
+		Reserv = "RESULTADO " + frappe.db.sql("""SELECT codigo,numero_quarto,check_in,check_out,reservation_status, pay_advance 
 				FROM `tabRESERVAS` WHERE reservation_status = "Nova" 
-				and check_in >=%s """, utils.today())
-		msgprint (_("asdfsafsfsadfsdafsfsfsdaaasdfsafsfsfasfsaf " + len(Reserv)))
+				and check_in <=%s """, utils.today(), as_dict=True)
+		frappe.msgprint (_("asdfsafsfsadfsdafsfsfsdaaasdfsafsfsfasfsaf " + len(Reserv)))
 		if len(Reserv) >0:
 			for d in Reserv:
-				d = unicode(Reserv[0][0]) + ";" + d
-				frappe.msgprint(_("O seguintes Quartos {0} seram liberados dentro de 5 minutos senao forem ocupados").format(d))
+				if (frappe.utils.data.time_diff_in_hours(frappe.utils.now(),Reserv[d].check_in) > 2):
+					reser = frappe.get_doc("RESERVAS",Reserv[d].codigo)
+					reser._comments = "Reserva Cancelada " + (frappe.utils.data.time_diff_in_hours(frappe.utils.now(),Reserv[d].check_in))
+
+					reser.save()
+
+					frappe.msgprint(_("O seguintes Quartos {0} seram liberados dentro de 5 minutos senao forem ocupados").format(d))
 

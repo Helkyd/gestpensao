@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<!-- Built on Frappe. https://frappe.io/ -->
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Blog Post List</title>
+	<meta name="generator" content="frappe">
+
+    
+	<link rel="shortcut icon"
+		href="/files/favicon.ico"
+		type="image/x-icon">
+	<link rel="icon"
+		href="/files/favicon.ico"
+		type="image/x-icon">
+    
+
+		
+		<link type="text/css" rel="stylesheet" href="https://bootswatch.com/simplex/bootstrap.min.css">
+		<link type="text/css" rel="stylesheet" href="/website_theme.css">
+		<link type="text/css" rel="stylesheet" href="/assets/frappe/css/font/open-sans/open-sans.css">
+		<link type="text/css" rel="stylesheet" href="/assets/css/frappe-web.css">
+		<link type="text/css" rel="stylesheet" href="/assets/erpnext/css/website.css"><script>
+    window.frappe = {
+    	page_ready_events: {},
+    	ready: function(fn) {
+    		if (!frappe.page_ready_events[location.pathname]) {
+    			frappe.page_ready_events[location.pathname] = []
+    		}
+    		frappe.page_ready_events[location.pathname].push(fn);
+    	}
+    }
+    window.dev_server = 0;
+    </script>
+</head>
+<body data-path="blog">
+	<div class="main-section">
+		<div>
+				<header>
+	<nav class="navbar navbar-default navbar-main" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<!-- <a class="navbar-brand ellipsis" href="/"> -->
+				<a class="navbar-brand ellipsis"
+					 href="/">
+					<span><img src="/files/castlecraft-word.png" style="max-height: 20px;"></span>
+				</a>
+				<!-- <a class="pull-right visible-xs navbar-toggle toggle-sidebar">
+					<i class="octicon octicon-three-bars"></i>
+				</a> -->
+				<div class="dropdown">
+					<button class="btn btn-default navbar-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+						<i class="octicon octicon-three-bars"></i>
+					</button>
+					<ul class="dropdown-menu dropdown-menu-right">
+<li data-label='About Us' >
+	<a href="/about"
+		
+		>
+	About Us</a></li><li data-label='Products' >
+	<a href="/products"
+		
+		>
+	Products</a></li><li data-label='Structural Services' >
+	<a href="/services"
+		
+		>
+	Structural Services</a></li><li data-label='Blog' >
+	<a href="/blog"
+		
+		>
+	Blog</a></li><li data-label='Clients' >
+	<a href="/clients"
+		
+		>
+	Clients</a></li><li data-label='Jobs' >
+	<a href="/jobs"
+		
+		>
+	Jobs</a></li><li data-label='Contact' >
+	<a href="/contact"
+		
+		>
+	Contact</a></li>
+
+<li class="divider"></li>
+<!-- post login tools -->
+<li data-label="My Account" 
+ class=" logged-in" ><a href="/me" 
+	rel="nofollow">
+	My Account
+	</a></li><li data-label="Logout" 
+ class=" logged-in" ><a href="/?cmd=web_logout" 
+	rel="nofollow">
+	Logout
+	</a></li>
+<li class="btn-login-area"><a href="/login">Login</a></li>
+
+
+</ul>
+				</div>
+			</div>
+			<div class="hidden-xs">
+				
+				<ul class="nav navbar-nav navbar-left"><li data-label='About Us' >
+	<a href="/about"
+		
+		>
+	About Us</a></li><li data-label='Products' >
+	<a href="/products"
+		
+		>
+	Products</a></li><li data-label='Structural Services' >
+	<a href="/services"
+		
+		>
+	Structural Services</a></li><li data-label='Blog' >
+	<a href="/blog"
+		
+		>
+	Blog</a></li><li data-label='Clients' >
+	<a href="/clients"
+		
+		>
+	Clients</a></li><li data-label='Jobs' >
+	<a href="/jobs"
+		
+		>
+	Jobs</a></li>
+</ul>
+<ul class="nav navbar-nav navbar-right"><li data-label='Contact' >
+	<a href="/contact"
+		
+		>
+	Contact</a></li>
+	
+		
+	<li class="shopping-cart">
+		<div class="cart-icon small">
+			<a class="dropdown-toggle" href="#" data-toggle="dropdown" id="navLogin">
+				Cart <span class="badge-wrapper" id="cart-count"></span>
+			</a>
+			<div id="cart-overlay" class="dropdown-menu shopping-cart-menu"></div>
+		</div>
+	 </li>
+
+	
+	<!-- post login tools -->
+
+<li class="dropdown logged-in" id="website-post-login"
+	data-label="website-post-login" style="display: none">
+	<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+		<span class="user-image-wrapper"></span>
+		<span class="full-name"></span>
+		<b class="caret"></b>
+	</a>
+    <ul class="dropdown-menu" role="menu"><li data-label="My Account" 
+			><a href="/me" 
+					rel="nofollow">
+					My Account
+				</a></li><li data-label="Logout" 
+			><a href="/?cmd=web_logout" 
+					rel="nofollow">
+					Logout
+				</a></li></ul>
+</li>
+
+<li class="btn-login-area"><a href="/login">Login</a></li>
+
+
+</ul>
+				
+			</div>
+		</div>
+	</nav>
+</header><div class="hero-and-content">
+                <div data-html-block="hero"></div>
+                <div class="container" data-html-block="content">
+                
+<div class="page-container" id="page-list" data-path="announcement"
+	>
+			<div class="row ">
+				
+				<div class=" page-content col-sm-12 ">
+					<div class="page-content-wrapper">
+						<div class="row page-head">
+							<div class="col-sm-8 col-xs-6">
+								
+								<div class="page-breadcrumbs">
+									
+	
+<ul class="breadcrumb">
+	<li>
+		<span class="icon icon-angle-left"></span>
+		<a href="/me">
+		My Account</a>
+	</li>
+	
+</ul>
+
+
+								</div>
+								
+								
+	<h1>Blog Post List</h1>
+
+							</div>
+							<div class="col-sm-4 col-xs-6">
+								
+									<div class="page-search-block">
+									
+										<div class="item-search text-muted pull-right">
+	<input type="text" class="item-search-input"
+		placeholder="Search" autocomplete="off">
+	<i class="octicon octicon-search pull-right" style='cursor: pointer;'></i>
+</div>
+<div class="clearfix pull-right" style="width:100%;">
+	<h5 class="item-search-results text-muted" style="margin-right: 30px;"></h5>
+	<p class="pull-right" style="margin-top: -28px;">
+		<a style="display: none;" href="javascript:history.back();" class="octicon octicon-x text-extra-muted clear" title="Clear Search" ></a>
+	</p>
+</div>
+
+<script>
+frappe.ready(function() {
+	if(get_url_arg("search")) {
+		var txt = get_url_arg("search");
+		$(".item-search-results").html("Search results for: " + txt);
+		$(".item-search").toggle(false);
+		$(".clear").toggle(true);
+	}
+	var thread = null;
+	function find_result(t) {
+		var search_link = "" || location.pathname;
+		window.location.href=search_link + "?search=" + t;
+	}
+
+	$(".item-search-input").keyup(function(e) {
+		if(e.which===13) {
+			find_result($(this).val());
+		}
+	});
+	$('.octicon-search').on('click', function() {
+		find_result($(".item-search-input").val());
+	})
+	$(".form-search").on("submit", function() { return false; });
+});
+</script>
+									
+									</div>
+								
+
+								
+								<div class="page-header-actions-block">
+									
+
+
+								</div>
+								
+							</div>
+						</div>
+					</div>
+					<div class="page_content">
+    <div class="website-list" data-doctype="Blog Post"
+        data-txt="[notxt]">
+        <!--  -->
+
+		
+
+		
+
+    	<div class="result">
+    		
+    			<div class="web-list-item blog-list-item">
+	<div class="row">
+		<div class="col-xs-12">
+			<h1 class="blog-header"><a href="/blog/general/repair-costs-for-societies-and-landlord-owned-tenant-occupied-buildings">Repair Costs for Societies and Landlord owned-tenant occupied buildings</a></h1>
+			<p class="post-description">Most clients ask us repair cost contribution strategies after structural audit. Here are a few common suggestions we give.</p>
+			<p class="post-by text-muted small">
+				<a href="/blog?by=riddhimaan&by_name=Riddhimaan Nandgaonkar" class="no-decoration">By Riddhimaan Nandgaonkar</a>
+				<i class="blog-dot"></i> 19 November 2014
+				<i class="blog-dot"></i>
+				<a href="/blog/general" class="no-decoration">General</a>
+				<i class="blog-dot"></i> No comments yet
+			</p>
+		</div>
+	</div>
+</div>
+    		
+    			<div class="web-list-item blog-list-item">
+	<div class="row">
+		<div class="col-xs-12">
+			<h1 class="blog-header"><a href="/blog/castlecraft-news/structural-audit-article-in-sakal">Structural Audit article in Sakal</a></h1>
+			<p class="post-description">An article on structural audit from our director Mrs. Maanasi Nandgaonkar in a Marathi daily newspaper Sakal on 19th May 2014.</p>
+			<p class="post-by text-muted small">
+				<a href="/blog?by=riddhimaan&by_name=Riddhimaan Nandgaonkar" class="no-decoration">By Riddhimaan Nandgaonkar</a>
+				<i class="blog-dot"></i> 19 May 2014
+				<i class="blog-dot"></i>
+				<a href="/blog/castlecraft-news" class="no-decoration">Castlecraft News</a>
+				<i class="blog-dot"></i> No comments yet
+			</p>
+		</div>
+	</div>
+</div>
+    		
+    	</div>
+    	<div class="more-block hide">
+    		<button class="btn btn-default btn-more btn-sm">More</button>
+    	</div>
+    </div></div>
+				</div>
+			</div>
+</div>
+
+                </div>
+            </div></div>
+		<div><footer class="web-footer">
+	<section class="footer-links">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6 text-left">
+					<div class="row">
+					
+					</div>
+				</div>
+
+				<div class="col-sm-6 text-right">
+					
+<div class='input-group input-group-sm pull-right footer-subscribe'>
+	<input class="form-control" type="text" id="footer-subscribe-email"
+		placeholder="Your email address...">
+	<span class='input-group-btn'>
+		<button class="btn btn-default" type="button"
+			id="footer-subscribe-button">Get Updates</button>
+	</span>
+</div>
+
+<script>
+frappe.ready(function() {
+	$("#footer-subscribe-button").click(function() {
+
+		if($("#footer-subscribe-email").val()) {
+			$("#footer-subscribe-email").attr('disabled', true);
+			$("#footer-subscribe-button").html("Sending...")
+				.attr("disabled", true);
+			erpnext.subscribe_to_newsletter({
+				email: $("#footer-subscribe-email").val(),
+				callback: function(r) {
+					if(!r.exc) {
+						$("#footer-subscribe-button").html(__("Added"))
+							.attr("disabled", true);
+					} else {
+						$("#footer-subscribe-button").html(__("Error: Not a valid id?"))
+							.addClass("btn-danger").attr("disabled", false);
+						$("#footer-subscribe-email").val("").attr('disabled', false);
+					}
+				}
+			});
+		}
+		else
+			frappe.msgprint(frappe._("Please enter email address"))
+	});
+});
+</script>
+
+
+				</div>
+			</div>
+			<div class="row footer-bottom-line">
+				<div class="text-muted small col-sm-6">
+					
+						&copy; Castlecraft Properties and Engineering Services Pvt Ltd
+					
+				</div>
+				
+				<div class="text-muted small col-sm-6 text-right footer-powered">
+					
+						<a href="https://erpnext.com?source=website_footer" target="_blank" class="text-muted">
+		Powered by ERPNext</a>
+					
+				</div>
+			</div>
+		</div>
+	</section>
+</footer></div>
+	</div>
+
+	<!-- js should be loaded in body! -->
+	<script type="text/javascript"
+		src="/assets/frappe/js/lib/jquery/jquery.min.js"></script>
+	<script type="text/javascript"
+		src="/assets/js/frappe-web.min.js"></script>
+	<script type="text/javascript" src="/website_script.js"></script>
+	<script type="text/javascript" src="/assets/js/erpnext-web.min.js"></script>
+<script>frappe.ready(function() {
+	var next_start = 20;
+	var result_wrapper = $(".website-list .result");
+
+	$(".website-list .btn-more").on("click", function() {
+		var btn = $(this);
+
+		var data = $.extend(get_query_params(), {
+			doctype: "Blog Post",
+			txt: "",
+			limit_start: next_start,
+			pathname: location.pathname,
+			is_web_form: "{{ is_web_form }}"
+		});
+
+		btn.prop("disabled", true);
+		return $.ajax({
+			url:"/api/method/frappe.www.list.get",
+			data: data,
+			statusCode: {
+				200: function(data) {
+					var data = data.message;
+					next_start = data.next_start;
+					$.each(data.result, function(i, d) {
+						$(d).appendTo(result_wrapper);
+					});
+					toggle_more(data.show_more);
+				}
+			}
+		}).always(function() {
+			btn.prop("disabled", false);
+		});
+	});
+
+	var toggle_more = function(show) {
+		if (!show) {
+			$(".website-list .more-block").addClass("hide");
+		}
+	};
+	
+	if($('.navbar-header .navbar-toggle:visible').length === 1)
+	{
+		$('.page-head h1').addClass('list-head').click(function(){
+			window.history.back();
+	 	});
+	}
+});</script>
+
+
+	<script>frappe.csrf_token = "None";</script></body>
+</html>

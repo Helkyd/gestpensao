@@ -1,0 +1,42 @@
+.modal-pro {
+	margin: 100px auto 0px; border-radius: 2px; left: 0px; top: 0px; width: 700px; right: 0px; position: absolute; z-index: 100; min-height: 250px; box-shadow: 0px 3px 500px rgba(0,0,0,0.5); background-clip: padding-box; background-color: rgb(255, 255, 255); -webkit-box-shadow: 0 3px 500px rgba(0, 0, 0, 0.5); -webkit-background-clip: padding-box; -moz-box-shadow: 0 3px 500px rgba(0, 0, 0, 0.5); -moz-background-clip: padding-box;
+}
+.modal-pro-bd {
+	left: 0px; top: 0px; right: 0px; bottom: 0px; position: fixed; z-index: 99; background-color: rgba(0, 0, 0, 0.8);
+}
+.modal-close {
+	background: url("/c/Images/ModalPro/close-cross.png") no-repeat center / 24px 24px; margin: 0px; padding: 0px; border: currentColor; border-image: none; top: -34px; width: 24px; height: 24px; right: -34px; position: absolute;
+}
+.modal-pro h1 {
+	padding: 35px 50px 0px; text-align: center; color: rgb(102, 102, 102); font-size: 30px; font-weight: 300; margin-top: 0px; margin-bottom: 0px;
+}
+.modal-pro input {
+	padding: 3px; font-weight: normal; margin-right: 5px; margin-left: 5px;
+}
+.modal-pro p {
+	margin: 10px 0px;
+}
+.modal-pro ul {
+	margin: 15px auto 35px; width: 250px;
+}
+.modal-pro ul li {
+	color: rgb(102, 102, 102); line-height: 1.345; font-size: 13px; margin-bottom: 14px;
+}
+.modal-pro-footer {
+	padding: 0px 45px; border-radius: 0px 0px 2px 2px; width: 100%; height: 100px; text-align: center; box-sizing: border-box; background-color: rgb(236, 239, 241);
+}
+a.modal-btn {
+	background: rgb(91, 214, 120); padding: 12px 25px; border-radius: 2px; text-align: center; color: white; line-height: 1.75; font-size: 14px; text-decoration: none; margin-top: 25px; display: inline-block; min-width: 43px; box-shadow: inset 0px -2px 0px 0px rgba(0,0,0,0.16);
+}
+a.btn-cancel.modal-btn {
+	border: 1px solid rgb(210, 210, 210); border-image: none; color: rgb(102, 102, 102); box-shadow: none; background-color: transparent;
+}
+a.btn-primary.modal-btn {
+	color: white !important; background-color: rgb(0, 109, 204);
+}
+.hidden {
+	display: none !important;
+}
+[hidden] {
+	display: none !important;
+}

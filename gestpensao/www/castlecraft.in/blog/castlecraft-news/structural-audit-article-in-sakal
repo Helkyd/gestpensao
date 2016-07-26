@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<!-- Built on Frappe. https://frappe.io/ -->
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title> Structural Audit article in Sakal </title>
+	<meta name="generator" content="frappe">
+
+    
+	<link rel="shortcut icon"
+		href="/files/favicon.ico"
+		type="image/x-icon">
+	<link rel="icon"
+		href="/files/favicon.ico"
+		type="image/x-icon">
+    
+
+		
+		<link type="text/css" rel="stylesheet" href="https://bootswatch.com/simplex/bootstrap.min.css">
+		<link type="text/css" rel="stylesheet" href="/website_theme.css">
+		<link type="text/css" rel="stylesheet" href="/assets/frappe/css/font/open-sans/open-sans.css">
+		<link type="text/css" rel="stylesheet" href="/assets/css/frappe-web.css">
+		<link type="text/css" rel="stylesheet" href="/assets/erpnext/css/website.css">
+<style>
+.blog-container {
+	max-width: 720px;
+	margin: auto;
+}
+.page-content {
+	padding-bottom: 0px;
+}
+</style>
+<script>
+    window.frappe = {
+    	page_ready_events: {},
+    	ready: function(fn) {
+    		if (!frappe.page_ready_events[location.pathname]) {
+    			frappe.page_ready_events[location.pathname] = []
+    		}
+    		frappe.page_ready_events[location.pathname].push(fn);
+    	}
+    }
+    window.dev_server = 0;
+    </script>
+</head>
+<body data-path="blog/castlecraft-news/structural-audit-article-in-sakal">
+	<div class="main-section">
+		<div>
+				<header>
+	<nav class="navbar navbar-default navbar-main" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<!-- <a class="navbar-brand ellipsis" href="/"> -->
+				<a class="navbar-brand ellipsis"
+					 href="/">
+					<span><img src="/files/castlecraft-word.png" style="max-height: 20px;"></span>
+				</a>
+				<!-- <a class="pull-right visible-xs navbar-toggle toggle-sidebar">
+					<i class="octicon octicon-three-bars"></i>
+				</a> -->
+				<div class="dropdown">
+					<button class="btn btn-default navbar-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+						<i class="octicon octicon-three-bars"></i>
+					</button>
+					<ul class="dropdown-menu dropdown-menu-right">
+<li data-label='About Us' >
+	<a href="/about"
+		
+		>
+	About Us</a></li><li data-label='Products' >
+	<a href="/products"
+		
+		>
+	Products</a></li><li data-label='Structural Services' >
+	<a href="/services"
+		
+		>
+	Structural Services</a></li><li data-label='Blog' >
+	<a href="/blog"
+		
+		>
+	Blog</a></li><li data-label='Clients' >
+	<a href="/clients"
+		
+		>
+	Clients</a></li><li data-label='Jobs' >
+	<a href="/jobs"
+		
+		>
+	Jobs</a></li><li data-label='Contact' >
+	<a href="/contact"
+		
+		>
+	Contact</a></li>
+
+<li class="divider"></li>
+<!-- post login tools -->
+<li data-label="My Account" 
+ class=" logged-in" ><a href="/me" 
+	rel="nofollow">
+	My Account
+	</a></li><li data-label="Logout" 
+ class=" logged-in" ><a href="/?cmd=web_logout" 
+	rel="nofollow">
+	Logout
+	</a></li>
+<li class="btn-login-area"><a href="/login">Login</a></li>
+
+
+</ul>
+				</div>
+			</div>
+			<div class="hidden-xs">
+				
+				<ul class="nav navbar-nav navbar-left"><li data-label='About Us' >
+	<a href="/about"
+		
+		>
+	About Us</a></li><li data-label='Products' >
+	<a href="/products"
+		
+		>
+	Products</a></li><li data-label='Structural Services' >
+	<a href="/services"
+		
+		>
+	Structural Services</a></li><li data-label='Blog' >
+	<a href="/blog"
+		
+		>
+	Blog</a></li><li data-label='Clients' >
+	<a href="/clients"
+		
+		>
+	Clients</a></li><li data-label='Jobs' >
+	<a href="/jobs"
+		
+		>
+	Jobs</a></li>
+</ul>
+<ul class="nav navbar-nav navbar-right"><li data-label='Contact' >
+	<a href="/contact"
+		
+		>
+	Contact</a></li>
+	
+		
+	<li class="shopping-cart">
+		<div class="cart-icon small">
+			<a class="dropdown-toggle" href="#" data-toggle="dropdown" id="navLogin">
+				Cart <span class="badge-wrapper" id="cart-count"></span>
+			</a>
+			<div id="cart-overlay" class="dropdown-menu shopping-cart-menu"></div>
+		</div>
+	 </li>
+
+	
+	<!-- post login tools -->
+
+<li class="dropdown logged-in" id="website-post-login"
+	data-label="website-post-login" style="display: none">
+	<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+		<span class="user-image-wrapper"></span>
+		<span class="full-name"></span>
+		<b class="caret"></b>
+	</a>
+    <ul class="dropdown-menu" role="menu"><li data-label="My Account" 
+			><a href="/me" 
+					rel="nofollow">
+					My Account
+				</a></li><li data-label="Logout" 
+			><a href="/?cmd=web_logout" 
+					rel="nofollow">
+					Logout
+				</a></li></ul>
+</li>
+
+<li class="btn-login-area"><a href="/login">Login</a></li>
+
+
+</ul>
+				
+			</div>
+		</div>
+	</nav>
+</header><div class="hero-and-content">
+                <div data-html-block="hero"></div>
+                <div class="container" data-html-block="content">
+                
+<div class="page-container" id="page-structural-audit-article-in-sakal" data-path="blog/castlecraft-news/structural-audit-article-in-sakal"
+	data-doctype="Blog Post">
+			<div class="row ">
+				
+				<div class=" page-content col-sm-12 ">
+					<div class="page-content-wrapper">
+						<div class="row page-head">
+							<div class="col-sm-8 col-xs-6">
+								
+								<div class="page-breadcrumbs">
+									
+									
+									
+								</div>
+								
+								
+							</div>
+							<div class="col-sm-4 col-xs-6">
+								
+
+								
+							</div>
+						</div>
+					</div>
+					<div class="page_content">
+<div class="blog-container">
+<article class="blog-content" itemscope itemtype="http://schema.org/BlogPosting">
+	<meta  itemprop="datePublished" content="19 May 2014"></meta>
+	<meta  itemprop="author" content="revant@revant.me"></meta>
+	<!-- begin blog content -->
+	<div class="blog-info">
+	<h1 itemprop="headline" class="blog-header">Structural Audit article in Sakal</h1>
+	<p class="post-by text-muted">
+		<a href="/blog?by=riddhimaan&by_name=revant@revant.me" class="no-decoration">By Riddhimaan Nandgaonkar</a>
+		<i class="blog-dot"></i> 19 May 2014
+		<i class="blog-dot"></i> <a href="/blog/castlecraft-news" class="no-decoration">Castlecraft News</a>
+		<i class="blog-dot"></i> No comments yet
+	</p>
+	</div>
+	<div itemprop="articleBody" class="longform blog-text">
+	<h4>
+स्ट्रक्‍चरल ऑडिटचे पालिकेचे धोरण "कातडी बचाव'</h4>
+- विष्णू सोनवणे : सकाळ वृत्तसेवा<br><i>
+सोमवार, 19 मे 2014 - 12:45 AM IST</i><br>
+<br>
+<br>
+मुंबई - महापालिकेने सरसकट सर्वच इमारतींना स्ट्रक्‍चरल ऑडिट सक्तीचे केले आहे. त्यासाठीच्या सर्व चाचण्याही बंधनकारक करण्यात आल्याने सोसायट्यांचे धाबे दणाणले आहे. स्ट्रक्‍चरल ऑडिट केल्याचे प्रमाणपत्र तीस दिवसांत सादर करण्याचे फर्मानच पालिकेने काढले आहे. स्ट्रक्‍चरल ऑडिटचे आयते निमित्त करून पालिकेने हात झटकले आहेत. भविष्यात एखादी इमारत दुर्घटना झाल्यास पालिकेने असे "कातडी बचाव‘ धोरण अवलंबल्याचे दिसत आहे. <br>
+<br>
+डॉकयार्ड रोड येथील पालिकेची बाबू गेनू मार्केट इमारत पडून 61 रहिवाशांचा बळी गेल्यानंतर पालिका खडबडून जागी झाली आहे. महिनाभरापासून पालिकेने जुन्या इमारतींना नोटिसा पाठविण्याचा सपाटा लावला आहे. दक्षिण मुंबई 80 ते 100 वर्षांची आहे. तेथील उपनगरे 60 ते 70 वर्षे जुनी आहेत. परदेशात रहिवासी जुन्या इमारतींची दुरुस्ती करीत असतात; आपल्याकडे मात्र त्याबाबत उदासीनता आहे. जुन्या इमारतींबाबत तहान लागल्यावर विहीर खोदण्याचा प्रकार पालिकेने सुरू केला आहे. पालिकेने सोसायट्यांना तीस हजार नोटिसा पाठवल्या आहेत. <br>
+<br><b>
+महागड्या चाचण्यांची सक्ती </b><br>
+हॅमर टेस्ट, अल्ट्रासॉनिक पल्स वेलोसिटी, कॉर्बोनेशन टेस्ट, हाफ सेल पोटेन्शियल टेस्ट, केमिकल ऍनालिसीस, कव्हर मिटर, कोअर टेस्ट आदी 10 चाचण्यांची स्ट्रक्‍चरल ऑडिटसाठी सक्ती करण्यात आली आहे. या चाचण्यांसाठी सुमारे एक लाखापर्यंत खर्च येतो. घरांच्या वाढत्या किमती आणि त्यातच आवश्‍यकता असो वा नसो स्ट्रक्‍चरल अभियंत्यांचा सल्ला न जुमानता चाचण्या करण्याच्या खर्चाचा भार रहिवाशांना भुर्दंड ठरत आहे. त्यानिमित्ताने होणाऱ्या पुनर्विकासाच्या आग्रहाबद्दल रहिवाशांमध्ये संशय व्यक्त होत आहे. या सर्व चाचण्यांची गरज काय, असा प्रश्‍न अभियंत्यांनाही पडला आहे. सोसायट्यांना सरसकट सर्वच चाचण्या करायला सांगितल्याने पालिका जबाबदारी झटकत असल्याचे बोलले जात आहे. <br>
+<br><b>
+पालिकेकडे दुरुस्तीची नोंद नाही </b><br>
+पालिकेच्या इमारतींचे स्ट्रक्‍चरल ऑडिट करण्यास सांगितले जात आहे; परंतु अनेक इमारतींची दुरुस्तीबाबतची नोंदच पालिकेकडे नसल्याची धक्कादायक बाब समोर येत आहे. विभाग कार्यालयात विचारले असता, ते नियोजन आणि संकल्पचित्रे खात्याकडे बोट दाखवतात. त्यांना विचारल्यास ते इमारत आणि बांधकाम विभागाकडे जाण्यास सांगतात. इमारतींच्या दुरुस्तीची नोंद मिळत नसल्याचे स्ट्रक्‍चरल अभियंते चिंतेत आहेत. रहिवासी आणि अभियंत्यांना जबाबदार धरण्याचा प्रकार पालिकेत सुरू झाला आहे. <br>
+<br><b>
+कुमक अपुरी </b><br>
+मुंबईतील नामांकित स्ट्रक्‍चरल अभियंतेही पालिकेच्या कारभारामुळे अचंबित झाले आहेत. पालिकेच्या सेवेत सुमारे 3,500 अभियंते आहेत. 1562 अभियंत्यांची नोंदणी पालिकेडे आहे; त्यातील किती अभियंते या कामासाठी मिळतील, हे सांगणे कठीण आहे. धोकादायक इमारतींच्या तुलनेत ही तज्ज्ञांची संख्या अपुरी आहे. चाचण्यांसाठी लागणारा वेळ, तज्ज्ञांची संख्या यांचा विचार न करता 30 दिवसांची मुदत देऊन पालिका कार्यभार उरकण्याच्या तयारीत आहे. <br>
+<br><b>
+पालिकेने जबाबदारी घ्यावी </b><br>
+इमारती धोकादायक आहेत की नाही, याचे प्रमाणपत्र मिळाले की सुटलो, अशी भूमिका पालिकेने घेऊ नये. दुरुस्तीच्या परवानग्या महिनोन्‌ महिने मिळत नाहीत. ठरावीक दिवसांत फायलींची मंजुरीची प्रक्रिया पूर्ण झाली पाहिजे. धोकादायक इमारती रिकामी केल्यानंतर विकास आराखड्यात संक्रमण शिबिरांची व्यवस्था करायला हवी. इमारत सोडणाऱ्या रहिवाशांना पुन्हा घर मिळेल, अशी हमी यंत्रणेने दिली पाहिजे. पायाभूत सुविधा, सल्लागार, चाचण्या करणारे विशेषज्ञ, इमारत रिकामी केल्यानंतर त्यांच्या पुनर्विकासास वेळेत मंजुरी देण्याबाबत तत्परता आदी बाबींचा पालिकेने विचार करायला हवा. नॉन-डिस्ट्रक्‍टिव्ह टेस्टिंगसंदर्भात "इंडियन सोसायटी ऑफ स्ट्रक्‍चरल इंजिनियर्स‘ या संस्थेने दिलेल्या निवेदनाचा पालिकेने विचार करावा, असे मत "इंडियन सोसायटी ऑफ स्ट्रक्‍चरल इंजिनियर्स‘च्या विश्‍वस्त मानसी नांदगावकर यांनी व्यक्त केले.<br>
+<br>
+Link for article:&nbsp;<a href="http://online3.esakal.com/NewsDetails.aspx?NewsId=5619568190949203412&amp;SectionId=11&amp;SectionName=%C3%A0%C2%A4%C2%AE%C3%A0%C2%A5%20%C3%A0%C2%A4%E2%80%9A%C3%A0%C2%A4%C2%AC%C3%A0%C2%A4%CB%86&amp;NewsDate=20140519&amp;Provider=%C3%A0%C2%A4%C2%B5%C3%A0%C2%A4%C2%BF%C3%A0%C2%A4%C2%B7%C3%A0%C2%A5%20%C3%A0%C2%A4%C2%A3%C3%A0%C2%A5%E2%80%9A" target="_blank">Sakal</a>
+	</div>
+	<!-- end blog content -->
+</article>
+
+<div class="blogger">
+	<div class="inline-block" style="vertical-align: top">
+		<div class="avatar avatar-large">
+			<img itemprop="thumbnailUrl" src="/files/Riddhi_Blogger.jpg" />
+		</div>
+	</div>
+	<div class="inline-block" style="width: calc(100% - 100px)">
+		<h2 class="blogger-name"><a href="/blog?by=riddhimaan&by_name=Riddhimaan Nandgaonkar">Riddhimaan Nandgaonkar</a></h2>
+		<p class="text-muted"></p>
+	</div>
+</div>
+
+<div class="blog-comments">
+	<div class="comment-view">
+	<div class="comment-header">No comments yet</div>
+
+<div class="no-comment">
+	<p class="text-muted">Start a new discussion.</p>
+    <br>
+</div>
+
+
+<div itemscope itemtype="http://schema.org/UserComments" id="comment-list">
+	
+</div>
+</div>
+
+<div class="add-comment-section">
+	<div class="text-muted hidden login-required">
+		<a href="/login?redirect-to=blog/castlecraft-news/structural-audit-article-in-sakal">Login to comment</a>
+	</div>
+
+	<div class="comment-form-wrapper">
+		<a class="add-comment btn btn-default btn-sm">Add Comment</a>
+			<div style="display: none;" id="comment-form">
+			<p>Leave a Comment</p>
+			<div class="alert" style="display:none;"></div>
+			<form>
+				<fieldset>
+					<div class="row ">
+						<div class="col-sm-6">
+							<p><input class="form-control" name="comment_by_fullname" placeholder="Your Name"
+								type="text"></p>
+						</div>
+						<div class="col-sm-6">
+							<p><input class="form-control" name="comment_by"
+								placeholder="Your Email Id" type="email"></p>
+						</div>
+					</div>
+					<p><textarea class="form-control" name="comment" rows=10
+						placeholder="Comment"></textarea></p>
+                        <button class="btn btn-primary btn-sm" id="submit-comment" style="margin-top:10px">
+                            Submit</button>
+				</fieldset>
+			</form>
+		</div>
+	</div>
+</div>
+<script>
+	frappe.ready(function() {
+		var login_required = 0;
+
+		if (login_required && !frappe.is_user_logged_in()) {
+			$(".login-required, .comment-form-wrapper").toggleClass("hidden");
+		}
+
+		var n_comments = $(".comment-row").length;
+
+		if(n_comments) {
+			$(".no_comment").toggle(false);
+		}
+		if(n_comments > 50) {
+			$(".add-comment").toggle(false)
+				.parent().append("<div class='text-muted'>Comments are closed.</div>")
+		}
+		$(".add-comment").click(function() {
+			$(this).toggle(false);
+		 	$("#comment-form").toggle();
+            var full_name = "", user_id = "";
+            if(frappe.is_user_logged_in()) {
+                full_name = getCookie("full_name");
+                user_id = getCookie("user_id");
+                if(user_id != "Guest") {
+        			$("[name='comment_by']").val(user_id);
+        			$("[name='comment_by_fullname']").val(full_name);
+                }
+            }
+			$("#comment-form textarea").val("");
+			})
+
+		$("#submit-comment").click(function() {
+			var args = {
+				comment_by_fullname: $("[name='comment_by_fullname']").val(),
+				comment_by: $("[name='comment_by']").val(),
+				comment: $("[name='comment']").val(),
+				reference_doctype: "Blog Post",
+				reference_name: "structural-audit-article-in-sakal",
+				comment_type: "Comment",
+				route: "blog/castlecraft-news/structural-audit-article-in-sakal",
+			}
+
+			if(!args.comment_by_fullname || !args.comment_by || !args.comment) {
+				frappe.msgprint("All fields are necessary to submit the comment.")
+				return false;
+			}
+
+			if (!valid_email(args.comment_by)) {
+				frappe.msgprint("Please enter a valid email address.");
+				return false;
+			}
+
+			frappe.call({
+				btn: this,
+				type: "POST",
+				method: "frappe.templates.includes.comments.comments.add_comment",
+				args: args,
+				callback: function(r) {
+					if(r.exc) {
+						if(r._server_messages)
+							frappe.msgprint(r._server_messages);
+					} else {
+						$(r.message).appendTo("#comment-list");
+						$(".no-comment, .add-comment").toggle(false);
+						$("#comment-form").toggle();
+					}
+					$(".add-comment").text('Add Another Comment');
+					$(".add-comment").toggle();
+				}
+			})
+
+			return false;
+		})
+	});
+</script>
+</div>
+</div>
+<script>
+    frappe.ready(function() { frappe.set_search_path("/blog"); })
+</script>
+</div>
+				</div>
+			</div>
+</div>
+
+                </div>
+            </div></div>
+		<div><footer class="web-footer">
+	<section class="footer-links">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6 text-left">
+					<div class="row">
+					
+					</div>
+				</div>
+
+				<div class="col-sm-6 text-right">
+					
+<div class='input-group input-group-sm pull-right footer-subscribe'>
+	<input class="form-control" type="text" id="footer-subscribe-email"
+		placeholder="Your email address...">
+	<span class='input-group-btn'>
+		<button class="btn btn-default" type="button"
+			id="footer-subscribe-button">Get Updates</button>
+	</span>
+</div>
+
+<script>
+frappe.ready(function() {
+	$("#footer-subscribe-button").click(function() {
+
+		if($("#footer-subscribe-email").val()) {
+			$("#footer-subscribe-email").attr('disabled', true);
+			$("#footer-subscribe-button").html("Sending...")
+				.attr("disabled", true);
+			erpnext.subscribe_to_newsletter({
+				email: $("#footer-subscribe-email").val(),
+				callback: function(r) {
+					if(!r.exc) {
+						$("#footer-subscribe-button").html(__("Added"))
+							.attr("disabled", true);
+					} else {
+						$("#footer-subscribe-button").html(__("Error: Not a valid id?"))
+							.addClass("btn-danger").attr("disabled", false);
+						$("#footer-subscribe-email").val("").attr('disabled', false);
+					}
+				}
+			});
+		}
+		else
+			frappe.msgprint(frappe._("Please enter email address"))
+	});
+});
+</script>
+
+
+				</div>
+			</div>
+			<div class="row footer-bottom-line">
+				<div class="text-muted small col-sm-6">
+					
+						&copy; Castlecraft Properties and Engineering Services Pvt Ltd
+					
+				</div>
+				
+				<div class="text-muted small col-sm-6 text-right footer-powered">
+					
+						<a href="https://erpnext.com?source=website_footer" target="_blank" class="text-muted">
+		Powered by ERPNext</a>
+					
+				</div>
+			</div>
+		</div>
+	</section>
+</footer></div>
+	</div>
+
+	<!-- js should be loaded in body! -->
+	<script type="text/javascript"
+		src="/assets/frappe/js/lib/jquery/jquery.min.js"></script>
+	<script type="text/javascript"
+		src="/assets/js/frappe-web.min.js"></script>
+	<script type="text/javascript" src="/website_script.js"></script>
+	<script type="text/javascript" src="/assets/js/erpnext-web.min.js"></script>
+
+	<script>frappe.csrf_token = "None";</script></body>
+</html>

@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<!-- Built on Frappe. https://frappe.io/ -->
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title> Software Developer </title>
+	<meta name="generator" content="frappe">
+
+    
+	<link rel="shortcut icon"
+		href="/files/favicon.ico"
+		type="image/x-icon">
+	<link rel="icon"
+		href="/files/favicon.ico"
+		type="image/x-icon">
+    
+
+		
+		<link type="text/css" rel="stylesheet" href="https://bootswatch.com/simplex/bootstrap.min.css">
+		<link type="text/css" rel="stylesheet" href="/website_theme.css">
+		<link type="text/css" rel="stylesheet" href="/assets/frappe/css/font/open-sans/open-sans.css">
+		<link type="text/css" rel="stylesheet" href="/assets/css/frappe-web.css">
+		<link type="text/css" rel="stylesheet" href="/assets/erpnext/css/website.css"><script>
+    window.frappe = {
+    	page_ready_events: {},
+    	ready: function(fn) {
+    		if (!frappe.page_ready_events[location.pathname]) {
+    			frappe.page_ready_events[location.pathname] = []
+    		}
+    		frappe.page_ready_events[location.pathname].push(fn);
+    	}
+    }
+    window.dev_server = 0;
+    </script>
+</head>
+<body data-path="jobs/Software Developer">
+	<div class="main-section">
+		<div>
+				<header>
+	<nav class="navbar navbar-default navbar-main" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<!-- <a class="navbar-brand ellipsis" href="/"> -->
+				<a class="navbar-brand ellipsis"
+					 href="/">
+					<span><img src="/files/castlecraft-word.png" style="max-height: 20px;"></span>
+				</a>
+				<!-- <a class="pull-right visible-xs navbar-toggle toggle-sidebar">
+					<i class="octicon octicon-three-bars"></i>
+				</a> -->
+				<div class="dropdown">
+					<button class="btn btn-default navbar-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+						<i class="octicon octicon-three-bars"></i>
+					</button>
+					<ul class="dropdown-menu dropdown-menu-right">
+<li data-label='About Us' >
+	<a href="/about"
+		
+		>
+	About Us</a></li><li data-label='Products' >
+	<a href="/products"
+		
+		>
+	Products</a></li><li data-label='Structural Services' >
+	<a href="/services"
+		
+		>
+	Structural Services</a></li><li data-label='Blog' >
+	<a href="/blog"
+		
+		>
+	Blog</a></li><li data-label='Clients' >
+	<a href="/clients"
+		
+		>
+	Clients</a></li><li data-label='Jobs' >
+	<a href="/jobs"
+		
+		>
+	Jobs</a></li><li data-label='Contact' >
+	<a href="/contact"
+		
+		>
+	Contact</a></li>
+
+<li class="divider"></li>
+<!-- post login tools -->
+<li data-label="My Account" 
+ class=" logged-in" ><a href="/me" 
+	rel="nofollow">
+	My Account
+	</a></li><li data-label="Logout" 
+ class=" logged-in" ><a href="/?cmd=web_logout" 
+	rel="nofollow">
+	Logout
+	</a></li>
+<li class="btn-login-area"><a href="/login">Login</a></li>
+
+
+</ul>
+				</div>
+			</div>
+			<div class="hidden-xs">
+				
+				<ul class="nav navbar-nav navbar-left"><li data-label='About Us' >
+	<a href="/about"
+		
+		>
+	About Us</a></li><li data-label='Products' >
+	<a href="/products"
+		
+		>
+	Products</a></li><li data-label='Structural Services' >
+	<a href="/services"
+		
+		>
+	Structural Services</a></li><li data-label='Blog' >
+	<a href="/blog"
+		
+		>
+	Blog</a></li><li data-label='Clients' >
+	<a href="/clients"
+		
+		>
+	Clients</a></li><li data-label='Jobs' >
+	<a href="/jobs"
+		
+		>
+	Jobs</a></li>
+</ul>
+<ul class="nav navbar-nav navbar-right"><li data-label='Contact' >
+	<a href="/contact"
+		
+		>
+	Contact</a></li>
+	
+		
+	<li class="shopping-cart">
+		<div class="cart-icon small">
+			<a class="dropdown-toggle" href="#" data-toggle="dropdown" id="navLogin">
+				Cart <span class="badge-wrapper" id="cart-count"></span>
+			</a>
+			<div id="cart-overlay" class="dropdown-menu shopping-cart-menu"></div>
+		</div>
+	 </li>
+
+	
+	<!-- post login tools -->
+
+<li class="dropdown logged-in" id="website-post-login"
+	data-label="website-post-login" style="display: none">
+	<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+		<span class="user-image-wrapper"></span>
+		<span class="full-name"></span>
+		<b class="caret"></b>
+	</a>
+    <ul class="dropdown-menu" role="menu"><li data-label="My Account" 
+			><a href="/me" 
+					rel="nofollow">
+					My Account
+				</a></li><li data-label="Logout" 
+			><a href="/?cmd=web_logout" 
+					rel="nofollow">
+					Logout
+				</a></li></ul>
+</li>
+
+<li class="btn-login-area"><a href="/login">Login</a></li>
+
+
+</ul>
+				
+			</div>
+		</div>
+	</nav>
+</header><div class="hero-and-content">
+                <div data-html-block="hero"></div>
+                <div class="container" data-html-block="content">
+                
+<div class="page-container" id="page-Software Developer" data-path="jobs/Software Developer"
+	data-doctype="Job Opening">
+			<div class="row ">
+				
+				<div class=" page-content col-sm-12 ">
+					<div class="page-content-wrapper">
+						<div class="row page-head">
+							<div class="col-sm-8 col-xs-6">
+								
+								<div class="page-breadcrumbs">
+									
+	
+
+								</div>
+								
+								
+<h1>Software Developer</h1>
+
+							</div>
+							<div class="col-sm-4 col-xs-6">
+								
+
+								
+							</div>
+						</div>
+					</div>
+					<div class="page_content"><div><table class="table table-bordered">
+    <colgroup>
+        <col>
+            <col>
+    </colgroup>
+    <tbody>
+        <tr>
+            <td>
+                <p><b>Designation</b>
+
+                </p>
+            </td>
+            <td>
+                <p>Software Developer</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p><b>Job Description</b>
+
+                </p>
+            </td>
+            <td>
+                <span style="line-height: 1.42857; background-color: transparent;">Programming in MVC using Python and JavaScript. (Bootstrap, jQuery, Jinja2, CSS)</span><br><span style="line-height: 1.42857; background-color: transparent;"><br>Identify Database Relations and Entity Diagrams</span><span style="line-height: 1.42857; background-color: transparent;"> (MariaDB / MySQL, PostgreSQL)</span><br><span style="line-height: 1.42857; background-color: transparent;"><br>Using Linux for development environment</span><br><span style="line-height: 1.42857; background-color: transparent;"><br>Using Python, JS, CSS frameworks</span><br><span style="line-height: 1.42857; background-color: transparent;"><br>Git Version control system<br></span><br><span style="line-height: 1.42857; background-color: transparent;">Willingness to learn</span><br><ol>
+                </ol>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p><b>Desired Profile</b>
+
+                </p>
+            </td>
+            <td>
+                <span style="line-height: 1.42857; background-color: transparent;">Candidate should have a positive attitude, Should be Goal oriented.</span><span style="line-height: 1.42857; background-color: transparent;"> <br></span><br><span style="line-height: 1.42857; background-color: transparent;">Disciplined and punctual, Adaptable/decisive and effective learner.<br></span><br><span style="line-height: 1.42857; background-color: transparent;">Understanding of other discipline work and should be able to communicate well in English.<br></span><br><span style="line-height: 1.42857; background-color: transparent;">Interacting with client / vendor and other discipline engineers is required.</span><br><ol>
+                </ol>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p><b>Experience</b>
+
+                </p>
+            </td>
+            <td>
+                <p>Any</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p><b>Industry Type</b>
+
+                </p>
+            </td>
+            <td>
+                <p>Software Development</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p><b>Role</b>
+
+                </p>
+            </td>
+            <td>
+                <p>Design of Business Apps</p>
+                <p>Development and programming of Business Apps</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p><b>Functional Area</b>
+
+                </p>
+            </td>
+            <td>
+                <p>Software Development / Programming / Coding</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p><b>Education</b>
+
+                </p>
+            </td>
+            <td> <span style="line-height: 1.42857; background-color: transparent;">BCA, BE/BTech (IT/Software), B. Sc. IT</span>
+                <br><br><span style="line-height: 1.42857; background-color: transparent;">MCA, ME/MTech (IT/Software), M. Sc. IT <br><br></span><span style="line-height: 1.42857; background-color: transparent;">Doctorate Not Required</span>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p><b>Location</b>
+
+                </p>
+            </td>
+            <td>
+                <p>Mumbai</p>
+            </td>
+        </tr>
+    </tbody>
+</table></div>
+
+<p>
+	<a class='btn btn-primary'
+	href='/job_application?job_title=Software Developer'>
+	Apply Now</a>
+</p>
+
+</div>
+				</div>
+			</div>
+</div>
+
+                </div>
+            </div></div>
+		<div><footer class="web-footer">
+	<section class="footer-links">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6 text-left">
+					<div class="row">
+					
+					</div>
+				</div>
+
+				<div class="col-sm-6 text-right">
+					
+<div class='input-group input-group-sm pull-right footer-subscribe'>
+	<input class="form-control" type="text" id="footer-subscribe-email"
+		placeholder="Your email address...">
+	<span class='input-group-btn'>
+		<button class="btn btn-default" type="button"
+			id="footer-subscribe-button">Get Updates</button>
+	</span>
+</div>
+
+<script>
+frappe.ready(function() {
+	$("#footer-subscribe-button").click(function() {
+
+		if($("#footer-subscribe-email").val()) {
+			$("#footer-subscribe-email").attr('disabled', true);
+			$("#footer-subscribe-button").html("Sending...")
+				.attr("disabled", true);
+			erpnext.subscribe_to_newsletter({
+				email: $("#footer-subscribe-email").val(),
+				callback: function(r) {
+					if(!r.exc) {
+						$("#footer-subscribe-button").html(__("Added"))
+							.attr("disabled", true);
+					} else {
+						$("#footer-subscribe-button").html(__("Error: Not a valid id?"))
+							.addClass("btn-danger").attr("disabled", false);
+						$("#footer-subscribe-email").val("").attr('disabled', false);
+					}
+				}
+			});
+		}
+		else
+			frappe.msgprint(frappe._("Please enter email address"))
+	});
+});
+</script>
+
+
+				</div>
+			</div>
+			<div class="row footer-bottom-line">
+				<div class="text-muted small col-sm-6">
+					
+						&copy; Castlecraft Properties and Engineering Services Pvt Ltd
+					
+				</div>
+				
+				<div class="text-muted small col-sm-6 text-right footer-powered">
+					
+						<a href="https://erpnext.com?source=website_footer" target="_blank" class="text-muted">
+		Powered by ERPNext</a>
+					
+				</div>
+			</div>
+		</div>
+	</section>
+</footer></div>
+	</div>
+
+	<!-- js should be loaded in body! -->
+	<script type="text/javascript"
+		src="/assets/frappe/js/lib/jquery/jquery.min.js"></script>
+	<script type="text/javascript"
+		src="/assets/js/frappe-web.min.js"></script>
+	<script type="text/javascript" src="/website_script.js"></script>
+	<script type="text/javascript" src="/assets/js/erpnext-web.min.js"></script>
+
+	<script>frappe.csrf_token = "None";</script></body>
+</html>

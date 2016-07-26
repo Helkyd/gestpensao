@@ -1,0 +1,14 @@
+ <?xml version="1.0" encoding="utf-8"?>
+<!-- generator="Joomla! - Open Source Content Management" -->
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Hotel Continental Luanda</title>
+		<description><![CDATA[Hotel de referência na hotelaria Angolana!
+83 rooms with wireless internet, including 8 suites (4 senior and 4 junior) and also a room for guests with reduced mobility. It also has a Gym, two meeting rooms (Mussulos and Chicals Rooms, with seating capacity for 35 people), a business lounge, a bar seating 26, a terrace Bar, 2 restaurants (one restaurant seating 100, and other seating 20) and the Kianda Multipurpose room in the last floor.]]></description>
+		<link>http://hotelcontinentalluanda.com/index.php/pt/</link>
+		<lastBuildDate>Sun, 24 Jul 2016 15:48:03 +0000</lastBuildDate>
+		<generator>Joomla! - Open Source Content Management</generator>
+		<atom:link rel="self" type="application/rss+xml" href="http://hotelcontinentalluanda.com/index.php/pt/?format=feed&amp;type=rss"/>
+		<language>pt-pt</language>
+	</channel>
+</rss>

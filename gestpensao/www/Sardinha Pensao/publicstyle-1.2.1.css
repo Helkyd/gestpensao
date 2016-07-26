@@ -1,0 +1,1062 @@
+body {
+	font-family: "Trebuchet MS", Tahoma, Geneva, Arial, Helvetica, sans-serif; font-size: 12px; background-color: rgb(255, 255, 255);
+}
+td {
+	font-family: "Trebuchet MS"; font-size: 12px;
+}
+a {
+	color: rgb(180, 0, 0); font-style: normal;
+}
+a:hover {
+	color: rgb(255, 0, 0); font-weight: normal;
+}
+body td big {
+	line-height: 19px; font-size: 11px; font-weight: bold;
+}
+body td strong {
+	line-height: 17px; font-size: 11px; font-weight: bold;
+}
+body td small {
+	color: rgb(102, 0, 0); line-height: 15px; font-size: 11px;
+}
+.pageCenterWrapper {
+	background-color: rgb(244, 244, 244);
+}
+.pageCenterHolder {
+	margin: 0px auto; padding: 20px 0px 50px; width: 796px; overflow: hidden; position: relative;
+}
+.familywebsite_container {
+	overflow: hidden;
+}
+.logocell a.logoimage_link {
+	margin: 7px 0px 0px 20px; width: 164px; height: 43px; display: block;
+}
+.logocell a.logoimage_link img {
+	margin: 0px; border: currentColor; border-image: none;
+}
+.logocell td p {
+	margin: 0px;
+}
+a.topbutton {
+	background-position: left bottom; width: 110px; height: 30px; text-indent: -9999px; display: block; outline-style: none;
+}
+.albumpic {
+	position: relative;
+}
+.knaplinks {
+	color: rgb(255, 255, 255); line-height: 16px; font-family: "Trebuchet MS", Tahoma, Geneva, Arial, Helvetica, sans-serif; font-size: 10px; font-style: normal; text-decoration: none;
+}
+.knaplinksSel {
+	color: rgb(0, 0, 0); line-height: 16px; font-family: "Trebuchet MS", Tahoma, Geneva, Arial, Helvetica, sans-serif; font-size: 10px; font-style: normal; text-decoration: none;
+}
+.content {
+	color: rgb(0, 0, 0); line-height: 12pt; font-family: "Trebuchet MS", Tahoma, Geneva, Arial, Helvetica, sans-serif; font-size: 9pt; font-style: normal; font-weight: normal; text-decoration: none;
+}
+.contentNarrow {
+	color: rgb(0, 0, 0); line-height: 10pt; font-family: "Trebuchet MS"; font-size: 9pt; font-style: normal; font-weight: normal; text-decoration: none;
+}
+.contentBig {
+	color: rgb(0, 0, 0); line-height: 16pt; font-family: "Trebuchet MS"; font-size: 13pt; font-style: normal; font-weight: normal; text-decoration: none;
+}
+td.content {
+	padding-bottom: 20px; background-color: rgb(255, 255, 255);
+}
+.contentLinkGreen {
+	color: rgb(102, 153, 102); line-height: 10pt; font-family: "Trebuchet MS", Tahoma, Geneva, Arial, Helvetica, sans-serif; font-size: 8pt; font-style: normal; font-weight: bold; text-decoration: underline;
+}
+.contentHeader {
+	color: rgb(0, 0, 0); line-height: 12pt; font-family: "Trebuchet MS", Tahoma, Geneva, Arial, Helvetica, sans-serif; font-size: 9pt; font-style: normal; font-weight: bold; text-decoration: none;
+}
+.header {
+	line-height: normal; font-family: "Trebuchet MS", Tahoma, Geneva, Arial, Helvetica, sans-serif; font-size: 26px;
+}
+.salesHeader {
+	color: rgb(0, 99, 164); line-height: normal; font-family: "Trebuchet MS", Tahoma, Geneva, Arial, Helvetica, sans-serif; font-size: 26px; font-weight: bold;
+}
+.SubHeader {
+	line-height: normal; font-family: "Trebuchet MS", Tahoma, Geneva, Arial, Helvetica, sans-serif; font-size: 17px; font-weight: normal; margin-top: 0px;
+}
+.birtdaytext_renew_subscription {
+	padding-top: 6px; display: block;
+}
+.headerBlue {
+	color: rgb(0, 99, 164); line-height: normal; font-family: "Trebuchet MS", Tahoma, Geneva, Arial, Helvetica, sans-serif; font-size: 22px; font-weight: bold;
+}
+.SubHeaderBlue {
+	color: rgb(0, 99, 164); line-height: normal; font-family: "Trebuchet MS", Tahoma, Geneva, Arial, Helvetica, sans-serif; font-size: 17px; font-weight: normal; margin-top: 0px;
+}
+.SubHeaderRed {
+	color: rgb(204, 0, 0); line-height: normal; font-family: "Trebuchet MS", Tahoma, Geneva, Arial, Helvetica, sans-serif; font-size: 13pt; font-weight: normal;
+}
+.SubSubHeader {
+	line-height: normal; font-family: "Trebuchet MS", Tahoma, Geneva, Arial, Helvetica, sans-serif; font-size: 10pt; font-weight: bold;
+}
+.SubSubHeaderBlue {
+	color: rgb(0, 99, 164); line-height: normal; font-family: "Trebuchet MS", Tahoma, Geneva, Arial, Helvetica, sans-serif; font-size: 10pt; font-weight: bold;
+}
+.SubSubHeaderRed {
+	color: rgb(204, 0, 0); line-height: normal; font-family: "Trebuchet MS", Tahoma, Geneva, Arial, Helvetica, sans-serif; font-size: 10pt; font-weight: bold;
+}
+.SubSubHeaderGreen {
+	color: rgb(0, 102, 0); line-height: normal; font-family: "Trebuchet MS", Tahoma, Geneva, Arial, Helvetica, sans-serif; font-size: 10pt; font-weight: bold;
+}
+.SubHeaderWhite {
+	color: rgb(255, 255, 255); line-height: normal; font-family: "Trebuchet MS", Tahoma, Geneva, Arial, Helvetica, sans-serif; font-size: 14pt; font-weight: bold;
+}
+.condHeader {
+	line-height: normal; padding-top: 10px; padding-bottom: 5px; font-family: "Trebuchet MS", Tahoma, Geneva, Arial, Helvetica, sans-serif; font-size: 10pt; font-weight: bold;
+}
+.condSubHeader {
+	color: rgb(0, 0, 0); line-height: 12pt; padding-top: 5px; padding-bottom: 3px; font-family: "Trebuchet MS", Tahoma, Geneva, Arial, Helvetica, sans-serif; font-size: 9pt; font-style: normal; font-weight: normal; text-decoration: underline;
+}
+.condBody {
+	color: rgb(0, 0, 0); line-height: 12pt; padding-bottom: 9px; font-family: "Trebuchet MS", Tahoma, Geneva, Arial, Helvetica, sans-serif; font-size: 9pt; font-style: normal; font-weight: normal; text-decoration: none;
+}
+.contentWhite {
+	color: rgb(255, 255, 255); line-height: 11pt; font-family: "Trebuchet MS", Tahoma, Geneva, Arial, Helvetica, sans-serif; font-size: 9pt; font-style: normal; font-weight: normal;
+}
+.RedHeader {
+	color: rgb(204, 0, 0); line-height: normal; font-family: "Trebuchet MS", Tahoma, Geneva, Arial, Helvetica, sans-serif; font-size: 26px;
+}
+.BoldContent {
+	color: rgb(0, 0, 0); line-height: 12pt; font-family: "Trebuchet MS", Tahoma, Geneva, Arial, Helvetica, sans-serif; font-size: 9pt; font-style: normal; font-weight: bold;
+}
+.Emphasized {
+	color: red;
+}
+.EmphasizedMild {
+	color: rgb(180, 0, 0);
+}
+.HPGreen {
+	color: rgb(0, 102, 0);
+}
+.MiniContent {
+	color: rgb(0, 0, 0); line-height: 10pt; font-family: "Trebuchet MS", Tahoma, Geneva, Arial, Helvetica, sans-serif; font-size: 10px; font-style: normal; font-weight: normal;
+}
+.MiniContentLink {
+	color: rgb(0, 0, 0); line-height: 10pt; font-family: "Trebuchet MS", Tahoma, Geneva, Arial, Helvetica, sans-serif; font-size: 8pt; font-style: normal; font-weight: normal; text-decoration: underline;
+}
+.knaplinksDown {
+	color: rgb(0, 0, 0); line-height: 16px; font-family: "Trebuchet MS", Tahoma, Geneva, Arial, Helvetica, sans-serif; font-size: 10px; font-style: normal; text-decoration: none;
+}
+.contentRightBar {
+	color: rgb(0, 0, 0); line-height: 16px; font-family: "Trebuchet MS", Tahoma, Geneva, Arial, Helvetica, sans-serif; font-size: 7pt; font-style: normal; font-weight: normal; text-decoration: none;
+}
+.contentRightBarHeader {
+	color: rgb(0, 0, 0); line-height: 10pt; font-family: "Trebuchet MS", Tahoma, Geneva, Arial, Helvetica, sans-serif; font-size: 8pt; font-style: normal; font-weight: bold; text-decoration: none;
+}
+.staticContentWrapper {
+	width: 736px; overflow: hidden;
+}
+.tourRightBox {
+	padding: 5px; border: 2px solid rgb(206, 189, 156); border-image: none; background-color: rgb(241, 232, 206);
+}
+.tourProgress {
+	color: rgb(180, 0, 0); padding-bottom: 20px; font-size: 10pt;
+}
+a .siteVerEdit {
+	color: rgb(0, 0, 0); font-weight: normal; text-decoration: none; background-color: yellow;
+}
+a:hover .siteVerEdit {
+	color: rgb(255, 255, 255); font-weight: normal; text-decoration: none; background-color: teal;
+}
+.richTbl {
+	padding: 10px; border: 1px solid rgb(178, 208, 228); border-image: none; width: 100%; table-layout: auto; background-color: rgb(242, 247, 250);
+}
+.richTblShort {
+	width: 670px;
+}
+.richTbl td {
+	
+}
+table {
+	color: rgb(0, 0, 0); font-family: "Trebuchet MS", Tahoma, Geneva, Arial, Helvetica, sans-serif; font-size: 12px;
+}
+td {
+	color: rgb(0, 0, 0); font-family: "Trebuchet MS", Tahoma, Geneva, Arial, Helvetica, sans-serif; font-size: 12px;
+}
+.cvTbl td {
+	color: rgb(0, 0, 0); line-height: 17px; font-family: "Trebuchet MS", Tahoma, Geneva, Arial, Helvetica, sans-serif; font-size: 12px;
+}
+.mainTbl {
+	width: 763px; table-layout: auto;
+}
+.masterTbl {
+	width: 736px; table-layout: auto;
+}
+.topLeftSpace {
+	margin-top: 20px; margin-left: 20px;
+}
+.topRightSpace {
+	margin-right: 20px;
+}
+.bygTbl {
+	border: 1px solid rgb(178, 208, 228); border-image: none; width: 100%; table-layout: auto; background-color: rgb(242, 247, 250);
+}
+.bygTbl td {
+	padding: 10px;
+}
+.bygTblShort {
+	width: 665px;
+}
+.butikTbl td {
+	padding: 0px;
+}
+.butikInput {
+	border: 1px solid rgb(178, 208, 228); border-image: none; width: 222px; font-family: "Trebuchet MS", Tahoma, Geneva, Arial, Helvetica, sans-serif; font-size: 12px; background-color: rgb(255, 255, 255);
+}
+.butikTextarea {
+	border: 1px solid rgb(178, 208, 228); border-image: none; width: 222px; height: 308px; font-family: "Trebuchet MS", Tahoma, Geneva, Arial, Helvetica, sans-serif; font-size: 12px; background-color: rgb(255, 255, 255);
+}
+.sendlinkTextarea {
+	border: 1px solid rgb(178, 208, 228); border-image: none; width: 350px; height: 170px; font-family: "Trebuchet MS", Tahoma, Geneva, Arial, Helvetica, sans-serif; font-size: 12px; background-color: rgb(255, 255, 255);
+}
+.SendLinkPreviewTbl {
+	border: 1px solid rgb(178, 208, 228); border-image: none; table-layout: auto; background-color: rgb(242, 247, 250);
+}
+.SendLinkPreviewTbl td {
+	padding: 10px;
+}
+.uddTblTop {
+	border-width: 1px 1px medium; border-style: solid solid none; border-color: rgb(178, 208, 228) rgb(178, 208, 228) currentColor; border-image: none; width: 106px; table-layout: auto; background-color: rgb(0, 99, 164);
+}
+.uddTblTop td {
+	padding: 10px; color: rgb(255, 255, 255); font-weight: bold;
+}
+.inputByg {
+	border: 1px solid rgb(178, 208, 228); border-image: none; left: 277px; width: 232px; font-family: "Trebuchet MS", Tahoma, Geneva, Arial, Helvetica, sans-serif; font-size: 12px; margin-top: -2px; position: absolute; background-color: rgb(255, 255, 255);
+}
+.inputGaest {
+	border: 1px solid rgb(178, 208, 228); border-image: none; width: 150px; background-color: rgb(255, 255, 255);
+}
+.textareaByg {
+	border: 1px solid rgb(255, 0, 0); border-image: none; padding-bottom: 100px;
+}
+.textareaGaest {
+	border: 1px solid rgb(178, 208, 228); border-image: none; width: 395px; height: 72px; font-family: "Trebuchet MS", Tahoma, Geneva, Arial, Helvetica, sans-serif; font-size: 12px; background-color: rgb(255, 255, 255);
+}
+.skabelonTxtTbl {
+	width: 100px;
+}
+.skabelonTxtTbl td {
+	padding: 0px;
+}
+.vinTdRoed {
+	padding: 8px; background-color: rgb(150, 0, 24);
+}
+.vinTdGron {
+	padding: 8px; background-color: rgb(122, 172, 98);
+}
+.familieTbl td {
+	font-family: Times New Roman; font-size: 10px;
+}
+.bifTblSort td {
+	color: rgb(255, 255, 255);
+}
+.billedTbl td {
+	padding: 1px;
+}
+.ditBilledTbl td {
+	padding: 0px;
+}
+.bgGen01 {
+	background-color: rgb(189, 220, 208);
+}
+.bgGen02 {
+	background-color: rgb(255, 162, 0);
+}
+.bgGen03 {
+	background-color: rgb(255, 148, 211);
+}
+.bgGen04 {
+	background-color: rgb(0, 150, 255);
+}
+.babyBrunBgMain {
+	background-color: rgb(200, 164, 110);
+}
+.babyBrunBgContent {
+	background-color: rgb(250, 224, 176);
+}
+.babyBrunBgSpacer {
+	padding-top: 10px; background-color: rgb(195, 175, 150);
+}
+.babyGronBgMain {
+	background-color: rgb(169, 212, 109);
+}
+.babyGronBgContent {
+	background-color: rgb(13, 103, 26);
+}
+.babyGronBgSpacer {
+	padding-top: 10px; background-color: rgb(0, 159, 98);
+}
+.babyBlaaBgMain {
+	background-color: rgb(137, 178, 200);
+}
+.babyBlaaBgContent {
+	background-color: rgb(10, 45, 160);
+}
+.babyBlaaBgSpacer {
+	background-color: rgb(204, 204, 204);
+}
+.babyPinkBgMain {
+	background-color: rgb(255, 152, 208);
+}
+.babyPinkBgContent {
+	background-color: rgb(152, 0, 83);
+}
+.babyPinkBgSpacer {
+	background-color: rgb(226, 0, 127);
+}
+.babyBallonBgMain {
+	background-color: rgb(10, 45, 160);
+}
+.babyBallonBgContent {
+	background-color: rgb(240, 167, 28);
+}
+.babyBallonBgSpacer {
+	background-color: rgb(13, 103, 26);
+}
+.vertSpacer {
+	padding: 5px;
+}
+.havenBgGronTop {
+	background-color: rgb(0, 75, 44);
+}
+.havenBgGronMain {
+	background-color: rgb(211, 234, 206);
+}
+.havenBgGraaMain {
+	background-color: rgb(162, 162, 162);
+}
+.chkboxTxt {
+	left: 540px; position: absolute;
+}
+.inputChkbox {
+	left: 515px; margin-top: -2px; position: absolute;
+}
+.inputBygTxt {
+	color: rgb(0, 99, 164); font-weight: bold;
+}
+.header {
+	font-family: "Trebuchet MS", Tahoma, Geneva, Arial, Helvetica, sans-serif; font-size: 26px;
+}
+.headerLarge {
+	font-family: "Trebuchet MS", Tahoma, Geneva, Arial, Helvetica, sans-serif; font-size: 36px;
+}
+.inviHeader {
+	font-size: 14px; font-style: italic; font-weight: bold;
+}
+.inviSubHeader {
+	font-size: 12px;
+}
+.menuRetter {
+	font-size: 13px; font-weight: bold;
+}
+.txtLimit {
+	padding-right: 40px;
+}
+.txtLimit20 {
+	padding-right: 20px;
+}
+.menuTxt {
+	font-size: 10px;
+}
+.dagbogTopLine {
+	color: rgb(255, 255, 255); font-size: 18px;
+}
+.dagbogTopOrangeHvid {
+	color: rgb(240, 167, 28); font-size: 18px;
+}
+.dagbogTopPinkLine {
+	color: rgb(255, 255, 255); font-size: 18px; font-style: italic;
+}
+.dagbogTopLineSortGron {
+	font-family: Times New Roman; font-size: 18px;
+}
+.dagbogTopLineOrange {
+	color: rgb(240, 167, 28); font-size: 18px; font-style: italic;
+}
+.dagbogBrunSubheader {
+	color: rgb(109, 77, 46); font-size: 18px;
+}
+.dagbogBrunSubheaderSortGron {
+	color: rgb(13, 103, 26); font-family: Times New Roman; font-size: 18px;
+}
+.dagbogSortSubheader {
+	font-size: 18px;
+}
+.dagbogBordeauxSubheader {
+	color: rgb(150, 0, 24); font-family: Times New Roman; font-size: 18px;
+}
+.dagbogBlomstBordeauxSubheader {
+	color: rgb(150, 0, 24); font-size: 18px;
+}
+.dagbogHvidBordeauxSubheader {
+	color: rgb(150, 0, 24); font-family: Times New Roman; font-size: 18px;
+}
+.dagbogPinkSubheader {
+	color: rgb(226, 0, 127); font-size: 18px;
+}
+.dagbogTxtStart {
+	padding-top: 15px;
+}
+.txtBlok {
+	padding-right: 20px;
+}
+.fontTimes {
+	font-family: Times New Roman;
+}
+.rejsedagbogArial {
+	color: rgb(240, 167, 28); font-family: Arial; font-size: 18px; font-style: italic;
+}
+.vinHeaderRoed {
+	color: rgb(150, 0, 24); font-weight: bold;
+}
+.vinHeaderGron {
+	color: rgb(69, 123, 43); font-weight: bold;
+}
+.opskriftBrunBg {
+	background-color: rgb(109, 77, 46);
+}
+.opskriftGronBg {
+	background-color: rgb(175, 189, 165);
+}
+.opskriftGronHeader {
+	color: rgb(13, 103, 26); font-size: 18px;
+}
+.opskriftSubHeaderRoed {
+	color: rgb(150, 0, 24); font-style: italic;
+}
+.opskriftRoedTxt {
+	text-align: justify; padding-right: 20px; padding-left: 20px;
+}
+.havenHeaderGron {
+	color: rgb(0, 75, 44); font-size: 18px;
+}
+.havenHeaderGraa {
+	color: rgb(136, 136, 136); font-size: 18px;
+}
+.havenHeaderOrange {
+	color: rgb(240, 167, 28); font-size: 18px;
+}
+.havenHeaderBrun {
+	color: rgb(163, 147, 126); font-size: 18px;
+}
+.barnetTxtBlaa {
+	color: rgb(10, 45, 160);
+}
+.billedTxt {
+	font-size: 10px;
+}
+.familieHeaderBrun {
+	color: rgb(250, 224, 176);
+}
+.familieTxtBrun {
+	color: rgb(109, 77, 46);
+}
+.bifLink {
+	color: rgb(248, 194, 1);
+}
+.juleHeader {
+	font-size: 40px; font-style: italic; font-weight: bold;
+}
+.gaesteBogHeader {
+	font-weight: bold;
+}
+.inputBobbel {
+	border: 1px solid rgb(178, 208, 228); border-image: none; width: 240px; font-family: "Trebuchet MS", Tahoma, Geneva, Arial, Helvetica, sans-serif; font-size: 12px; background-color: rgb(255, 255, 255);
+}
+.inputLogin {
+	border: 1px solid rgb(236, 152, 0); border-image: none; width: 161px; font-family: "Trebuchet MS", Tahoma, Geneva, Arial, Helvetica, sans-serif; font-size: 12px; background-color: rgb(255, 255, 255);
+}
+.builderMenuBtn {
+	top: 4px; position: relative;
+}
+.opskriftSpacer {
+	padding-left: 26px;
+}
+.opskriftTxtSpacer {
+	padding-left: 11px;
+}
+.rightSpacer {
+	padding-right: 20px;
+}
+.menuPlace {
+	padding-top: 10px; padding-left: 10px;
+}
+.babyTxt {
+	padding-right: 120px; padding-left: 120px;
+}
+.onskeTxt {
+	padding-right: 60px; padding-left: 60px;
+}
+.babyTxtBrun {
+	color: rgb(117, 89, 38);
+}
+.babyTxtGroen {
+	color: rgb(169, 212, 109);
+}
+.babyTxtPink {
+	color: rgb(255, 152, 208);
+}
+.babyTxtBallon {
+	color: rgb(226, 0, 127);
+}
+.babyTxtHvid {
+	color: rgb(255, 255, 255);
+}
+.babyTxtBlaa {
+	color: rgb(137, 178, 200);
+}
+.picHeaderPlacement {
+	margin-top: -6px;
+}
+.horSpacer {
+	padding-left: 10px;
+}
+.pageSpace {
+	padding: 20px;
+}
+.vinBgColorBrun {
+	background-color: rgb(250, 224, 176);
+}
+.panelPlace {
+	left: 690px; margin-top: -11px; position: absolute;
+}
+.picUplPlace {
+	left: 151px; margin-top: 0px; position: absolute;
+}
+.bobbelPlace {
+	left: 45px; margin-top: 10px; position: absolute;
+}
+.elementSpace {
+	padding-bottom: 40px;
+}
+.halfLineSpace {
+	padding-bottom: 5px;
+}
+.oneLineSpace {
+	padding-bottom: 10px;
+}
+.twoLineSpace {
+	padding-bottom: 20px;
+}
+.topLeftSpace {
+	padding-top: 5px; padding-left: 5px;
+}
+.mainContentTblSpace {
+	padding-top: 20px; padding-right: 5px; padding-bottom: 10px;
+}
+#sortLink {
+	color: rgb(0, 0, 0);
+}
+#orangeLink {
+	color: rgb(240, 167, 28);
+}
+#brunLink {
+	color: rgb(109, 77, 46);
+}
+#hvidLink {
+	color: rgb(255, 255, 255);
+}
+#hipLink {
+	color: rgb(91, 55, 20);
+}
+#rodLink {
+	color: rgb(180, 0, 0);
+}
+.woodHeader {
+	color: rgb(255, 255, 255); font-family: Times New Roman, serif; font-size: 26px;
+}
+.woodSubHeader {
+	color: rgb(255, 255, 255); font-family: Times New Roman, serif; font-size: 20px;
+}
+.greenHeader {
+	color: rgb(187, 187, 47);
+}
+.blueHeader {
+	color: rgb(51, 153, 204);
+}
+.darkOrangeHeader {
+	color: rgb(255, 102, 0);
+}
+.lightOrangeHeader {
+	color: rgb(255, 153, 0);
+}
+.redHeader {
+	color: rgb(215, 0, 0);
+}
+.whiteUnderLine {
+	margin-top: 5px; margin-bottom: 8px; border-bottom-color: rgb(255, 255, 255); border-bottom-width: 2px; border-bottom-style: solid;
+}
+.cmpRichText1_OuterTable {
+	width: 489px; background-color: rgb(158, 190, 245);
+}
+#cmpRichText1_toolbarArea select {
+	font: 14px/normal "Trebuchet MS", Tahoma, Verdana, sans-serif; margin: 0px; padding: 0px; font-size-adjust: none; font-stretch: normal;
+}
+.cmpRichText1_HtmlBox {
+	padding: 4px; border: 1px solid rgb(128, 128, 128); font-family: Courier New, Courier; scroll: auto;
+}
+.cmpRichText1_DesignBox {
+	border: 1px solid rgb(128, 128, 128); border-image: none; background-color: rgb(255, 255, 255); frameBorder: 0;
+}
+.cmpRichText1_DesignBox body {
+	background-color: black;
+}
+.cmpRichText1_Toolbar {
+	margin-right: 2px; margin-bottom: 1px; float: left;
+}
+.cmpRichText1_Button_Off_Out {
+	padding: 1px; background-color: transparent;
+}
+.cmpRichText1_Button_Off_Over {
+	padding: 0px; border: 1px solid rgb(0, 0, 128); background-color: rgb(255, 244, 204);
+}
+.cmpRichText1_Button_On_Out {
+	padding: 0px; border: 1px solid rgb(0, 0, 128); background-color: rgb(255, 213, 140);
+}
+.cmpRichText1_Button_On_Over {
+	padding: 0px; border: 1px solid rgb(0, 0, 128); background-color: rgb(254, 145, 78);
+}
+.cmpRichText1_StartTabOn {
+	border-width: 1px; border-style: solid; border-color: rgb(128, 128, 128) rgb(255, 255, 255) rgb(129, 169, 226) rgb(129, 169, 226); font: 10pt/normal MS Sans Serif; padding: 1px; font-size-adjust: none; font-stretch: normal; background-color: rgb(129, 169, 226);
+}
+.cmpRichText1_StartTabOff {
+	border-width: 1px; border-style: solid; border-color: rgb(128, 128, 128) rgb(128, 128, 128) rgb(129, 169, 226) rgb(129, 169, 226); font: 10pt/normal MS Sans Serif; padding: 1px; font-size-adjust: none; font-stretch: normal; background-color: rgb(129, 169, 226);
+}
+.cmpRichText1_TabOn {
+	border-width: 1px; border-style: solid; border-color: rgb(158, 190, 245) rgb(128, 128, 128) rgb(128, 128, 128) rgb(255, 255, 255); font: 8pt/normal MS Sans Serif; padding: 1px 5px; font-size-adjust: none; font-stretch: normal; background-color: rgb(158, 190, 245);
+}
+.cmpRichText1_TabOffRight {
+	border-width: 1px; border-style: solid; border-color: rgb(128, 128, 128) rgb(128, 128, 128) rgb(129, 169, 226); font: 8pt/normal MS Sans Serif; padding: 1px 5px; font-size-adjust: none; font-stretch: normal; background-color: rgb(129, 169, 226);
+}
+.cmpRichText1_TabOffLeft {
+	border-width: 1px; border-style: solid; border-color: rgb(128, 128, 128) rgb(255, 255, 255) rgb(158, 190, 245) rgb(128, 128, 128); font: 8pt/normal MS Sans Serif; padding: 1px 5px; font-size-adjust: none; font-stretch: normal; background-color: rgb(129, 169, 226);
+}
+.cmpRichText1_EndTab {
+	border-width: 1px; border-style: solid; border-color: rgb(128, 128, 128) rgb(129, 169, 226) rgb(129, 169, 226); font: 10pt/normal MS Sans Serif; padding: 1px; width: 100%; font-size-adjust: none; font-stretch: normal; background-color: rgb(129, 169, 226);
+}
+.cmpRichText1_AncestorArea {
+	margin-left: 4px;
+}
+.cmpRichText1_AncestorArea a {
+	padding: 1px; border: 1px solid rgb(128, 128, 128); border-image: none; color: rgb(0, 0, 0); font-family: arial; font-size: 11px; margin-right: 2px; margin-left: 2px;
+}
+.cmpRichText1_AncestorArea a:link {
+	text-decoration: none; background-color: transparent;
+}
+.cmpRichText1_AncestorArea a:visited {
+	text-decoration: none; background-color: transparent;
+}
+.cmpRichText1_AncestorArea a:active {
+	text-decoration: none; background-color: transparent;
+}
+.cmpRichText1_AncestorArea a:hover {
+	border: 1px solid rgb(255, 255, 255); border-image: none; color: rgb(255, 255, 255); text-decoration: none; background-color: rgb(49, 106, 197);
+}
+.cmpRichText1_Paragraph {
+	font: 14px/normal "Trebuchet MS", Tahoma, Verdana, sans-serif; margin: 0px; padding: 0px; font-size-adjust: none; font-stretch: normal;
+}
+.cmpRichText1_Color {
+	font: 14px/normal "Trebuchet MS", Tahoma, Verdana, sans-serif; margin: 0px; padding: 0px; font-size-adjust: none; font-stretch: normal;
+}
+.cmpRichText1_Size {
+	font: 14px/normal "Trebuchet MS", Tahoma, Verdana, sans-serif; margin: 0px; padding: 0px; font-size-adjust: none; font-stretch: normal;
+}
+.cmpRichText1_Font {
+	font: 14px/normal "Trebuchet MS", Tahoma, Verdana, sans-serif; margin: 0px; padding: 0px; font-size-adjust: none; font-stretch: normal;
+}
+.cmpRichText1_InsertHtml {
+	font: 14px/normal "Trebuchet MS", Tahoma, Verdana, sans-serif; margin: 0px; padding: 0px; font-size-adjust: none; font-stretch: normal;
+}
+.cmpRichText1_EmoticonMenu {
+	font: 14px/normal "Trebuchet MS", Tahoma, Verdana, sans-serif; margin: 0px; padding: 0px; font-size-adjust: none; font-stretch: normal;
+}
+.domainintrooffermainbannerbuilder {
+	margin-bottom: 10px;
+}
+.domainintrooffermainbanner {
+	background: rgb(180, 0, 0); padding: 8px 4px; border: 1px solid rgb(236, 152, 0); border-image: none; color: rgb(255, 255, 255); line-height: 1.7em; font-size: 12px;
+}
+.domainintrooffermainbanner a {
+	color: rgb(236, 152, 0);
+}
+.domainintrooffermainbanner strong {
+	font-size: 18px; font-weight: normal;
+}
+.domainintrooffermainbanner .linkstyle {
+	color: rgb(236, 152, 0);
+}
+.albumImageEditControlLabel {
+	left: 30px; top: 0px; width: 200px; color: rgb(0, 0, 0); line-height: 22px; font-size: 13px; font-weight: bold; text-decoration: none; position: absolute;
+}
+.albumImageEditControlLabel:hover {
+	left: 30px; top: 0px; width: 200px; color: rgb(0, 0, 0); line-height: 22px; font-size: 13px; font-weight: bold; text-decoration: none; position: absolute;
+}
+.newAlbumImageEditSaveBtn {
+	background: url("/images/fotoalbum/green_image_button.gif") no-repeat left 0px; height: 25px; color: rgb(255, 255, 255); padding-left: 20px; font-size: 13px; font-weight: bold; text-decoration: none; float: left;
+}
+.newAlbumImageEditSaveBtn:hover {
+	background: url("/images/fotoalbum/green_image_button.gif") no-repeat left 0px; height: 25px; color: rgb(255, 255, 255); padding-left: 20px; font-size: 13px; font-weight: bold; text-decoration: none; float: left;
+}
+.newAlbumImageEditSaveBtn span {
+	background: url("/images/fotoalbum/green_image_button.gif") no-repeat right -25px; height: 25px; line-height: 22px; padding-right: 20px; display: block; cursor: pointer;
+}
+.newAlbumImageEditSaveBtn:hover {
+	background-position: left -50px;
+}
+.newAlbumImageEditSaveBtn:hover span {
+	background-position: right -75px;
+}
+.status_box {
+	margin-bottom: 18px; background-color: rgb(241, 232, 206);
+}
+.status_box .status_box_header {
+	border-width: 1px 0px; border-style: solid; border-color: rgb(255, 255, 255); padding: 3px 10px; font-size: 12px; font-weight: bold; position: relative; background-color: rgb(230, 214, 167);
+}
+.status_box .status_box_header .status_box_close {
+	top: 3px; right: 5px; font-size: 12px; text-decoration: underline; position: absolute; cursor: pointer;
+}
+.status_box .status_box_content {
+	background: url("/images/status_box_content_bg.gif") repeat-x left bottom rgb(241, 232, 206); padding: 10px 10px 35px;
+}
+.status_box .status_box_content p {
+	margin: 0px 0px 10px; font-size: 12px;
+}
+.status_box .status_box_content a {
+	font-size: 12px;
+}
+.send_link_box .send_link_image {
+	border: 1px solid rgb(255, 255, 255); border-image: none;
+}
+.send_link_box .send_link_tip_img {
+	vertical-align: bottom;
+}
+.plainVideoUploadWrapper {
+	padding: 40px 0px; text-align: center; position: relative;
+}
+.plainVideoUploadWrapper .plainVideoSelectWrapper {
+	
+}
+.plainVideoUploadWrapper h2 {
+	margin: 0px 0px 6px; font-size: 14px;
+}
+.plainVideoUploadWrapper p {
+	margin: 0px 0px 6px; font-size: 12px;
+}
+.plainVideoUploadWrapper .plainVideoButtons {
+	margin: 20px 0px 15px;
+}
+.plainVideoUploadWrapper .plainVideoButtons table {
+	margin: 0px auto;
+}
+.plainVideoUploadWrapper .plainVideoButtons td {
+	vertical-align: top;
+}
+.plainVideoUploadWrapper .plainVideoButtons .selectVideoLink {
+	float: left;
+}
+.plainVideoUploadWrapper .plainVideoButtons object {
+	float: left;
+}
+.plainVideoUploadWrapper .uplodifyProgressWrapper {
+	left: 0px; top: 0px; width: 100%; height: 100%; text-align: center; font-size: 12px; display: none; position: absolute; background-color: rgb(255, 255, 255);
+}
+.plainVideoUploadWrapper .uplodifyProgressWrapperInner {
+	left: 0px; top: 50%; width: 100%; height: 100px; margin-top: -50px; position: absolute;
+}
+.plainVideoUploadWrapper .uplodifyProgressWrapper p {
+	margin: 12px 0px;
+}
+.plainVideoUploadWrapper .uplodifyProgressWrapper .header {
+	margin: 14px 0px; font-size: 14px; font-weight: bold;
+}
+.plainVideoUploadWrapper .uploadifyQueue {
+	display: none;
+}
+.plainVideoUploadWrapper .uplodifyProgressBg {
+	background-position: 0px 0px; width: 230px; height: 12px; text-align: left; background-repeat: no-repeat;
+}
+.plainVideoUploadWrapper .uplodifyProgress {
+	background-position: 0px 0px; width: 230px; height: 12px; text-align: left; background-repeat: no-repeat;
+}
+.plainVideoUploadWrapper .uplodifyProgressBg {
+	margin: 0px auto; background-image: url("/Images/VideoUpload/Progressbar_white.gif");
+}
+.plainVideoUploadWrapper .uplodifyProgress {
+	width: 0px; background-image: url("/Images/VideoUpload/Progressbar_green.gif");
+}
+.videoUploadBody {
+	background-color: rgb(242, 247, 250);
+}
+.videoUploadWrapper {
+	border: 1px solid rgb(202, 226, 237); border-image: none; background-color: rgb(255, 255, 255);
+}
+.addVideoHeadline {
+	padding-bottom: 20px; font-size: 14px; font-weight: bold; float: left; background-color: rgb(242, 247, 250);
+}
+.addVideoCancel {
+	float: right;
+}
+.redValidatorText {
+	color: red;
+}
+.errorVisible.redValidatorText {
+	padding: 4px 0px 12px; display: block;
+}
+.navigation-bottom-impl {
+	margin-bottom: 30px;
+}
+.subsshop-list-entry {
+	padding-left: 6px;
+}
+html[dir='rtl'] tr[align='left'] {
+	float: right;
+}
+html[dir='rtl'] #maincontentcell a.btn_std {
+	text-align: right;
+}
+html[dir='rtl'] #maincontentcell a.btn_std span {
+	padding-right: 4px;
+}
+html[dir='rtl'] .buildernavigation > li {
+	margin-left: 20px; float: right;
+}
+html[dir='rtl'] #usrUserMainBannerVersion2_pnlDomainQualifications a {
+	display: inline-block;
+}
+html[dir='rtl'] .create_shop_btn.sb_btn_blue_big.sb_btn_std {
+	float: left !important;
+}
+html[dir='rtl'] .add_page_btn {
+	float: right;
+}
+html[dir='rtl'] .page-icon {
+	float: right;
+}
+html[dir='rtl'] .page-title {
+	float: right;
+}
+html[dir='rtl'] .page-bar-buttons {
+	float: right;
+}
+html[dir='rtl'] .sort-handle {
+	float: left;
+}
+html[dir='rtl'] .newsubpage-area img {
+	margin-left: 5px; float: right;
+}
+html[dir='rtl'] .add_page_btn img {
+	margin: 5px 0px 0px 5px; float: right; display: block;
+}
+html[dir='rtl'] .create_shop_btn img {
+	margin: 5px 0px 0px 5px; float: right; display: block;
+}
+html[dir='rtl'] .inputByg {
+	right: 277px;
+}
+html[dir='rtl'] .writeAddressHolder .rowHeadline {
+	line-height: 22px; margin-right: 0px; margin-left: 100px; float: right;
+}
+html[dir='rtl'] .speechBubbleHolder .rowHeadline {
+	line-height: 22px; margin-right: 0px; margin-left: 100px; float: right;
+}
+html[dir='rtl'] .writeAddressHolder input {
+	float: right;
+}
+html[dir='rtl'] .speechBubbleHolder input.tbxSpeechBubble {
+	float: right;
+}
+html[dir='rtl'] .inputBygTxt .info_map_name {
+	right: 236px;
+}
+html[dir='rtl'] .inputBygTxt .info_map_text {
+	right: 236px;
+}
+html[dir='rtl'] .status_box .status_box_header .status_box_close {
+	left: 5px;
+}
+html[dir='rtl'] .logocell a.logoimage_link {
+	margin: 7px 20px 0px 0px;
+}
+html[dir='rtl'] .topLeftSpace {
+	margin-right: 20px;
+}
+html[dir='rtl'] .bygTbl td {
+	padding: 10px;
+}
+html[dir='rtl'] .butikTbl td {
+	padding: 0px;
+}
+html[dir='rtl'] .SendLinkPreviewTbl td {
+	padding: 10px;
+}
+html[dir='rtl'] .uddTblTop td {
+	padding: 10px;
+}
+html[dir='rtl'] .skabelonTxtTbl td {
+	padding: 0px;
+}
+html[dir='rtl'] .billedTbl td {
+	padding: 1px;
+}
+html[dir='rtl'] .ditBilledTbl td {
+	padding: 0px;
+}
+html[dir='rtl'] .vertSpacer {
+	padding: 5px;
+}
+html[dir='rtl'] .txtLimit {
+	padding-left: 40px;
+}
+html[dir='rtl'] .txtLimit20 {
+	padding-left: 20px;
+}
+html[dir='rtl'] .txtBlok {
+	padding-left: 20px;
+}
+html[dir='rtl'] .opskriftRoedTxt {
+	padding-right: 20px; padding-left: 20px;
+}
+html[dir='rtl'] .opskriftSpacer {
+	padding-right: 26px;
+}
+html[dir='rtl'] .opskriftTxtSpacer {
+	padding-right: 11px;
+}
+html[dir='rtl'] .rightSpacer {
+	padding-left: 20px;
+}
+html[dir='rtl'] .babyTxt {
+	padding-right: 120px; padding-left: 120px;
+}
+html[dir='rtl'] .onskeTxt {
+	padding-right: 60px; padding-left: 60px;
+}
+html[dir='rtl'] .horSpacer {
+	padding-right: 10px;
+}
+html[dir='rtl'] .pageSpace {
+	padding: 20px;
+}
+html[dir='rtl'] .picUplPlace {
+	right: 151px;
+}
+html[dir='rtl'] .bobbelPlace {
+	right: 45px;
+}
+html[dir='rtl'] .topLeftSpace {
+	padding-right: 5px;
+}
+html[dir='rtl'] #cmpRichText1_toolbarArea select {
+	margin: 0px; padding: 0px;
+}
+html[dir='rtl'] .cmpRichText1_HtmlBox {
+	padding: 4px;
+}
+html[dir='rtl'] .cmpRichText1_DesignBox {
+	border-right-color: currentColor; border-left-color: currentColor; border-right-width: 0px; border-left-width: 0px; border-right-style: none; border-left-style: none;
+}
+html[dir='rtl'] .cmpRichText1_Button_Off_Out {
+	padding: 1px;
+}
+html[dir='rtl'] .cmpRichText1_Button_Off_Over {
+	padding: 0px;
+}
+html[dir='rtl'] .cmpRichText1_Button_On_Out {
+	border-right-color: currentColor; border-left-color: currentColor; border-right-width: 0px; border-left-width: 0px; border-right-style: none; border-left-style: none;
+}
+html[dir='rtl'] .cmpRichText1_Button_On_Over {
+	border-right-color: currentColor; border-left-color: currentColor; border-right-width: 0px; border-left-width: 0px; border-right-style: none; border-left-style: none;
+}
+html[dir='rtl'] .cmpRichText1_StartTabOn {
+	padding: 1px; border-right-color: currentColor; border-left-color: currentColor; border-right-width: 0px; border-left-width: 0px; border-right-style: none; border-left-style: none;
+}
+html[dir='rtl'] .cmpRichText1_StartTabOff {
+	border-right-color: currentColor; border-left-color: currentColor; border-right-width: 0px; border-left-width: 0px; border-right-style: none; border-left-style: none;
+}
+html[dir='rtl'] .cmpRichText1_TabOn {
+	padding-right: 5px; padding-left: 5px; border-right-color: currentColor; border-left-color: currentColor; border-right-width: 0px; border-left-width: 0px; border-right-style: none; border-left-style: none;
+}
+html[dir='rtl'] .cmpRichText1_TabOffRight {
+	padding-right: 5px; padding-left: 5px; border-right-color: currentColor; border-left-color: currentColor; border-right-width: 0px; border-left-width: 0px; border-right-style: none; border-left-style: none;
+}
+html[dir='rtl'] .cmpRichText1_TabOffLeft {
+	padding-right: 5px; padding-left: 5px; border-right-color: currentColor; border-left-color: currentColor; border-right-width: 0px; border-left-width: 0px; border-right-style: none; border-left-style: none;
+}
+html[dir='rtl'] .cmpRichText1_EndTab {
+	padding: 1px; border-right-color: rgb(129, 169, 226); border-left-color: rgb(129, 169, 226); border-right-width: 1px; border-left-width: 1px; border-right-style: solid; border-left-style: solid;
+}
+html[dir='rtl'] .cmpRichText1_AncestorArea {
+	margin-right: 4px;
+}
+html[dir='rtl'] .cmpRichText1_AncestorArea a {
+	padding: 1px; margin-left: auto;
+}
+html[dir='rtl'] .cmpRichText1_Paragraph {
+	margin: 0px; padding: 0px;
+}
+html[dir='rtl'] .cmpRichText1_Color {
+	margin: 0px; padding: 0px;
+}
+html[dir='rtl'] .cmpRichText1_Size {
+	margin: 0px; padding: 0px;
+}
+html[dir='rtl'] .cmpRichText1_Font {
+	margin: 0px; padding: 0px;
+}
+html[dir='rtl'] .cmpRichText1_InsertHtml {
+	margin: 0px; padding: 0px;
+}
+html[dir='rtl'] .cmpRichText1_EmoticonMenu {
+	margin: 0px; padding: 0px;
+}
+html[dir='rtl'] .newAlbumImageEditSaveBtn {
+	padding-right: 20px; float: right;
+}
+html[dir='rtl'] .newAlbumImageEditSaveBtn:hover {
+	padding-right: 20px; float: right;
+}
+html[dir='rtl'] .status_box .status_box_header {
+	padding: 3px 10px;
+}
+html[dir='rtl'] .status_box .status_box_header .status_box_close {
+	left: 5px;
+}
+html[dir='rtl'] .status_box .status_box_content {
+	padding: 10px 10px 35px;
+}
+html[dir='rtl'] .status_box .status_box_content p {
+	margin: 0px 0px 10px;
+}
+html[dir='rtl'] .plainVideoUploadWrapper h2 {
+	margin: 0px 0px 6px;
+}
+html[dir='rtl'] .plainVideoUploadWrapper .plainVideoButtons {
+	margin: 20px 0px 15px;
+}
+html[dir='rtl'] .plainVideoUploadWrapper .plainVideoButtons table {
+	margin: 0px auto;
+}
+html[dir='rtl'] .plainVideoUploadWrapper .plainVideoButtons .selectVideoLink {
+	float: right;
+}
+html[dir='rtl'] .plainVideoUploadWrapper .plainVideoButtons object {
+	float: right;
+}
+html[dir='rtl'] .plainVideoUploadWrapper .uplodifyProgressWrapper p {
+	margin: 12px 0px;
+}
+html[dir='rtl'] .plainVideoUploadWrapper .uplodifyProgressWrapper .header {
+	margin: 14px 0px;
+}
+html[dir='rtl'] .plainVideoUploadWrapper .uplodifyProgressBg {
+	margin: 0px auto;
+}
+html[dir='rtl'] .addVideoHeadline {
+	float: right;
+}
+html[dir='rtl'] .addVideoCancel {
+	float: left;
+}

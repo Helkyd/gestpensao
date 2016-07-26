@@ -1,0 +1,144 @@
+#rightbar .btn {
+	padding: 8px 12px; height: 38px; text-align: left; font-size: 13px; box-shadow: none;
+}
+#rightbar .btn-group > .btn {
+	font-size: 13px;
+}
+.btn-group > .dropdown-menu {
+	font-size: 13px;
+}
+#rightbar .btn-primary {
+	box-shadow: none; text-shadow: none;
+}
+#rightbar .glyphicon {
+	padding-right: 9px; font-size: 14px; text-shadow: none;
+}
+#rightbar .dropdown-menu {
+	left: auto; right: 0px;
+}
+#wrapper {
+	top: 0px; padding-right: 200px; font-family: "Open Sans"; position: absolute;
+}
+.iframeLoaded#wrapper {
+	transition:0.4s; padding-right: 200px;
+}
+#rightbar {
+	background: rgb(242, 242, 242); transition:width 0.4s 1s; width: 0px; height: 100%; right: 0px; overflow: hidden; padding-right: 0px; margin-right: 0px; position: fixed; z-index: 10000;
+}
+.iframeLoaded#rightbar {
+	width: 200px; right: 200px; margin-right: -200px;
+}
+.clear.iframeLoaded#rightbar {
+	transition:width 0.4s; overflow: visible;
+}
+.min#rightbar #settings .btn-group button.btn .glyphicon-cog {
+	padding-right: 0px;
+}
+#rightbar #rightbar-heading #rightbar-heading-min {
+	display: none;
+}
+.min#rightbar #rightbar-heading #rightbar-heading-min {
+	display: block;
+}
+.min#rightbar {
+	width: 70px;
+}
+.min#rightbar #rightbar-heading #rightbar-heading-text {
+	display: none;
+}
+.min#rightbar .desc {
+	display: none;
+}
+#rightbar-heading {
+	top: 0px; height: 40px; right: 0px; line-height: 40px; cursor: pointer; background-color: rgb(225, 225, 225);
+}
+#rightbar-heading p {
+	color: rgb(94, 94, 94); text-transform: uppercase; letter-spacing: 1.5px; font-size: 11px; font-weight: 800;
+}
+#rightbar-body {
+	top: 40px; height: 100%; right: 0px; border-left-color: rgb(221, 221, 221); border-left-width: 1px; border-left-style: solid; background-color: rgb(242, 242, 242);
+}
+.rightbar-body-placeholder {
+	padding-top: 10px; padding-right: 10px; padding-left: 10px;
+}
+.right-icon {
+	top: 14px; right: 14px; color: rgb(94, 94, 94); position: absolute;
+}
+.rightbar-footer0 {
+	width: 200px; height: 50px; right: 0px; bottom: 250px; visibility: hidden; position: absolute;
+}
+.rightbar-footer1 {
+	width: 200px; height: 50px; right: 0px; bottom: 200px; visibility: hidden; position: absolute; background-color: rgb(66, 139, 202);
+}
+.rightbar-footer2 {
+	width: 200px; height: 150px; right: 0px; bottom: 50px; visibility: hidden; position: absolute; background-color: rgb(66, 139, 202);
+}
+.rightbar-footer3 {
+	width: 200px; height: 50px; right: 0px; bottom: 0px; visibility: hidden; position: absolute; background-color: rgb(66, 139, 202);
+}
+@media all and (max-width:600px)
+{
+#rightbar-heading {
+	display: none;
+}
+#rightbar {
+	width: 60px;
+}
+#rightbar #rightbar-heading #rightbar-heading-text {
+	display: none;
+}
+#rightbar .desc {
+	display: none;
+}
+}
+@media only screen and (max-device-width:640px), all and (max-width:640px)
+{
+.modal-pro#modal-pro-dialog {
+	margin: 0px; left: 0px; top: 0px; width: 100%; height: 100%; right: 0px; bottom: 0px; position: fixed;
+}
+#modal-pro-dialog .modal-close {
+	padding: 22px; border-radius: 50%; top: 15px; right: 15px; background-color: black;
+}
+.add-page-floater.modal {
+	margin: 0px; padding: 0px; border-radius: 0px; left: 0px; top: 0px; width: 100%; height: 100% !important; right: 0px; bottom: 0px; display: block; position: fixed;
+}
+.add-page-floater.modal .modal-body {
+	padding-top: 5%;
+}
+.add-page-floater.modal .close-icon {
+	top: 9px;
+}
+.add-page-floater.modal .modal-footer {
+	width: 100%; bottom: 0px; position: absolute;
+}
+.top-hidden.modal {
+	top: -1000px !important;
+}
+}
+.layout-main {
+	transition:0.3s 1s; padding-right: 0px;
+}
+.iframeLoaded.layout-main {
+	margin-right: 238px;
+}
+@media screen and (max-width:770px)
+{
+.iframeLoaded#ifrmWrapper {
+	transition:0.3s;
+}
+}
+.setting-navigation .pure-g {
+	position: relative;
+}
+.bottom-buttons {
+	left: 0px; right: 0px; bottom: 0px; position: absolute;
+}
+.banner-wrapper + .bottom-buttons {
+	position: static;
+}
+.rightbar-pitch {
+	position: absolute;
+}
+.rightbar-entry {
+	height: 30px;
+}

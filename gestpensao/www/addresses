@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<!-- Built on Frappe. https://frappe.io/ -->
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Address</title>
+	<meta name="generator" content="frappe">
+
+    
+	<link rel="shortcut icon"
+		href="/files/favicon.ico"
+		type="image/x-icon">
+	<link rel="icon"
+		href="/files/favicon.ico"
+		type="image/x-icon">
+    
+
+		
+		<link type="text/css" rel="stylesheet" href="https://bootswatch.com/simplex/bootstrap.min.css">
+		<link type="text/css" rel="stylesheet" href="/website_theme.css">
+		<link type="text/css" rel="stylesheet" href="/assets/frappe/css/font/open-sans/open-sans.css">
+		<link type="text/css" rel="stylesheet" href="/assets/css/frappe-web.css">
+		<link type="text/css" rel="stylesheet" href="/assets/erpnext/css/website.css">
+
+<script>
+    window.frappe = {
+    	page_ready_events: {},
+    	ready: function(fn) {
+    		if (!frappe.page_ready_events[location.pathname]) {
+    			frappe.page_ready_events[location.pathname] = []
+    		}
+    		frappe.page_ready_events[location.pathname].push(fn);
+    	}
+    }
+    window.dev_server = 0;
+    </script>
+</head>
+<body data-path="addresses">
+	<div class="main-section">
+		<div>
+				<header>
+	<nav class="navbar navbar-default navbar-main" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<!-- <a class="navbar-brand ellipsis" href="/"> -->
+				<a class="navbar-brand ellipsis"
+					 href="/">
+					<span><img src="/files/castlecraft-word.png" style="max-height: 20px;"></span>
+				</a>
+				<!-- <a class="pull-right visible-xs navbar-toggle toggle-sidebar">
+					<i class="octicon octicon-three-bars"></i>
+				</a> -->
+				<div class="dropdown">
+					<button class="btn btn-default navbar-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+						<i class="octicon octicon-three-bars"></i>
+					</button>
+					<ul class="dropdown-menu dropdown-menu-right">
+<li data-label='About Us' >
+	<a href="/about"
+		
+		>
+	About Us</a></li><li data-label='Products' >
+	<a href="/products"
+		
+		>
+	Products</a></li><li data-label='Structural Services' >
+	<a href="/services"
+		
+		>
+	Structural Services</a></li><li data-label='Blog' >
+	<a href="/blog"
+		
+		>
+	Blog</a></li><li data-label='Clients' >
+	<a href="/clients"
+		
+		>
+	Clients</a></li><li data-label='Jobs' >
+	<a href="/jobs"
+		
+		>
+	Jobs</a></li><li data-label='Contact' >
+	<a href="/contact"
+		
+		>
+	Contact</a></li>
+
+<li class="divider"></li>
+<!-- post login tools -->
+<li data-label="My Account" 
+ class=" logged-in" ><a href="/me" 
+	rel="nofollow">
+	My Account
+	</a></li><li data-label="Logout" 
+ class=" logged-in" ><a href="/?cmd=web_logout" 
+	rel="nofollow">
+	Logout
+	</a></li>
+<li class="btn-login-area"><a href="/login">Login</a></li>
+
+
+</ul>
+				</div>
+			</div>
+			<div class="hidden-xs">
+				
+				<ul class="nav navbar-nav navbar-left"><li data-label='About Us' >
+	<a href="/about"
+		
+		>
+	About Us</a></li><li data-label='Products' >
+	<a href="/products"
+		
+		>
+	Products</a></li><li data-label='Structural Services' >
+	<a href="/services"
+		
+		>
+	Structural Services</a></li><li data-label='Blog' >
+	<a href="/blog"
+		
+		>
+	Blog</a></li><li data-label='Clients' >
+	<a href="/clients"
+		
+		>
+	Clients</a></li><li data-label='Jobs' >
+	<a href="/jobs"
+		
+		>
+	Jobs</a></li>
+</ul>
+<ul class="nav navbar-nav navbar-right"><li data-label='Contact' >
+	<a href="/contact"
+		
+		>
+	Contact</a></li>
+	
+		
+	<li class="shopping-cart">
+		<div class="cart-icon small">
+			<a class="dropdown-toggle" href="#" data-toggle="dropdown" id="navLogin">
+				Cart <span class="badge-wrapper" id="cart-count"></span>
+			</a>
+			<div id="cart-overlay" class="dropdown-menu shopping-cart-menu"></div>
+		</div>
+	 </li>
+
+	
+	<!-- post login tools -->
+
+<li class="dropdown logged-in" id="website-post-login"
+	data-label="website-post-login" style="display: none">
+	<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+		<span class="user-image-wrapper"></span>
+		<span class="full-name"></span>
+		<b class="caret"></b>
+	</a>
+    <ul class="dropdown-menu" role="menu"><li data-label="My Account" 
+			><a href="/me" 
+					rel="nofollow">
+					My Account
+				</a></li><li data-label="Logout" 
+			><a href="/?cmd=web_logout" 
+					rel="nofollow">
+					Logout
+				</a></li></ul>
+</li>
+
+<li class="btn-login-area"><a href="/login">Login</a></li>
+
+
+</ul>
+				
+			</div>
+		</div>
+	</nav>
+</header><div class="hero-and-content">
+                <div data-html-block="hero"></div>
+                <div class="container" data-html-block="content">
+                
+<div class="page-container" id="page-addresses" data-path="addresses"
+	data-doctype="Web Form">
+			<div class="row vert-line">
+				
+					<div class="col-sm-3 sidebar-block hidden-xs">
+						<div class="web-sidebar">
+	<!-- <div class="your-account-info-sidebar">
+		<div class="row">
+			<div class="col-xs-2">
+				<span class="user-image-sidebar"></span>
+			</div>
+			<div class="col-xs-10">
+				<div class="web-sidebar-user">Guest</div>
+				<a href="/?cmd=web_logout">
+					<div class="text-muted small">
+						Logout</div>
+				</a>
+			</div>
+		</div>
+	</div> -->
+	<div class="sidebar-items">
+		<ul class="list-unstyled">
+			
+			<li class="sidebar-item">
+				<a href="/me">My Account</a>
+			</li>
+			
+		<li class="sidebar-item">
+				<a href="/project" class="text-muted "
+				>
+				Projects
+				</a>
+			</li><li class="sidebar-item">
+				<a href="/rfq" class="text-muted "
+				>
+				Request for Quotations
+				</a>
+			</li><li class="sidebar-item">
+				<a href="/orders" class="text-muted "
+				>
+				Orders
+				</a>
+			</li><li class="sidebar-item">
+				<a href="/invoices" class="text-muted "
+				>
+				Invoices
+				</a>
+			</li><li class="sidebar-item">
+				<a href="/shipments" class="text-muted "
+				>
+				Shipments
+				</a>
+			</li><li class="sidebar-item">
+				<a href="/issues" class="text-muted "
+				>
+				Issues
+				</a>
+			</li><li class="sidebar-item">
+				<a href="/addresses" class="text-muted "
+				>
+				Addresses
+				</a>
+			</li>
+		</ul>
+		</div>
+</div>
+
+
+<script>
+frappe.ready(function() {
+	$('.sidebar-item a').each(function(index) {
+	        if(this.href.trim() == window.location)
+	            $(this).addClass("active");
+	    });
+});
+</script>
+					</div>
+				
+				<div class="page-content with-sidebar col-sm-9">
+					<div class="page-content-wrapper">
+						<div class="row page-head">
+							<div class="col-sm-8 col-xs-6">
+								
+								
+<h1>Address</h1>
+
+							</div>
+							<div class="col-sm-4 col-xs-6">
+								
+
+								
+								<div class="page-header-actions-block">
+									
+  
+
+								</div>
+								
+							</div>
+						</div>
+					</div>
+					<div class="page_content">
+<div class="introduction">
+	
+</div>
+
+<div class="login-required">
+	<div class="text-muted">
+		Please login to create a new Address
+	</div>
+	<p>
+		<a href="/login?redirect-to=/addresses" class="btn btn-primary">
+			Login
+		</a>
+	</p>
+</div>
+
+<div class="padding"></div>
+</div>
+				</div>
+			</div>
+</div>
+
+                </div>
+            </div></div>
+		<div><footer class="web-footer">
+	<section class="footer-links">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6 text-left">
+					<div class="row">
+					
+					</div>
+				</div>
+
+				<div class="col-sm-6 text-right">
+					
+<div class='input-group input-group-sm pull-right footer-subscribe'>
+	<input class="form-control" type="text" id="footer-subscribe-email"
+		placeholder="Your email address...">
+	<span class='input-group-btn'>
+		<button class="btn btn-default" type="button"
+			id="footer-subscribe-button">Get Updates</button>
+	</span>
+</div>
+
+<script>
+frappe.ready(function() {
+	$("#footer-subscribe-button").click(function() {
+
+		if($("#footer-subscribe-email").val()) {
+			$("#footer-subscribe-email").attr('disabled', true);
+			$("#footer-subscribe-button").html("Sending...")
+				.attr("disabled", true);
+			erpnext.subscribe_to_newsletter({
+				email: $("#footer-subscribe-email").val(),
+				callback: function(r) {
+					if(!r.exc) {
+						$("#footer-subscribe-button").html(__("Added"))
+							.attr("disabled", true);
+					} else {
+						$("#footer-subscribe-button").html(__("Error: Not a valid id?"))
+							.addClass("btn-danger").attr("disabled", false);
+						$("#footer-subscribe-email").val("").attr('disabled', false);
+					}
+				}
+			});
+		}
+		else
+			frappe.msgprint(frappe._("Please enter email address"))
+	});
+});
+</script>
+
+
+				</div>
+			</div>
+			<div class="row footer-bottom-line">
+				<div class="text-muted small col-sm-6">
+					
+						&copy; Castlecraft Properties and Engineering Services Pvt Ltd
+					
+				</div>
+				
+				<div class="text-muted small col-sm-6 text-right footer-powered">
+					
+						<a href="https://erpnext.com?source=website_footer" target="_blank" class="text-muted">
+		Powered by ERPNext</a>
+					
+				</div>
+			</div>
+		</div>
+	</section>
+</footer></div>
+	</div>
+
+	<!-- js should be loaded in body! -->
+	<script type="text/javascript"
+		src="/assets/frappe/js/lib/jquery/jquery.min.js"></script>
+	<script type="text/javascript"
+		src="/assets/js/frappe-web.min.js"></script>
+	<script type="text/javascript" src="/website_script.js"></script>
+	<script type="text/javascript" src="/assets/js/erpnext-web.min.js"></script>
+<script>
+frappe.ready(function() {
+	window.file_reading = false;
+		window.success_message = "";
+	frappe.datepicker_format = "dd-mm-yy";
+	var $form = $("form[data-web-form='addresses']");
+
+	// read file attachment
+	$form.on("change", "[type='file']", function() {
+		var $input = $(this);
+		if($input.attr("type")==="file") {
+			var input = $input.get(0);
+			var reader = new FileReader();
+
+			input.filedata = null;
+			if(input.files.length) {
+				file = input.files[0];
+				window.file_reading = true;
+				reader.onload = function(e) {
+					input.filedata = {
+						"__file_attachment": 1,
+						"filename": file.name,
+						"dataurl": reader.result
+					};
+					window.file_reading = false;
+				}
+
+				reader.readAsDataURL(file);
+			}
+		}
+	});
+
+	// change attach
+	$form.on("click", ".change-attach", function() {
+		$(this).parent().addClass("hide")
+			.parent().find(".attach-input-wrap").removeClass("hide");
+
+		return false;
+	});
+
+	// submit
+	$(".btn-form-submit").on("click", function() {
+		var args = {};
+		if(window.saving)
+			return;
+		window.saving = true;
+
+		if(window.file_reading) {
+			window.saving = false;
+			frappe.msgprint("Reading file, please retry.");
+			return;
+		}
+
+		$form.find("[name]").each(function() {
+			var $input = $(this);
+			var input_type = $input.attr("type");
+			if(input_type==="file") {
+				var val = $input.get(0).filedata;
+			} else if(input_type==="checkbox") {
+				var val = $input.is(":checked") ? 1 : 0;
+			} else if($input.attr("data-fieldtype")==="Date") {
+				var val = $.datepicker.formatDate("yy-mm-dd",
+					$input.datepicker('getDate'));
+			} else {
+				var val = $input.val();
+			}
+
+			if($input.prop("required") && val===undefined) {
+				frappe.msgprint(__("{0} is required",
+					$input.attr("data-label")));
+				window.saving = false;
+				throw "mandatory missing";
+			}
+
+			args[$input.attr("name")] = val;
+		});
+
+		frappe.call({
+			type: "POST",
+			method: "frappe.website.doctype.web_form.web_form.accept",
+			args: args,
+			freeze: true,
+			btn: $form.find("[type='submit']"),
+			callback: function(data) {
+				if(!data.exc) {
+					if(window.success_message) {
+						$form.addClass("hide");
+						$(".comments, .introduction").addClass("hide");
+						scroll(0, 0);
+						$(".form-message")
+							.html('None<p><a href="/addresses">Continue</a></p>')
+							.removeClass("hide");
+                    } else {
+						frappe.msgprint(__('Successfully Updated. Redirecting...'));
+						setTimeout(function() {
+							window.location.href = "/addresses";
+						}, 3000);
+				    }
+			    }
+		    },
+            always: function() {
+                window.saving = false;
+            }
+		});
+
+		return false;
+	});
+
+	// close button
+	$(".close").on("click", function() {
+		var name = $(this).attr("data-name");
+		if(name) {
+			frappe.call({
+				type:"POST",
+				method: "frappe.website.doctype.web_form.web_form.delete",
+				args: {
+					"web_form": "addresses",
+					"name": name
+				},
+				callback: function(r) {
+					if(!r.exc) {
+						location.reload();
+					}
+				}
+			});
+		}
+	})
+
+	// import date picker / timepicker if required
+	
+
+	
+});
+
+
+frappe.ready(function() {
+	// bind events here
+})
+
+
+</script>
+
+
+	<script>frappe.csrf_token = "None";</script></body>
+</html>

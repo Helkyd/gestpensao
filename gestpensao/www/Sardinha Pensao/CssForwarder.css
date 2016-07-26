@@ -1,0 +1,453 @@
+.captcha_button {
+	height: 200px; padding-right: 28px;
+}
+.captcha_style {
+	margin-top: 20px; margin-bottom: 20px;
+}
+a.StdBtnHvid {
+	color: rgb(255, 255, 255); font-size: 10px; text-decoration: none;
+}
+a.StdBtnHvid:hover {
+	color: rgb(255, 255, 255); font-size: 10px; text-decoration: none;
+}
+a.StdBtnSort {
+	color: rgb(0, 0, 0); font-size: 10px; text-decoration: none;
+}
+a.StdBtnSort:hover {
+	color: rgb(0, 0, 0); font-size: 10px; text-decoration: none;
+}
+.btn_std * {
+	margin: 0px; padding: 0px;
+}
+.btn_fat * {
+	margin: 0px; padding: 0px;
+}
+.btn_std {
+	background: url("/pages/art/standard_knapper/knap.gif") no-repeat left bottom; width: 106px; height: 18px; text-align: left; color: rgb(255, 255, 255); line-height: 17px; overflow: hidden; font-family: Trebuchet MS; font-size: 10px; font-weight: normal; text-decoration: none; vertical-align: middle; display: block; cursor: pointer;
+}
+.btn_std span {
+	background: url("/pages/art/standard_knapper/knap.gif") no-repeat right bottom; height: 18px; line-height: 17px; margin-left: 3px; display: block;
+}
+a.btn_std:hover {
+	background-position: left; color: rgb(255, 255, 255);
+}
+a.btn_std:hover span {
+	background-position: right; color: rgb(255, 255, 255);
+}
+a.btn_sel {
+	background-position: left top; color: rgb(0, 0, 0);
+}
+.btn_sel span {
+	background-position: right top; color: rgb(0, 0, 0);
+}
+a.btn_sel:hover {
+	background-position: left top; color: rgb(0, 0, 0);
+}
+a.btn_sel:hover span {
+	background-position: right top; color: rgb(0, 0, 0);
+}
+.btn_double {
+	width: 233px;
+}
+.btn_medium {
+	width: 164px;
+}
+.btn_small {
+	width: 79px;
+}
+.btn_bold span {
+	font-weight: bold;
+}
+.btn_center span {
+	text-align: center;
+}
+.btn_fat {
+	height: 41px; background-image: url("/pages/art/standard_knapper/knap_green_fat.gif");
+}
+.btn_fat span {
+	height: 41px; background-image: url("/pages/art/standard_knapper/knap_green_fat.gif");
+}
+.btn_blue {
+	background-image: url("/pages/art/standard_knapper/knap_blue.gif");
+}
+.btn_blue span {
+	background-image: url("/pages/art/standard_knapper/knap_blue.gif");
+}
+.btn_green {
+	background-image: url("/pages/art/standard_knapper/knap_green.gif");
+}
+.btn_green span {
+	background-image: url("/pages/art/standard_knapper/knap_green.gif");
+}
+.btn_grey {
+	background-image: url("/pages/art/standard_knapper/knap_grey.gif");
+}
+.btn_grey span {
+	background-image: url("/pages/art/standard_knapper/knap_grey.gif");
+}
+.btn_red {
+	background-image: url("/pages/art/standard_knapper/knap_red.gif");
+}
+.btn_red span {
+	background-image: url("/pages/art/standard_knapper/knap_red.gif");
+}
+.btn_blue_fat {
+	background-image: url("/pages/art/standard_knapper/knap_blue_fat.gif");
+}
+.btn_blue_fat span {
+	background-image: url("/pages/art/standard_knapper/knap_blue_fat.gif");
+}
+.btn_green_fat {
+	background-image: url("/pages/art/standard_knapper/knap_green_fat.gif");
+}
+.btn_green_fat span {
+	background-image: url("/pages/art/standard_knapper/knap_green_fat.gif");
+}
+.btn_grey_fat {
+	background-image: url("/pages/art/standard_knapper/knap_grey_fat.gif");
+}
+.btn_grey_fat span {
+	background-image: url("/pages/art/standard_knapper/knap_grey_fat.gif");
+}
+.btn_red_fat {
+	background-image: url("/pages/art/standard_knapper/knap_red_fat.gif");
+}
+.btn_red_fat span {
+	background-image: url("/pages/art/standard_knapper/knap_red_fat.gif");
+}
+.new_blue_btn {
+	background: rgb(52, 152, 219); padding: 0px 16px; border-radius: 4px; color: rgb(255, 255, 255); line-height: 30px; overflow: hidden; font-weight: bold; text-decoration: none; display: inline-block; box-shadow: 1px 1px 2px #666;
+}
+.upload_image_button {
+	width: 100px; text-align: center; margin-top: 10px;
+}
+button.var_btn_std {
+	height: 25px; color: rgb(255, 255, 255); line-height: 22px; font-size: 14px; font-weight: bold; text-decoration: none; background-image: url("/pages/art/var_standard_buttons/blue_button.png"); background-repeat: no-repeat;
+}
+button.var_btn_std span {
+	height: 25px; color: rgb(255, 255, 255); line-height: 22px; font-size: 14px; font-weight: bold; text-decoration: none; background-image: url("/pages/art/var_standard_buttons/blue_button.png"); background-repeat: no-repeat;
+}
+a.var_btn_std {
+	height: 25px; color: rgb(255, 255, 255); line-height: 22px; font-size: 14px; font-weight: bold; text-decoration: none; background-image: url("/pages/art/var_standard_buttons/blue_button.png"); background-repeat: no-repeat;
+}
+a.var_btn_std span {
+	height: 25px; color: rgb(255, 255, 255); line-height: 22px; font-size: 14px; font-weight: bold; text-decoration: none; background-image: url("/pages/art/var_standard_buttons/blue_button.png"); background-repeat: no-repeat;
+}
+button.var_btn_std {
+	background-position: right -25px; padding-right: 20px; display: inline-block; cursor: pointer;
+}
+a.var_btn_std {
+	background-position: right -25px; padding-right: 20px; display: inline-block; cursor: pointer;
+}
+button.var_btn_std:hover {
+	background-position: right -75px; color: rgb(255, 255, 255); line-height: 22px; font-size: 14px; font-weight: bold; text-decoration: none;
+}
+a.var_btn_std:hover {
+	background-position: right -75px; color: rgb(255, 255, 255); line-height: 22px; font-size: 14px; font-weight: bold; text-decoration: none;
+}
+button.var_btn_std_disabled {
+	background-position: right -125px; cursor: default;
+}
+button.var_btn_std_disabled:hover button[disabled].var_btn_std {
+	background-position: right -125px; cursor: default;
+}
+a.var_btn_std_disabled {
+	background-position: right -125px; cursor: default;
+}
+a[disabled].var_btn_std {
+	background-position: right -125px; cursor: default;
+}
+a.var_btn_std_disabled:hover {
+	background-position: right -125px; cursor: default;
+}
+button.var_btn_std span {
+	background-position: left 0px; padding-left: 18px; display: block;
+}
+a.var_btn_std span {
+	background-position: left 0px; padding-left: 18px; display: block;
+}
+button.var_btn_std:hover span {
+	background-position: left -50px;
+}
+a.var_btn_std:hover span {
+	background-position: left -50px;
+}
+button.var_btn_std_disabled span {
+	background-position: left -100px;
+}
+button.var_btn_std_disabled:hover span button[disabled].var_btn_std span {
+	background-position: left -100px;
+}
+a.var_btn_std_disabled span {
+	background-position: left -100px;
+}
+a[disabled].var_btn_std span {
+	background-position: left -100px;
+}
+a.var_btn_std_disabled:hover span {
+	background-position: left -100px;
+}
+* html button.var_btn_std span {
+	display: inline; -ms-zoom: 1;
+}
+* html a.var_btn_std span {
+	display: inline; -ms-zoom: 1;
+}
+button.var_btn_blue {
+	background-image: url("/pages/art/var_standard_buttons/blue_button.png");
+}
+button.var_btn_blue span {
+	background-image: url("/pages/art/var_standard_buttons/blue_button.png");
+}
+a.var_btn_blue {
+	background-image: url("/pages/art/var_standard_buttons/blue_button.png");
+}
+a.var_btn_blue span {
+	background-image: url("/pages/art/var_standard_buttons/blue_button.png");
+}
+button.var_btn_black {
+	background-image: url("/pages/art/var_standard_buttons/black_button.png");
+}
+button.var_btn_black span {
+	background-image: url("/pages/art/var_standard_buttons/black_button.png");
+}
+a.var_btn_black {
+	background-image: url("/pages/art/var_standard_buttons/black_button.png");
+}
+a.var_btn_black span {
+	background-image: url("/pages/art/var_standard_buttons/black_button.png");
+}
+button.var_btn_green {
+	background-image: url("/pages/art/var_standard_buttons/green_button.png");
+}
+button.var_btn_green span {
+	background-image: url("/pages/art/var_standard_buttons/green_button.png");
+}
+a.var_btn_green {
+	background-image: url("/pages/art/var_standard_buttons/green_button.png");
+}
+a.var_btn_green span {
+	background-image: url("/pages/art/var_standard_buttons/green_button.png");
+}
+button.var_btn_red {
+	background-image: url("/pages/art/var_standard_buttons/red_button.png");
+}
+button.var_btn_red span {
+	background-image: url("/pages/art/var_standard_buttons/red_button.png");
+}
+a.var_btn_red {
+	background-image: url("/pages/art/var_standard_buttons/red_button.png");
+}
+a.var_btn_red span {
+	background-image: url("/pages/art/var_standard_buttons/red_button.png");
+}
+button.var_btn_yellow {
+	background-image: url("/pages/art/var_standard_buttons/yellow_button.png");
+}
+button.var_btn_yellow span {
+	background-image: url("/pages/art/var_standard_buttons/yellow_button.png");
+}
+a.var_btn_yellow {
+	background-image: url("/pages/art/var_standard_buttons/yellow_button.png");
+}
+a.var_btn_yellow span {
+	background-image: url("/pages/art/var_standard_buttons/yellow_button.png");
+}
+button.var_btn_orange {
+	background-image: url("/pages/art/var_standard_buttons/orange_button.png");
+}
+button.var_btn_orange span {
+	background-image: url("/pages/art/var_standard_buttons/orange_button.png");
+}
+a.var_btn_orange {
+	background-image: url("/pages/art/var_standard_buttons/orange_button.png");
+}
+a.var_btn_orange span {
+	background-image: url("/pages/art/var_standard_buttons/orange_button.png");
+}
+button.var_btn_red-new {
+	background-position: 100% -33px; padding-right: 12px; margin-right: 16px;
+}
+a.var_btn_red-new {
+	background-position: 100% -33px; padding-right: 12px; margin-right: 16px;
+}
+button.var_btn_red-new span {
+	padding-left: 12px;
+}
+a.var_btn_red-new span {
+	padding-left: 12px;
+}
+button.var_btn_red-new {
+	height: 30px; line-height: 30px; background-image: url("/pages/art/var_standard_buttons/red_button_old.png");
+}
+button.var_btn_red-new span {
+	height: 30px; line-height: 30px; background-image: url("/pages/art/var_standard_buttons/red_button_old.png");
+}
+a.var_btn_red-new {
+	height: 30px; line-height: 30px; background-image: url("/pages/art/var_standard_buttons/red_button_old.png");
+}
+a.var_btn_red-new span {
+	height: 30px; line-height: 30px; background-image: url("/pages/art/var_standard_buttons/red_button_old.png");
+}
+button.var_btn_red-new:hover {
+	background-position: 100% -33px;
+}
+a.var_btn_red-new:hover {
+	background-position: 100% -33px;
+}
+button.var_btn_red-new:hover span {
+	background-position: 0px 0px;
+}
+a.var_btn_red-new:hover span {
+	background-position: 0px 0px;
+}
+button.var_btn_gray {
+	
+}
+a.var_btn_gray {
+	
+}
+button.var_btn_gray span {
+	padding-left: 12px;
+}
+a.var_btn_gray span {
+	padding-left: 12px;
+}
+button.var_btn_gray {
+	color: rgb(57, 57, 57); font-size: 12px; font-weight: normal; background-image: url("/pages/art/var_standard_buttons/gray_button.png");
+}
+button.var_btn_gray span {
+	color: rgb(57, 57, 57); font-size: 12px; font-weight: normal; background-image: url("/pages/art/var_standard_buttons/gray_button.png");
+}
+a.var_btn_gray {
+	color: rgb(57, 57, 57); font-size: 12px; font-weight: normal; background-image: url("/pages/art/var_standard_buttons/gray_button.png");
+}
+a.var_btn_gray span {
+	color: rgb(57, 57, 57); font-size: 12px; font-weight: normal; background-image: url("/pages/art/var_standard_buttons/gray_button.png");
+}
+button[disabled].var_btn_gray {
+	cursor: default;
+}
+button.var_btn_gray.var_btn_std_disabled {
+	cursor: default;
+}
+a[disabled].var_btn_gray {
+	cursor: default;
+}
+a.var_btn_gray.var_btn_std_disabled {
+	cursor: default;
+}
+a.var_btn_std_disabled.var_btn_gray:hover {
+	cursor: default;
+}
+button[disabled].var_btn_gray span {
+	color: rgb(136, 136, 136);
+}
+button.var_btn_gray.var_btn_std_disabled span {
+	color: rgb(136, 136, 136);
+}
+a[disabled].var_btn_gray span a.var_btn_gray.var_btn_std_disabled span {
+	color: rgb(136, 136, 136);
+}
+a.var_btn_std_disabled.var_btn_gray:hover span {
+	color: rgb(136, 136, 136);
+}
+button.var_btn_green_arrow {
+	background-image: url("/pages/art/var_standard_buttons/green_arrow_button.png");
+}
+button.var_btn_green_arrow span {
+	background-image: url("/pages/art/var_standard_buttons/green_arrow_button.png");
+}
+a.var_btn_green_arrow {
+	background-image: url("/pages/art/var_standard_buttons/green_arrow_button.png");
+}
+a.var_btn_green_arrow span {
+	background-image: url("/pages/art/var_standard_buttons/green_arrow_button.png");
+}
+button.var_btn_green_arrow span {
+	padding-left: 30px;
+}
+a.var_btn_green_arrow span {
+	padding-left: 30px;
+}
+button.var_btn_green_arrow_r {
+	background-image: url("/pages/art/var_standard_buttons/green_arrow_button_right.png");
+}
+button.var_btn_green_arrow_r span {
+	background-image: url("/pages/art/var_standard_buttons/green_arrow_button_right.png");
+}
+a.var_btn_green_arrow_r {
+	background-image: url("/pages/art/var_standard_buttons/green_arrow_button_right.png");
+}
+a.var_btn_green_arrow_r span {
+	background-image: url("/pages/art/var_standard_buttons/green_arrow_button_right.png");
+}
+button.var_btn_small {
+	line-height: 20px;
+}
+button.var_btn_small span {
+	line-height: 20px;
+}
+a.var_btn_small {
+	line-height: 20px;
+}
+a.var_btn_small span {
+	line-height: 20px;
+}
+button.var_btn_small {
+	padding-right: 12px;
+}
+a.var_btn_small {
+	padding-right: 12px;
+}
+button.var_btn_green_arrow_r {
+	padding-right: 28px;
+}
+a.var_btn_green_arrow_r {
+	padding-right: 28px;
+}
+button.var_btn_blue_arrow {
+	background-image: url("/pages/art/var_standard_buttons/blue_arrow_button.png");
+}
+button.var_btn_blue_arrow span {
+	background-image: url("/pages/art/var_standard_buttons/blue_arrow_button.png");
+}
+a.var_btn_blue_arrow {
+	background-image: url("/pages/art/var_standard_buttons/blue_arrow_button.png");
+}
+a.var_btn_blue_arrow span {
+	background-image: url("/pages/art/var_standard_buttons/blue_arrow_button.png");
+}
+button.var_btn_blue_arrow span {
+	padding-left: 26px;
+}
+a.var_btn_blue_arrow span {
+	padding-left: 26px;
+}
+button.var_btn_ghost {
+	cursor: default; background-image: url("/pages/art/var_standard_buttons/ghost_button.png");
+}
+button.var_btn_ghost span {
+	cursor: default; background-image: url("/pages/art/var_standard_buttons/ghost_button.png");
+}
+a.var_btn_ghost {
+	cursor: default; background-image: url("/pages/art/var_standard_buttons/ghost_button.png");
+}
+a.var_btn_ghost span {
+	cursor: default; background-image: url("/pages/art/var_standard_buttons/ghost_button.png");
+}
+button.var_btn_orange {
+	background-image: url("/pages/art/var_standard_buttons/orange_button.png");
+}
+button.var_btn_orange span {
+	background-image: url("/pages/art/var_standard_buttons/orange_button.png");
+}
+a.var_btn_orange {
+	background-image: url("/pages/art/var_standard_buttons/orange_button.png");
+}
+a.var_btn_orange span {
+	background-image: url("/pages/art/var_standard_buttons/orange_button.png");
+}
+.changeInfo_stdbtn_OK {
+	margin-left: 16px;
+}

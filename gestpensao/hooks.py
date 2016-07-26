@@ -15,12 +15,12 @@ app_license = "MIT"
 # ------------------
 
 # include js, css files in header of desk.html
-# app_include_css = "/assets/gestpensao/css/gestpensao.css"
-# app_include_js = "/assets/gestpensao/js/gestpensao.js"
+app_include_css = "/assets/gestpensao/css/gestpensao.css"
+app_include_js = "/assets/gestpensao/js/gestpensao.js"
 
 # include js, css files in header of web template
-# web_include_css = "/assets/gestpensao/css/gestpensao.css"
-# web_include_js = "/assets/gestpensao/js/gestpensao.js"
+web_include_css = "/assets/gestpensao/css/gestpensao.css"
+web_include_js = "/assets/gestpensao/js/gestpensao.js"
 
 # Home Pages
 # ----------
@@ -42,11 +42,31 @@ app_license = "MIT"
 # automatically create page for each record of this doctype
 # website_generators = ["Web Page"]
 
+# website_generators = ["QUARTOS","SERVICOS","CLIENTES"]
+
 # Installation
 # ------------
 
 # before_install = "gestpensao.install.before_install"
 # after_install = "gestpensao.install.after_install"
+
+# setup_wizard_requires = "assets/gestpensao/js/setup_wizard.js"
+# setup_wizard_complete = "gestpensao.setup.setup_wizard.setup_wizard.setup_complete"
+
+# before_install = "gestpensao.setup.install.check_setup_wizard_not_completed"
+# after_install = "gestpensao.setup.install.after_install"
+
+# boot_session = "gestpensao.startup.boot.boot_session"
+# notification_config = "erpnext.startup.notifications.get_notification_config"
+
+
+
+# on_session_creation = "erpnext.shopping_cart.utils.set_cart_count"
+# on_logout = "erpnext.shopping_cart.utils.clear_cart_count"
+
+remember_selected = ['Company']
+# treeviews = ['Account', 'Cost Center', 'Warehouse', 'Item Group', 'Customer Group', 'Sales Person', 'Territory', "BOM"]
+
 
 # Desk Notifications
 # ------------------

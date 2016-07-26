@@ -1,0 +1,504 @@
+.alert {
+	border-radius: 0px !important;
+}
+#Sp_builder_B1_htmNavigationRow > table {
+	display: none !important;
+}
+#Sp_builder_b2_htmNavigationRow > table {
+	display: none !important;
+}
+#_ctl0_Sp_builder_B1_htmNavigationRow > table {
+	display: none !important;
+}
+#mainNavigation {
+	display: none !important;
+}
+.htmNavigationRow {
+	display: none !important;
+}
+.spinner {
+	animation:spin 2s linear infinite;
+}
+.setting-navigation {
+	padding: 15px 0px 0px; transition:0.3s 1s; top: 0px; width: 0px; right: 0px; bottom: 0px; overflow: auto; border-left-color: rgb(213, 213, 213); border-left-width: 1px; border-left-style: solid; position: fixed; z-index: 99; box-sizing: content-box; background-color: rgb(245, 245, 245);
+}
+.iframeLoaded.setting-navigation {
+	width: 213px; padding-right: 12px; padding-left: 12px;
+}
+.setting-navigation a {
+	color: rgb(102, 102, 102); font-size: 15px;
+}
+.setting-navigation a:hover {
+	color: rgb(102, 102, 102); text-decoration: none; background-color: rgb(249, 249, 249);
+}
+.setting-navigation__title {
+	text-align: center; color: rgb(102, 102, 102); text-transform: uppercase; letter-spacing: 1.5px; font-size: 12px; font-weight: bold; margin-bottom: 12px; cursor: pointer;
+}
+.setting-navigation__list {
+	padding-bottom: 10px;
+}
+.button--extra-hight {
+	height: 42px;
+}
+.setting-navigation__button {
+	border: 1px solid rgb(213, 213, 213); border-image: none; height: 42px; text-align: left; text-decoration: none; margin-bottom: 6px; background-image: none; background-color: transparent;
+}
+.setting-navigation__button:visited {
+	border: 1px solid rgb(213, 213, 213); border-image: none; height: 42px; text-align: left; text-decoration: none; margin-bottom: 6px; background-image: none; background-color: transparent;
+}
+.setting-navigation__button:focus {
+	border: 1px solid rgb(213, 213, 213); border-image: none; height: 42px; text-align: left; text-decoration: none; margin-bottom: 6px; background-image: none; background-color: transparent;
+}
+.setting-navigation__button:active {
+	border: 1px solid rgb(213, 213, 213); border-image: none; height: 42px; text-align: left; text-decoration: none; margin-bottom: 6px; background-image: none; background-color: transparent;
+}
+.setting-navigation__button:hover {
+	color: rgb(102, 102, 102); background-image: none; background-color: rgb(228, 228, 228);
+}
+.setting-navigation__button--active.setting-navigation__button {
+	color: rgb(102, 102, 102); background-image: none; background-color: rgb(228, 228, 228);
+}
+.setting-navigation__button--logout.setting-navigation__button {
+	width: 100%; bottom: 10px;
+}
+.setting-navigation__tab {
+	color: rgb(204, 204, 204); font-size: 14px; font-weight: bold; background-image: none; background-color: transparent;
+}
+.setting-navigation__tab:hover {
+	color: rgb(204, 204, 204); font-size: 14px; font-weight: bold; background-image: none; background-color: transparent;
+}
+.setting-navigation__tab:visited {
+	color: rgb(204, 204, 204); font-size: 14px; font-weight: bold; background-image: none; background-color: transparent;
+}
+.setting-navigation__tab:focus {
+	color: rgb(204, 204, 204); font-size: 14px; font-weight: bold; background-image: none; background-color: transparent;
+}
+.setting-navigation__tab:active {
+	color: rgb(204, 204, 204); font-size: 14px; font-weight: bold; background-image: none; background-color: transparent;
+}
+.setting-navigation__tab--active.setting-navigation__tab {
+	color: rgb(102, 102, 102); border-bottom-color: rgb(102, 102, 102); border-bottom-width: 4px; border-bottom-style: solid;
+}
+.setting-navigation__subnav {
+	margin-bottom: 6px;
+}
+.setting-navigation__subnav > li a {
+	color: rgb(102, 102, 102); font-size: 13px;
+}
+.setting-navigation__subnav > li a:hover {
+	color: rgb(102, 102, 102); font-size: 13px;
+}
+.setting-navigation__subnav > li a:visited {
+	color: rgb(102, 102, 102); font-size: 13px;
+}
+.setting-navigation__subnav > li a:active {
+	color: rgb(102, 102, 102); font-size: 13px;
+}
+.setting-navigation__subnav > li a:focus {
+	color: rgb(102, 102, 102); font-size: 13px;
+}
+.pure-menu-selected {
+	background-color: rgb(242, 242, 242);
+}
+.button--pill {
+	font-size: 12px; font-weight: bold;
+}
+.button--pill:visited {
+	font-size: 12px; font-weight: bold;
+}
+.button--pill:focus {
+	font-size: 12px; font-weight: bold;
+}
+.button--pill:active {
+	font-size: 12px; font-weight: bold;
+}
+.setting-navigation__container-button-close {
+	padding: 10px; text-align: center;
+}
+.setting-navigation__container-button-close__button {
+	border-radius: 50em; color: white; font-size: 14px; background-color: rgb(204, 204, 204);
+}
+.pure-button {
+	margin-bottom: 6px;
+}
+.pure-button:hover {
+	box-shadow: none;
+}
+a.pure-button-primary {
+	border-radius: 2px; text-align: left; color: white !important; line-height: 1.35; font-size: 15px; text-decoration: none; box-shadow: inset 0px -2px 0px 0px rgba(0,0,0,0.16);
+}
+a.pure-button-primary:visited {
+	border-radius: 2px; text-align: left; color: white !important; line-height: 1.35; font-size: 15px; text-decoration: none; box-shadow: inset 0px -2px 0px 0px rgba(0,0,0,0.16);
+}
+a.pure-button-primary:active {
+	border-radius: 2px; text-align: left; color: white !important; line-height: 1.35; font-size: 15px; text-decoration: none; box-shadow: inset 0px -2px 0px 0px rgba(0,0,0,0.16);
+}
+a.pure-button-primary:focus {
+	border-radius: 2px; text-align: left; color: white !important; line-height: 1.35; font-size: 15px; text-decoration: none; box-shadow: inset 0px -2px 0px 0px rgba(0,0,0,0.16);
+}
+a.pure-button-primary:hover {
+	background: rgb(0, 99, 191);
+}
+.button--wide {
+	width: 100%;
+}
+.pure-menu-list--wide {
+	width: 100%;
+}
+.pure-menu-list--wide li {
+	width: 100%;
+}
+ul.pure-menu-children {
+	box-shadow: 0px 1px 3px 0px rgba(161,161,161,0.5);
+}
+.pure-menu-item i {
+	font-size: 150%; margin-right: 5px; vertical-align: -3px;
+}
+.pure-button i {
+	font-size: 150%; margin-right: 5px; vertical-align: -3px;
+}
+.pure-menu-horizontal .pure-menu-item a.pure-menu-link:hover {
+	color: rgb(102, 102, 102); background-color: rgb(228, 228, 228);
+}
+.pure-menu-horizontal .pure-menu-selected.pure-menu-item a.pure-menu-link {
+	color: rgb(102, 102, 102); background-color: rgb(228, 228, 228);
+}
+.setting-navigation__subnav .pure-menu-item:hover a.pure-menu-link {
+	color: rgb(102, 102, 102); background-color: rgb(228, 228, 228);
+}
+.setting-navigation__subnav .pure-menu-selected.pure-menu-item a.pure-menu-link {
+	color: rgb(102, 102, 102); background-color: rgb(228, 228, 228);
+}
+.banner-wrapper {
+	margin: 40px auto 0px; bottom: 45px;
+}
+.sidebar-banner {
+	border-radius: 2px; width: 100%; margin-bottom: 25px; position: relative; box-shadow: 1px 1px 3px 0px rgba(0,0,0,0.14); background-color: rgb(255, 255, 255);
+}
+.upgrade-icon {
+	widht: 50px;
+}
+.top-icon {
+	margin: 0px auto 0px 50%; left: -25px; top: -25px; width: 50px; height: 50px; position: absolute;
+}
+.top-icon > img {
+	width: 50px;
+}
+.sidebar-banner h3 {
+	text-align: center; color: rgb(102, 102, 102); text-transform: uppercase; letter-spacing: 1.5px; padding-top: 50px; font-size: 11px; font-weight: bold;
+}
+.sidebar-banner ul {
+	list-style: none; margin: 20px 0px 25px; padding: 0px 0px 0px 25px;
+}
+.sidebar-banner ul li {
+	color: rgb(102, 102, 102); line-height: 1.345; font-size: 13px; margin-bottom: 14px;
+}
+.banner-btn {
+	background: rgb(91, 214, 120); padding: 10px 15px; color: white; text-decoration: none; margin-bottom: 15px; box-shadow: inset 0px -2px 0px 0px rgba(0,0,0,0.16);
+}
+.banner-btn:focus {
+	background: rgb(91, 214, 120); padding: 10px 15px; color: white; text-decoration: none; margin-bottom: 15px; box-shadow: inset 0px -2px 0px 0px rgba(0,0,0,0.16);
+}
+.banner-btn:hover {
+	background: rgb(91, 214, 120); padding: 10px 15px; color: white; text-decoration: none; margin-bottom: 15px; box-shadow: inset 0px -2px 0px 0px rgba(0,0,0,0.16);
+}
+.banner-btn:visited {
+	background: rgb(91, 214, 120); padding: 10px 15px; color: white; text-decoration: none; margin-bottom: 15px; box-shadow: inset 0px -2px 0px 0px rgba(0,0,0,0.16);
+}
+.banner-btn:active {
+	background: rgb(91, 214, 120); padding: 10px 15px; color: white; text-decoration: none; margin-bottom: 15px; box-shadow: inset 0px -2px 0px 0px rgba(0,0,0,0.16);
+}
+a.banner-btn:hover {
+	background: rgb(91, 198, 120);
+}
+.btn-floater {
+	width: 100%; text-align: center;
+}
+.current-plan {
+	text-align: center; color: rgb(163, 163, 163); line-height: 18px; padding-bottom: 25px; font-size: 13px;
+}
+.ion--list-big {
+	font-size: 18px; margin-right: 2px; vertical-align: text-bottom; display: inline-block;
+}
+body {
+	line-height: 1.3; font-family: "Open Sans", "Helvetica", Arial, sans-serif; font-size: 14px;
+}
+#aftertrialtitle {
+	text-align: left;
+}
+.modal-centered {
+	padding: 20px; text-align: center;
+}
+.loginsplash .modal-centered {
+	
+}
+.loginsplash .modal-btn {
+	
+}
+#editsplash .modal-centered {
+	
+}
+#editsplash .modal-btn {
+	
+}
+.loginsplash .modal-centered a {
+	font-weight: 700;
+}
+#editsplash .modal-centered a {
+	font-weight: 700;
+}
+.loginsplash .modal-pro {
+	z-index: 2001;
+}
+#editsplash .modal-pro {
+	z-index: 2001;
+}
+.loginsplash .modal-pro-bd {
+	z-index: 2000;
+}
+#editsplash .modal-pro-bd {
+	z-index: 2000;
+}
+.loginsplash .modal-pro__feature-list {
+	font-weight: 700;
+}
+.loginsplash .modal-btn {
+	font-weight: 700;
+}
+#editsplash .modal-pro__feature-list {
+	font-weight: 700;
+}
+#editsplash .modal-btn {
+	font-weight: 700;
+}
+#login3splash .modal-pro__feature-list {
+	width: 500px;
+}
+#login1splashsubtitle {
+	line-height: 1px; font-size: 150%; font-weight: 700;
+}
+#login2splashsubtitle {
+	line-height: 1px; font-size: 150%; font-weight: 700;
+}
+#login3splashsubtitle {
+	line-height: 1px; font-size: 150%; font-weight: 700;
+}
+#login4splashsubtitle {
+	line-height: 1px; font-size: 150%; font-weight: 700;
+}
+#editsplashsubtitle {
+	line-height: 1px; font-size: 150%; font-weight: 700;
+}
+.selection-list {
+	margin: 15px 0px 0px; font-size: 14px;
+}
+.selection-list-mobile {
+	display: none;
+}
+.selection-list .item {
+	margin: 0px 0px 15px; padding: 15px; border: 1px solid rgb(219, 220, 221); border-image: none; text-align: left; background-color: rgb(236, 239, 241);
+}
+.selection-list :last-child.item {
+	margin: 0px;
+}
+.selection-list .choose {
+	float: left;
+}
+.selection-list .center {
+	font-weight: bold; margin-left: 25px;
+}
+.selection-list .right {
+	text-align: center; float: right;
+}
+.selection-list .clear {
+	clear: both;
+}
+.footer-right-align {
+	text-align: right;
+}
+.modal-pro__feature-list {
+	list-style: none;
+}
+.domain-field {
+	margin: 0px auto; width: 546px; height: auto; position: relative;
+}
+.address-bar {
+	border-radius: 5px 5px 0px 0px; width: 100%; height: 45px; margin-top: 15px; background-color: rgb(236, 239, 241);
+}
+.address-bar .controls {
+	background: url("images/window-controls.png") no-repeat center / 42px 11px; border-radius: 5px 0px 0px; width: 62px; height: 45px; float: left;
+}
+.address-bar .domain-name {
+	border-radius: 0px 5px 0px 0px; width: 484px; height: 45px; color: rgb(102, 102, 102); font-size: 18px; float: right;
+}
+.domain-name p {
+	background: rgb(255, 255, 255); padding: 3px 15px; border-radius: 2px; border: 1px solid rgb(222, 225, 227); border-image: none; width: 440px; margin-top: 8px; display: inline-block;
+}
+.window-gradient {
+	height: 50px; text-align: center; background-image: linear-gradient(-180deg, rgb(247, 249, 250) 0%, rgb(255, 255, 255) 100%);
+}
+.window-gradient a {
+	color: rgb(178, 178, 178); padding-top: 20px; text-decoration: none; display: inline-block;
+}
+.window-gradient a:hover {
+	text-decoration: underline;
+}
+.layout-main {
+	transition:0.3s 1s; padding-right: 0px;
+}
+.iframeLoaded.layout-main {
+	margin-right: 238px;
+}
+.rotate-phone-splash {
+	left: 0px; top: 0px; width: 100%; height: 100%; text-align: center; right: 0px; bottom: 0px; padding-top: 30%; display: none; position: fixed; z-index: 99999; background-color: white;
+}
+.rotate-phone-splash h1 {
+	width: 100%; font-size: 46px; margin-top: 56px; white-space: normal;
+}
+.rotate-phone-splash img {
+	width: 180px;
+}
+@media only screen and (orientation:portrait) and (max-device-width:640px)
+{
+.rotate-phone-splash {
+	display: none;
+}
+}
+#ifrmWrapper {
+	
+}
+.pageCenterHolder#pageCenterHolder {
+	padding: 20px 238px 0px 0px; box-sizing: content-box;
+}
+#pageCenterHolder {
+	padding: 20px 238px 0px 0px; box-sizing: content-box;
+}
+.pageCenterHolder {
+	padding: 20px 238px 0px 0px; box-sizing: content-box;
+}
+body.SubscriptionCheckout .pageCenterHolder#pageCenterHolder {
+	padding-right: 0px; padding-left: 0px;
+}
+body.SubscriptionCheckout #pageCenterHolder {
+	padding-right: 0px; padding-left: 0px;
+}
+body.SubscriptionCheckout .pageCenterHolder {
+	padding-right: 0px; padding-left: 0px;
+}
+body.PaymentCreated .pageCenterHolder#pageCenterHolder {
+	padding-right: 0px; padding-left: 0px;
+}
+body.PaymentCreated #pageCenterHolder {
+	padding-right: 0px; padding-left: 0px;
+}
+body.PaymentCreated .pageCenterHolder {
+	padding-right: 0px; padding-left: 0px;
+}
+html[dir='rtl'] .headlineBox input {
+	margin-right: 0px; float: right;
+}
+html[dir='rtl'] div.save_and_view_bar div.description_box {
+	float: right;
+}
+html[dir='rtl'] td[background='/pages/art/centered_page_left_shadow.gif'] {
+	transform: rotate(180deg);
+}
+html[dir='rtl'] td[background='/pages/art/centered_page_right_shadow.gif'] {
+	transform: rotate(180deg);
+}
+html[dir='rtl'] .setting-navigation {
+	left: 0px; padding-right: 0px; padding-left: 0px; border-right-color: rgb(213, 213, 213); border-left-color: currentColor; border-right-width: 1px; border-left-width: 0px; border-right-style: solid; border-left-style: none;
+}
+html[dir='rtl'] .iframeLoaded.setting-navigation {
+	padding-right: 12px; padding-left: 12px;
+}
+html[dir='rtl'] .setting-navigation__button {
+	text-align: right;
+}
+html[dir='rtl'] .setting-navigation__button:visited {
+	text-align: right;
+}
+html[dir='rtl'] .setting-navigation__button:focus {
+	text-align: right;
+}
+html[dir='rtl'] .setting-navigation__button:active {
+	text-align: right;
+}
+html[dir='rtl'] a.pure-button-primary {
+	text-align: right;
+}
+html[dir='rtl'] a.pure-button-primary:visited {
+	text-align: right;
+}
+html[dir='rtl'] a.pure-button-primary:active {
+	text-align: right;
+}
+html[dir='rtl'] a.pure-button-primary:focus {
+	text-align: right;
+}
+html[dir='rtl'] .pure-menu-item i {
+	margin-right: auto; margin-left: 5px;
+}
+html[dir='rtl'] .pure-button i {
+	margin-right: auto; margin-left: 5px;
+}
+html[dir='rtl'] .top-icon {
+	right: -25px; margin-right: 50%; margin-left: auto;
+}
+html[dir='rtl'] .sidebar-banner ul {
+	padding-right: 25px;
+}
+html[dir='rtl'] .ion--list-big {
+	margin-right: auto; margin-left: 2px;
+}
+html[dir='rtl'] #aftertrialtitle {
+	text-align: right;
+}
+html[dir='rtl'] .selection-list .item {
+	text-align: right;
+}
+html[dir='rtl'] .selection-list .choose {
+	float: right;
+}
+html[dir='rtl'] .selection-list .center {
+	margin-right: 25px; margin-left: auto;
+}
+html[dir='rtl'] .selection-list .right {
+	float: left;
+}
+html[dir='rtl'] .footer-right-align {
+	text-align: left;
+}
+html[dir='rtl'] a.modal-btn {
+	text-align: right;
+}
+html[dir='rtl'] .address-bar .controls {
+	float: right;
+}
+html[dir='rtl'] .address-bar .domain-name {
+	float: left;
+}
+html[dir='rtl'] .layout-main {
+	padding-left: 0px;
+}
+html[dir='rtl'] .iframeLoaded.layout-main {
+	margin-right: auto; margin-left: 238px;
+}
+html[dir='rtl'] .rotate-phone-splash {
+	left: 0px; right: 0px;
+}
+@media only screen and (orientation:portrait) and (max-device-width:640px)
+{
+html[dir='rtl'] .rotate-phone-splash {
+	display: block;
+}
+}
+html[dir='rtl'] .pageCenterHolder#pageCenterHolder {
+	padding: 20px 0px 0px 238px;
+}
+html[dir='rtl'] #pageCenterHolder {
+	padding: 20px 0px 0px 238px;
+}
+html[dir='rtl'] .pageCenterHolder {
+	padding: 20px 0px 0px 238px;
+}

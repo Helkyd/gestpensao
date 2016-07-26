@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<!-- Built on Frappe. https://frappe.io/ -->
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title> Fixoblock </title>
+	<meta name="generator" content="frappe">
+
+    
+	<link rel="shortcut icon"
+		href="/files/favicon.ico"
+		type="image/x-icon">
+	<link rel="icon"
+		href="/files/favicon.ico"
+		type="image/x-icon">
+    
+
+		
+		<link type="text/css" rel="stylesheet" href="https://bootswatch.com/simplex/bootstrap.min.css">
+		<link type="text/css" rel="stylesheet" href="/website_theme.css">
+		<link type="text/css" rel="stylesheet" href="/assets/frappe/css/font/open-sans/open-sans.css">
+		<link type="text/css" rel="stylesheet" href="/assets/css/frappe-web.css">
+		<link type="text/css" rel="stylesheet" href="/assets/erpnext/css/website.css"><script>
+    window.frappe = {
+    	page_ready_events: {},
+    	ready: function(fn) {
+    		if (!frappe.page_ready_events[location.pathname]) {
+    			frappe.page_ready_events[location.pathname] = []
+    		}
+    		frappe.page_ready_events[location.pathname].push(fn);
+    	}
+    }
+    window.dev_server = 0;
+    </script>
+</head>
+<body data-path="products/fixoblock">
+	<div class="main-section">
+		<div>
+				<header>
+	<nav class="navbar navbar-default navbar-main" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<!-- <a class="navbar-brand ellipsis" href="/"> -->
+				<a class="navbar-brand ellipsis"
+					 href="/">
+					<span><img src="/files/castlecraft-word.png" style="max-height: 20px;"></span>
+				</a>
+				<!-- <a class="pull-right visible-xs navbar-toggle toggle-sidebar">
+					<i class="octicon octicon-three-bars"></i>
+				</a> -->
+				<div class="dropdown">
+					<button class="btn btn-default navbar-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+						<i class="octicon octicon-three-bars"></i>
+					</button>
+					<ul class="dropdown-menu dropdown-menu-right">
+<li data-label='About Us' >
+	<a href="/about"
+		
+		>
+	About Us</a></li><li data-label='Products' >
+	<a href="/products"
+		
+		>
+	Products</a></li><li data-label='Structural Services' >
+	<a href="/services"
+		
+		>
+	Structural Services</a></li><li data-label='Blog' >
+	<a href="/blog"
+		
+		>
+	Blog</a></li><li data-label='Clients' >
+	<a href="/clients"
+		
+		>
+	Clients</a></li><li data-label='Jobs' >
+	<a href="/jobs"
+		
+		>
+	Jobs</a></li><li data-label='Contact' >
+	<a href="/contact"
+		
+		>
+	Contact</a></li>
+
+<li class="divider"></li>
+<!-- post login tools -->
+<li data-label="My Account" 
+ class=" logged-in" ><a href="/me" 
+	rel="nofollow">
+	My Account
+	</a></li><li data-label="Logout" 
+ class=" logged-in" ><a href="/?cmd=web_logout" 
+	rel="nofollow">
+	Logout
+	</a></li>
+<li class="btn-login-area"><a href="/login">Login</a></li>
+
+
+</ul>
+				</div>
+			</div>
+			<div class="hidden-xs">
+				
+				<ul class="nav navbar-nav navbar-left"><li data-label='About Us' >
+	<a href="/about"
+		
+		>
+	About Us</a></li><li data-label='Products' >
+	<a href="/products"
+		
+		>
+	Products</a></li><li data-label='Structural Services' >
+	<a href="/services"
+		
+		>
+	Structural Services</a></li><li data-label='Blog' >
+	<a href="/blog"
+		
+		>
+	Blog</a></li><li data-label='Clients' >
+	<a href="/clients"
+		
+		>
+	Clients</a></li><li data-label='Jobs' >
+	<a href="/jobs"
+		
+		>
+	Jobs</a></li>
+</ul>
+<ul class="nav navbar-nav navbar-right"><li data-label='Contact' >
+	<a href="/contact"
+		
+		>
+	Contact</a></li>
+	
+		
+	<li class="shopping-cart">
+		<div class="cart-icon small">
+			<a class="dropdown-toggle" href="#" data-toggle="dropdown" id="navLogin">
+				Cart <span class="badge-wrapper" id="cart-count"></span>
+			</a>
+			<div id="cart-overlay" class="dropdown-menu shopping-cart-menu"></div>
+		</div>
+	 </li>
+
+	
+	<!-- post login tools -->
+
+<li class="dropdown logged-in" id="website-post-login"
+	data-label="website-post-login" style="display: none">
+	<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+		<span class="user-image-wrapper"></span>
+		<span class="full-name"></span>
+		<b class="caret"></b>
+	</a>
+    <ul class="dropdown-menu" role="menu"><li data-label="My Account" 
+			><a href="/me" 
+					rel="nofollow">
+					My Account
+				</a></li><li data-label="Logout" 
+			><a href="/?cmd=web_logout" 
+					rel="nofollow">
+					Logout
+				</a></li></ul>
+</li>
+
+<li class="btn-login-area"><a href="/login">Login</a></li>
+
+
+</ul>
+				
+			</div>
+		</div>
+	</nav>
+</header><div class="hero-and-content">
+                <div data-html-block="hero"></div>
+                <div class="container" data-html-block="content">
+                
+<div class="page-container" id="page-UT-FB01" data-path="products/fixoblock"
+	data-doctype="Item">
+			<div class="row ">
+				
+				<div class=" page-content col-sm-12 ">
+					<div class="page-content-wrapper">
+						<div class="row page-head">
+							<div class="col-sm-8 col-xs-6">
+								
+								
+							</div>
+							<div class="col-sm-4 col-xs-6">
+								
+									<div class="page-search-block">
+									
+										<div class="item-search text-muted pull-right">
+	<input type="text" class="item-search-input"
+		placeholder="Search" autocomplete="off">
+	<i class="octicon octicon-search pull-right" style='cursor: pointer;'></i>
+</div>
+<div class="clearfix pull-right" style="width:100%;">
+	<h5 class="item-search-results text-muted" style="margin-right: 30px;"></h5>
+	<p class="pull-right" style="margin-top: -28px;">
+		<a style="display: none;" href="javascript:history.back();" class="octicon octicon-x text-extra-muted clear" title="Clear Search" ></a>
+	</p>
+</div>
+
+<script>
+frappe.ready(function() {
+	if(get_url_arg("search")) {
+		var txt = get_url_arg("search");
+		$(".item-search-results").html("Search results for: " + txt);
+		$(".item-search").toggle(false);
+		$(".clear").toggle(true);
+	}
+	var thread = null;
+	function find_result(t) {
+		var search_link = "/product_search" || location.pathname;
+		window.location.href=search_link + "?search=" + t;
+	}
+
+	$(".item-search-input").keyup(function(e) {
+		if(e.which===13) {
+			find_result($(this).val());
+		}
+	});
+	$('.octicon-search').on('click', function() {
+		find_result($(".item-search-input").val());
+	})
+	$(".form-search").on("submit", function() { return false; });
+});
+</script>
+									
+									</div>
+								
+
+								
+							</div>
+						</div>
+					</div>
+					<div class="page_content">
+
+<div class="item-content" style="margin-top:20px;">
+	<div class="product-page-content" itemscope itemtype="http://schema.org/Product">
+		<div class="row">
+			<div class="col-sm-6">
+				
+					
+    <div class="product-image  product-full-image">
+    	<img itemprop="image" src="/files/fixoblock.jpg" class="img-responsive">
+    </div>
+
+				
+			</div>
+			<div class="col-sm-6" style="padding-left:20px;">
+				 <h2 itemprop="name" style="margin-top: 0px;">Fixoblock</h2>
+
+				<p class="text-muted">
+					Item Code: <span itemprop="productID">UT-FB01</span></p>
+				<br>
+				<div class="item-attribute-selectors">
+                    
+				</div>
+				<br>
+				<div style="min-height: 100px; margin: 10px 0;">
+					<div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+						<h4 class="item-price" itemprop="price"></h4>
+						<div class="item-stock" itemprop="availability"></div>
+					</div>
+                    <div class="item-cart hide">
+    					<div id="item-add-to-cart">
+    						<button class="btn btn-primary btn-sm">
+    							Add to Cart</button>
+    					</div>
+    					<div id="item-update-cart"
+                            style="display: none;
+    						padding-left: 0px; padding-right: 0px;
+                            padding-top: 10px;">
+    						<a href="/cart">Goto Cart</a>
+    					</div>
+                    </div>
+				</div>
+			</div>
+		</div>
+		<div class="row item-website-description" style="margin-top:30px; margin-bottom:20px">
+			<div class="col-md-12">
+		<div class="h6 text-uppercase">Description</div>
+		<div itemprop="description" class="item-desc">
+		<div>FixoBlock is a ready mix thin layer jointing mortar composition by "Ultratech Cement Limted" for laying AAC blocks, fly ash bricks, concrete bricks etc. FixoBlock jointing mortar consists of cement, graded sand and special additives. This unique combination
+    is specifically designed for superior adhesive strength and durable bonding between the blocks. Unlike classical cement and sand mix mortar, Fixoblock compacts more enabling thinner joints.&nbsp;</div>
+<div>
+    <br>
+</div>
+<div><b>Special features and benefits :</b>
+</div>
+<div>
+    <ul>
+        <li><span style="line-height: 1.42857;">Ready to use composition. Only water to be added at site. Completely eliminates storage of individual materials at site</span>
+        </li>
+        <li><span style="line-height: 1.42857;">Thinner jointing material with very high adhesive strength, improves overall masonry and load bearing capacity</span>
+        </li>
+        <li><span style="line-height: 1.42857;">No water curing is required after application</span>
+        </li>
+        <li><span style="line-height: 1.42857;">Ready for subsequent application like plastering just after 24 hours</span>
+        </li>
+        <li><span style="line-height: 1.42857;">Raking of joints is required before plastering.</span>
+        </li>
+    </ul>
+</div>
+<div><span style="line-height: 1.42857;"><b>Areas of application&nbsp;</b></span>
+    <br>
+</div>
+<div>
+    <ul>
+        <li><span style="line-height: 1.42857;">Laying and jointing of masonry materials like fly ash bricks, concrete blocks, hollow block, AAC blocks etc&nbsp;</span>
+        </li>
+        <li><span style="line-height: 1.42857;">Joining of pre stressed concrete slabs, panels</span>
+        </li>
+        <li><span style="line-height: 1.42857;">Joining of cement-concrete floor tiles&nbsp;</span>
+        </li>
+        <li><span style="line-height: 1.42857;">Joining of concrete windows and door frames&nbsp;</span>
+        </li>
+    </ul>
+</div>
+<div><b style="line-height: 1.42857;">Packaging Details:</b><span class="Apple-tab-span" style="line-height: 1.42857; white-space: pre;">	</span><span style="line-height: 1.42857;">&nbsp;</span><span style="line-height: 1.42857;">Fixoblock is available in 25 kg PP laminated bag</span>
+</div>
+<div><span style="line-height: 1.42857;"><br></span>
+</div>
+<div><span style="line-height: 20px;">Brochure PDF</span></div><div><a class="btn btn-primary " href="/files/FixoBlock.pdf ">Download »</a>
+</div>
+<div><span style="line-height: 20px;"><br></span>
+</div>
+		</div>
+		</div>
+		</div>
+
+		
+	</div>
+</div>
+<script>
+	// Copyright (c) 2015, Frappe Technologies Pvt. Ltd. and Contributors
+// License: GNU General Public License v3. See license.txt
+
+frappe.ready(function() {
+	window.item_code = $('[itemscope] [itemprop="productID"]').text().trim();
+	var qty = 0;
+
+	frappe.call({
+		type: "POST",
+		method: "erpnext.shopping_cart.product.get_product_info",
+		args: {
+			item_code: get_item_code()
+		},
+		callback: function(r) {
+			$(".item-cart").toggleClass("hide", !!!r.message.price);
+			if(r.message && r.message.price) {
+				$(".item-price")
+					.html(r.message.price.formatted_price + " per " + r.message.uom);
+
+				if(r.message.stock==0) {
+					$(".item-stock").html("<div class='help'>Not in stock</div>");
+				}
+				else if(r.message.stock==1) {
+					$(".item-stock").html("<div style='color: green'>\
+						<i class='icon-check'></i> Available (in stock)</div>");
+				}
+
+				if(r.message.qty) {
+					qty = r.message.qty;
+					toggle_update_cart(r.message.qty);
+				} else {
+					toggle_update_cart(0);
+				}
+			}
+		}
+	})
+
+	$("#item-add-to-cart button").on("click", function() {
+		shopping_cart.update_cart({
+			item_code: get_item_code(),
+			qty: 1,
+			callback: function(r) {
+				if(!r.exc) {
+					toggle_update_cart(1);
+					qty = 1;
+				}
+			},
+			btn: this,
+		});
+	});
+
+	$("[itemscope] .item-view-attribute .form-control").on("change", function() {
+		try {
+			var item_code = encodeURIComponent(get_item_code());
+
+		} catch(e) {
+			// unable to find variant
+			// then chose the closest available one
+
+			var attribute = $(this).attr("data-attribute");
+			var attribute_value = $(this).val()
+			var item_code = find_closest_match(attribute, attribute_value);
+
+			if (!item_code) {
+				msgprint(__("Cannot find a matching Item. Please select some other value for {0}.", [attribute]))
+				throw e;
+			}
+		}
+
+		if (window.location.search.indexOf(item_code)!==-1) {
+			return;
+		}
+
+		window.location.href = window.location.pathname + "?variant=" + item_code;
+	});
+});
+
+var toggle_update_cart = function(qty) {
+	$("#item-add-to-cart").toggle(qty ? false : true);
+	$("#item-update-cart")
+		.toggle(qty ? true : false)
+		.find("input").val(qty);
+}
+
+function get_item_code() {
+	if(window.variant_info) {
+		var attributes = get_selected_attributes();
+		var no_of_attributes = Object.keys(attributes).length;
+
+		for(var i in variant_info) {
+			var variant = variant_info[i];
+
+			if (variant.attributes.length < no_of_attributes) {
+				// the case when variant has less attributes than template
+				continue;
+			}
+
+			var match = true;
+			for(var j in variant.attributes) {
+				if(attributes[variant.attributes[j].attribute]
+					!= variant.attributes[j].attribute_value) {
+						match = false;
+						break;
+				}
+			}
+			if(match) {
+				return variant.name;
+			}
+		}
+		throw "Unable to match variant";
+	} else {
+		return item_code;
+	}
+}
+
+function find_closest_match(selected_attribute, selected_attribute_value) {
+	// find the closest match keeping the selected attribute in focus and get the item code
+
+	var attributes = get_selected_attributes();
+
+	var previous_match_score = 0;
+	var previous_no_of_attributes = 0;
+	var matched;
+
+	for(var i in variant_info) {
+		var variant = variant_info[i];
+		var match_score = 0;
+		var has_selected_attribute = false;
+
+		for(var j in variant.attributes) {
+			if(attributes[variant.attributes[j].attribute]===variant.attributes[j].attribute_value) {
+				match_score = match_score + 1;
+
+				if (variant.attributes[j].attribute==selected_attribute && variant.attributes[j].attribute_value==selected_attribute_value) {
+					has_selected_attribute = true;
+				}
+			}
+		}
+
+		if (has_selected_attribute
+			&& ((match_score > previous_match_score) || (match_score==previous_match_score && previous_no_of_attributes < variant.attributes.length))) {
+			previous_match_score = match_score;
+			matched = variant;
+			previous_no_of_attributes = variant.attributes.length;
+
+
+		}
+	}
+
+	if (matched) {
+		for (var j in matched.attributes) {
+			var attr = matched.attributes[j];
+			$('[itemscope]')
+				.find(repl('.item-view-attribute .form-control[data-attribute="%(attribute)s"]', attr))
+				.val(attr.attribute_value);
+		}
+
+		return matched.name;
+	}
+}
+
+function get_selected_attributes() {
+	var attributes = {};
+	$('[itemscope]').find(".item-view-attribute .form-control").each(function() {
+		attributes[$(this).attr('data-attribute')] = $(this).val();
+	});
+	return attributes;
+}
+
+    
+    window.variant_info = null;
+    
+</script>
+</div>
+				</div>
+			</div>
+</div>
+
+                </div>
+            </div></div>
+		<div><footer class="web-footer">
+	<section class="footer-links">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6 text-left">
+					<div class="row">
+					
+					</div>
+				</div>
+
+				<div class="col-sm-6 text-right">
+					
+<div class='input-group input-group-sm pull-right footer-subscribe'>
+	<input class="form-control" type="text" id="footer-subscribe-email"
+		placeholder="Your email address...">
+	<span class='input-group-btn'>
+		<button class="btn btn-default" type="button"
+			id="footer-subscribe-button">Get Updates</button>
+	</span>
+</div>
+
+<script>
+frappe.ready(function() {
+	$("#footer-subscribe-button").click(function() {
+
+		if($("#footer-subscribe-email").val()) {
+			$("#footer-subscribe-email").attr('disabled', true);
+			$("#footer-subscribe-button").html("Sending...")
+				.attr("disabled", true);
+			erpnext.subscribe_to_newsletter({
+				email: $("#footer-subscribe-email").val(),
+				callback: function(r) {
+					if(!r.exc) {
+						$("#footer-subscribe-button").html(__("Added"))
+							.attr("disabled", true);
+					} else {
+						$("#footer-subscribe-button").html(__("Error: Not a valid id?"))
+							.addClass("btn-danger").attr("disabled", false);
+						$("#footer-subscribe-email").val("").attr('disabled', false);
+					}
+				}
+			});
+		}
+		else
+			frappe.msgprint(frappe._("Please enter email address"))
+	});
+});
+</script>
+
+
+				</div>
+			</div>
+			<div class="row footer-bottom-line">
+				<div class="text-muted small col-sm-6">
+					
+						&copy; Castlecraft Properties and Engineering Services Pvt Ltd
+					
+				</div>
+				
+				<div class="text-muted small col-sm-6 text-right footer-powered">
+					
+						<a href="https://erpnext.com?source=website_footer" target="_blank" class="text-muted">
+		Powered by ERPNext</a>
+					
+				</div>
+			</div>
+		</div>
+	</section>
+</footer></div>
+	</div>
+
+	<!-- js should be loaded in body! -->
+	<script type="text/javascript"
+		src="/assets/frappe/js/lib/jquery/jquery.min.js"></script>
+	<script type="text/javascript"
+		src="/assets/js/frappe-web.min.js"></script>
+	<script type="text/javascript" src="/website_script.js"></script>
+	<script type="text/javascript" src="/assets/js/erpnext-web.min.js"></script>
+
+	<script>frappe.csrf_token = "None";</script></body>
+</html>

@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<!-- Built on Frappe. https://frappe.io/ -->
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title> Clients </title>
+	<meta name="generator" content="frappe">
+
+    
+	<link rel="shortcut icon"
+		href="/files/favicon.ico"
+		type="image/x-icon">
+	<link rel="icon"
+		href="/files/favicon.ico"
+		type="image/x-icon">
+    
+
+		
+		<link type="text/css" rel="stylesheet" href="https://bootswatch.com/simplex/bootstrap.min.css">
+		<link type="text/css" rel="stylesheet" href="/website_theme.css">
+		<link type="text/css" rel="stylesheet" href="/assets/frappe/css/font/open-sans/open-sans.css">
+		<link type="text/css" rel="stylesheet" href="/assets/css/frappe-web.css">
+		<link type="text/css" rel="stylesheet" href="/assets/erpnext/css/website.css">
+<style>
+
+</style>
+<script>
+    window.frappe = {
+    	page_ready_events: {},
+    	ready: function(fn) {
+    		if (!frappe.page_ready_events[location.pathname]) {
+    			frappe.page_ready_events[location.pathname] = []
+    		}
+    		frappe.page_ready_events[location.pathname].push(fn);
+    	}
+    }
+    window.dev_server = 0;
+    </script>
+</head>
+<body data-path="clients">
+	<div class="main-section">
+		<div>
+				<header>
+	<nav class="navbar navbar-default navbar-main" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<!-- <a class="navbar-brand ellipsis" href="/"> -->
+				<a class="navbar-brand ellipsis"
+					 href="/">
+					<span><img src="/files/castlecraft-word.png" style="max-height: 20px;"></span>
+				</a>
+				<!-- <a class="pull-right visible-xs navbar-toggle toggle-sidebar">
+					<i class="octicon octicon-three-bars"></i>
+				</a> -->
+				<div class="dropdown">
+					<button class="btn btn-default navbar-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+						<i class="octicon octicon-three-bars"></i>
+					</button>
+					<ul class="dropdown-menu dropdown-menu-right">
+<li data-label='About Us' >
+	<a href="/about"
+		
+		>
+	About Us</a></li><li data-label='Products' >
+	<a href="/products"
+		
+		>
+	Products</a></li><li data-label='Structural Services' >
+	<a href="/services"
+		
+		>
+	Structural Services</a></li><li data-label='Blog' >
+	<a href="/blog"
+		
+		>
+	Blog</a></li><li data-label='Clients' >
+	<a href="/clients"
+		
+		>
+	Clients</a></li><li data-label='Jobs' >
+	<a href="/jobs"
+		
+		>
+	Jobs</a></li><li data-label='Contact' >
+	<a href="/contact"
+		
+		>
+	Contact</a></li>
+
+<li class="divider"></li>
+<!-- post login tools -->
+<li data-label="My Account" 
+ class=" logged-in" ><a href="/me" 
+	rel="nofollow">
+	My Account
+	</a></li><li data-label="Logout" 
+ class=" logged-in" ><a href="/?cmd=web_logout" 
+	rel="nofollow">
+	Logout
+	</a></li>
+<li class="btn-login-area"><a href="/login">Login</a></li>
+
+
+</ul>
+				</div>
+			</div>
+			<div class="hidden-xs">
+				
+				<ul class="nav navbar-nav navbar-left"><li data-label='About Us' >
+	<a href="/about"
+		
+		>
+	About Us</a></li><li data-label='Products' >
+	<a href="/products"
+		
+		>
+	Products</a></li><li data-label='Structural Services' >
+	<a href="/services"
+		
+		>
+	Structural Services</a></li><li data-label='Blog' >
+	<a href="/blog"
+		
+		>
+	Blog</a></li><li data-label='Clients' >
+	<a href="/clients"
+		
+		>
+	Clients</a></li><li data-label='Jobs' >
+	<a href="/jobs"
+		
+		>
+	Jobs</a></li>
+</ul>
+<ul class="nav navbar-nav navbar-right"><li data-label='Contact' >
+	<a href="/contact"
+		
+		>
+	Contact</a></li>
+	
+		
+	<li class="shopping-cart">
+		<div class="cart-icon small">
+			<a class="dropdown-toggle" href="#" data-toggle="dropdown" id="navLogin">
+				Cart <span class="badge-wrapper" id="cart-count"></span>
+			</a>
+			<div id="cart-overlay" class="dropdown-menu shopping-cart-menu"></div>
+		</div>
+	 </li>
+
+	
+	<!-- post login tools -->
+
+<li class="dropdown logged-in" id="website-post-login"
+	data-label="website-post-login" style="display: none">
+	<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+		<span class="user-image-wrapper"></span>
+		<span class="full-name"></span>
+		<b class="caret"></b>
+	</a>
+    <ul class="dropdown-menu" role="menu"><li data-label="My Account" 
+			><a href="/me" 
+					rel="nofollow">
+					My Account
+				</a></li><li data-label="Logout" 
+			><a href="/?cmd=web_logout" 
+					rel="nofollow">
+					Logout
+				</a></li></ul>
+</li>
+
+<li class="btn-login-area"><a href="/login">Login</a></li>
+
+
+</ul>
+				
+			</div>
+		</div>
+	</nav>
+</header><div class="hero-and-content">
+                <div data-html-block="hero"></div>
+                <div class="container" data-html-block="content">
+                
+<div class="page-container" id="page-clients" data-path="clients"
+	data-doctype="Web Page">
+			<div class="row ">
+				
+				<div class=" page-content col-sm-12 ">
+					<div class="page-content-wrapper">
+						<div class="row page-head">
+							<div class="col-sm-8 col-xs-6">
+								
+								<h1>Clients</h1>
+							</div>
+							<div class="col-sm-4 col-xs-6">
+								
+
+								
+							</div>
+						</div>
+					</div>
+					<div class="page_content">
+<div class="webpage-content">
+	
+	<article class="web-page-content" id="clients" style="text-align: Left">
+	<div class="panel-group" id="panel-670386">
+    <div class="panel panel-default">
+        <div class="panel-heading"> <b><a class="panel-title collapsed" href="#panel-element-955401">Structural Audit</a></b>
+
+<span class="badge pull-right">75+</span>
+
+        </div>
+        <div class="panel-collapse collapse" id="panel-element-955401" style="height: 0px;">
+            <div class="panel-body">
+                <div class="panel panel-default" id="sa">
+                    <ul class="list-group">
+                        <li class="list-group-item">Pramila Niwas, Shivaji Park</li>
+                        <li class="list-group-item">Rukmini Sadan, Shivaji Park</li>
+                        <li class="list-group-item">Karnataka Sangh theater, Mahim</li>
+                        <li class="list-group-item">Narottamwadi, Kalbadevi</li>
+                        <li class="list-group-item">Mahim Sharda CHSL, Mahim</li>
+                        <li class="list-group-item">Sanskruti, Andheri</li>
+                        <li class="list-group-item">Ambulkar Sadan, Dadar (W)</li>
+                        <li class="list-group-item">Rubans Apartments. Off Napean Sea Road.</li>
+                        <li class="list-group-item">La-Paloma CHS. Orlem Church, Malad (W).</li>
+                        <li class="list-group-item">Nanik Niwas, Girgaum.</li>
+                        <li class="list-group-item">Sundaram CHS. Raheja Complex, Malad ( E ).</li>
+                        <li class="list-group-item">Madhurima CHS. D. N. Nagar, Andheri (W).</li>
+                        <li class="list-group-item">Jeevan Prasad CHS. Juhu Lane, Andheri (W).</li>
+                        <li class="list-group-item">Morumal Mansion CHS. Bachani Nagar, Malad(E).</li>
+                        <li class="list-group-item">Saint Joseph School, Malad.</li>
+                        <li class="list-group-item">Canbank employees’ CHS. Garodia Nagar, Ghatkopar</li>
+                        <li class="list-group-item">Asmita Mogra CHS. Andheri(E)</li>
+                        <li class="list-group-item">Perpetual CHS. 11th Road, Chembur</li>
+                        <li class="list-group-item">Shree Govindnagar CHS. Borivli (W)</li>
+                        <li class="list-group-item">Classic CHS. Malad (W)</li>
+                        <li class="list-group-item">St. Martin’s CHS. Bandra (W)</li>
+                        <li class="list-group-item">Bhavna CHS at Mulund (W)</li>
+                        <li class="list-group-item">Parimal CHS. Dadar (W)</li>
+                        <li class="list-group-item">Samata CHS. Dadar (W)</li>
+                        <li class="list-group-item">Shakti CHS. 11th Road, Chembur</li>
+                        <li class="list-group-item">Bimanagar CHS. Andheri (E)</li>
+                        <li class="list-group-item">Devdoot CHS. Bandstand, Bandra (W)</li>
+                        <li class="list-group-item">Vishramalaya CHS. Sion (E),</li>
+                        <li class="list-group-item">Jaiji Mansion. Coloba</li>
+                        <li class="list-group-item">Shreyas CHS. 11th Road, Chembur</li>
+                        <li class="list-group-item">Samartha Premises. Mahim ( W)</li>
+                        <li class="list-group-item">Ojas CHS. Andheri(E)</li>
+                        <li class="list-group-item">Paradise Appt Andheri(W)</li>
+                        <li class="list-group-item">Atomica CHS Chembur</li>
+                        <li class="list-group-item">Debonair CHS Mahim</li>
+                        <li class="list-group-item">Shree Vinayak CHS, Goregaon</li>
+                        <li class="list-group-item">Sukh-Sadan CHS, Malad</li>
+                        <li class="list-group-item">Sahayog CHS , Andheri (W)</li>
+                        <li class="list-group-item">Santacruz Arun CHS, Santacruz</li>
+                        <li class="list-group-item">Crystal Appt. CHS. Altamount Road.</li>
+                        <li class="list-group-item">Gabhasti CHS. Jogeshwari, (E).</li>
+                        <li class="list-group-item">MIG Group B-57, Bandra (E)</li>
+                        <li class="list-group-item">Prakash Tower, Dadar</li>
+                        <li class="list-group-item">Manavendra CHS, Bandra (W)</li>
+                        <li class="list-group-item">Namaskar CHS, Santacruz</li>
+                        <li class="list-group-item">Mandarpushpa CHS, Mulund</li>
+                        <li class="list-group-item">Satyadarshan CHS, Andheri</li>
+                        <li class="list-group-item">New Balgovind CHS, Mahim</li>
+                        <li class="list-group-item">Clamar CHS, Bandra (W)</li>
+                        <li class="list-group-item">Juhu Sea Nymph CHS, Juhu</li>
+                        <li class="list-group-item">Kilbil CHS, Mulund</li>
+                        <li class="list-group-item">Noor CHS, Dadar (W)</li>
+                        <li class="list-group-item">Ambal Gayatri CHS, Chembur</li>
+                        <li class="list-group-item">Ruby House CHS, Mahim</li>
+                        <li class="list-group-item">Davduth CHS, Bandra (W)</li>
+                        <li class="list-group-item">Sindur CHS, Goregoan (E)</li>
+                        <li class="list-group-item">Benliz CHS, Bandra (W)</li>
+                        <li class="list-group-item">Shakti CHS, Chembur</li>
+                        <li class="list-group-item">Samir CHS, Sion (E)</li>
+                        <li class="list-group-item">Alhad CHS, Girgum</li>
+                        <li class="list-group-item">Samta CHS, Dadar (W)</li>
+                        <li class="list-group-item">Morning star CHS, Mahim</li>
+                        <li class="list-group-item">Naad Brahma CHS, Khar (W)</li>
+                        <li class="list-group-item">MIG – Gp 6 – Bandra (E)</li>
+                        <li class="list-group-item">And many more</li>
+                        <li class="list-group-item">Anand Bhavan CHS, Santacruz (W)</li>
+                        <li class="list-group-item">Krishna Niwas CHS, Chembur</li>
+                        <li class="list-group-item">Parel Vikas CHS, Parel</li>
+                        <li class="list-group-item">New Balgovind CHS, Mahim</li>
+                        <li class="list-group-item">Clamar CHS, Bandra (W)</li>
+                        <li class="list-group-item">Juhu Sea Nymph CHS, Juhu</li>
+                        <li class="list-group-item">Kilbil CHS, Mulund</li>
+                        <li class="list-group-item">Noor CHS, Dadar (W)</li>
+                        <li class="list-group-item">Ambal Gayatri CHS, Chembur</li>
+                        <li class="list-group-item">Ruby House CHS, Mahim</li>
+                        <li class="list-group-item">Davduth CHS, Bandra (W)</li>
+                        <li class="list-group-item">Sindur CHS, Goregoan (E)</li>
+                        <li class="list-group-item">Benliz CHS, Bandra (W)</li>
+                        <li class="list-group-item">Shakti CHS, Chembur</li>
+                        <li class="list-group-item">Samir CHS, Sion (E)</li>
+                        <li class="list-group-item">Alhad CHS, Girgum</li>
+                        <li class="list-group-item">Samta CHS, Dadar (W)</li>
+                        <li class="list-group-item">Morning star CHS, Mahim</li>
+                        <li class="list-group-item">Naad Brahma CHS, Khar (W)</li>
+                        <li class="list-group-item">MIG – Gp 6 – Bandra (E)</li>
+                        <li class="list-group-item">more . . . .</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading"><b><a class="panel-title collapsed" href="#panel-element-184789">Execution - Contracting</a></b>
+
+<span class="badge pull-right">20+</span>
+
+        </div>
+        <div class="panel-collapse collapse" id="panel-element-184789" style="height: 0px;">
+            <div class="panel-body">
+                <ul class="list-group">
+                    <li class="list-group-item">Kalplok CHS. at Vashi</li>
+                    <li class="list-group-item">Dohad Saifee CHS. at Andheri</li>
+                    <li class="list-group-item">Sarswat Bank at Apsara Cinema.</li>
+                    <li class="list-group-item">Nabard Park at Santacruz.</li>
+                    <li class="list-group-item">ANSA Industries at Andheri</li>
+                    <li class="list-group-item">B. P. Training Centre, Juhu.</li>
+                    <li class="list-group-item">Lohana school Balcony/Passage, Andheri.</li>
+                    <li class="list-group-item">Jeevan Prasad, Juhu lane, Andheri.</li>
+                    <li class="list-group-item">Repairs &amp; rehabilitation of Jewellery shop, Chiplun.</li>
+                    <li class="list-group-item">Balcony &amp; Alt for Purushottam Bhuvan, Walkeshwar.</li>
+                    <li class="list-group-item">Sunkersett Block, Nana chowk, Tardeo.</li>
+                    <li class="list-group-item">Balcony at Dilkhush, Malabar Hill.</li>
+                    <li class="list-group-item">Repairs &amp; alteration existing Bunglow for TOPS, Lokhandwala Complex.</li>
+                    <li class="list-group-item">‘Banoo Mansion‘ at Kemps Corner</li>
+                    <li class="list-group-item">Sindhu CHS, Chunabhatti</li>
+                    <li class="list-group-item">Jeevan Prasad CHS. Juhu Lane, Andheri (W).</li>
+                    <li class="list-group-item">Debonair CHS Mahim</li>
+                    <li class="list-group-item">Vishaka CHSL Andheri ( E )</li>
+                    <li class="list-group-item">Juhu sea nymph CHSL ( Juhu)</li>
+                    <li class="list-group-item"><span style="line-height: 1.42857143;">Aryan Education Society School on Jagannath Sankarseth Marg, Girgaum</span><br></li><li class="list-group-item">Shaneshwar Mandir, Dongri</li><li class="list-group-item">Laxmi Ratan CHSL, Mahim</li><li class="list-group-item"><span style="color: rgb(0, 0, 0); font-family: 'Noto Sans', 'Helvetica Neue', Arial, Sans;">Rukmini Sadan, Shivaji Park</span><br></li>
+                    <li class="list-group-item">more . . . .</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading"> <a class="panel-title collapsed" href="#panel-element-184790"><b>Structural Design</b></a>
+
+<span class="badge pull-right">15+</span>
+
+        </div>
+        <div class="panel-collapse collapse" id="panel-element-184790" style="height: 0px;">
+            <div class="panel-body">
+                <ul class="list-group">
+                    <li class="list-group-item">P.S.C. &amp; R.C.C. Designs of Bridges in Maharashtra.</li>
+                    <li class="list-group-item">Residential &amp; Commercial Buildings.</li>
+                    <li class="list-group-item">Earth-Quake Resistant Public Utility Structures at Sastur, Osmanabad, Latur for MHADA ( World-Bank aided project ).</li>
+                    <li class="list-group-item">Residential buildings &amp; Bungalows at Mumbai, Sanjaan, Sikar (Rajasthan),</li>
+                    <li class="list-group-item">Pune, Junnar, Kolhapur, Panvel, Karnala, Chiplun, Ratnagiri, Sawantwadi,</li>
+                    <li class="list-group-item">Alibag &amp; Dahanu.</li>
+                    <li class="list-group-item">Commercial buildings at Panvel, Ratnagiri, Malvan.</li>
+                    <li class="list-group-item">Hospitals at Sikar (Rajasthan), Sawantwadi.</li>
+                    <li class="list-group-item">School structures at Mumbai, Sikar (Rajasthan), Kankavli.</li>
+                    <li class="list-group-item">Industrial structures at Mumbai, Thane MIDC, Taloja, Mahad MIDC,</li>
+                    <li class="list-group-item">Religious structures at Mumbai, Karad, Ratnagiri, Malvan.</li>
+                    <li class="list-group-item">Drama Theatre at Kankavli.</li>
+                    <li class="list-group-item">Petrol Pump at Sangameshwar.</li>
+                    <li class="list-group-item">Cement factory at MP.</li>
+                    <li class="list-group-item">Bridges at Mumbai, Sindhudurg. etc.</li>
+                    <li class="list-group-item">Sirmaxo Chemical Factory, Tarapur</li>
+                    <li class="list-group-item">Trilok CHSL(MHB Colony), Borivli (W)</li>
+                    <li class="list-group-item">Many Private Bungalows and Houses</li>
+                    <li class="list-group-item">more . . . .</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading"> <a class="panel-title collapsed" href="#panel-element-184791"><b>Project Management</b></a><span class="badge pull-right">10+</span>
+
+        </div>
+        <div class="panel-collapse collapse" id="panel-element-184791" style="height: 0px;">
+            <div class="panel-body">
+                <ul class="list-group">
+                    <li class="list-group-item">24 storeyed building 'Antariksha' at Prabhadevi, Mumbai.</li>
+                    <li class="list-group-item">Residence &amp; Hospital building for a family of renowned doctors at IC Colony, Mumbai.</li>
+                    <li class="list-group-item">First of a kind Petrol Pump 'Convenio' at Sahar, Mumbai for Indian Oil as per the concept of IDC, IIT(Bombay).</li>
+                    <li class="list-group-item">Addition, Alteration &amp; rehabilitation of Bungalow at Lokhandwalla complex, Mumbai for 'TOPS Security Pvt. Ltd.'.</li>
+                    <li class="list-group-item">Assisted to have smooth progress with various contractors &amp; consultants for renovation of "Shri Siddhivinayak Mandir" at Prabhadevi, Mumbai.</li>
+                    <li class="list-group-item">Addition of Lift structure &amp; then Addition of classrooms, halls for "Sharadashram Vidhya Mandir", Dadar, Mumbai.</li>
+                    <li class="list-group-item">Erection of a open air drama theatre with complete stage at Kasarde, Kankavli, Sindhudurg, Maharashtra.</li>
+                    <li class="list-group-item">Complete commercial complex in crowded area of Malvan Bazaar for Khandalekar Brothers at Malvan, Sindhudurg, Maharashtra.</li>
+                    <li class="list-group-item">Prestigeous guest house for Mumbai University, Kalina through PWD, North Mumbai.</li>
+                    <li class="list-group-item">People Education Society (PES) Dadar.</li>
+                    <li class="list-group-item">Avanti (Jogeshwari East)</li>
+                    <li class="list-group-item">Galaxy CHSL (Andheri East)</li>
+                    <li class="list-group-item">more . . . .</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+	</article>
+	
+</div>
+</div>
+				</div>
+			</div>
+</div>
+
+                </div>
+            </div></div>
+		<div><footer class="web-footer">
+	<section class="footer-links">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6 text-left">
+					<div class="row">
+					
+					</div>
+				</div>
+
+				<div class="col-sm-6 text-right">
+					
+<div class='input-group input-group-sm pull-right footer-subscribe'>
+	<input class="form-control" type="text" id="footer-subscribe-email"
+		placeholder="Your email address...">
+	<span class='input-group-btn'>
+		<button class="btn btn-default" type="button"
+			id="footer-subscribe-button">Get Updates</button>
+	</span>
+</div>
+
+<script>
+frappe.ready(function() {
+	$("#footer-subscribe-button").click(function() {
+
+		if($("#footer-subscribe-email").val()) {
+			$("#footer-subscribe-email").attr('disabled', true);
+			$("#footer-subscribe-button").html("Sending...")
+				.attr("disabled", true);
+			erpnext.subscribe_to_newsletter({
+				email: $("#footer-subscribe-email").val(),
+				callback: function(r) {
+					if(!r.exc) {
+						$("#footer-subscribe-button").html(__("Added"))
+							.attr("disabled", true);
+					} else {
+						$("#footer-subscribe-button").html(__("Error: Not a valid id?"))
+							.addClass("btn-danger").attr("disabled", false);
+						$("#footer-subscribe-email").val("").attr('disabled', false);
+					}
+				}
+			});
+		}
+		else
+			frappe.msgprint(frappe._("Please enter email address"))
+	});
+});
+</script>
+
+
+				</div>
+			</div>
+			<div class="row footer-bottom-line">
+				<div class="text-muted small col-sm-6">
+					
+						&copy; Castlecraft Properties and Engineering Services Pvt Ltd
+					
+				</div>
+				
+				<div class="text-muted small col-sm-6 text-right footer-powered">
+					
+						<a href="https://erpnext.com?source=website_footer" target="_blank" class="text-muted">
+		Powered by ERPNext</a>
+					
+				</div>
+			</div>
+		</div>
+	</section>
+</footer></div>
+	</div>
+
+	<!-- js should be loaded in body! -->
+	<script type="text/javascript"
+		src="/assets/frappe/js/lib/jquery/jquery.min.js"></script>
+	<script type="text/javascript"
+		src="/assets/js/frappe-web.min.js"></script>
+	<script type="text/javascript" src="/website_script.js"></script>
+	<script type="text/javascript" src="/assets/js/erpnext-web.min.js"></script>
+    <script>$(function() { });</script>
+
+
+	<script>frappe.csrf_token = "None";</script></body>
+</html>

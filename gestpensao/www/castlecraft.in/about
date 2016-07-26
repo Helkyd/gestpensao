@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<!-- Built on Frappe. https://frappe.io/ -->
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>About Us</title>
+	<meta name="generator" content="frappe">
+
+    
+	<link rel="shortcut icon"
+		href="/files/favicon.ico"
+		type="image/x-icon">
+	<link rel="icon"
+		href="/files/favicon.ico"
+		type="image/x-icon">
+    
+
+		
+		<link type="text/css" rel="stylesheet" href="https://bootswatch.com/simplex/bootstrap.min.css">
+		<link type="text/css" rel="stylesheet" href="/website_theme.css">
+		<link type="text/css" rel="stylesheet" href="/assets/frappe/css/font/open-sans/open-sans.css">
+		<link type="text/css" rel="stylesheet" href="/assets/css/frappe-web.css">
+		<link type="text/css" rel="stylesheet" href="/assets/erpnext/css/website.css"><script>
+    window.frappe = {
+    	page_ready_events: {},
+    	ready: function(fn) {
+    		if (!frappe.page_ready_events[location.pathname]) {
+    			frappe.page_ready_events[location.pathname] = []
+    		}
+    		frappe.page_ready_events[location.pathname].push(fn);
+    	}
+    }
+    window.dev_server = 0;
+    </script>
+</head>
+<body data-path="about">
+	<div class="main-section">
+		<div>
+				<header>
+	<nav class="navbar navbar-default navbar-main" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<!-- <a class="navbar-brand ellipsis" href="/"> -->
+				<a class="navbar-brand ellipsis"
+					 href="/">
+					<span><img src="/files/castlecraft-word.png" style="max-height: 20px;"></span>
+				</a>
+				<!-- <a class="pull-right visible-xs navbar-toggle toggle-sidebar">
+					<i class="octicon octicon-three-bars"></i>
+				</a> -->
+				<div class="dropdown">
+					<button class="btn btn-default navbar-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+						<i class="octicon octicon-three-bars"></i>
+					</button>
+					<ul class="dropdown-menu dropdown-menu-right">
+<li data-label='About Us' >
+	<a href="/about"
+		
+		>
+	About Us</a></li><li data-label='Products' >
+	<a href="/products"
+		
+		>
+	Products</a></li><li data-label='Structural Services' >
+	<a href="/services"
+		
+		>
+	Structural Services</a></li><li data-label='Blog' >
+	<a href="/blog"
+		
+		>
+	Blog</a></li><li data-label='Clients' >
+	<a href="/clients"
+		
+		>
+	Clients</a></li><li data-label='Jobs' >
+	<a href="/jobs"
+		
+		>
+	Jobs</a></li><li data-label='Contact' >
+	<a href="/contact"
+		
+		>
+	Contact</a></li>
+
+<li class="divider"></li>
+<!-- post login tools -->
+<li data-label="My Account" 
+ class=" logged-in" ><a href="/me" 
+	rel="nofollow">
+	My Account
+	</a></li><li data-label="Logout" 
+ class=" logged-in" ><a href="/?cmd=web_logout" 
+	rel="nofollow">
+	Logout
+	</a></li>
+<li class="btn-login-area"><a href="/login">Login</a></li>
+
+
+</ul>
+				</div>
+			</div>
+			<div class="hidden-xs">
+				
+				<ul class="nav navbar-nav navbar-left"><li data-label='About Us' >
+	<a href="/about"
+		
+		>
+	About Us</a></li><li data-label='Products' >
+	<a href="/products"
+		
+		>
+	Products</a></li><li data-label='Structural Services' >
+	<a href="/services"
+		
+		>
+	Structural Services</a></li><li data-label='Blog' >
+	<a href="/blog"
+		
+		>
+	Blog</a></li><li data-label='Clients' >
+	<a href="/clients"
+		
+		>
+	Clients</a></li><li data-label='Jobs' >
+	<a href="/jobs"
+		
+		>
+	Jobs</a></li>
+</ul>
+<ul class="nav navbar-nav navbar-right"><li data-label='Contact' >
+	<a href="/contact"
+		
+		>
+	Contact</a></li>
+	
+		
+	<li class="shopping-cart">
+		<div class="cart-icon small">
+			<a class="dropdown-toggle" href="#" data-toggle="dropdown" id="navLogin">
+				Cart <span class="badge-wrapper" id="cart-count"></span>
+			</a>
+			<div id="cart-overlay" class="dropdown-menu shopping-cart-menu"></div>
+		</div>
+	 </li>
+
+	
+	<!-- post login tools -->
+
+<li class="dropdown logged-in" id="website-post-login"
+	data-label="website-post-login" style="display: none">
+	<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+		<span class="user-image-wrapper"></span>
+		<span class="full-name"></span>
+		<b class="caret"></b>
+	</a>
+    <ul class="dropdown-menu" role="menu"><li data-label="My Account" 
+			><a href="/me" 
+					rel="nofollow">
+					My Account
+				</a></li><li data-label="Logout" 
+			><a href="/?cmd=web_logout" 
+					rel="nofollow">
+					Logout
+				</a></li></ul>
+</li>
+
+<li class="btn-login-area"><a href="/login">Login</a></li>
+
+
+</ul>
+				
+			</div>
+		</div>
+	</nav>
+</header><div class="hero-and-content">
+                <div data-html-block="hero"></div>
+                <div class="container" data-html-block="content">
+                
+<div class="page-container" id="page-about" data-path="about"
+	>
+			<div class="row ">
+				
+				<div class=" page-content col-sm-12 ">
+					<div class="page-content-wrapper">
+						<div class="row page-head">
+							<div class="col-sm-8 col-xs-6">
+								
+								
+							</div>
+							<div class="col-sm-4 col-xs-6">
+								
+
+								
+							</div>
+						</div>
+					</div>
+					<div class="page_content">
+
+<article class="about-content">
+	<span style="line-height: 1.6;">Founded by professionals, post graduate civil engineers from IIT (Bombay); well versed with conception, designing, execution, rehabilitation &amp; decoration of buildings, villas, bungalows, industries, bridges &amp; ancillaries. Having actually worked on site for more than two decades with Clients, Architects, Engineers &amp; Contractors; we came across different aspects &amp; behaviours of structures. </span><span style="line-height: 1.6;">After working in consortium &amp; independently, we have formulated a consultancy firm named <b>“Castlecraft Properties and Engineering Services Pvt. Ltd."</b></span><div><span style="line-height: 22.4px;">Following technological advances in the industry we have built and are currently using an App on ERPNext to manage all civil contracting sites carried on under our group. Starting from the civil contracting App we have built MN Technique, a firm of IT Consultants and Developers under our group. We are listed as a Service Provider for ERPNext. There is a continuous demand of customization and new development related to ERPNext and Frappe Framework. Our Experts identify functional Requirements, Developers and technical experts map the requirement with framework and write software.</span></div><div><div><span style="line-height: 1.6;"><b><br></b></span></div><div><span style="line-height: 1.6;"><b>Key Information</b></span></div><div><span style="line-height: 1.6;">Castlecraft </span><span style="line-height: 22.3999996185303px;">Properties and Engineering Services Pvt. Ltd. </span><span style="line-height: 1.6;">is proud to be on MCGM's own panel for structural audit of Municipality owned buildings</span></div></div>
+
+	
+
+	
+	<h3>Team Members</h3>
+	
+	<div class="row" itemscope itemtype="http://schema.org/Person">
+		<span class="col-md-2">
+			<div class="avatar avatar-large">
+				<img class="avatar" src="/files/MadhavNandgaonkar.jpg" style="" itemprop="image">
+			</div>
+		</span>
+		<span class="col-md-10"><h4 itemprop="name">Late Mr. Madhav N. Nandgaonkar (Co-Founder) (Ex-Director)</h4>
+			<p itemprop="description"><ul>
+<li>B.E. (Civil) from Bombay University (1980) and M. Tech (General) from IIT, Bombay (1982).</li>
+<li>Member of Institution of Engineers, India (F16987/7).</li>
+<li>Structural Consultant for M.C.G.B. (STR/N/26), Site Supervisor Gr. I for   M.C.G.B. (SS/N/7/I) and on Repair panel of  MHADA MBRR board  IV 105</li>
+</ul></p>
+		</span>
+	</div>
+	
+	<div class="row" itemscope itemtype="http://schema.org/Person">
+		<span class="col-md-2">
+			<div class="avatar avatar-large">
+				<img class="avatar" src="/files/MaanasiNandgaonkar.jpg" style="" itemprop="image">
+			</div>
+		</span>
+		<span class="col-md-10"><h4 itemprop="name">Mrs. Maanasi M. Nandgaonkar - Chairman</h4>
+			<p itemprop="description"><ul>
+<li>B.E. (Civil) from Bombay University ( 1980) and M. Tech (Struct) from IIT, Bombay (1982)</li>
+<li>Member of Institution of Engineers India Convener of Civil Div. &amp; Hon. Jt. Secretary (04-06 &amp; 08-10) (F 16988/5), India Chapter of A.C.I. ex-Director (396), Indian Society of Structural Engineers Advisory trustee (AT-12), Building &amp; works committee of SNDT Chancellor’s nominee (05-08).</li>
+<li>Structural Consultant M.C.G.B. STR/N/27, Site Supervisor Gr. I M.C. G.B. SS/N/4/I and on Repair panel of MHADA MBRR board IV 106</li>
+<li>Assisted in structural design of various P.S.C. bridges in Maharashtra, Gujarat, Assam, and Jammu &amp; W. Bengal while working in ‘GAMMON INDIA LIMITED’ as Design Engineer.  (Oct -1982 to March -1993)</li>
+<li>4 bridges in Manipur - Designed well foundations, open foundations, piers, abutments, prestressed girders of span @ 35.0 M.  &amp; 48.0 M. &amp; all other structural members.</li>
+<li>1 bridge in Maharashtra   - Designed well foundations.</li>
+<li>1 bridge in Gujarat - Designed abutments.</li>
+<li>1 bridge in Jammu - Designed int. piers, open foundations &amp; abutments.</li>
+<li>1 bridge in W. Bengal - Designed int. piers, int. well foundations, abutment well foundations, &amp; balanced cantilever superstructure. </li>
+<li>2 bridges in Maharashtra – Designed prestressed spans.</li>
+<li>Publication of technical paper : On ‘Reliability Analysis’ in I. E. Journal.</li>
+</ul></p>
+		</span>
+	</div>
+	
+	<div class="row" itemscope itemtype="http://schema.org/Person">
+		<span class="col-md-2">
+			<div class="avatar avatar-large">
+				<img class="avatar" src="/files/2014-04-23 15.32.39.jpg" style="" itemprop="image">
+			</div>
+		</span>
+		<span class="col-md-10"><h4 itemprop="name">N.K. Bhattacharyya - Advisor</h4>
+			<p itemprop="description"><ul>
+<li>Retired Chief Engineer, Ministry of Defense; Civil Engineer, specialized in economic design of multi-storeyed buildings, bridge engineering, design and construction of tall concrete structures and many other fields of civil engineering</li>
+<li>Fellow/Memberships of 12 professional institutes</li>
+<li>Published 46 technical papers in various prestigious civil engg. journals</li>
+<li>Years in design of high rise buildings, large steel structures, blast/seismic resistant designs, storage/underground structures, aircraft pens/hangars, water/sewage treatment plants/reservoirs, runway pavements, large retaining structures, investigation of collapse/distress rehabilitation/retrofitting of structures and 12 years in construction of in almost all possible structures provisioning, control of cost and quality of works.</li>
+</ul></p>
+		</span>
+	</div>
+	
+	<div class="row" itemscope itemtype="http://schema.org/Person">
+		<span class="col-md-2">
+			<div class="avatar avatar-large">
+				<img class="avatar" src="/files/Revant-Face.jpg" style="" itemprop="image">
+			</div>
+		</span>
+		<span class="col-md-10"><h4 itemprop="name">Revant Nandgaonkar - Director of IT and Marketing</h4>
+			<p itemprop="description"><ul>
+<li>Masters in Management Studies, Marketing (Mumbai University)</li>
+<li>Leader / Moderator on discuss.erpnext.com</li>
+<li>Domain expert for all our ERPNext projects</li>
+</ul></p>
+		</span>
+	</div>
+	
+	<div class="row" itemscope itemtype="http://schema.org/Person">
+		<span class="col-md-2">
+			<div class="avatar avatar-large">
+				<img class="avatar" src="/files/RiddhiFace.JPG" style="" itemprop="image">
+			</div>
+		</span>
+		<span class="col-md-10"><h4 itemprop="name">Riddhimaan Nandgaonkar - Director of Finance and Administration</h4>
+			<p itemprop="description"><ul>
+<li>Masters in Science, Finance(American University, Washington DC, US)</li>
+<li>Heads all financial decisions for the group</li>
+<li>Monitors value value creation activities and works on improving organisational efficiency</li>
+</ul></p>
+		</span>
+	</div>
+	
+	<div class="row" itemscope itemtype="http://schema.org/Person">
+		<span class="col-md-2">
+			<div class="avatar avatar-large">
+				<img class="avatar" src="/files/Manohar_Patil.jpg" style="" itemprop="image">
+			</div>
+		</span>
+		<span class="col-md-10"><h4 itemprop="name">Manohar Patil - Design Engineer</h4>
+			<p itemprop="description"><ul>
+<li>B. E. Civil </li>
+<li>Experienced Design Engineer</li>
+<li>Manohar Patil is a Civil Engineer with 14 years of experience in the field of design. He has designed residential, commercial and industrial structures. He leads our RCC design assignments in PMC and turnkey projects.</li>
+</ul></p>
+		</span>
+	</div>
+	
+	<div class="row" itemscope itemtype="http://schema.org/Person">
+		<span class="col-md-2">
+			<div class="avatar avatar-large">
+				<img class="avatar" src="/files/WP_20141109_016 copy.jpg" style="" itemprop="image">
+			</div>
+		</span>
+		<span class="col-md-10"><h4 itemprop="name">Rajiv Yadav - Engineer</h4>
+			<p itemprop="description"><ul>
+<li>Structural Audit</li>
+<li>Tender and BOQ</li>
+<li>Design</li>
+</ul></p>
+		</span>
+	</div>
+	
+	<div class="row" itemscope itemtype="http://schema.org/Person">
+		<span class="col-md-2">
+			<div class="avatar avatar-large">
+				<img class="avatar" src="attach_files:" style="" itemprop="image">
+			</div>
+		</span>
+		<span class="col-md-10"><h4 itemprop="name">Bhausaheb Desai - Design Engineer</h4>
+			<p itemprop="description"><ul>
+<li>B. E. Civil</li>
+<li>Experienced Design Engineer</li>
+</ul></p>
+		</span>
+	</div>
+	
+	
+	
+</article>
+</div>
+				</div>
+			</div>
+</div>
+
+                </div>
+            </div></div>
+		<div><footer class="web-footer">
+	<section class="footer-links">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6 text-left">
+					<div class="row">
+					
+					</div>
+				</div>
+
+				<div class="col-sm-6 text-right">
+					
+<div class='input-group input-group-sm pull-right footer-subscribe'>
+	<input class="form-control" type="text" id="footer-subscribe-email"
+		placeholder="Your email address...">
+	<span class='input-group-btn'>
+		<button class="btn btn-default" type="button"
+			id="footer-subscribe-button">Get Updates</button>
+	</span>
+</div>
+
+<script>
+frappe.ready(function() {
+	$("#footer-subscribe-button").click(function() {
+
+		if($("#footer-subscribe-email").val()) {
+			$("#footer-subscribe-email").attr('disabled', true);
+			$("#footer-subscribe-button").html("Sending...")
+				.attr("disabled", true);
+			erpnext.subscribe_to_newsletter({
+				email: $("#footer-subscribe-email").val(),
+				callback: function(r) {
+					if(!r.exc) {
+						$("#footer-subscribe-button").html(__("Added"))
+							.attr("disabled", true);
+					} else {
+						$("#footer-subscribe-button").html(__("Error: Not a valid id?"))
+							.addClass("btn-danger").attr("disabled", false);
+						$("#footer-subscribe-email").val("").attr('disabled', false);
+					}
+				}
+			});
+		}
+		else
+			frappe.msgprint(frappe._("Please enter email address"))
+	});
+});
+</script>
+
+
+				</div>
+			</div>
+			<div class="row footer-bottom-line">
+				<div class="text-muted small col-sm-6">
+					
+						&copy; Castlecraft Properties and Engineering Services Pvt Ltd
+					
+				</div>
+				
+				<div class="text-muted small col-sm-6 text-right footer-powered">
+					
+						<a href="https://erpnext.com?source=website_footer" target="_blank" class="text-muted">
+		Powered by ERPNext</a>
+					
+				</div>
+			</div>
+		</div>
+	</section>
+</footer></div>
+	</div>
+
+	<!-- js should be loaded in body! -->
+	<script type="text/javascript"
+		src="/assets/frappe/js/lib/jquery/jquery.min.js"></script>
+	<script type="text/javascript"
+		src="/assets/js/frappe-web.min.js"></script>
+	<script type="text/javascript" src="/website_script.js"></script>
+	<script type="text/javascript" src="/assets/js/erpnext-web.min.js"></script>
+
+	<script>frappe.csrf_token = "None";</script></body>
+</html>
