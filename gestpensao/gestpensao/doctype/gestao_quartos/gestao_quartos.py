@@ -50,3 +50,22 @@ class GESTAO_QUARTOS(Document):
 def empresa_load():
 	return frappe.db.get_value("Empresa",None,"moeda_default")
 
+
+
+@frappe.whitelist()
+def verifica_hora_entrada():
+
+		print "HORA ENTRADA CCCCCCCCCCCCCCCCCCCCCCCCCCCCCC"
+		# loop no Doc a procura de quartos com limite da DATA de ENTRADA.
+
+		for d in frappe.db.sql("""SELECT numero_quarto,hora_entrada,hora_saida,status_reserva FROM `tabGESTAO_QUARTOS` WHERE status_reserva = "Ocupado" and check_in <=%s """, frappe.utils.now(), as_dict=True):
+			#print("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
+			if (frappe.utils.data.time_diff_in_hours(frappe.utils.now(),d.check_in) > 1):
+				reser = frappe.get_doc("RESERVAS",d.codigo)
+				dd= str(frappe.utils.data.time_diff_in_hours(frappe.utils.now(),d.hora_entrada))
+				reser._comments = "Reserva Cancelada por mais de " + dd + " horas"
+				print " AGORA " + frappe.utils.now()
+				print " CHECK IN " + str(d.hora_entrada)
+				print "Reserva " + d.codigo + " " + str(d.hora_entrada) + " Cancelada por mais de " + dd + " horas"
+				#reser.save()
+

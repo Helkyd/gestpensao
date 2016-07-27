@@ -1,0 +1,19 @@
+{
+ "add_total_row": 0, 
+ "apply_user_permissions": 1, 
+ "creation": "2016-07-26 19:52:46.822441", 
+ "disabled": 0, 
+ "docstatus": 0, 
+ "doctype": "Report", 
+ "idx": 0, 
+ "is_standard": "Yes", 
+ "modified": "2016-07-26 19:59:35.202224", 
+ "modified_by": "Administrator", 
+ "module": "Gestpensao", 
+ "name": "Reservas Ativas ou Novas", 
+ "owner": "Administrator", 
+ "query": "SELECT name as \"N. Reserva:data:120\",numero_cliente as \"Nome do Cliente:data:100\", \ncheck_in as \"Data Entrada:datetime:200\",check_out as \"Data Saida:datetime:100\",numero_quarto as \"Quarto Numero:data:100\", booked_by as \"Feita por:data:200\",reservation_status as \"Status:data:50\", pay_advance as \"Pago em Avanco:data:50\" FROM tabRESERVAS WHERE(reservation_status LIKE \"Ativo\" OR \"Novo\");", 
+ "ref_doctype": "RESERVAS", 
+ "report_name": "Reservas Ativas ou Novas", 
+ "report_type": "Query Report"
+}

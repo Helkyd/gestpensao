@@ -1,0 +1,23 @@
+# -*- coding: utf-8 -*-
+from __future__ import unicode_literals
+from frappe import _
+
+def get_data():
+	return [
+{
+            "label": _("Documents"),
+            "icon": "icon-star",
+            "items": [
+                {
+                    "type": "doctype",
+                    "name": "Clientes",
+                    "description": _("Clientes...)")
+                },
+                {
+                    "type": "doctype",
+                    "name": "Servicos",
+                    "description": _("Servicos")
+                },
+            ]
+        },
+	]

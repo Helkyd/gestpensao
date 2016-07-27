@@ -8,7 +8,7 @@ from frappe import _, msgprint, throw
 from frappe.model.document import Document
 from frappe.model.naming import make_autoname
 from frappe import utils 
-import datetime
+import datetime 
 
 from frappe.utils import flt, time_diff_in_hours, get_datetime, getdate, cint, get_datetime_str
 
@@ -31,9 +31,10 @@ class RESERVAS(Document):
 	def Validar_Numero_Dias(self):
 		if self.number_days <1:
 			frappe.throw(_("Verificar Datas de Entrada e Saida. Numero de Dias tem que ser 1 ou mais."))
-		
-		if (self.check_in < utils.today()):
-			frappe.throw(_("Verificar Data de Entrada. Inferior a Data de Hoje."))
+
+		# Retirar de momento vendo que nao tenho contornar este check
+		#if (str(self.check_in) < frappe.utils.today()):
+		#	frappe.throw(_("Verificar Data de Entrada. Inferior a Data de Hoje."))
 
 	def Quartos_Status(self):
 		if (self.reservation_status=="Nova"):
@@ -75,22 +76,5 @@ class RESERVAS(Document):
 			quarto.status_quarto = "Livre"
 
 			quarto.save()
-@frappe.whitelist()
-def verifica_check_in():
-	def __unicode__(self):
-		
-		# loop no Doc a procura de quartos com limite da DATA de ENTRADA.
-		Reserv = "RESULTADO " + frappe.db.sql("""SELECT codigo,numero_quarto,check_in,check_out,reservation_status, pay_advance 
-				FROM `tabRESERVAS` WHERE reservation_status = "Nova" 
-				and check_in <=%s """, utils.today(), as_dict=True)
-		#frappe.msgprint (_("asdfsafsfsadfsdafsfsfsdaaasdfsafsfsfasfsaf " + len(Reserv)))
-		if len(Reserv) >0:
-			for d in Reserv:
-				if (frappe.utils.data.time_diff_in_hours(frappe.utils.now(),Reserv[d].check_in) > 2):
-					reser = frappe.get_doc("RESERVAS",Reserv[d].codigo)
-					reser._comments = "Reserva Cancelada " + (frappe.utils.data.time_diff_in_hours(frappe.utils.now(),Reserv[d].check_in))
 
-					reser.save()
-
-					frappe.msgprint(_("O seguintes Quartos {0} seram liberados dentro de 5 minutos senao forem ocupados").format(d))
 

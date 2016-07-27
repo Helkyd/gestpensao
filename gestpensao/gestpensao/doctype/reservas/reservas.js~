@@ -1,8 +1,12 @@
 // Copyright (c) 2016, Helio de Jesus and contributors
 // For license information, please see license.txt
 
+//cur_frm.call({method:"verifica_check_in",args:{"start":"0"}})
+
 frappe.ui.form.on('RESERVAS', {
 	onload: function(frm) {
+
+//		cur_frm.call({method:"verifica_check_in",args:{"start":"0"}})
 
 		if (frm.doc.reservation_status=="Nova" && frm.doc.pay_advance !="Sim" && frm.doc.numero_cliente ==undefined){
 			cur_frm.toggle_enable("booked_by",true)
@@ -11,6 +15,8 @@ frappe.ui.form.on('RESERVAS', {
 		}else if (frm.doc.reservation_status=="Nova" && frm.doc.pay_advance !="Sim"){
 			cur_frm.toggle_enable("booked_by",false)
 			cur_frm.toggle_enable("numero_cliente",false)	
+			cur_frm.toggle_enable("check_in",false)	
+			cur_frm.toggle_enable("check_out",false)	
 
 		}else if (frm.doc.reservation_status=="Cancelada" ){
 			cur_frm.toggle_enable("booked_by",false)	
@@ -23,6 +29,8 @@ frappe.ui.form.on('RESERVAS', {
 			cur_frm.toggle_enable("numero_cliente",false)	
 			cur_frm.toggle_enable("reservation_status",false)
 			cur_frm.toggle_enable("pay_advance",false)		
+			cur_frm.toggle_enable("number_days",false)
+			cur_frm.toggle_enable("preco_quarto",false)
 		
 		}else if (frm.doc.reservation_status=="Ativo"){
 			cur_frm.toggle_enable("booked_by",false)	
@@ -57,6 +65,10 @@ frappe.ui.form.on('RESERVAS', {
 			frm.set_df_property("reservation_status","options","Ativo\nPago")
 		}
 		cur_frm.refresh_fields()
+
+
+
+//		cur_frm.call({method:"verifica_check_in",args:{"start":"0"}})
 		
 
 	}
@@ -124,7 +136,7 @@ frappe.ui.form.on('RESERVAS','reservation_status',function(frm,cdt,cdn){
 	if (frm.doc.reservation_status =="Cancelada") {
 		show_alert("Verificando se pode ser cancelado a Reserva!!!",3)
 		frappe.call({
-			method: "gespensao.gestao_de_pensao.doctype.api.get_gestao_quartos_check",
+			method: "gestpensao.gestpensao.doctype.api.get_gestao_quartos_check",
 			args: {
 				"quarto":frm.doc.numero_quarto,
 				

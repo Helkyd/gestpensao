@@ -103,7 +103,7 @@ notification_config = "gestpensao.notifications.get_notification_config"
 
 scheduler_events = {
  	"all": [
- 		"gestpensao.gestpensao.doctype.reservas.reservas.verifica_check_in"
+		"gestpensao.gestpensao.doctype.api.verifica_check_in"
  	]
 
 }
