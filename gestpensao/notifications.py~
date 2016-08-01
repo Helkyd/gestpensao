@@ -6,7 +6,7 @@ from __future__ import unicode_literals
 def get_notification_config():
 	return { "for_doctype":
 		{
-			"GESTAO_QUARTOS": {"status_reserva": "Ativo"},
+			"GESTAO_QUARTOS": {"status_reserva": "Ocupado"},
 			"RESERVAS": {"reservation_status": "Nova"}
 
 		}

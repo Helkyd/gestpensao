@@ -2,7 +2,7 @@ import frappe
 from frappe import utils 
 import datetime 
 from frappe.model.naming import make_autoname
-
+import frappe.async
 
 @frappe.whitelist()
 def get_quartos(start, end):
@@ -38,7 +38,6 @@ def verifica_check_in():
 		# loop no Doc a procura de quartos com limite da DATA de ENTRADA.
 
 		for d in frappe.db.sql("""SELECT codigo,numero_quarto,check_in,check_out,reservation_status, pay_advance FROM `tabRESERVAS` WHERE reservation_status = "Nova" and check_in <=%s """, frappe.utils.now(), as_dict=True):
-			print "now " + frappe.utils.now()
 
 			if (frappe.utils.data.time_diff_in_hours(frappe.utils.now(),d.check_in) >2):
 				
@@ -57,3 +56,28 @@ def verifica_check_in():
 				reser.reservation_status="Cancelada"
 				reser.save()
 
+
+@frappe.whitelist()
+def verifica_hora_saida():
+
+		print "HORA SAIDA CCCCCCCCCCCCCCCCCCCCCCCCCCCCCC"
+		# loop no Doc a procura de quartos com limite da DATA de ENTRADA.
+
+		for d in frappe.db.sql("""SELECT name,numero_quarto,hora_entrada,hora_saida,status_reserva FROM `tabGESTAO_QUARTOS` WHERE status_reserva = "Ocupado" and hora_saida <=%s """, frappe.utils.now(), as_dict=True):
+			print "MINUTOS " + str(frappe.utils.data.time_diff_in_seconds(frappe.utils.now(),d.hora_entrada)/60)
+			if (frappe.utils.data.time_diff_in_hours(frappe.utils.now(),d.hora_saida) <= 1): 
+				# Avisa que passou do tempo...menos de 1 hora
+				print " Menos de 1 hora"
+				frappe.publish_realtime('msgprint','Este Quarto ja passou da hora. ' + str(frappe.utils.data.time_diff_in_seconds(frappe.utils.now(),d.hora_entrada)/60) + ' minutos a mais.' , user=frappe.session.user)
+			elif (frappe.utils.data.time_diff_in_hours(frappe.utils.now(),d.hora_saida) > 1):
+				print " MAIS de 1 hora"
+				reser = frappe.get_doc("GESTAO_QUARTOS",d.name)
+				dd= str(frappe.utils.data.time_diff_in_seconds(frappe.utils.now(),d.hora_entrada))
+				reser._comments = "Hora de Saida por mais de " + dd + " minutos"
+				print " AGORA " + frappe.utils.now()
+				print " hora_saida " + str(d.hora_saida)
+				print "QUARTO " + d.numero_quarto + " " + str(d.hora_saida) + " Cancelada por mais de " + dd + " horas"
+				print " USER " + frappe.session.user
+				#reser.save()
+				frappe.publish_realtime('msgprint', "QUARTO " + d.numero_quarto + " " + str(d.hora_saida) + " Cancelada por mais de " + dd + " horas", user=frappe.session.user,doctype="GESTAO_QUARTOS")
+			

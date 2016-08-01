@@ -95,7 +95,7 @@ frappe.ui.form.on('GESTAO_QUARTOS','hora_entrada',function(frm,cdt,cdn){
 
 });
 
-
+cur_frm.add_fetch('nome_servico','preco','preco_servico')	
 
 frappe.ui.form.on("RESERVAS_Services","nome_servico",function(frm,cdt,cdn){
 
@@ -171,7 +171,10 @@ cur_frm.cscript.pagar_servicos = function(frm,cdt,cdn) {
 	calculate_totals1(frm,cdt,cdn)	
 	
 	var d = frappe.prompt([
-        	{label:__("Pagamento por:"), fieldtype:"Select",options: ["1-Cash","2-TPA", "3-Conta-corrente","4-Não Pagar"],fieldname:"priority",'reqd': 1},
+		{label:__("Valor a Pagar: "),fieldtype:"Read Only",fieldname:"apagar",default: cur_frm.doc.total_servicos},
+		{label:__("Valor Pago: "),fieldtype:"Currency",fieldname:"vpago",default: cur_frm.doc.total_servicos},
+		{label:__("Troco: "),fieldtype:"Read Only",fieldname:"troco",default: 0},
+        	{label:__("Pagamento por:"), fieldtype:"Select",options: ["1-Cash","2-TPA", "3-Conta-corrente","4-Não Pagar"],fieldname:"priority",'reqd': 1,default:"1-Cash"},
         ],
         function(values){
             var c = d.get_values();
@@ -263,7 +266,7 @@ var servicos_ = function(frm,cdt,cdn){
 	frappe.model.with_doc(frm, cdt, function() { 
 		var d = frappe.model.get_doc(frm,cdt)
 //		cur_frm.doc.preco_servico = d.preco
-		frappe.model.set_value(cdt,cdn,cur_frm.fields_dict["servicos"].grid.docfields, {"fieldname": "preco_servico"}),d.preco)
+		frappe.model.set_value(cdt,cdn,frappe.utils.filter_dict(cur_frm.fields_dict["servicos"].grid.docfields, {"fieldname": "preco_servico"}),d.preco)
 		cur_frm.refresh_fields()
 
 

@@ -33,6 +33,7 @@ class RESERVAS(Document):
 			frappe.throw(_("Verificar Datas de Entrada e Saida. Numero de Dias tem que ser 1 ou mais."))
 
 		# Retirar de momento vendo que nao tenho contornar este check
+
 		#if (str(self.check_in) < frappe.utils.today()):
 		#	frappe.throw(_("Verificar Data de Entrada. Inferior a Data de Hoje."))
 

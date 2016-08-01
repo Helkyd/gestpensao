@@ -5,6 +5,14 @@ from frappe import _
 def get_data():
 	return [
 
+		{
+			"_doctype": "CLIENTES",
+			"module_name": "CLIENTES",
+			"color": "#2ecc71",
+			"icon": "octicon octicon-organization",
+			"type": "link",
+			"link": "List/Clientes"
+		},
                 {
                     "type": "doctype",
                     "name": "Clientes",

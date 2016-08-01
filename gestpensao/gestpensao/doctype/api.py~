@@ -2,7 +2,7 @@ import frappe
 from frappe import utils 
 import datetime 
 from frappe.model.naming import make_autoname
-
+import frappe.async
 
 @frappe.whitelist()
 def get_quartos(start, end):
@@ -34,15 +34,11 @@ def get_gestao_quartos_check(quarto):
 
 @frappe.whitelist()
 def verifica_check_in():
-#	def __unicode__(self):
 
-		print "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCC"
 		# loop no Doc a procura de quartos com limite da DATA de ENTRADA.
 
 		for d in frappe.db.sql("""SELECT codigo,numero_quarto,check_in,check_out,reservation_status, pay_advance FROM `tabRESERVAS` WHERE reservation_status = "Nova" and check_in <=%s """, frappe.utils.now(), as_dict=True):
 			print "now " + frappe.utils.now()
-#			print " checkin " + str(d.check_in)
-#			print " Horas " + (frappe.utils.data.time_diff_in_hours(frappe.utils.now(),d.check_in)
 
 			if (frappe.utils.data.time_diff_in_hours(frappe.utils.now(),d.check_in) >2):
 				
@@ -50,23 +46,8 @@ def verifica_check_in():
 				dd= str(frappe.utils.data.time_diff_in_hours(frappe.utils.now(),d.check_in))
 
 				ddd = make_autoname('CANCEL/' + '.#####')
-#				frappe.get_doc({
-#					"doctype":"Communication",
-#					"name": ddd,
-#					"docstatus": 0,			
-#					"seen": 0,
-#					"unread_notification_sent":0,		
-#					"subject":"Reserva " + d.codigo + " " + str(d.check_in) + " Cancelada por mais de " + dd + " horas \n",
-#					"reference":d.codigo,
-#					"reference_doctype": "RESERVAS",
-#					"sent_or_received": "Sent",
-#					"content": "Reserva " + d.codigo + " " + str(d.check_in) + " Cancelada por mais de " + dd + " horas \n\n<!-- markdown -->",
-#					"communication_type": "Comment"
-					
-#				}).insert()
 				print " Numer " + ddd
 				frappe.db.sql("INSERT into tabCommunication  (name,docstatus,seen,unread_notification_sent,subject,reference_name,reference_doctype,sent_or_received,content,communication_type,creation,modified) values (%s,0,0,0,'RESERVA Cancelada ',%s,'RESERVAS','Sent','RESERVA Cancelada  <!-- markdown -->','Comment',%s,%s) ",(ddd,d.codigo,frappe.utils.now(),frappe.utils.now()))
-
 
 				reser._comments =[{"comment": "Reserva " + d.codigo + " " + str(d.check_in) + " Cancelada por mais de " + dd + " horas <!-- markdown -->","by": "Scheduler", "name":ddd}]
 
@@ -76,5 +57,28 @@ def verifica_check_in():
 				reser.reservation_status="Cancelada"
 				reser.save()
 
-#				frappe.msgprint(_("O seguintes Quartos {0} seram liberados dentro de 5 minutos senao forem ocupados").format(d))
 
+@frappe.whitelist()
+def verifica_hora_saida():
+
+		print "HORA SAIDA CCCCCCCCCCCCCCCCCCCCCCCCCCCCCC"
+		# loop no Doc a procura de quartos com limite da DATA de ENTRADA.
+
+		for d in frappe.db.sql("""SELECT name,numero_quarto,hora_entrada,hora_saida,status_reserva FROM `tabGESTAO_QUARTOS` WHERE status_reserva = "Ocupado" and hora_saida <=%s """, frappe.utils.now(), as_dict=True):
+			print "MINUTOS " + str(frappe.utils.data.time_diff_in_seconds(frappe.utils.now(),d.hora_entrada)/60)
+			if (frappe.utils.data.time_diff_in_hours(frappe.utils.now(),d.hora_saida) <= 1): 
+				# Avisa que passou do tempo...menos de 1 hora
+				print " Menos de 1 hora"
+				frappe.publish_realtime('msgprint','Este Quarto ja passou da hora. ' + str(frappe.utils.data.time_diff_in_seconds(frappe.utils.now(),d.hora_entrada)/60) + ' minutos a mais.' , user=frappe.session.user)
+			elif (frappe.utils.data.time_diff_in_hours(frappe.utils.now(),d.hora_saida) > 1):
+				print " MAIS de 1 hora"
+				reser = frappe.get_doc("GESTAO_QUARTOS",d.name)
+				dd= str(frappe.utils.data.time_diff_in_seconds(frappe.utils.now(),d.hora_entrada))
+				reser._comments = "Hora de Saida por mais de " + dd + " minutos"
+				print " AGORA " + frappe.utils.now()
+				print " hora_saida " + str(d.hora_saida)
+				print "QUARTO " + d.numero_quarto + " " + str(d.hora_saida) + " Cancelada por mais de " + dd + " horas"
+				print " USER " + frappe.session.user
+				#reser.save()
+				frappe.publish_realtime('msgprint', "QUARTO " + d.numero_quarto + " " + str(d.hora_saida) + " Cancelada por mais de " + dd + " horas", user=frappe.session.user,doctype="GESTAO_QUARTOS")
+			

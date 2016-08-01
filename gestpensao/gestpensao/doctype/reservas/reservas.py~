@@ -78,24 +78,3 @@ class RESERVAS(Document):
 			quarto.save()
 
 
-
-@frappe.whitelist()
-def verifica_check_in():
-#	def __unicode__(self):
-
-		print "AAAAAAAAAAAAAAAAAABBBBBBBBBBBBB"
-		# loop no Doc a procura de quartos com limite da DATA de ENTRADA.
-
-		for d in frappe.db.sql("""SELECT codigo,numero_quarto,check_in,check_out,reservation_status, pay_advance FROM `tabRESERVAS` WHERE reservation_status = "Nova" and check_in <=%s """, frappe.utils.now(), as_dict=True):
-			# print("BBBBBBBBBBBBBBBBBBBBBAAAAAAAAAAAAAAAA")
-			if (frappe.utils.data.time_diff_in_hours(frappe.utils.now(),d.check_in) > 2):
-				reser = frappe.get_doc("RESERVAS",d.codigo)
-				dd= str(frappe.utils.data.time_diff_in_hours(frappe.utils.now(),d.check_in))
-				reser._comments = "Reserva " + d.codigo + " " + str(d.check_in) + " Cancelada por mais de " + dd + " horas"
-				print " AGORA " + frappe.utils.now()
-				print " CHECK IN " + str(d.check_in)
-				print "Reserva " + d.codigo + " " + str(d.check_in) + " Cancelada por mais de " + dd + " horas"
-				reser.save()
-
-#				frappe.msgprint(_("O seguintes Quartos {0} seram liberados dentro de 5 minutos senao forem ocupados").format(d))
-

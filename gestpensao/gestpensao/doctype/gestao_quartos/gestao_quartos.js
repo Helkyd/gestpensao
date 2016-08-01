@@ -95,7 +95,7 @@ frappe.ui.form.on('GESTAO_QUARTOS','hora_entrada',function(frm,cdt,cdn){
 
 });
 
-
+cur_frm.add_fetch('nome_servico','preco','preco_servico')	
 
 frappe.ui.form.on("RESERVAS_Services","nome_servico",function(frm,cdt,cdn){
 
@@ -171,7 +171,10 @@ cur_frm.cscript.pagar_servicos = function(frm,cdt,cdn) {
 	calculate_totals1(frm,cdt,cdn)	
 	
 	var d = frappe.prompt([
-        	{label:__("Pagamento por:"), fieldtype:"Select",options: ["1-Cash","2-TPA", "3-Conta-corrente","4-Não Pagar"],fieldname:"priority",'reqd': 1},
+		{label:__("Valor a Pagar: "),fieldtype:"Read Only",fieldname:"apagar",default: cur_frm.doc.total_servicos},
+		{label:__("Valor Pago: "),fieldtype:"Currency",fieldname:"vpago",default: cur_frm.doc.total_servicos},
+		{label:__("Troco: "),fieldtype:"Read Only",fieldname:"troco",default: 0},
+        	{label:__("Pagamento por:"), fieldtype:"Select",options: ["1-Cash","2-TPA", "3-Conta-Corrente","4-Não Pagar"],fieldname:"priority",'reqd': 1,default:"1-Cash"},
         ],
         function(values){
             var c = d.get_values();
@@ -189,7 +192,7 @@ cur_frm.cscript.pagar_servicos = function(frm,cdt,cdn) {
 			frappe.model.set_value(cdt,cdn,'status_reserva',"Fechado")
 			frappe.model.set_value(cdt,cdn,'servico_pago_por',c.priority)
 			cur_frm.refresh_fields("status_reserva");	
-		} else if (c.priority=="3-Conta-corrente") {
+		} else if (c.priority=="3-Conta-Corrente") {
 			//Gestao_quarto status Fechado ... Ja nao se pode alterar.
 			//Contas ou valores para a Conta corrente do cliente.
 

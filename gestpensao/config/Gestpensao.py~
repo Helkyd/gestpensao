@@ -4,10 +4,15 @@ from frappe import _
 
 def get_data():
 	return [
-{
-            "label": _("Documents"),
-            "icon": "icon-star",
-            "items": [
+
+		{
+			"_doctype": "CLIENTES",
+			"module_name": "Clientes",
+			"color": "#2ecc71",
+			"icon": "octicon octicon-organization",
+			"type": "link",
+			"link": "List/Clientes"
+		},
                 {
                     "type": "doctype",
                     "name": "Clientes",
@@ -38,6 +43,4 @@ def get_data():
                     "name": "RESERVAS",
                     "description": _("Reservas dos Quartos...")
                 },
-            ]
-        },
 	]
