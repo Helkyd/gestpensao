@@ -16,7 +16,7 @@ class GESTAO_QUARTOS(Document):
 
 	def validate(self):
 		self.Validar_Numero_Dias()
-
+		self.Check_ContaCorrente()
 
 	def Validar_Numero_Dias(self):
 		if self.horas <= 0:
@@ -28,7 +28,7 @@ class GESTAO_QUARTOS(Document):
 
 	def on_update(self):
 		self.Quartos_Status()
-		valor_pago = total_servicos
+		self.valor_pago = self.total_servicos
 
 
 	def Quartos_Status(self):
@@ -46,6 +46,13 @@ class GESTAO_QUARTOS(Document):
 			quarto.status_quarto = "Livre"
 
 		quarto.save()		
+
+	def Check_ContaCorrente(self):
+		# Not yet Implemented...
+		if (self.servico_pago_por=="3-Conta-Corrente"):
+			frappe.throw(_("Modulo nao funcional de momento."))
+		
+
 
 @frappe.whitelist()
 def empresa_load():
