@@ -74,6 +74,7 @@ def verifica_hora_saida():
 				print " Menos de 1 hora"
 				frappe.publish_realtime('msgprint','Este Quarto ja passou da hora. ' + str(frappe.utils.data.time_diff_in_seconds(frappe.utils.now(),d.hora_entrada)/60) + ' minutos a mais.' , user=frappe.session.user)
 			elif (frappe.utils.data.time_diff_in_hours(frappe.utils.now(),d.hora_saida) > 1):
+				frappe.publish_realtime(event='msgprint',message='MENSAGEM QUARTOS')
 				print " MAIS de 1 hora"
 				reser = frappe.get_doc("GESTAO_QUARTOS",d.name)
 				dd= str(frappe.utils.data.time_diff_in_seconds(frappe.utils.now(),d.hora_entrada))
@@ -83,5 +84,5 @@ def verifica_hora_saida():
 				print "QUARTO " + d.numero_quarto + " " + str(d.hora_saida) + " Cancelada por mais de " + dd + " horas"
 				print " USER " + frappe.session.user
 				#reser.save()
-				frappe.publish_realtime('msgprint', "QUARTO " + d.numero_quarto + " " + str(d.hora_saida) + " Cancelada por mais de " + dd + " horas", user=frappe.session.user,doctype="GESTAO_QUARTOS")
+				frappe.publish_realtime(event='msgprint', message='QUARTO ' + d.numero_quarto + ' ' + str(d.hora_saida) + ' Cancelada por mais de ' + dd + ' horas', user=frappe.session.user,doctype='GESTAO_QUARTOS')
 			
