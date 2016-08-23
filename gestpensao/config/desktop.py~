@@ -16,7 +16,8 @@ def get_data():
 				"color": "#2ecc71",
 				"icon": "octicon octicon-organization",
 				"type": "link",
-				"link": "List/Clientes"
+				"link": "List/Clientes",
+				"label": _("Lista de Clientes")
 			},
 
 		},

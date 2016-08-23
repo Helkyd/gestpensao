@@ -9,7 +9,7 @@ def get_data():
 			"color": "grey",
 			"icon": "octicon octicon-file-directory",
 			"type": "module",
-			"label": _("Gestao Pensao")
+			"label": _("Gestao Pensao"),
 			{
 				"_doctype": "CLIENTES",
 				"module_name": "Clientes",
