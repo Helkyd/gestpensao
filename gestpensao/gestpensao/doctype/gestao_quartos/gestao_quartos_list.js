@@ -14,6 +14,9 @@ frappe.listview_settings['GESTAO_QUARTOS'] = {
 			return [__("" + doc.tipo_quarto), "red"]
 		} else if (doc.status_reserva== "Ativo" ) {
 			return [__("" + doc.tipo_quarto), "orange"]
+
+		} else if (doc.status_reserva== "Fechado" ) {
+			return [__("" + doc.tipo_quarto), "blue"]
 		
 		}
 	},

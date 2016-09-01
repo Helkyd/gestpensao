@@ -17,7 +17,7 @@ frappe.listview_settings['GESTAO_QUARTOS'] = {
 		
 		}
 	},
-	colwidths: {"subject": 3, "indicator": 3,"Horas Entrada": 5,"Horas Saida": 5},
+	colwidths: {"subject": 3, "indicator": 3,"Horas Entrada": 6,"Horas Saida": 6},
 	
 };
 
