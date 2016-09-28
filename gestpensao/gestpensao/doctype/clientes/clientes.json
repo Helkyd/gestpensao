@@ -1,6 +1,6 @@
 {
  "allow_copy": 0, 
- "allow_import": 0, 
+ "allow_import": 1, 
  "allow_rename": 0, 
  "beta": 0, 
  "creation": "2016-07-20 06:04:19.289292", 
@@ -226,7 +226,7 @@
  "issingle": 0, 
  "istable": 0, 
  "max_attachments": 0, 
- "modified": "2016-07-29 00:29:52.604905", 
+ "modified": "2016-09-21 17:25:57.016536", 
  "modified_by": "Administrator", 
  "module": "Gestpensao", 
  "name": "CLIENTES", 

@@ -16,7 +16,7 @@ frappe.ui.form.on('QUARTOS', {
 	}
 });
 
-
+/*
 frappe.ui.form.on('QUARTOS','tipo_quarto',function(frm,cdt,cdn){
 
 	quartos_('QUARTOS_TIPO',frm.doc.tipo_quarto)
@@ -36,4 +36,4 @@ var quartos_ = function(frm,cdt,cdn){
 
 
 
-
+*/

@@ -1,6 +1,6 @@
 {
  "allow_copy": 0, 
- "allow_import": 0, 
+ "allow_import": 1, 
  "allow_rename": 0, 
  "autoname": "", 
  "beta": 0, 
@@ -311,7 +311,7 @@
  "issingle": 0, 
  "istable": 0, 
  "max_attachments": 0, 
- "modified": "2016-08-03 12:50:00.955697", 
+ "modified": "2016-09-21 17:14:53.934241", 
  "modified_by": "Administrator", 
  "module": "Gestpensao", 
  "name": "BAR_RESTAURANTE", 

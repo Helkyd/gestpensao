@@ -1,6 +1,6 @@
 {
  "allow_copy": 0, 
- "allow_import": 0, 
+ "allow_import": 1, 
  "allow_rename": 0, 
  "autoname": "", 
  "beta": 0, 
@@ -74,7 +74,7 @@
  "issingle": 0, 
  "istable": 0, 
  "max_attachments": 0, 
- "modified": "2016-07-29 01:12:14.038566", 
+ "modified": "2016-09-21 17:25:46.146528", 
  "modified_by": "Administrator", 
  "module": "Gestpensao", 
  "name": "MESAS", 

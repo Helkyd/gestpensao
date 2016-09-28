@@ -3,21 +3,21 @@
 
 // render
 frappe.listview_settings['QUARTOS'] = {
-	add_fields: ["status_quarto","tipo_quarto"],
+	add_fields: ["status_quarto","tipo_cama"],
 
 	get_indicator: function(doc) {
 
 
 		if (doc.status_quarto== "Livre" ) {
-			return [__("Livre - " + doc.tipo_quarto), "green"]
+			return [__("Livre - " + doc.tipo_cama), "green"]
 		} else if (doc.status_quarto== "Ocupado" ) {
-			return [__("Ocupado - " + doc.tipo_quarto), "red"]
+			return [__("Ocupado - " + doc.tipo_cama), "red"]
 		} else if (doc.status_quarto== "Reservado" ) {
-			return [__("Reservado - " + doc.tipo_quarto), "orange"]
+			return [__("Reservado - " + doc.tipo_cama), "orange"]
 		} else if (doc.status_quarto== "Manutenção" ) {
-			return [__("Manutenção - " + doc.tipo_quarto), "yellow"]
+			return [__("Manutenção - " + doc.tipo_cama), "yellow"]
 		} else if (doc.status_quarto== "Não funcional" ) {
-			return [__("Não funcional - " + doc.tipo_quarto), "black"]
+			return [__("Não funcional - " + doc.tipo_cama), "black"]
 		
 		}
 	},

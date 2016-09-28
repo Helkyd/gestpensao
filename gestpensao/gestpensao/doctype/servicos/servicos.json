@@ -1,6 +1,6 @@
 {
  "allow_copy": 0, 
- "allow_import": 0, 
+ "allow_import": 1, 
  "allow_rename": 0, 
  "beta": 0, 
  "creation": "2016-07-20 05:58:59.253008", 
@@ -178,7 +178,7 @@
  "issingle": 0, 
  "istable": 0, 
  "max_attachments": 0, 
- "modified": "2016-07-29 09:13:45.170870", 
+ "modified": "2016-09-21 17:24:38.959533", 
  "modified_by": "Administrator", 
  "module": "Gestpensao", 
  "name": "SERVICOS", 

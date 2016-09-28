@@ -10,16 +10,7 @@ def get_data():
 			"icon": "octicon octicon-file-directory",
 			"type": "module",
 			"label": _("Gestao Pensao"),
-			{
-				"_doctype": "CLIENTES",
-				"module_name": "Clientes",
-				"color": "#2ecc71",
-				"icon": "octicon octicon-organization",
-				"type": "link",
-				"link": "List/Clientes",
-				"label": _("Lista de Clientes")
-			},
-
+	
 		},
 		{
 				"_doctype": "CLIENTES",
