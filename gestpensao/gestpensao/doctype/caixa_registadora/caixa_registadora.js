@@ -171,6 +171,7 @@ frappe.ui.form.on("CAIXA_Registadora","abertura_fecho",function(frm,cdt,cdn){
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 //frappe.ui.form.on("CAIXA_Registadora","validate",function(frm,cdt,cdn){
 
 //	if (mesas_open.statusText=="OK" ){
@@ -188,22 +189,29 @@ frappe.ui.form.on("CAIXA_Registadora","abertura_fecho",function(frm,cdt,cdn){
 =======
 >>>>>>> Versao Production
 frappe.ui.form.on("CAIXA_Registadora","validate",function(frm,cdt,cdn){
+=======
+//frappe.ui.form.on("CAIXA_Registadora","validate",function(frm,cdt,cdn){
+>>>>>>> CAIXA Registadora
 
-	if (mesas_open.statusText=="OK" ){
-		if (mesas_open.responseText != "{}"){
-			alert("Verifique as Mesas Abertas!!!")
-			cur_frm.disable_save()
-			cur_frm.reload_doc()
+//	if (mesas_open.statusText=="OK" ){
+//		if (mesas_open.responseText != "{}"){
+//			alert("Verifique as Mesas Abertas!!!")
+//			cur_frm.disable_save()
+//			cur_frm.reload_doc()
 			//cur_frm.page.clear_primary_action()
 			//cur_frm.refresh()
-		}
-	}
+//		}
+//	}
 
+<<<<<<< HEAD
 });
 <<<<<<< HEAD
 >>>>>>> Versao Production
 =======
 >>>>>>> Versao Production
+=======
+//});
+>>>>>>> CAIXA Registadora
 
 
 frappe.ui.form.on("CAIXA_Registadora","status_caixa",function(frm,cdt,cdn){
