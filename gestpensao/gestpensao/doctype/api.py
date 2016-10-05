@@ -40,7 +40,7 @@ def verifica_check_in():
 		# loop no Doc a procura de quartos com limite da DATA de ENTRADA.
 
 		for d in frappe.db.sql("""SELECT codigo,numero_quarto,check_in,check_out,reservation_status, pay_advance FROM `tabRESERVAS` WHERE reservation_status = "Nova" and check_in <=%s """, frappe.utils.now(), as_dict=True):
-
+			print "RESERVAS +++++++++++++++++++++++++++++++"
 			if (frappe.utils.data.time_diff_in_hours(frappe.utils.now(),d.check_in) >2):
 				
 				reser = frappe.get_doc("RESERVAS",d.codigo)
@@ -85,4 +85,17 @@ def verifica_hora_saida():
 				print " USER " + frappe.session.user
 				#reser.save()
 				frappe.publish_realtime(event='msgprint', message='QUARTO ' + d.numero_quarto + ' ' + str(d.hora_saida) + ' Cancelada por mais de ' + dd + ' horas', user=frappe.session.user,doctype='GESTAO_QUARTOS')
-			
+
+
+
+@frappe.whitelist()
+def verifica_mesas_vendidas(start):			
+	return frappe.db.sql("""select
+		hora_atendimento, name,
+		total_servicos,pagamento_por, status_atendimento
+	from `tabBAR_RESTAURANTE`
+	where hora_atendimento >= %(start)s and hora_atendimento <= %(end)s """, {
+		"start": start,
+		"end": frappe.utils.now()
+	}, as_dict=True)
+
