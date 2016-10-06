@@ -4,9 +4,15 @@
 
 from __future__ import unicode_literals
 import frappe
+<<<<<<< HEAD
 from frappe import _
 from frappe.model.document import Document
 from frappe.model.naming import make_autoname
+=======
+from frappe.model.document import Document
+from frappe.model.naming import make_autoname
+from frappe import _
+>>>>>>> Versao Production
 
 class CAIXA_Registadora(Document):
 
@@ -17,6 +23,13 @@ class CAIXA_Registadora(Document):
 
 
 
+<<<<<<< HEAD
+=======
+	def validate(self):
+		if len(frappe.db.sql("""select name from `tabBAR_RESTAURANTE` WHERE status_atendimento ='Ocupado' """, as_dict=False)) >= 1:
+			frappe.throw(_("CAIXA Aberto. Por favor fechar primeiro!!!!"))
+
+>>>>>>> Versao Production
 @frappe.whitelist()
 def empresa_load():
 	return frappe.db.get_value("Empresa",None,"moeda_default")
@@ -26,11 +39,17 @@ def caixa_aberto():
 
 	return frappe.db.sql("""select name from `tabCAIXA_Registadora` WHERE status_caixa ='Aberto' """, as_dict=False)
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> Versao Production
 @frappe.whitelist()
 def mesas_abertas():
 
 	return frappe.db.sql("""select name from `tabBAR_RESTAURANTE` WHERE status_atendimento ='Ocupado' """, as_dict=False)
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> Versao Production
