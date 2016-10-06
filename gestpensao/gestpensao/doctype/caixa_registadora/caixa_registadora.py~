@@ -1,0 +1,60 @@
+# -*- coding: utf-8 -*-
+# Copyright (c) 2015, Helio de Jesus and contributors
+# For license information, please see license.txt
+
+from __future__ import unicode_literals
+import frappe
+from frappe import _
+from frappe.model.document import Document
+from frappe.model.naming import make_autoname
+
+class CAIXA_Registadora(Document):
+
+	def autoname(self):
+		self.name = make_autoname(self.abertura_fecho + '-' + '.#####')
+		self.nome_empresa= frappe.db.get_value("Empresa",None,"nome_empresa")
+		self.usuario_caixa= frappe.session.user
+
+
+
+@frappe.whitelist()
+def empresa_load():
+	return frappe.db.get_value("Empresa",None,"moeda_default")
+
+@frappe.whitelist()
+def caixa_aberto():
+
+	return frappe.db.sql("""select name from `tabCAIXA_Registadora` WHERE status_caixa ='Aberto' """, as_dict=False)
+
+
+@frappe.whitelist()
+def mesas_abertas():
+
+	return frappe.db.sql("""select name from `tabBAR_RESTAURANTE` WHERE status_atendimento ='Ocupado' """, as_dict=False)
+
+
+@frappe.whitelist()
+def movimentos_in(start,caixa):
+
+		
+		for d in  frappe.db.sql("""select hora_atendimento, name,total_servicos,pagamento_por, status_atendimento from `tabBAR_RESTAURANTE` where status_atendimento ='Fechado' and hora_atendimento >= %(start)s and hora_atendimento <= %(end)s """, {"start": start,"end": frappe.utils.now()	}, as_dict=True):
+			
+#for d in frappe.db.sql("""SELECT codigo,numero_quarto,check_in,check_out,reservation_status, pay_advance FROM `tabRESERVAS` WHERE reservation_status = "Nova" and check_in <=%s """, frappe.utils.now(), as_dict=True):
+			print "MOVIMENTOS BAR RESTAURANTE +++++++++++++++++++++++++++++++"
+#			if (frappe.utils.data.time_diff_in_hours(frappe.utils.now(),d.check_in) >2):
+			
+//			reser = frappe.get_doc("RESERVAS",d.codigo)
+//			dd= str(frappe.utils.data.time_diff_in_hours(frappe.utils.now(),d.check_in))
+
+			ddd = make_autoname('MOV-' + '.#####')
+			print " MOV " + ddd
+			frappe.db.sql("INSERT into tabMovimentos_Caixa (name,docstatus,parent,parenttype,parentfield,tipo_pagamento,descricao_movimento,valor_pago,hora_atendimento,creation,modified) values (%s,0,%s,'CAIXA_Registadora','movimentos_caixa',%s,%s,%s,%s,%s,%s) ",(ddd,caixa,d.pagamento_por,d.name,d.total_servicos,d.hora_atendimento,frappe.utils.now(),frappe.utils.now()))
+
+#				reser._comments =[{"comment": "Reserva " + d.codigo + " " + str(d.check_in) + " Cancelada por mais de " + dd + " horas <!-- markdown -->","by": "Scheduler", "name":ddd}]
+
+#				print " AGORA " + frappe.utils.now()
+#				print " CHECK IN " + str(d.check_in)
+#				print "Reserva " + d.codigo + " " + str(d.check_in) + " Cancelada por mais de " + dd + " horas"
+#				reser.reservation_status="Cancelada"
+#				reser.save()
+
