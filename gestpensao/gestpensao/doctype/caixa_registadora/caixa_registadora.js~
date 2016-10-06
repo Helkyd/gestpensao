@@ -48,7 +48,6 @@ frappe.ui.form.on('CAIXA_Registadora', {
 			cur_frm.disable_save()
 
 		}else if (cur_frm.docname.substring(0,3) != "New") {
-			alert("SERA!!!!")
 			cur_frm.enable_save()
 			movimentos_add(frm)
 

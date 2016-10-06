@@ -106,12 +106,12 @@ frappe.ui.form.on('CAIXA_Registadora', {
 	}
 });
 
-frappe.ui.form.on("CAIXA_Registadora","abertura_fecho",function(frm,cdt,cdn){
+//frappe.ui.form.on("CAIXA_Registadora","abertura_fecho",function(frm,cdt,cdn){
 
-	frappe.model.set_value(cdt,cdn,'usuario_caixa',user)
-	cur_frm.refresh_fields('usuario_caixa')
+//	frappe.model.set_value(cdt,cdn,'usuario_caixa',user)
+//	cur_frm.refresh_fields('usuario_caixa')
 
-});
+//});
 
 
 //frappe.ui.form.on("CAIXA_Registadora","validate",function(frm,cdt,cdn){
