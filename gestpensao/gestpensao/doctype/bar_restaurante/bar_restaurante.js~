@@ -77,6 +77,7 @@ frappe.ui.form.on('BAR_RESTAURANTE', {
 				cur_frm.toggle_enable("nome_mesa",false)
 				cur_frm.toggle_enable("nome_cliente",false)
 				cur_frm.toggle_enable("extras_item",false)
+				cur_frm.toggle_enable("status_atendimento",false)
 				cur_frm.disable_save()
 				return
 			}
@@ -91,6 +92,16 @@ frappe.ui.form.on('BAR_RESTAURANTE', {
 		if (cx_open.statusText=="OK" ){
 			if (cx_open.responseText != "{}"){
 				//CAIXA aberto ...
+
+				cur_frm.fields_dict['status_atendimento'].get_query = function(doc){
+					return{
+						filters:{
+							"status_atendimento":"Ocupado",
+
+						},
+				
+					}
+				}
 
 				cur_frm.fields_dict['nome_mesa'].get_query = function(doc){
 					return{
