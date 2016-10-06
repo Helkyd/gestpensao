@@ -118,14 +118,17 @@ def caixa_movimentos_in(start,caixa,fecho):
 		if (total_caixa > 1) and (reser.amount_caixa == 0):
 			reser.amount_caixa = total_caixa+reser.amount_caixa
 			reser.status_caixa='Em Curso'
+			reser.save()
 		elif (total_caixa > 1) and (reser.amount_caixa >= 0):
 			reser.amount_caixa = total_caixa+reser.amount_caixa
+			reser.save()
 		print fecho
 		print reser.status_caixa
 		if (fecho==2):
 			reser.status_caixa='Fechado'
+			reser.save()
 
-		reser.save()
+		
 
 		return total_caixa
 

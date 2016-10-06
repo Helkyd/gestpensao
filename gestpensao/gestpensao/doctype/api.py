@@ -62,7 +62,7 @@ def verifica_check_in():
 @frappe.whitelist()
 def verifica_hora_saida():
 
-		print "HORA SAIDA CCCCCCCCCCCCCCCCCCCCCCCCCCCCCC"
+		print "HORA SAIDA QUARTOS CCCCCCCCCCCCCCCCCCCCCCCC"
 		# loop no Doc a procura de quartos com limite da DATA de ENTRADA.
 
 		for d in frappe.db.sql("""SELECT name,numero_quarto,hora_entrada,hora_saida,status_reserva FROM `tabGESTAO_QUARTOS` WHERE status_reserva = "Ocupado" and hora_saida <=%s """, frappe.utils.now(), as_dict=True):
@@ -83,7 +83,7 @@ def verifica_hora_saida():
 				print " hora_saida " + str(d.hora_saida)
 				print "QUARTO " + d.numero_quarto + " " + str(d.hora_saida) + " Cancelada por mais de " + dd + " horas"
 				print " USER " + frappe.session.user
-				#reser.save()
+				reser.save()
 				frappe.publish_realtime(event='msgprint', message='QUARTO ' + d.numero_quarto + ' ' + str(d.hora_saida) + ' Cancelada por mais de ' + dd + ' horas', user=frappe.session.user,doctype='GESTAO_QUARTOS')
 
 

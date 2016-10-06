@@ -16,7 +16,10 @@ class BAR_RESTAURANTE(Document):
 
 	def validate(self):
 
-		if (self.pagamento_por == "Conta-Corrente"):
+        	if self.get('__islocal'):
+           		print "LOCAL"
+       
+		elif (self.pagamento_por == "Conta-Corrente"):
 			if (self.conta_corrente =="") or (self.conta_corrente == "nome do cliente"):
 				frappe.throw(_("Cliente Conta-Corrente nao selecionado !!!! A MESA mantem-se aberta."))
 
@@ -65,7 +68,7 @@ def lista_clientes():
 
 	return frappe.db.sql("""select name from `tabCLIENTES` WHERE cliente_tipo ='Membro' """, as_dict=False)
 
-frappe.whitelist()
+@frappe.whitelist()
 def check_caixa_aberto():
 
 	return frappe.db.sql("""select name from `tabCAIXA_Registadora` WHERE status_caixa ='Aberto' """, as_dict=False)

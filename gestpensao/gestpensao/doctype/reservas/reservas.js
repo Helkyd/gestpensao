@@ -78,7 +78,18 @@ frappe.ui.form.on('RESERVAS', {
 
 frappe.ui.form.on('RESERVAS','numero_quarto',function(frm,cdt,cdn){
 
-	quartos_('QUARTOS',frm.doc.numero_quarto)
+//	quartos_('QUARTOS',frm.doc.numero_quarto)
+//	cur_frm.refresh_fields('preco_quarto','total_reserva')
+//	frappe.model.set_value(cdt,cdn,'total_reserva',(frm.doc.preco_quarto*frm.doc.number_days))
+//	cur_frm.refresh_fields();
+
+
+
+});
+
+frappe.ui.form.on('RESERVAS','quarto_tipo',function(frm,cdt,cdn){
+
+	quartos_('QUARTOS_TIPO',frm.doc.quarto_tipo)
 	cur_frm.refresh_fields('preco_quarto','total_reserva')
 	frappe.model.set_value(cdt,cdn,'total_reserva',(frm.doc.preco_quarto*frm.doc.number_days))
 	cur_frm.refresh_fields();
@@ -89,7 +100,7 @@ frappe.ui.form.on('RESERVAS','numero_quarto',function(frm,cdt,cdn){
 
 frappe.ui.form.on('RESERVAS','numero_cliente',function(frm,cdt,cdn){
 
-	quartos_('QUARTOS',frm.doc.numero_quarto)
+	quartos_('QUARTOS_TIPO',frm.doc.quarto_tipo)
 	cur_frm.refresh_fields('preco_quarto','total_reserva')
 	frappe.model.set_value(cdt,cdn,'total_reserva',(frm.doc.preco_quarto*frm.doc.number_days))
 	cur_frm.refresh_fields();

@@ -17,6 +17,7 @@ frappe.ui.form.on('RESERVAS', {
 			cur_frm.toggle_enable("numero_cliente",false)	
 			cur_frm.toggle_enable("check_in",false)	
 			cur_frm.toggle_enable("check_out",false)	
+			cur_frm.toggle_enable("number_days",false)
 
 		}else if (frm.doc.reservation_status=="Cancelada" ){
 			cur_frm.toggle_enable("booked_by",false)	

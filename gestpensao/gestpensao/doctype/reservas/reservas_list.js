@@ -3,7 +3,7 @@
 
 // render
 frappe.listview_settings['RESERVAS'] = {
-	add_fields: ["numero_quarto", "reservation_status", "check_in", "check_out", "number_days"],
+	add_fields: ["numero_quarto", "reservation_status"],
 
 	get_indicator: function(doc) {
 		if (doc.reservation_status== "Nova") {
@@ -16,6 +16,7 @@ frappe.listview_settings['RESERVAS'] = {
 			return [__("Cancelada "+doc.numero_quarto), "blue", "reservation_status,=,Cancelada"]
 		}
 	},
+	colwidths: {"subject": 3, "indicator": 3,"Data de Entrada": 3},
 
 	
 };
