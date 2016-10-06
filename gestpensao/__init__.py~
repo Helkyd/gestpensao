@@ -2,8 +2,12 @@
 from __future__ import unicode_literals
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 __version__ = '0.0.2'
 =======
 __version__ = '0.0.1'
 >>>>>>> Versao Production
+=======
+__version__ = '0.0.2'
+>>>>>>> Mudanca Versao 0.0.1
 
