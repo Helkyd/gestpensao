@@ -7,11 +7,17 @@ cx_aberto =cur_frm.call({method:"caixa_aberto",args:{"start":"none"}})
 mesas_open =cur_frm.call({method:"mesas_abertas",args:{"start":"none"}})
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 var caixa_upd=0
 =======
 >>>>>>> Versao Production
 =======
 >>>>>>> Versao Production
+=======
+var caixa_upd=0
+=======
+>>>>>>> Versao Production
+>>>>>>> Producao
 
 frappe.ui.form.on('CAIXA_Registadora', {
 	onload: function(frm) {
@@ -24,6 +30,9 @@ frappe.ui.form.on('CAIXA_Registadora', {
 				cur_frm.page.clear_primary_action()
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Producao
 			}else{
 			// acrescenta os registos
 				cur_frm.toggle_enable("movimentos_caixa",false)	
@@ -33,8 +42,11 @@ frappe.ui.form.on('CAIXA_Registadora', {
 				//movimentos_add(frm)
 =======
 >>>>>>> Versao Production
+<<<<<<< HEAD
 =======
 >>>>>>> Versao Production
+=======
+>>>>>>> Producao
 			}
 		}else if (cx_aberto.statusText=="OK" && frm.doc.__unsaved==1){
 			if (cx_aberto.responseText != "{}"){
@@ -43,6 +55,9 @@ frappe.ui.form.on('CAIXA_Registadora', {
 			}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Producao
 		}else if (cur_frm.doc.status_caixa=="Em Curso"){
 			cur_frm.toggle_enable("data_hora",false)
 			cur_frm.toggle_enable("amount_init",false)
@@ -55,8 +70,11 @@ frappe.ui.form.on('CAIXA_Registadora', {
 
 =======
 >>>>>>> Versao Production
+<<<<<<< HEAD
 =======
 >>>>>>> Versao Production
+=======
+>>>>>>> Producao
 		}else if (cur_frm.doc.status_caixa=="Fechado"){
 			cur_frm.toggle_enable("data_hora",false)
 			cur_frm.toggle_enable("amount_init",false)
@@ -64,6 +82,9 @@ frappe.ui.form.on('CAIXA_Registadora', {
 			cur_frm.toggle_enable("status_caixa",false)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Producao
 			cur_frm.toggle_enable("movimentos_caixa",false)	
 			cur_frm.disable_save()
 
@@ -72,15 +93,21 @@ frappe.ui.form.on('CAIXA_Registadora', {
 			movimentos_add(frm)
 
 =======
+<<<<<<< HEAD
 =======
 >>>>>>> Versao Production
+=======
+>>>>>>> Producao
 			cur_frm.disable_save()
 
 		}else {
 			cur_frm.enable_save()
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> Versao Production
 =======
+=======
+>>>>>>> Producao
 >>>>>>> Versao Production
 		}
 
@@ -96,6 +123,9 @@ frappe.ui.form.on('CAIXA_Registadora', {
 //			cur_frm.page.clear_primary_action()
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Producao
 			if (cx_aberto.responseText != "{}"){
 //				cur_frm.toggle_enable("amount_caixa",false)
 //				cur_frm.toggle_enable("status_caixa",false)
@@ -114,10 +144,13 @@ frappe.ui.form.on('CAIXA_Registadora', {
 			cur_frm.toggle_enable("amount_caixa",false)
 			cur_frm.toggle_enable("status_caixa",false)
 >>>>>>> Versao Production
+<<<<<<< HEAD
 =======
 			cur_frm.toggle_enable("amount_caixa",false)
 			cur_frm.toggle_enable("status_caixa",false)
 >>>>>>> Versao Production
+=======
+>>>>>>> Producao
 
 		}else if (cur_frm.doc.status_caixa=="Fechado"){
 			cur_frm.toggle_enable("data_hora",false)
@@ -126,6 +159,9 @@ frappe.ui.form.on('CAIXA_Registadora', {
 			cur_frm.toggle_enable("status_caixa",false)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Producao
 			cur_frm.set_df_property("movimentos_caixa","hidden",false)
 			frappe.utils.filter_dict(frm.fields_dict["movimentos_caixa"].grid.docfields, {"fieldname": "descricao_movimento"})[0].read_only = true;	
 			frappe.utils.filter_dict(frm.fields_dict["movimentos_caixa"].grid.docfields, {"fieldname": "tipo_pagamento"})[0].read_only = true;	
@@ -134,8 +170,11 @@ frappe.ui.form.on('CAIXA_Registadora', {
 
 =======
 >>>>>>> Versao Production
+<<<<<<< HEAD
 =======
 >>>>>>> Versao Production
+=======
+>>>>>>> Producao
 
 		}else if (frm.doc.abertura_fecho=="Abertura" && frm.doc.status_caixa=="Aberto"){
 			cur_frm.toggle_enable("data_hora",false)
@@ -143,6 +182,9 @@ frappe.ui.form.on('CAIXA_Registadora', {
 			cur_frm.toggle_enable("amount_caixa",false)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Producao
 			cur_frm.set_df_property("movimentos_caixa","hidden",false)
 			frappe.utils.filter_dict(frm.fields_dict["movimentos_caixa"].grid.docfields, {"fieldname": "descricao_movimento"})[0].read_only = true;	
 			frappe.utils.filter_dict(frm.fields_dict["movimentos_caixa"].grid.docfields, {"fieldname": "tipo_pagamento"})[0].read_only = true;	
@@ -152,9 +194,12 @@ frappe.ui.form.on('CAIXA_Registadora', {
 =======
 
 >>>>>>> Versao Production
+<<<<<<< HEAD
 =======
 
 >>>>>>> Versao Production
+=======
+>>>>>>> Producao
 		}
 
 	
@@ -169,6 +214,7 @@ frappe.ui.form.on("CAIXA_Registadora","abertura_fecho",function(frm,cdt,cdn){
 });
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -190,6 +236,8 @@ frappe.ui.form.on("CAIXA_Registadora","abertura_fecho",function(frm,cdt,cdn){
 >>>>>>> Versao Production
 frappe.ui.form.on("CAIXA_Registadora","validate",function(frm,cdt,cdn){
 =======
+=======
+>>>>>>> Producao
 //frappe.ui.form.on("CAIXA_Registadora","validate",function(frm,cdt,cdn){
 >>>>>>> CAIXA Registadora
 
@@ -211,13 +259,34 @@ frappe.ui.form.on("CAIXA_Registadora","validate",function(frm,cdt,cdn){
 >>>>>>> Versao Production
 =======
 //});
+<<<<<<< HEAD
 >>>>>>> CAIXA Registadora
+=======
+=======
+frappe.ui.form.on("CAIXA_Registadora","validate",function(frm,cdt,cdn){
+
+	if (mesas_open.statusText=="OK" ){
+		if (mesas_open.responseText != "{}"){
+			alert("Verifique as Mesas Abertas!!!")
+			cur_frm.disable_save()
+			cur_frm.reload_doc()
+			//cur_frm.page.clear_primary_action()
+			//cur_frm.refresh()
+		}
+	}
+
+});
+>>>>>>> Versao Production
+>>>>>>> Producao
 
 
 frappe.ui.form.on("CAIXA_Registadora","status_caixa",function(frm,cdt,cdn){
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Producao
 	var me = this;
 	if (cur_frm.doc.status_caixa=="Fechado"){
 	    	show_alert("Verificando Mesas Abertas...",2)
@@ -231,10 +300,13 @@ frappe.ui.form.on("CAIXA_Registadora","status_caixa",function(frm,cdt,cdn){
 	if (cur_frm.doc.status_caixa=="Fechado"){
 	    	show_alert("Verificando Mesas Abertas...",2)
 >>>>>>> Versao Production
+<<<<<<< HEAD
 =======
 	if (cur_frm.doc.status_caixa=="Fechado"){
 	    	show_alert("Verificando Mesas Abertas...",2)
 >>>>>>> Versao Production
+=======
+>>>>>>> Producao
 		if (mesas_open.statusText=="OK" ){
 			if (mesas_open.responseText != "{}"){
 				alert("NAO PODE FECHAR O CAIXA. Ainda tem Mesas Abertas")
@@ -244,6 +316,9 @@ frappe.ui.form.on("CAIXA_Registadora","status_caixa",function(frm,cdt,cdn){
 			//cur_frm.refresh()
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Producao
 
 			}else{
 			// Mesas Fechadas during open Caixa time to add ...
@@ -290,8 +365,11 @@ frappe.ui.form.on("CAIXA_Registadora","status_caixa",function(frm,cdt,cdn){
 			//Nao pode fechar o Caixa ... nao tem NADA !!!!
 		
 =======
+<<<<<<< HEAD
 =======
 >>>>>>> Versao Production
+=======
+>>>>>>> Producao
 			}
 		}else{
 			// check all tables from the open time until now and get the values PAID....
@@ -313,8 +391,11 @@ frappe.ui.form.on("CAIXA_Registadora","status_caixa",function(frm,cdt,cdn){
 			}
 		});
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> Versao Production
 =======
+=======
+>>>>>>> Producao
 >>>>>>> Versao Production
 		}		
 		
@@ -324,6 +405,9 @@ frappe.ui.form.on("CAIXA_Registadora","status_caixa",function(frm,cdt,cdn){
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Producao
 
 var movimentos_add = function(frm) {
 	var me = this; 
@@ -360,5 +444,8 @@ var movimentos_add = function(frm) {
 }
 =======
 >>>>>>> Versao Production
+<<<<<<< HEAD
 =======
 >>>>>>> Versao Production
+=======
+>>>>>>> Producao

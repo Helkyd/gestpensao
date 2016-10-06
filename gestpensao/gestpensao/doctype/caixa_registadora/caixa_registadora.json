@@ -1,6 +1,14 @@
 {
  "allow_copy": 0, 
+<<<<<<< HEAD
  "allow_import": 0, 
+=======
+<<<<<<< HEAD
+ "allow_import": 1, 
+=======
+ "allow_import": 0, 
+>>>>>>> Versao Production
+>>>>>>> Producao
  "allow_rename": 0, 
  "beta": 0, 
  "creation": "2016-10-04 22:17:36.667603", 
@@ -204,8 +212,11 @@
    "unique": 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> CAIXA Registadora
+=======
+>>>>>>> Producao
   }, 
   {
    "allow_on_submit": 0, 
@@ -241,10 +252,15 @@
    "set_only_once": 0, 
    "unique": 0
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> Versao Production
 =======
 >>>>>>> CAIXA Registadora
+=======
+=======
+>>>>>>> Versao Production
+>>>>>>> Producao
   }
  ], 
  "hide_heading": 0, 
@@ -259,6 +275,7 @@
  "max_attachments": 0, 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
  "modified": "2016-10-06 12:59:15.852648", 
 =======
  "modified": "2016-10-05 02:50:11.434492", 
@@ -266,6 +283,12 @@
 =======
  "modified": "2016-10-05 10:06:38.559683", 
 >>>>>>> CAIXA Registadora
+=======
+ "modified": "2016-10-06 01:10:15.349744", 
+=======
+ "modified": "2016-10-05 02:50:11.434492", 
+>>>>>>> Versao Production
+>>>>>>> Producao
  "modified_by": "Administrator", 
  "module": "Gestpensao", 
  "name": "CAIXA_Registadora", 
