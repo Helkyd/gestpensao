@@ -8,11 +8,6 @@ frappe.listview_settings['CAIXA_Registadora'] = {
 	get_indicator: function(doc) {
 
 		if (doc.status_caixa== "Aberto" ) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> Producao
 			return [__("Aberto" ), "green"]
 		} else if (doc.status_caixa== "Em Curso" ) {
 			return [__("Em Curso" ), "red"]
@@ -22,26 +17,6 @@ frappe.listview_settings['CAIXA_Registadora'] = {
 		}
 	},
 	colwidths: {"subject": 3, "indicator": 2,"Data e Hora": 3},
-=======
-<<<<<<< HEAD
-=======
->>>>>>> Versao Production
-=======
->>>>>>> Producao
-			return [__("Aberto  " ), "green"]
-		} else if (doc.status_caixa== "Fechado" ) {
-			return [__("Fechado " ), "orange"]
-		
-		}
-	},
-	colwidths: {"subject": 3, "indicator": 3},
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> Versao Production
-=======
-=======
->>>>>>> Producao
->>>>>>> Versao Production
 
 	
 	
