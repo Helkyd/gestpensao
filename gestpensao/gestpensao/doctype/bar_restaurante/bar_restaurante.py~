@@ -44,8 +44,8 @@ class BAR_RESTAURANTE(Document):
 
 	def Clientes_Status(self):
 		#Update Cliente caso Conta-Corrente
-		print "SSSSSSSSSSS " + str(self.conta_corrente)
-		if (self.conta_corrente !="nome do cliente") and (self.conta_corrente !=""):
+
+		if (self.conta_corrente !="nome do cliente") and (self.conta_corrente !=None):
 			cliente = frappe.get_doc("CLIENTES", self.conta_corrente)	
 			if (self.status_atendimento == "Fechado") and (self.conta_corrente != "nome do cliente") :
 				cliente.conta_corrente = "Conta-Corrente"
@@ -64,4 +64,9 @@ def empresa_load1():
 def lista_clientes():
 
 	return frappe.db.sql("""select name from `tabCLIENTES` WHERE cliente_tipo ='Membro' """, as_dict=False)
+
+frappe.whitelist()
+def caixa_aberto():
+
+	return frappe.db.sql("""select name from `tabCAIXA_Registadora` WHERE status_caixa ='Aberto' """, as_dict=False)
 

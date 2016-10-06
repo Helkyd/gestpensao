@@ -85,4 +85,47 @@ def verifica_hora_saida():
 				print " USER " + frappe.session.user
 				#reser.save()
 				frappe.publish_realtime(event='msgprint', message='QUARTO ' + d.numero_quarto + ' ' + str(d.hora_saida) + ' Cancelada por mais de ' + dd + ' horas', user=frappe.session.user,doctype='GESTAO_QUARTOS')
+
+
+
+@frappe.whitelist()
+def verifica_mesas_vendidas(start):			
+	return frappe.db.sql("""select
+		hora_atendimento, name,
+		total_servicos,pagamento_por, status_atendimento
+	from `tabBAR_RESTAURANTE`
+	where hora_atendimento >= %(start)s and hora_atendimento <= %(end)s """, {
+		"start": start,
+		"end": frappe.utils.now()
+	}, as_dict=True)
+
+
+@frappe.whitelist()
+def caixa_movimentos_in(start,caixa,fecho):
+
+		total_caixa = 0
+		for d in  frappe.db.sql("""select hora_atendimento, name,total_servicos,pagamento_por, status_atendimento from `tabBAR_RESTAURANTE` where status_atendimento ='Fechado' and hora_atendimento >= %(start)s and hora_atendimento <= %(end)s """, {"start": start,"end": frappe.utils.now()	}, as_dict=True):
 			
+#for d in frappe.db.sql("""SELECT codigo,numero_quarto,check_in,check_out,reservation_status, pay_advance FROM `tabRESERVAS` WHERE reservation_status = "Nova" and check_in <=%s """, frappe.utils.now(), as_dict=True):
+			print "MOVIMENTOS BAR RESTAURANTE +++++++++++++++++++++++++++++++"
+			ddd = make_autoname('MOV-' + '.#####')
+			if len(frappe.db.sql("SELECT name,descricao_movimento from tabMovimentos_Caixa WHERE descricao_movimento=%(mov)s""",{"mov":d.name}, as_dict=True))==0:
+				frappe.db.sql("INSERT into tabMovimentos_Caixa (name, docstatus, parent, parenttype, parentfield, tipo_pagamento, descricao_movimento, valor_pago, hora_atendimento, creation, modified) values (%s,0,%s,'CAIXA_Registadora','movimentos_caixa',%s,%s,%s,%s,%s,%s) ",(ddd, caixa, d.pagamento_por ,d.name, d.total_servicos, d.hora_atendimento, frappe.utils.now(), frappe.utils.now()))
+				total_caixa = d.total_servicos+total_caixa
+		print "Abre Caixa"
+		print total_caixa
+		reser = frappe.get_doc("CAIXA_Registadora",caixa)
+		if (total_caixa > 1) and (reser.amount_caixa == 0):
+			reser.amount_caixa = total_caixa+reser.amount_caixa
+			reser.status_caixa='Em Curso'
+		elif (total_caixa > 1) and (reser.amount_caixa >= 0):
+			reser.amount_caixa = total_caixa+reser.amount_caixa
+		print fecho
+		print reser.status_caixa
+		if (fecho==2):
+			reser.status_caixa='Fechado'
+
+		reser.save()
+
+		return total_caixa
+

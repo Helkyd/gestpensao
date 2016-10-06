@@ -5,58 +5,67 @@ cur_frm.call({method:"empresa_load",args:{"start":"moeda"}})
 //cur_frm.call({method:"empresa_load1",args:{"start":"moeda"}})
 //cur_frm.add_fetch("nome_mesa","comp","nome_empresa")
 lista =cur_frm.call({method:"lista_clientes",args:{"start":"moeda"}})
+cx_aberto =cur_frm.call({method:"caixa_aberto",args:{"start":"none"}})
 
 frappe.ui.form.on('BAR_RESTAURANTE', {
 	onload: function(frm) {
 
-		if (frm.doc.status_atendimento=="Ocupado" && frm.doc.bar_tender ==undefined){
+		if (cx_aberto.statusText=="OK" ){
+			if (cx_aberto.responseText != "{}"){
+				//CAIXA aberto ...
+				if (frm.doc.status_atendimento=="Ocupado" && frm.doc.bar_tender ==undefined){
 
-			//Novo Registo 
+					//Novo Registo 
 
-			cur_frm.toggle_enable("bar_tender",false)
-			cur_frm.toggle_enable("pagamento_por",false)
-			cur_frm.toggle_enable("status_atendimento",false)
+					cur_frm.toggle_enable("bar_tender",false)
+					cur_frm.toggle_enable("pagamento_por",false)
+					cur_frm.toggle_enable("status_atendimento",false)
 			
 			
-//			cur_frm.set_df_property("reserva_numero","hidden",true)
-//			cur_frm.set_df_property("servico_pago_por","hidden",true)
+		//			cur_frm.set_df_property("reserva_numero","hidden",true)
+		//			cur_frm.set_df_property("servico_pago_por","hidden",true)
 
 
-		}else if (frm.doc.status_atendimento=="Ocupado" && frm.doc.total_servicos !=0){
-			cur_frm.toggle_enable("nome_mesa",false)
-			cur_frm.toggle_enable("nome_cliente",false)
-			cur_frm.toggle_enable("status_atendimento",false)
-//			cur_frm.toggle_enable("hora_entrada",false)
-//			cur_frm.toggle_enable("hora_saida",false)
-//			cur_frm.toggle_enable("pagamento_por",false)	
-//			cur_frm.toggle_enable("status_reserva",false)	
-//			cur_frm.set_df_property("reserva_numero","hidden",true)
-//			cur_frm.set_df_property("servico_pago_por","hidden",true)
-		}else if (frm.doc.status_atendimento=="Fechado"){
-			cur_frm.toggle_enable("nome_mesa",false)
-			cur_frm.toggle_enable("nome_cliente",false)
-			cur_frm.toggle_enable("pagamento_por",false)
-			cur_frm.toggle_enable("status_atendimento",false)
-			cur_frm.toggle_enable("extras_item",false)
-			cur_frm.toggle_enable("pagamento_botao",false)
+				}else if (frm.doc.status_atendimento=="Ocupado" && frm.doc.total_servicos !=0){
+					cur_frm.toggle_enable("nome_mesa",false)
+					cur_frm.toggle_enable("nome_cliente",false)
+					cur_frm.toggle_enable("status_atendimento",false)
+		//			cur_frm.toggle_enable("hora_entrada",false)
+		//			cur_frm.toggle_enable("hora_saida",false)
+		//			cur_frm.toggle_enable("pagamento_por",false)	
+		//			cur_frm.toggle_enable("status_reserva",false)	
+		//			cur_frm.set_df_property("reserva_numero","hidden",true)
+		//			cur_frm.set_df_property("servico_pago_por","hidden",true)
+				}else if (frm.doc.status_atendimento=="Fechado"){
+					cur_frm.toggle_enable("nome_mesa",false)
+					cur_frm.toggle_enable("nome_cliente",false)
+					cur_frm.toggle_enable("pagamento_por",false)
+					cur_frm.toggle_enable("status_atendimento",false)
+					cur_frm.toggle_enable("extras_item",false)
+					cur_frm.toggle_enable("pagamento_botao",false)
 	
-//			cur_frm.toggle_enable("status_reserva",false)	
-//			cur_frm.set_df_property("reserva_numero","hidden",true)
-//			cur_frm.set_df_property("servico_pago_por","hidden",true)
+		//			cur_frm.toggle_enable("status_reserva",false)	
+		//			cur_frm.set_df_property("reserva_numero","hidden",true)
+		//			cur_frm.set_df_property("servico_pago_por","hidden",true)
 
 
-		}
+				}
 
-//		cur_frm.fields_dict["extras_item"].frm.grids[0].frm.fetch_dict["nome_servico"].set_query = function(doc){
-//			return{
-//				query: "gestpensao.controllers.queries.group_servicos_query",
-//			}
-//		}
+		//		cur_frm.fields_dict["extras_item"].frm.grids[0].frm.fetch_dict["nome_servico"].set_query = function(doc){
+		//			return{
+		//				query: "gestpensao.controllers.queries.group_servicos_query",
+		//			}
+		//		}
 
 
-		cur_frm.fetch_dict["nome_servico"].set_query= function(doc){
-			return{
-				query: "gestpensao.controllers.queries.group_servicos_query",
+				cur_frm.fetch_dict["nome_servico"].set_query= function(doc){
+					return{
+						query: "gestpensao.controllers.queries.group_servicos_query",
+					}
+				}
+			}else{
+				alert("Faca abertura do Caixa primeiro.")
+				return
 			}
 		}
 
@@ -132,7 +141,8 @@ frappe.ui.form.on('BAR_RESTAURANTE', {
 				})
 			}else if (frm.doc.status_atendimento !="Fechado") {
 //				cur_frm.page.clear_primary_action()
-				cur_frm.page.set_primary_action()
+				//cur_frm.page.set_primary_action()
+				cur_frm.page.clear_user_actions()
 			}else{
 				cur_frm.page.clear_primary_action()
 				cur_frm.page.clear_secondary_action()
