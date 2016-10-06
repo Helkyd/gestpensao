@@ -93,6 +93,7 @@ frappe.ui.form.on('BAR_RESTAURANTE', {
 			if (cx_open.responseText != "{}"){
 				//CAIXA aberto ...
 
+		
 				cur_frm.fields_dict['nome_mesa'].get_query = function(doc){
 					return{
 						filters:{

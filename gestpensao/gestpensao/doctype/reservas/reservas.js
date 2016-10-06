@@ -12,6 +12,7 @@ frappe.ui.form.on('RESERVAS', {
 			cur_frm.toggle_enable("booked_by",true)
 			cur_frm.toggle_enable("numero_cliente",true)	
 			cur_frm.toggle_enable("reservation_status",false)	
+			cur_frm.toggle_enable("number_days",false)
 		
 		}else if (frm.doc.reservation_status=="Nova" && frm.doc.pay_advance !="Sim"){
 			cur_frm.toggle_enable("booked_by",false)

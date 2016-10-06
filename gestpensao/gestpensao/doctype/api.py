@@ -57,7 +57,7 @@ def verifica_check_in():
 				print "Reserva " + d.codigo + " " + str(d.check_in) + " Cancelada por mais de " + dd + " horas"
 				reser.reservation_status="Cancelada"
 				reser.save()
-				frappe.redirecttomessage(_('INFORMACAO RESERVAS'),"<div>RESERVA " + d.codigo + " FOI CANCELADA </div>")		
+				frappe.redirect_to_message(_('INFORMACAO RESERVAS'),"<div>RESERVA " + d.codigo + " FOI CANCELADA </div>")		
 
 
 @frappe.whitelist()
@@ -68,7 +68,7 @@ def verifica_hora_saida():
 
 		for d in frappe.db.sql("""SELECT name,numero_quarto,hora_entrada,hora_saida,status_reserva FROM `tabGESTAO_QUARTOS` WHERE status_reserva = "Ocupado" and hora_saida <=%s """, frappe.utils.now(), as_dict=True):
 #			print "MINUTOS " + (frappe.utils.data.time_diff_in_seconds(frappe.utils.now(),d.hora_entrada)/60)
-			frappe.redirecttomessage(_('INFORMACAO QUARTO'),"<div>VERIFIQUE AS HORAS DE SAIDA</div>")		
+			frappe.redirect_to_message(_('INFORMACAO QUARTO'),"<div>VERIFIQUE AS HORAS DE SAIDA</div>")		
 			frappe.respond_as_web_page("TESTES","OLA")
 			if (frappe.utils.data.time_diff_in_hours(frappe.utils.now(),d.hora_saida) <= 1): 
 				# Avisa que passou do tempo...menos de 1 hora
