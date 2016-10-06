@@ -73,10 +73,11 @@ frappe.ui.form.on('BAR_RESTAURANTE', {
 					}
 				}
 			}else{
-				alert("Faca abertura do Caixa primeiro.")
+				//alert("Faca abertura do Caixa primeiro.")
 				cur_frm.toggle_enable("nome_mesa",false)
 				cur_frm.toggle_enable("nome_cliente",false)
 				cur_frm.toggle_enable("extras_item",false)
+				cur_frm.toggle_enable("status_atendimento",false)
 				cur_frm.disable_save()
 				return
 			}
@@ -183,7 +184,7 @@ frappe.ui.form.on('BAR_RESTAURANTE', {
 				//	frm.set_df_property("status_atendimento","options","Fechado")
 				//}
 			}else{
-				alert("Faca abertura do Caixa primeiro.")
+				alert("Por favor abrir o Caixa antes de qualquer movimento.")
 				cur_frm.disable_save()
 				return
 			}

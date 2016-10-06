@@ -57,6 +57,7 @@ def verifica_check_in():
 				print "Reserva " + d.codigo + " " + str(d.check_in) + " Cancelada por mais de " + dd + " horas"
 				reser.reservation_status="Cancelada"
 				reser.save()
+				frappe.redirecttomessage(_('INFORMACAO RESERVAS'),"<div>RESERVA " + d.codigo + " FOI CANCELADA </div>")		
 
 
 @frappe.whitelist()
@@ -67,7 +68,7 @@ def verifica_hora_saida():
 
 		for d in frappe.db.sql("""SELECT name,numero_quarto,hora_entrada,hora_saida,status_reserva FROM `tabGESTAO_QUARTOS` WHERE status_reserva = "Ocupado" and hora_saida <=%s """, frappe.utils.now(), as_dict=True):
 #			print "MINUTOS " + (frappe.utils.data.time_diff_in_seconds(frappe.utils.now(),d.hora_entrada)/60)
-			frappe.redirect_to_message(_('INFORMACAO QUARTO'),"<div>A RESERVA SERA CANCELADA</div>")		
+			frappe.redirecttomessage(_('INFORMACAO QUARTO'),"<div>VERIFIQUE AS HORAS DE SAIDA</div>")		
 			frappe.respond_as_web_page("TESTES","OLA")
 			if (frappe.utils.data.time_diff_in_hours(frappe.utils.now(),d.hora_saida) <= 1): 
 				# Avisa que passou do tempo...menos de 1 hora
@@ -75,9 +76,13 @@ def verifica_hora_saida():
 				frappe.publish_realtime('msgprint','Este Quarto ja passou da hora. ' + str(frappe.utils.data.time_diff_in_seconds(frappe.utils.now(),d.hora_entrada)/60) + ' minutos a mais.' , user=frappe.session.user)
 			elif (frappe.utils.data.time_diff_in_hours(frappe.utils.now(),d.hora_saida) > 1):
 				frappe.publish_realtime(event='msgprint',message='MENSAGEM QUARTOS')
-				print " MAIS de 1 hora"
+				print " MAIS de 1 hora " + d.name
 				reser = frappe.get_doc("GESTAO_QUARTOS",d.name)
+				print reser.numero_quarto
 				dd= str(frappe.utils.data.time_diff_in_seconds(frappe.utils.now(),d.hora_entrada))
+				ddd = make_autoname(d.name +'AVISO/' + '.###')
+				frappe.db.sql("INSERT into tabCommunication  (name,docstatus,seen,unread_notification_sent,subject,reference_name,reference_doctype,sent_or_received,content,communication_type,creation,modified) values (%s,0,0,0,'HORA DE SAIDA Expirada ',%s,'GESTAO_QUARTOS','Sent','HORA SAIDA Expirada  <!-- markdown -->','Comment',%s,%s) ",(ddd,d.name,frappe.utils.now(),frappe.utils.now()))
+
 				reser._comments = "Hora de Saida por mais de " + dd + " minutos"
 				print " AGORA " + frappe.utils.now()
 				print " hora_saida " + str(d.hora_saida)
