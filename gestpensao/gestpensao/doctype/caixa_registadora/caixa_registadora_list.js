@@ -9,6 +9,7 @@ frappe.listview_settings['CAIXA_Registadora'] = {
 
 		if (doc.status_caixa== "Aberto" ) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 			return [__("Aberto" ), "green"]
 		} else if (doc.status_caixa== "Em Curso" ) {
 			return [__("Em Curso" ), "red"]
@@ -19,6 +20,8 @@ frappe.listview_settings['CAIXA_Registadora'] = {
 	},
 	colwidths: {"subject": 3, "indicator": 2,"Data e Hora": 3},
 =======
+=======
+>>>>>>> 52343b985dd15deb32022b5a553c01ecf8822c36
 			return [__("Aberto  " ), "green"]
 		} else if (doc.status_caixa== "Fechado" ) {
 			return [__("Fechado " ), "orange"]
@@ -26,7 +29,10 @@ frappe.listview_settings['CAIXA_Registadora'] = {
 		}
 	},
 	colwidths: {"subject": 3, "indicator": 3},
+<<<<<<< HEAD
 >>>>>>> Versao Production
+=======
+>>>>>>> 52343b985dd15deb32022b5a553c01ecf8822c36
 
 	
 	
