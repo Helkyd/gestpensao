@@ -57,7 +57,8 @@ def verifica_check_in():
 				print "Reserva " + d.codigo + " " + str(d.check_in) + " Cancelada por mais de " + dd + " horas"
 				reser.reservation_status="Cancelada"
 				reser.save()
-				frappe.redirect_to_message(_('INFORMACAO RESERVAS'),"<div>RESERVA " + d.codigo + " FOI CANCELADA </div>")		
+				frappe.redirect_to_message(_('INFORMACAO RESERVAS'),"<div>RESERVA " + d.codigo + " FOI CANCELADA </div>")	
+				frappe.publish_realtime(event='msgprint', message='RESERVA ' + d.codigo + ' ' + str(d.check_in) + ' Cancelada por mais de ' + dd + ' horas', user=frappe.session.user,doctype='RESERVAS')	
 
 
 @frappe.whitelist()

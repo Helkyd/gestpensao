@@ -12,12 +12,13 @@ frappe.ui.form.on('CAIXA_Registadora', {
 
 //		alert(frm.doc.__islocal)
 		//If Cx_aberto ABERTO no other record can be added until this is closed.
-		if (cur_frm.docname.substring(0,3)=="New" && cx_aberto.statusText=="OK" ){
+		if ((cur_frm.docname.substring(0,3)=="New" || cur_frm.docname.substring(0,3)=="Nov") && cx_aberto.statusText=="OK" ){
 			if (cx_aberto.responseText != "{}"){
 				alert("Caixa Registadora ja esta aberta!!!")
 				cur_frm.page.clear_primary_action()
 			}else{
 			// acrescenta os registos
+				show_alert("Abertura do Caixa...",2)
 				cur_frm.toggle_enable("movimentos_caixa",false)	
 				cur_frm.toggle_enable("amount_init",true)
 				cur_frm.toggle_enable("data_hora",false)
@@ -28,6 +29,9 @@ frappe.ui.form.on('CAIXA_Registadora', {
 			if (cx_aberto.responseText != "{}"){
 				alert("Caixa aberto!!! Por favor fechar antes.")
 				cur_frm.page.clear_primary_action()
+			}else{
+				alert("aaaa")
+				cur_frm.toggle_enable("amount_init",true)			
 			}
 		}else if (cur_frm.doc.status_caixa=="Em Curso"){
 			cur_frm.toggle_enable("data_hora",false)
@@ -47,9 +51,19 @@ frappe.ui.form.on('CAIXA_Registadora', {
 			cur_frm.toggle_enable("movimentos_caixa",false)	
 			cur_frm.disable_save()
 
-		}else if (cur_frm.docname.substring(0,3) != "New") {
+		}else if ((cur_frm.docname.substring(0,3)=="New" && cur_frm.docname.substring(0,3)=="Nov"))  {
+			alert("bbbbb " + cur_frm.docname)
+			cur_frm.toggle_enable("amount_init",true)
 			cur_frm.enable_save()
 			movimentos_add(frm)
+
+		}else if ((cur_frm.docname.substring(0,3)=="New" || cur_frm.docname.substring(0,3)=="Nov")) {
+			alert("Abrindo o Caixa!!!  Nao se esqueca que so pode fechar o Caixa depois de fechar todas a Mesas.")	
+			cur_frm.toggle_enable("data_hora",false)
+			cur_frm.toggle_enable("amount_init",true)
+			cur_frm.toggle_enable("amount_caixa",false)
+			cur_frm.toggle_enable("status_caixa",false)
+			cur_frm.toggle_enable("movimentos_caixa",false)	
 
 		}
 
@@ -90,7 +104,7 @@ frappe.ui.form.on('CAIXA_Registadora', {
 			frappe.utils.filter_dict(frm.fields_dict["movimentos_caixa"].grid.docfields, {"fieldname": "hora_atendimento"})[0].read_only = true;
 
 
-		}else if (frm.doc.abertura_fecho=="Abertura" && frm.doc.status_caixa=="Aberto"){
+		}else if (cur_frm.docname.substring(0,3)=="New" && frm.doc.abertura_fecho=="Abertura" && frm.doc.status_caixa=="Aberto"){
 			cur_frm.toggle_enable("data_hora",false)
 			cur_frm.toggle_enable("amount_init",false)
 			cur_frm.toggle_enable("amount_caixa",false)
