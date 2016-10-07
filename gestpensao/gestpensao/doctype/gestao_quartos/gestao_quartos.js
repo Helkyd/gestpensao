@@ -70,18 +70,6 @@ frappe.ui.form.on('GESTAO_QUARTOS', {
 	}
 });
 
-/*
-No longer required due to Tipo_quarto selects Diaria,Noite ou Hora
-
-frappe.ui.form.on('GESTAO_QUARTOS','numero_quarto',function(frm,cdt,cdn){
-
-	quartos_('QUARTOS',frm.doc.numero_quarto)
-
-	cur_frm.refresh_fields('preco','tipo_quarto');
-
-});
-
-*/
 
 frappe.ui.form.on('GESTAO_QUARTOS','tipo_quarto',function(frm,cdt,cdn){
 
@@ -231,7 +219,8 @@ var calculate_totals1 = function(frm, cdt,cdn) {
 
 cur_frm.cscript.pagar_servicos = function(frm,cdt,cdn) {
 
-	alert("Apos pagamento dos Serviços o Quarto estará livre.");
+//	alert("Apos pagamento dos Serviços o Quarto estará livre.");
+	show_alert("Apos pagamento dos Serviços o Quarto estará livre.",3)
 	calculate_totals1(frm,cdt,cdn)	
 	
 	var d = frappe.prompt([
@@ -270,6 +259,7 @@ cur_frm.cscript.pagar_servicos = function(frm,cdt,cdn) {
 
 
 		}
+		cur_frm.enable_save()
 
         },
         	'Pagamento',
@@ -291,19 +281,25 @@ frappe.ui.form.on("GESTAO_QUARTOS","status_reserva",function(frm,cdt,cdn){
 		cur_frm.toggle_display("servico_pago_por",true)
 		if ((frm.doc.servico_pago_por =="1-Cash") || (frm.doc.servico_pago_por =="2-TPA")){
 			// Pode prosseguir com pagamento
-			alert("Pagamento de Serviços feito. Por favor salvar registo para liberar o Quarto.")	
-		} else if (frm.doc.total_servicos==0) {
-			alert("Quarto liberado pois nao tem servicos...")	
-			
+			//alert("Pagamento de Serviços feito. Por favor salvar registo para liberar o Quarto.")	
+			show_alert("Pagamento de Serviços feito. QUARTO LIVRE",3)
+			this.cur_page.page.frm._save()
+		} else if (frm.doc.total_servicos==0) {	
+			show_alert("QUARTO LIVRE. Sem servicos por pagar...",3)
+			this.cur_page.page.frm._save()
+			cur_frm.reload_doc()
 		} else {
 			// Esta vazio .....
 			alert("Nao pode Fechar pois ainda nao foram feitos os pagamentos...")	
+			cur_frm.disable_save()
 //			frappe.model.set_value(cdt,cdn,'status',"Ocupado")
 //			cur_frm.refresh_fields("status");	
 		}
 	}else if ((frm.doc.status_reserva=="Ativo") && (frm.doc.reserva_numero !="")){
-		alert("Quarto Ativo... por favor Salvar registo")
-		
+//		alert("Quarto Ativo... por favor Salvar registo")
+		show_alert("QUARTO ATIVO. Salvando registo...",3)
+		this.cur_page.page.frm._save()	
+		cur_frm.reload_doc()	
 	}
 
 });
