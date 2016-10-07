@@ -3,6 +3,10 @@
 
 cur_frm.call({method:"empresa_load",args:{"start":"moeda"}})
 
+frappe.listview_settings['GESTAO_QUARTOS'] = {
+		add_fields: ["name","hora_entrada","hora_saida","status_reserva"]
+};
+
 frappe.ui.form.on('GESTAO_QUARTOS', {
 	onload: function(frm) {
 
@@ -259,6 +263,7 @@ cur_frm.cscript.pagar_servicos = function(frm,cdt,cdn) {
 
 
 		}
+		cur_frm.enable_save()
 
         },
         	'Pagamento',
@@ -290,6 +295,7 @@ frappe.ui.form.on("GESTAO_QUARTOS","status_reserva",function(frm,cdt,cdn){
 		} else {
 			// Esta vazio .....
 			alert("Nao pode Fechar pois ainda nao foram feitos os pagamentos...")	
+			cur_frm.disable_save()
 //			frappe.model.set_value(cdt,cdn,'status',"Ocupado")
 //			cur_frm.refresh_fields("status");	
 		}

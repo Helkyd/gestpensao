@@ -8,6 +8,10 @@ from frappe import _
 from frappe.model.document import Document
 from frappe.model.naming import make_autoname
 
+form_grid_templates = {
+	"items": "templates/form_grid/gestao_quartos_list.html"
+}
+
 class GESTAO_QUARTOS(Document):
 
 	def autoname(self):
