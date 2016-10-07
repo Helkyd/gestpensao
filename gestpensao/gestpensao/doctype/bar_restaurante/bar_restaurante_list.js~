@@ -3,22 +3,26 @@
 
 // render
 frappe.listview_settings['BAR_RESTAURANTE'] = {
-	add_fields: ["status_atendimento"],
+	add_fields: ["status_atendimento","hora_atendimento"],
 
 	get_indicator: function(doc) {
 
 		if (doc.status_atendimento== "Livre" ) {
 			return [__("Livre  " ), "green"]
 		} else if (doc.status_atendimento== "Ocupado" ) {
-			return [__("Ocupado " ), "red"]
-		} else if (doc.status_atendimento== "Ativo" ) {
+			return [__("Ocupado " + frappe.format(doc.hora_atendimento,{"fieldtype":"Date"})), "red"]
+		} else if (doc.status_atendimento== "Fechado" ) {
 			return [__("Fechado" ), "orange"]
 		
 		}
 	},
-	colwidths: {"subject": 3, "indicator": 2,"Empregado de Mesa": 6},
+	colwidths: {"subject": 4, "indicator": 2.1,"Empregado de Mesa": 2},
 
-	
+	onload: function(listview){
+		frappe.route_options = {
+			"status_atendimento":"Ocupado"
+		};
+	},	
 	
 };
 

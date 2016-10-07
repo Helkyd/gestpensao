@@ -3,6 +3,7 @@
 
 cur_frm.call({method:"empresa_load",args:{"start":"moeda"}})
 
+
 frappe.ui.form.on('GESTAO_QUARTOS', {
 	onload: function(frm) {
 

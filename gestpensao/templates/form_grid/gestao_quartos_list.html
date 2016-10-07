@@ -1,0 +1,11 @@
+<div class="row" style="max-height: 30px;">
+	<div class="col-xs-12">
+		<div class="text-ellipsis">
+			<span style="margin-right: 8px; display: inline-block"> {%= doc.name %} </span>
+			<span style="margin-right: 8px; display: inline-block"> {%= doc.hora_entrada %} </span>			
+			<span style="margin-right: 8px; display: inline-block"> {%= frappe.format(doc.hora_saida,{"fieldtype":"Date"}) %} </span>
+			<span style="margin-right: 8px; display: inline-block"> {%= doc.status_reserva %} </span>
+		</div>
+	</div>
+</div>	
+

@@ -28,7 +28,7 @@ class GESTAO_QUARTOS(Document):
 
 	def on_update(self):
 		self.Quartos_Status()
-		self.valor_pago = self.total_servicos
+		#self.valor_pago = self.total_servicos
 
 
 	def Quartos_Status(self):
