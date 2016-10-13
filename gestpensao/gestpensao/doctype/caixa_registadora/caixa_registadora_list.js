@@ -2,6 +2,8 @@
 // For license information, please see license.txt
 
 // render
+
+
 frappe.listview_settings['CAIXA_Registadora'] = {
 	add_fields: ["status_caixa"],
 
@@ -20,7 +22,7 @@ frappe.listview_settings['CAIXA_Registadora'] = {
 
 	onload: function(listview){
 		frappe.route_options = {
-			"status_caixa":"Em Curso"
+			"status_caixa":"Aberto"
 		};
 	},	
 	
