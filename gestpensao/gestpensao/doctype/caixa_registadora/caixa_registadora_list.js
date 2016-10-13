@@ -18,7 +18,11 @@ frappe.listview_settings['CAIXA_Registadora'] = {
 	},
 	colwidths: {"subject": 3, "indicator": 2,"Data e Hora": 3},
 
-	
+	onload: function(listview){
+		frappe.route_options = {
+			"status_caixa":"Em Curso"
+		};
+	},	
 	
 };
 
