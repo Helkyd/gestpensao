@@ -16,7 +16,6 @@ class CAIXA_Registadora(Document):
 		self.usuario_caixa= frappe.session.user
 
 
-
 @frappe.whitelist()
 def empresa_load():
 	return frappe.db.get_value("Empresa",None,"moeda_default")
@@ -24,7 +23,11 @@ def empresa_load():
 @frappe.whitelist()
 def caixa_aberto():
 
-	return frappe.db.sql("""select name from `tabCAIXA_Registadora` WHERE status_caixa ='Aberto' """, as_dict=False)
+	if (frappe.db.sql("""select name from `tabCAIXA_Registadora` WHERE status_caixa ='Aberto' """, as_dict=False)) != ():
+		return frappe.db.sql("""select name from `tabCAIXA_Registadora` WHERE status_caixa ='Aberto' """, as_dict=False)
+	elif (frappe.db.sql("""select name from `tabCAIXA_Registadora` WHERE status_caixa ='Em Curso' """, as_dict=False)) != ():
+		return frappe.db.sql("""select name from `tabCAIXA_Registadora` WHERE status_caixa ='Em Curso' """, as_dict=False)
+
 
 
 @frappe.whitelist()
