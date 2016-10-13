@@ -125,8 +125,8 @@ frappe.ui.form.on('CAIXA_Registadora', {
 //		if (d[0].status_caixa =="Aberto"){
 			//Nao pode insert novo Caixa
 //			cur_frm.toggle_enable("status_caixa",false)
-//			cur_frm.disable_save()
-		if ((cur_frm.docname.substring(0,3)=="New" || cur_frm.docname.substring(0,3)=="Nov") && (d[0].status_caixa !="Aberto" && d[0].status_caixa !="Em Curso") { //cx_aberto.statusText=="OK"){
+//			cur_frm.disable_save())
+		if ((cur_frm.docname.substring(0,3)=="New" || cur_frm.docname.substring(0,3)=="Nov") && (d[0].status_caixa !="Aberto" && d[0].status_caixa !="Em Curso")) { //cx_aberto.statusText=="OK"){
 //			alert("Caixa Registadora ja esta aberta!!!")
 //			cur_frm.page.clear_primary_action()
 			if (cx_aberto.responseText != "{}"){

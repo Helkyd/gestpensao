@@ -61,6 +61,18 @@ class BAR_RESTAURANTE(Document):
 
 
 @frappe.whitelist()
+def caixa_aberto():
+#	if (frappe.get_list("CAIXA_Registadora",filters={'status_caixa':'Aberto'},fields=['name','status_caixa'])) !=():
+	return frappe.get_list("CAIXA_Registadora",filters={'status_caixa':'Aberto'},fields=['name','status_caixa'])
+#	elif (frappe.get_list("CAIXA_Registadora",filters={'status_caixa':'Em Curso'},fields=['name','status_caixa'])) !=():
+#		return frappe.get_list("CAIXA_Registadora",filters={'status_caixa':'Em Curso'},fields=['name','status_caixa'])
+
+@frappe.whitelist()
+def caixa_curso():
+#	elif (frappe.get_list("CAIXA_Registadora",filters={'status_caixa':'Em Curso'},fields=['name','status_caixa'])) !=():
+	return frappe.get_list("CAIXA_Registadora",filters={'status_caixa':'Em Curso'},fields=['name','status_caixa'])
+
+@frappe.whitelist()
 def empresa_load():
 	return frappe.db.get_value("Empresa",None,"moeda_default")
 

@@ -12,13 +12,14 @@ frappe.ui.form.on('CAIXA_Registadora', {
 
 		//Verifica se o Caixa esta aberto ... segudo controle caso cx_aberto nao retorne valores ....
 		d = frappe.get_list("CAIXA_Registadora",filters={'status_caixa':'Aberto'},fields=['name','status_caixa'])
-		if (d[0].status_caixa =="Aberto"){
-			//Ja tem caixa Aberto
+		if (d.length !=0){
+			if (d[0].status_caixa =="Aberto"){
+				//Ja tem caixa Aberto
 
-		}else{
-			d = frappe.get_list("CAIXA_Registadora",filters={'status_caixa':'Em Curso'},fields=['name','status_caixa'])
+			}else{
+				d = frappe.get_list("CAIXA_Registadora",filters={'status_caixa':'Em Curso'},fields=['name','status_caixa'])
+			}
 		}
-		
 
 //		alert(frm.doc.__islocal)
 		//If Cx_aberto ABERTO no other record can be added until this is closed.
@@ -122,6 +123,9 @@ frappe.ui.form.on('CAIXA_Registadora', {
 frappe.ui.form.on('CAIXA_Registadora', {
 	refresh: function(frm) {
 
+		if (d.length ==0){
+			d = frappe.get_list("CAIXA_Registadora",filters={'status_caixa':'Aberto'},fields=['name','status_caixa'])
+		}
 //		if (d[0].status_caixa =="Aberto"){
 			//Nao pode insert novo Caixa
 //			cur_frm.toggle_enable("status_caixa",false)
