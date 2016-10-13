@@ -8,20 +8,18 @@ cur_frm.call({method:"empresa_load",args:{"start":"moeda"}})
 //cur_frm.add_fetch("nome_mesa","comp","nome_empresa")
 
 
-frappe.ui.form.on("BAR_RESTAURANTE", "validate", function(frm, cdt, cdn){
-    if (frm.doc.__islocal){
-        // do something
-//	alert ("LOCAL")
-
-    } else {
-        // do something else
-//	alert("NAO LOCAL")
-    }
-});
 frappe.ui.form.on('BAR_RESTAURANTE', {
 	onload: function(frm) {
 
-//		cx_open =cur_frm.call({method:"check_caixa_aberto",args:{"start":"none"}})
+		//Verifica se o Caixa esta aberto ... segudo controle caso cx_aberto nao retorne valores ....
+//		d = frappe.get_list("CAIXA_Registadora",filters={'status_caixa':'Aberto'},fields=['name','status_caixa'])
+//		if (d[0].status_caixa =="Aberto"){
+//			//Ja tem caixa Aberto
+
+//		}else{
+//			d = frappe.get_list("CAIXA_Registadora",filters={'status_caixa':'Em Curso'},fields=['name','status_caixa'])
+//		}
+
 		show_alert("Verificando CAIXA ABERTO...",3)
 //		if (cx_open.statusText=="OK" ){
 		if ((cur_frm.docname.substring(0,3)=="New" || cur_frm.docname.substring(0,3)=="Nov") && cx_open.responseText != "{}"){
@@ -76,7 +74,7 @@ frappe.ui.form.on('BAR_RESTAURANTE', {
 			return
 		
 		}else{
-			alert("CAIXA")
+//			alert("CAIXA")
 			//JSON status still 1... no CAIXA Info
 			cur_frm.toggle_enable("nome_mesa",false)
 			cur_frm.toggle_enable("nome_cliente",false)
@@ -95,6 +93,7 @@ frappe.ui.form.on('BAR_RESTAURANTE', {
 	refresh: function(frm) {
 //		alert(cx_open.statusText)
 		if (cx_open.statusText=="OK" ){
+//		if ((cur_frm.docname.substring(0,3)=="New" || cur_frm.docname.substring(0,3)=="Nov") && (d[0].status_caixa !="Aberto" && d[0].status_caixa !="Em Curso")){
 			if (cx_open.responseText != "{}"){
 				//CAIXA aberto ...
 
@@ -203,9 +202,15 @@ frappe.ui.form.on('BAR_RESTAURANTE', {
 				return
 			}
 		}else if (cx_open.readyState==1 ){
-				alert("Por favor abrir o Caixa antes de qualquer movimento. " + cx_open.readyState)
-				cur_frm.disable_save()
-				return
+//			frappe.get_meta("CAIXA_Registadora")
+//			cx_open =cur_frm.call({method:"check_caixa_aberto",args:{"start":"none"}})
+//			d = frappe.get_list("CAIXA_Registadora",filters={'status_caixa':'Aberto'},fields=['name','status_caixa'])
+//			alert(d[0].status_caixa)
+//			if (d[0].status_caixa !="Aberto"){
+			alert("Por favor abrir o Caixa antes de qualquer movimento. " + cx_open.readyState)
+//			cur_frm.disable_save()
+//			}
+			return
 
 		}else{
 			alert("PORQUE")
