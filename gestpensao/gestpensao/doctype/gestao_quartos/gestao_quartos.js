@@ -13,6 +13,7 @@ frappe.ui.form.on('GESTAO_QUARTOS', {
 			cur_frm.toggle_enable("horas",false)
 			cur_frm.toggle_enable("hora_entrada",false)
 			cur_frm.toggle_enable("hora_saida",false)
+			cur_frm.toggle_enable("tipo_quarto",false)
 			cur_frm.toggle_enable("pagamento_por",false)
 			cur_frm.set_df_property("reserva_numero","hidden",true)
 			cur_frm.set_df_property("servico_pago_por","hidden",true)
@@ -29,6 +30,7 @@ frappe.ui.form.on('GESTAO_QUARTOS', {
 			cur_frm.toggle_enable("horas",false)
 			cur_frm.toggle_enable("hora_entrada",false)
 			cur_frm.toggle_enable("hora_saida",false)
+			cur_frm.toggle_enable("tipo_quarto",false)
 			cur_frm.toggle_enable("pagamento_por",false)	
 			cur_frm.toggle_enable("status_reserva",false)	
 			cur_frm.set_df_property("reserva_numero","hidden",true)
@@ -41,6 +43,7 @@ frappe.ui.form.on('GESTAO_QUARTOS', {
 			cur_frm.toggle_enable("horas",false)
 			cur_frm.toggle_enable("hora_entrada",false)
 			cur_frm.toggle_enable("hora_saida",false)
+			cur_frm.toggle_enable("tipo_quarto",false)
 			cur_frm.toggle_enable("pagamento_por",false)
 			cur_frm.set_df_property("reserva_numero","hidden",true)
 			cur_frm.set_df_property("servico_pago_por","hidden",true)
@@ -100,6 +103,7 @@ frappe.ui.form.on('GESTAO_QUARTOS','tipo_quarto',function(frm,cdt,cdn){
 
 
 	}
+	frappe.model.set_value(cdt,cdn,'usuario_quarto',frappe.session.user)
 	cur_frm.refresh_fields();
 
 

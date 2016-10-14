@@ -22,7 +22,8 @@ frappe.listview_settings['CAIXA_Registadora'] = {
 
 	onload: function(listview){
 		frappe.route_options = {
-			"status_caixa":frm.doc.status_caixa
+			'status_caixa':['in','Fechado, Em Curso']
+
 		};
 	},	
 	
