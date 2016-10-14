@@ -1,30 +1,56 @@
 // Copyright (c) 2016, Helio de Jesus and contributors
 // For license information, please see license.txt
 
+cx_aberto =cur_frm.call({method:"caixa_aberto",args:{"start":"none"}})
 
 cur_frm.call({method:"empresa_load",args:{"start":"moeda"}})
-cx_aberto =cur_frm.call({method:"caixa_aberto",args:{"start":"none"}})
+
 mesas_open =cur_frm.call({method:"mesas_abertas",args:{"start":"none"}})
 var caixa_upd=0
+var caix = 0
 
 frappe.ui.form.on('CAIXA_Registadora', {
 	onload: function(frm) {
 
 		//Verifica se o Caixa esta aberto ... segudo controle caso cx_aberto nao retorne valores ....
-		d = frappe.get_list("CAIXA_Registadora",filters={'status_caixa':'Aberto'},fields=['name','status_caixa'])
-		if (d.length !=0){
-			if (d[0].status_caixa =="Aberto"){
+//		caixa_stat =cur_frm.call({method:"caixa_stat",args:{"start":"none"}})
+		frappe.call({
+			method: "gestpensao.gestpensao.doctype.api.check_caixa_aberto",
+			args: {},
+			callback: function(r) {
+//				var caix = frappe.model.sync(r.message);
+//				msgprint(r.message)
+				if (r.message !=undefined){
+//					alert("Aberto ou em Curso")
+					caix = r.message
+//					return
+				}else{
+//					alert("CAIXA Fechado")
+				}
+
+			}
+		});
+//		d = frappe.get_list("CAIXA_Registadora",filters={'status_caixa':'Aberto'},fields=['name','status_caixa'])
+//		d= frappe.get_value("CAIXA_Registadora",{'status_caixa':'Aberto'},'status_caixa')
+//		alert(caixa_stat)
+//		alert( d[0].name)
+//		alert(d[0].status_caixa)
+//		if (caixa_stat.responseText != "{}"){
+//			if (caixa_stat.responseJSON.message =="Em Curso"){
 				//Ja tem caixa Aberto
 
-			}else{
-				d = frappe.get_list("CAIXA_Registadora",filters={'status_caixa':'Em Curso'},fields=['name','status_caixa'])
-			}
-		}
+//			}else{
+//				d = frappe.get_list("CAIXA_Registadora",filters={'status_caixa':'Em Curso'},fields=['name','status_caixa'])
+//			}
+//		}
 
 //		alert(frm.doc.__islocal)
 		//If Cx_aberto ABERTO no other record can be added until this is closed.
-		if ((cur_frm.docname.substring(0,3)=="New" || cur_frm.docname.substring(0,3)=="Nov") && cx_aberto.statusText=="OK" ){
-			if (cx_aberto.responseText != "{}"){
+//		if ((cur_frm.docname.substring(0,3)=="New" || cur_frm.docname.substring(0,3)=="Nov") && cx_aberto.statusText=="OK" ){
+//		alert(d[0].name)
+		if (cur_frm.doc.docstatus ==1 && cur_frm.doc.status_caixa=="Aberto" ){
+//			if (cx_aberto.responseText != "{}"){
+			if (caix[0] !=[] ){
 				alert("Caixa Registadora ja esta aberta!!!")
 				cur_frm.toggle_enable("movimentos_caixa",false)	
 				cur_frm.toggle_enable("amount_init",false)
@@ -42,14 +68,14 @@ frappe.ui.form.on('CAIXA_Registadora', {
 				cur_frm.toggle_enable("amount_caixa",false)
 				//movimentos_add(frm)
 			}
-		}else if (cx_aberto.statusText=="OK" && frm.doc.__unsaved==1){
-			if (cx_aberto.responseText != "{}"){
-				alert("Caixa aberto!!! Por favor fechar antes.")
-				cur_frm.page.clear_primary_action()
-			}else{
-				alert("aaaa")
-				cur_frm.toggle_enable("amount_init",true)			
-			}
+		}else if (cur_frm.doc.docstatus ==0 && frm.doc.__unsaved==1){
+//			if (cx_aberto.responseText != "{}"){
+//				alert("Caixa aberto!!! Por favor fechar antes.")
+//				cur_frm.page.clear_primary_action()
+//			}else{
+//				alert("aaaa")
+//				cur_frm.toggle_enable("amount_init",true)			
+//			}
 		}else if (cur_frm.doc.status_caixa=="Em Curso"){
 			cur_frm.toggle_enable("data_hora",false)
 			cur_frm.toggle_enable("amount_init",false)
@@ -69,44 +95,45 @@ frappe.ui.form.on('CAIXA_Registadora', {
 			cur_frm.toggle_enable("movimentos_caixa",false)	
 			cur_frm.disable_save()
 
-		}else if ((cur_frm.docname.substring(0,3)=="New" && cur_frm.docname.substring(0,3)=="Nov"))  {
-			//TO REMOVE; WILL NEVER HAPPEN
+		}else if (cur_frm.doc.docstatus ==1)  {
+			//ADD New RECORD
 			alert("bbbbb " + cur_frm.docname)
 			cur_frm.toggle_enable("amount_init",true)
 			cur_frm.enable_save()
-			movimentos_add(frm)
-			cur_frm.reload_doc()
+//			movimentos_add(frm)
+//			cur_frm.reload_doc()
 
-		}else if ((cur_frm.docname.substring(0,3)=="New" || cur_frm.docname.substring(0,3)=="Nov")) {
+		}else if (cur_frm.doc.docstatus ==1) {
 
-			d = frappe.get_list("CAIXA_Registadora",filters={'status_caixa':'Aberto'},fields=['name','status_caixa'])
-			if (d[0].status_caixa =="Aberto"){
+//			d = frappe.get_list("CAIXA_Registadora",filters={'status_caixa':'Aberto'},fields=['name','status_caixa'])
+//			if (d[0].status_caixa =="Aberto"){
 				//Ja tem caixa Aberto
 				cur_frm.toggle_enable("data_hora",false)
 				cur_frm.toggle_enable("amount_init",false)
 				cur_frm.toggle_enable("amount_caixa",false)
 
-			}else{
-				d = frappe.get_list("CAIXA_Registadora",filters={'status_caixa':'Em Curso'},fields=['name','status_caixa'])
-				if (d[0].status_caixa =="Em Curso"){
-					//Ja tem caixa Aberto					
+//			}else{
+//				d = frappe.get_list("CAIXA_Registadora",filters={'status_caixa':'Em Curso'},fields=['name','status_caixa'])
+//				if (d[0].status_caixa =="Em Curso"){
+					//Ja tem caixa Aberto	
+//					alert("O CAIXA ja foi aberto")				
 					cur_frm.toggle_enable("data_hora",false)
 					cur_frm.toggle_enable("amount_init",false)
 					cur_frm.toggle_enable("amount_caixa",false)
-
-				}else{
+					cur_frm.disable_save()
+//				}else{
 					// Pode Abrir novo Caixa
-					alert("Abrindo o Caixa!!!  Nao se esqueca que so pode fechar o Caixa depois de fechar todas a Mesas.")	
+//					alert("Abrindo o Caixa!!!  Nao se esqueca que so pode fechar o Caixa depois de fechar todas a Mesas.")	
 			
-					cur_frm.toggle_enable("data_hora",false)
-					cur_frm.toggle_enable("amount_init",true)
-					cur_frm.toggle_enable("amount_caixa",false)
-					cur_frm.toggle_enable("status_caixa",false)
-					cur_frm.toggle_enable("movimentos_caixa",false)	
+//					cur_frm.toggle_enable("data_hora",false)
+//					cur_frm.toggle_enable("amount_init",true)
+//					cur_frm.toggle_enable("amount_caixa",false)
+//					cur_frm.toggle_enable("status_caixa",false)
+//					cur_frm.toggle_enable("movimentos_caixa",false)	
+//
+//				}
 
-				}
-
-			}
+//			}
 
 
 		}else if (cur_frm.doc.status_caixa=="Aberto"){
@@ -123,26 +150,28 @@ frappe.ui.form.on('CAIXA_Registadora', {
 frappe.ui.form.on('CAIXA_Registadora', {
 	refresh: function(frm) {
 
-		if (d.length ==0){
-			d = frappe.get_list("CAIXA_Registadora",filters={'status_caixa':'Aberto'},fields=['name','status_caixa'])
-		}
+//		if (d.length ==0){
+//			d = frappe.get_list("CAIXA_Registadora",filters={'status_caixa':'Aberto'},fields=['name','status_caixa'])
+//		}
 //		if (d[0].status_caixa =="Aberto"){
 			//Nao pode insert novo Caixa
 //			cur_frm.toggle_enable("status_caixa",false)
 //			cur_frm.disable_save())
-		if ((cur_frm.docname.substring(0,3)=="New" || cur_frm.docname.substring(0,3)=="Nov") && (d[0].status_caixa !="Aberto" && d[0].status_caixa !="Em Curso")) { //cx_aberto.statusText=="OK"){
+		if (cur_frm.doc.docstatus ==1 && caix[0] !=[] ) { //cx_aberto.statusText=="OK"){
 //			alert("Caixa Registadora ja esta aberta!!!")
 //			cur_frm.page.clear_primary_action()
-			if (cx_aberto.responseText != "{}"){
+			if (caix[0] !=[]){
+				alert("O CAIXA ja esta aberto")	
 				cur_frm.toggle_enable("amount_init",true)
 				cur_frm.toggle_enable("data_hora",false)
 				cur_frm.toggle_enable("amount_caixa",false)
-//				cur_frm.toggle_enable("status_caixa",false)
+				cur_frm.toggle_enable("status_caixa",false)
 				cur_frm.set_df_property("movimentos_caixa","hidden",false)
-
+				cur_frm.disable_save()
 		
 			}else{
 			// acrescenta os registos
+				//alert("aqui!!!")
 				cur_frm.toggle_enable("movimentos_caixa",false)	
 				cur_frm.toggle_enable("amount_init",true)
 				cur_frm.toggle_enable("data_hora",false)
@@ -162,7 +191,8 @@ frappe.ui.form.on('CAIXA_Registadora', {
 			frappe.utils.filter_dict(frm.fields_dict["movimentos_caixa"].grid.docfields, {"fieldname": "hora_atendimento"})[0].read_only = true;
 
 
-		}else if (cur_frm.docname.substring(0,3)=="New" && frm.doc.abertura_fecho=="Abertura" && frm.doc.status_caixa=="Aberto"){
+		}else if (cur_frm.doc.docstatus ==1 && frm.doc.status_caixa=="Aberto" && caix[0] !=[]){
+			alert("O CAIXA ja foi aberto!!!")	
 			cur_frm.toggle_enable("data_hora",false)
 			cur_frm.toggle_enable("amount_init",false)
 			cur_frm.toggle_enable("amount_caixa",false)
@@ -171,19 +201,42 @@ frappe.ui.form.on('CAIXA_Registadora', {
 			frappe.utils.filter_dict(frm.fields_dict["movimentos_caixa"].grid.docfields, {"fieldname": "tipo_pagamento"})[0].read_only = true;	
 			frappe.utils.filter_dict(frm.fields_dict["movimentos_caixa"].grid.docfields, {"fieldname": "valor_pago"})[0].read_only = true;
 			frappe.utils.filter_dict(frm.fields_dict["movimentos_caixa"].grid.docfields, {"fieldname": "hora_atendimento"})[0].read_only = true;
-		
+			cur_frm.disable_save()
+
+		}else if (cur_frm.doc.docstatus ==0 && frm.doc.status_caixa=="Aberto" && caix[0] !=undefined){
+			if (cur_frm.docname.substring(0,3)=="New" || cur_frm.docname.substring(0,3)=="Nov"){
+				alert("O CAIXA ja foi aberto!!!")	
+				cur_frm.disable_save()
+			}
+			cur_frm.toggle_enable("data_hora",false)
+			cur_frm.toggle_enable("amount_init",false)
+			cur_frm.toggle_enable("amount_caixa",false)
+			cur_frm.set_df_property("movimentos_caixa","hidden",false)
+			frappe.utils.filter_dict(frm.fields_dict["movimentos_caixa"].grid.docfields, {"fieldname": "descricao_movimento"})[0].read_only = true;	
+			frappe.utils.filter_dict(frm.fields_dict["movimentos_caixa"].grid.docfields, {"fieldname": "tipo_pagamento"})[0].read_only = true;	
+			frappe.utils.filter_dict(frm.fields_dict["movimentos_caixa"].grid.docfields, {"fieldname": "valor_pago"})[0].read_only = true;
+			frappe.utils.filter_dict(frm.fields_dict["movimentos_caixa"].grid.docfields, {"fieldname": "hora_atendimento"})[0].read_only = true;
+
+		}else if (cur_frm.doc.docstatus ==0 && frm.doc.status_caixa=="Aberto" && caix[0] ==undefined){
+//			alert("aqui")
+//			if (cx_aberto.responseText != []){
+//				cur_frm.toggle_enable("amount_init",false)
+//			}else{
+			cur_frm.toggle_enable("amount_init",true)
+//			}
+			cur_frm.toggle_enable("movimentos_caixa",false)	
+
+			cur_frm.toggle_enable("data_hora",false)
+			cur_frm.toggle_enable("amount_caixa",false)
 		}
 
+		if (cur_frm.doc.status_caixa=="Em Curso"){
+			frm.set_df_property("status_caixa","options","Em Curso\nFechado")
+		}
 	
 	}
 });
 
-frappe.ui.form.on('CAIXA_Registadora', {
-	before_insert: function(frm) {
-		alert ("vamos controlar")
-	}
-
-});
 //frappe.ui.form.on("CAIXA_Registadora","abertura_fecho",function(frm,cdt,cdn){
 
 //	frappe.model.set_value(cdt,cdn,'usuario_caixa',user)
