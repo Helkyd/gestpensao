@@ -87,10 +87,10 @@ def verifica_hora_saida():
 				reser._comments = "Hora de Saida por mais de " + dd + " minutos"
 				print " AGORA " + frappe.utils.now()
 				print " hora_saida " + str(d.hora_saida)
-				print "QUARTO " + d.numero_quarto + " " + str(d.hora_saida) + " Cancelada por mais de " + dd + " horas"
+				print "QUARTO " + d.numero_quarto + " " + str(d.hora_saida) + " Cancelada por mais de " + datetime.datetime.fromtimestamp(dd).strftime('%M:%S') + " horas"
 				print " USER " + frappe.session.user
 				reser.save()
-				frappe.publish_realtime(event='msgprint', message='QUARTO ' + d.numero_quarto + ' ' + str(d.hora_saida) + ' Cancelada por mais de ' + dd + ' horas', user=frappe.session.user,doctype='GESTAO_QUARTOS')
+				frappe.publish_realtime(event='msgprint', message='QUARTO ' + d.numero_quarto + ' ' + str(d.hora_saida) + ' Cancelada por mais de ' + datetime.datetime.fromtimestamp(dd).strftime('%H:%M:%S') + ' horas', user=frappe.session.user,doctype='GESTAO_QUARTOS')
 
 
 
@@ -131,13 +131,13 @@ def caixa_movimentos_in(start,caixa,fecho):
 		if (total_caixa > 1) and (reser.amount_caixa == 0):
 			reser.amount_caixa = total_caixa+reser.amount_caixa
 			reser.amount_tpa = total_tpa+reser.amount_tpa
-			reset.amount_conta_corrente = total_ccorrente+reser.amount_conta_corrente
+			reser.amount_conta_corrente = total_ccorrente+reser.amount_conta_corrente
 			reser.status_caixa='Em Curso'
 			reser.save()
 		elif (total_caixa > 1) and (reser.amount_caixa >= 0):
 			reser.amount_caixa = total_caixa+reser.amount_caixa
 			reser.amount_tpa = total_tpa+reser.amount_tpa
-			reset.amount_conta_corrente = total_ccorrente+reser.amount_conta_corrente
+			reser.amount_conta_corrente = total_ccorrente+reser.amount_conta_corrente
 			reser.save()
 		print fecho
 		print reser.status_caixa
