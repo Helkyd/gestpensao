@@ -13,6 +13,7 @@ frappe.ui.form.on('GESTAO_QUARTOS', {
 			cur_frm.toggle_enable("horas",false)
 			cur_frm.toggle_enable("hora_entrada",false)
 			cur_frm.toggle_enable("hora_saida",false)
+			cur_frm.toggle_enable("tipo_quarto",false)
 			cur_frm.toggle_enable("pagamento_por",false)
 			cur_frm.set_df_property("reserva_numero","hidden",true)
 			cur_frm.set_df_property("servico_pago_por","hidden",true)
@@ -29,6 +30,7 @@ frappe.ui.form.on('GESTAO_QUARTOS', {
 			cur_frm.toggle_enable("horas",false)
 			cur_frm.toggle_enable("hora_entrada",false)
 			cur_frm.toggle_enable("hora_saida",false)
+			cur_frm.toggle_enable("tipo_quarto",false)
 			cur_frm.toggle_enable("pagamento_por",false)	
 			cur_frm.toggle_enable("status_reserva",false)	
 			cur_frm.set_df_property("reserva_numero","hidden",true)
@@ -41,6 +43,7 @@ frappe.ui.form.on('GESTAO_QUARTOS', {
 			cur_frm.toggle_enable("horas",false)
 			cur_frm.toggle_enable("hora_entrada",false)
 			cur_frm.toggle_enable("hora_saida",false)
+			cur_frm.toggle_enable("tipo_quarto",false)
 			cur_frm.toggle_enable("pagamento_por",false)
 			cur_frm.set_df_property("reserva_numero","hidden",true)
 			cur_frm.set_df_property("servico_pago_por","hidden",true)
@@ -61,13 +64,14 @@ frappe.ui.form.on('GESTAO_QUARTOS', {
 			}
 		}
 		calculate_totals(frm);
-		
-		if (cur_frm.doc.status_reserva=="Ocupado"){
-			frm.set_df_property("status_reserva","options","Ocupado\nFechado")
-		}else if (cur_frm.doc.status_reserva=="Ativo"){
-			frm.set_df_property("status_reserva","options","Ativo\nFechado")
-		}
 
+		if (cur_frm.doc.status_reserva=="Livre"){
+			frm.set_df_property("status_reserva","options","Ocupado\nFechado")
+		}else if (cur_frm.doc.status_reserva=="Ocupado"){
+			frm.set_df_property("status_reserva","options","Ocupado\nFechado")
+
+		}
+		
 	}
 });
 
@@ -82,13 +86,14 @@ frappe.ui.form.on('GESTAO_QUARTOS','tipo_quarto',function(frm,cdt,cdn){
 		frappe.model.set_value(cdt,cdn,'horas',1);
 	//	frappe.model.set_value(cdt,cdn,'hora_entrada',frappe.utils.data.now_datetime());
 		frappe.model.set_value(cdt,cdn,'hora_saida',moment(moment(cur_frm.doc.hora_entrada).add(12,'hours')).format('DD/MM/YY, h:mm a'));
-		frappe.model.set_value(cdt,cdn,'total',frm.doc.preco*1)
+		frappe.model.set_value(cdt,cdn,'total',cur_frm.doc.preco*1)
 	}else if (frm.doc.hora_diaria_noite =="Hora"){
 		// Horas set 2; 
+		cur_frm.set_df_property("horas","label","Horas")
 		frappe.model.set_value(cdt,cdn,'horas',2);
 	//	frappe.model.set_value(cdt,cdn,'hora_entrada',frappe.utils.data.now_datetime());
 		frappe.model.set_value(cdt,cdn,'hora_saida',moment(cur_frm.doc.hora_entrada).add(cur_frm.doc.horas,'hours'));
-		frappe.model.set_value(cdt,cdn,'total',frm.doc.preco*frm.doc.horas)
+		frappe.model.set_value(cdt,cdn,'total',cur_frm.doc.preco*cur_frm.doc.horas)
 
 	}else if (frm.doc.hora_diaria_noite =="Diaria"){
 		// Horas set 1 Dia; 
@@ -96,7 +101,7 @@ frappe.ui.form.on('GESTAO_QUARTOS','tipo_quarto',function(frm,cdt,cdn){
 		frappe.model.set_value(cdt,cdn,'horas',1);
 	//	frappe.model.set_value(cdt,cdn,'hora_entrada',frappe.utils.data.now_datetime());
 		frappe.model.set_value(cdt,cdn,'hora_saida',frappe.datetime.add_days(cur_frm.doc.hora_entrada, 1));
-		frappe.model.set_value(cdt,cdn,'total',frm.doc.preco*frm.doc.horas)
+		frappe.model.set_value(cdt,cdn,'total',cur_frm.doc.preco*cur_frm.doc.horas)
 
 
 	}
@@ -196,6 +201,15 @@ frappe.ui.form.on("RESERVAS_Services","quantidade",function(frm,cdt,cdn){
 });
 
 
+frappe.ui.form.on('GESTAO_QUARTOS', {
+	validate: function(frm) {
+		
+		alert("Validando dados ...")
+	
+	}
+	
+});
+
 var calculate_totals = function(frm, cdt,cdn) {
 	var tbl1 = frm.doc.servicos || [];
 	var total_valor = 0; 
@@ -223,6 +237,26 @@ cur_frm.cscript.pagar_servicos = function(frm,cdt,cdn) {
 
 //	alert("Apos pagamento dos Serviços o Quarto estará livre.");
 	show_alert("Apos pagamento dos Serviços o Quarto estará livre.",3)
+
+	if (frm.doc.hora_diaria_noite =="Noite"){
+		//disable Horas and set 1; disable hora_entrada and calculate as from now until 
+//		frappe.model.set_value(cdt,cdn,'horas',1);
+	//	frappe.model.set_value(cdt,cdn,'hora_entrada',frappe.utils.data.now_datetime());
+		frappe.model.set_value(cdt,cdn,'hora_saida',moment(cur_frm.doc.hora_entrada).add(12,'hours'));
+		frappe.model.set_value(cdt,cdn,'total',frm.doc.preco*1)
+	}else if (frm.doc.hora_diaria_noite =="Diaria"){
+		// Horas set 1 Dia; 
+		//frappe.model.set_value(cdt,cdn,'horas',1);
+	//	frappe.model.set_value(cdt,cdn,'hora_entrada',frappe.utils.data.now_datetime());
+		frappe.model.set_value(cdt,cdn,'hora_saida',frappe.datetime.add_days(cur_frm.doc.hora_entrada, frm.doc.horas));
+		frappe.model.set_value(cdt,cdn,'total',frm.doc.preco*frm.doc.horas)
+
+	}else{
+		frappe.model.set_value(cdt,cdn,'hora_saida',moment(cur_frm.doc.hora_entrada).add(cur_frm.doc.horas,'hours'))
+		frappe.model.set_value(cdt,cdn,'total',frm.doc.preco*frm.doc.horas)
+		cur_frm.refresh_fields();	
+
+	}
 	calculate_totals1(frm,cdt,cdn)	
 	
 	var d = frappe.prompt([
@@ -323,9 +357,11 @@ var quartos_ = function(frm,cdt,cdn){
 		var d = frappe.model.get_doc(frm,cdt)
 		cur_frm.doc.preco = d.preco
 		cur_frm.doc.hora_diaria_noite = d.diaria_hora
-
+		cur_frm.doc.horas= 1
 		cur_frm.refresh_fields()
 	});
+
+
 }
 
 var servicos_ = function(frm,cdt,cdn){

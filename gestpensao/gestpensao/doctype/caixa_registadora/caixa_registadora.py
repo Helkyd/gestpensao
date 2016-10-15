@@ -19,9 +19,11 @@ class CAIXA_Registadora(Document):
 		print "VAAAAAALIIIIIIDAR"
 		d=caixa_aberto()
 		if (d !=None):
-			print d
-			validated=False
-			frappe.throw(_("CAIXA JA ESTA ABERTO!!! NAO PODE TER MAIS QUE UM ABERTO"))
+			print d[0]
+			print self.name
+			if (d[0][0] != self.name):
+				validated=False
+				frappe.throw(_("CAIXA JA ESTA ABERTO!!! NAO PODE TER MAIS QUE UM ABERTO"))
 
 
 @frappe.whitelist()
