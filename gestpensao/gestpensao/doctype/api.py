@@ -109,6 +109,8 @@ def verifica_mesas_vendidas(start):
 @frappe.whitelist()
 def caixa_movimentos_in(start,caixa,fecho):
 
+		total_tpa = 0
+		total_ccorrente = 0
 		total_caixa = 0
 		for d in  frappe.db.sql("""select hora_atendimento, name,total_servicos,pagamento_por, status_atendimento, bar_tender from `tabBAR_RESTAURANTE` where status_atendimento ='Fechado' and hora_atendimento >= %(start)s and hora_atendimento <= %(end)s """, {"start": start,"end": frappe.utils.now()	}, as_dict=True):
 			
@@ -118,15 +120,24 @@ def caixa_movimentos_in(start,caixa,fecho):
 			if len(frappe.db.sql("SELECT name,descricao_movimento from tabMovimentos_Caixa WHERE descricao_movimento=%(mov)s""",{"mov":d.name}, as_dict=True))==0:
 				frappe.db.sql("INSERT into tabMovimentos_Caixa (name, docstatus, parent, parenttype, parentfield, tipo_pagamento, descricao_movimento, valor_pago, hora_atendimento, creation, modified, usuario_movimentos) values (%s,0,%s,'CAIXA_Registadora','movimentos_caixa',%s,%s,%s,%s,%s,%s,%s) ",(ddd, caixa, d.pagamento_por ,d.name, d.total_servicos, d.hora_atendimento, frappe.utils.now(), frappe.utils.now(),d.bar_tender))
 				total_caixa = d.total_servicos+total_caixa
+				if (d.pagamento_por == "TPA"):
+					total_tpa = d.total_servicos+total_tpa
+				
+				if (d.pagamento_por == "Conta-Corrente"):
+					total_ccorrente = d.total_servicos+total_ccorrente
 		print "Abre Caixa"
 		print total_caixa
 		reser = frappe.get_doc("CAIXA_Registadora",caixa)
 		if (total_caixa > 1) and (reser.amount_caixa == 0):
 			reser.amount_caixa = total_caixa+reser.amount_caixa
+			reser.amount_tpa = total_tpa+reser.amount_tpa
+			reser.amount_conta_corrente = total_ccorrente+reser.amount_conta_corrente
 			reser.status_caixa='Em Curso'
 			reser.save()
 		elif (total_caixa > 1) and (reser.amount_caixa >= 0):
 			reser.amount_caixa = total_caixa+reser.amount_caixa
+			reser.amount_tpa = total_tpa+reser.amount_tpa
+			reser.amount_conta_corrente = total_ccorrente+reser.amount_conta_corrente
 			reser.save()
 		print fecho
 		print reser.status_caixa

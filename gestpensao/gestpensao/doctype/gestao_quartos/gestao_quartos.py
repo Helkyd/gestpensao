@@ -24,9 +24,11 @@ class GESTAO_QUARTOS(Document):
 
 	def Validar_Numero_Dias(self):
 		if self.horas <= 0:
-			frappe.throw(_("Horas tem que ser 1 ou mais."))
+			validated=False
+			frappe.throw(_("Horas/Dias tem que ser 1 ou mais."))
 
 		elif self.hora_entrada == self.hora_saida:
+			validated=False
 			frappe.throw(_("Hora de Saida tem que sair diferente que Hora de Entrada."))
 
 
@@ -61,7 +63,6 @@ class GESTAO_QUARTOS(Document):
 @frappe.whitelist()
 def empresa_load():
 	return frappe.db.get_value("Empresa",None,"moeda_default")
-
 
 
 

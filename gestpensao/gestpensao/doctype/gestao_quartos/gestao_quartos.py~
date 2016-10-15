@@ -8,6 +8,10 @@ from frappe import _
 from frappe.model.document import Document
 from frappe.model.naming import make_autoname
 
+form_grid_templates = {
+	"items": "templates/form_grid/gestao_quartos_list.html"
+}
+
 class GESTAO_QUARTOS(Document):
 
 	def autoname(self):
@@ -20,9 +24,11 @@ class GESTAO_QUARTOS(Document):
 
 	def Validar_Numero_Dias(self):
 		if self.horas <= 0:
-			frappe.throw(_("Horas tem que ser 1 ou mais."))
+			validated=False
+			frappe.throw(_("Horas/Dias tem que ser 1 ou mais."))
 
 		elif self.hora_entrada == self.hora_saida:
+			validated=False
 			frappe.throw(_("Hora de Saida tem que sair diferente que Hora de Entrada."))
 
 
