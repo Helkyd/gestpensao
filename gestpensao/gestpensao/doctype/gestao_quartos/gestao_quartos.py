@@ -5,6 +5,8 @@
 from __future__ import unicode_literals
 import frappe
 from frappe import _
+from datetime import datetime, timedelta
+from frappe.utils import cstr, get_datetime, getdate, cint, get_datetime_str
 from frappe.model.document import Document
 from frappe.model.naming import make_autoname
 
@@ -21,6 +23,7 @@ class GESTAO_QUARTOS(Document):
 	def validate(self):
 		self.Validar_Numero_Dias()
 		self.Check_ContaCorrente()
+		self.Sethoras_Quarto()
 
 	def Validar_Numero_Dias(self):
 		if self.horas <= 0:
@@ -57,12 +60,21 @@ class GESTAO_QUARTOS(Document):
 		# Not yet Implemented...
 		if (self.servico_pago_por=="3-Conta-Corrente"):
 			frappe.throw(_("Modulo nao funcional de momento."))
-		
 
+	def Sethoras_Quarto(self):
+		
+		if self.hora_diaria_noite == "Noite":			
+			self.hora_saida= get_datetime(self.hora_entrada) + timedelta(hours=12)			
+		elif self.hora_diaria_noite == "Diaria":
+			self.hora_saida= get_datetime(self.hora_entrada) + timedelta(days=self.horas)
+		elif self.hora_diaria_noite == "Hora":
+			self.hora_saida = get_datetime(self.hora_entrada) + timedelta(hours=self.horas)
+
+		print "DEPOIS DE CALCULAR"
+		print self.hora_saida
 
 @frappe.whitelist()
 def empresa_load():
 	return frappe.db.get_value("Empresa",None,"moeda_default")
-
 
 
