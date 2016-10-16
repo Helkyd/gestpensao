@@ -47,19 +47,22 @@ class RESERVAS(Document):
 		elif (self.reservation_status=="Ativo"):
 			
 			quarto = frappe.get_doc("QUARTOS",self.numero_quarto)
+			hdn = frappe.get_doc("QUARTOS_TIPO",self.quarto_tipo)
 			# Criar o registo no Gestao_Quartos poe ATIVO
 			frappe.get_doc({
 				"doctype":"GESTAO_QUARTOS",
 				"name": make_autoname(self.numero_quarto + '-' + '.#####'),
 				"numero_quarto": self.numero_quarto,			
-				"tipo_quarto": quarto.tipo_quarto,
-				"preco":quarto.preco,		
+				"tipo_quarto": self.quarto_tipo,
+				"preco":self.preco_quarto,		
 				"hora_entrada":self.check_in,
 				"hora_saida":self.check_out,
 				"horas": self.number_days,
-				"total": int(self.number_days) * quarto.preco,
+				"total": int(self.number_days) * self.preco_quarto,
 				"pagamento_por": "Cash",
 				"status_reserva": "Ativo",
+				"hora_diaria_noite": hdn.diaria_hora,
+				"nome_cliente":self.numero_cliente,
 				"reserva_numero":self.name
 			}).insert()
 

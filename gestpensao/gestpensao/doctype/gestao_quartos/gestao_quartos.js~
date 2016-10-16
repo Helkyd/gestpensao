@@ -2,7 +2,7 @@
 
 
 cur_frm.call({method:"empresa_load",args:{"start":"moeda"}})
-
+lista =cur_frm.call({method:"lista_clientes",args:{"start":"moeda"}})
 
 frappe.ui.form.on('GESTAO_QUARTOS', {
 	onload: function(frm) {
@@ -17,6 +17,7 @@ frappe.ui.form.on('GESTAO_QUARTOS', {
 			cur_frm.toggle_enable("pagamento_por",false)
 			cur_frm.set_df_property("reserva_numero","hidden",true)
 			cur_frm.set_df_property("servico_pago_por","hidden",true)
+			cur_frm.toggle_enable("nome_cliente",false)
 
 		}else if (frm.doc.status_reserva=="Ocupado" && frm.doc.horas ==undefined){
 			cur_frm.toggle_enable("status_reserva",false)	
@@ -36,6 +37,7 @@ frappe.ui.form.on('GESTAO_QUARTOS', {
 			cur_frm.set_df_property("reserva_numero","hidden",true)
 			cur_frm.set_df_property("servico_pago_por","hidden",true)
 			cur_frm.set_df_property("pagar_servicos","hidden",true)
+			cur_frm.toggle_enable("nome_cliente",false)
 
 		}else if (frm.doc.status_reserva=="Ativo"){
 			cur_frm.set_df_property("horas","label","Dias")
@@ -47,6 +49,7 @@ frappe.ui.form.on('GESTAO_QUARTOS', {
 			cur_frm.toggle_enable("pagamento_por",false)
 			cur_frm.set_df_property("reserva_numero","hidden",true)
 			cur_frm.set_df_property("servico_pago_por","hidden",true)
+			cur_frm.toggle_enable("nome_cliente",false)
 
 		}
 
@@ -208,7 +211,8 @@ frappe.ui.form.on("RESERVAS_Services","quantidade",function(frm,cdt,cdn){
 frappe.ui.form.on('GESTAO_QUARTOS', {
 	validate: function(frm) {
 		
-		alert("Validando dados ...")
+
+		show_alert("Validando Dados...",3)
 		if (frm.doc.hora_diaria_noite =="Noite"){
 			//disable Horas and set 1; disable hora_entrada and calculate as from now until 
 	//		frappe.model.set_value(cdt,cdn,'horas',1);
@@ -263,23 +267,23 @@ cur_frm.cscript.pagar_servicos = function(frm,cdt,cdn) {
 //	alert("Apos pagamento dos Serviços o Quarto estará livre.");
 	show_alert("Apos pagamento dos Serviços o Quarto estará livre.",3)
 
-	if (frm.doc.hora_diaria_noite =="Noite"){
+	if (cur_frm.doc.hora_diaria_noite =="Noite"){
 		//disable Horas and set 1; disable hora_entrada and calculate as from now until 
 //		frappe.model.set_value(cdt,cdn,'horas',1);
 	//	frappe.model.set_value(cdt,cdn,'hora_entrada',frappe.utils.data.now_datetime());
-		frappe.model.set_value(cdt,cdn,'hora_saida',moment(frm.doc.hora_entrada).add(12,'hours'));
-		frappe.model.set_value(cdt,cdn,'total',frm.doc.preco*1)
-	}else if (frm.doc.hora_diaria_noite =="Diaria"){
+		frappe.model.set_value(cdt,cdn,'hora_saida',moment(cur_frm.doc.hora_entrada).add(12,'hours'));
+		frappe.model.set_value(cdt,cdn,'total',cur_frm.doc.preco*1)
+	}else if (cur_frm.doc.hora_diaria_noite =="Diaria"){
 		// Horas set 1 Dia; 
 		//frappe.model.set_value(cdt,cdn,'horas',1);
 	//	frappe.model.set_value(cdt,cdn,'hora_entrada',frappe.utils.data.now_datetime());
-		frappe.model.set_value(cdt,cdn,'hora_saida',frappe.datetime.add_days(frm.doc.hora_entrada, frm.doc.horas));
-		frappe.model.set_value(cdt,cdn,'total',frm.doc.preco*frm.doc.horas)
+		frappe.model.set_value(cdt,cdn,'hora_saida',frappe.datetime.add_days(cur_frm.doc.hora_entrada, cur_frm.doc.horas));
+		frappe.model.set_value(cdt,cdn,'total',cur_frm.doc.preco*cur_frm.doc.horas)
 
 	}else{
-		frappe.model.set_value(cdt,cdn,'hora_saida',moment(moment(frm.doc.hora_entrada).add(frm.doc.horas,'hours')));;
+		frappe.model.set_value(cdt,cdn,'hora_saida',moment(moment(cur_frm.doc.hora_entrada).add(cur_frm.doc.horas,'hours')));;
 //		cur_frm.doc.hora_saida = moment(cur_frm.doc.hora_entrada).add(frm.doc.horas,'hours'));
-		frappe.model.set_value(cdt,cdn,'total',frm.doc.preco*frm.doc.horas)
+		frappe.model.set_value(cdt,cdn,'total',cur_frm.doc.preco*cur_frm.doc.horas)
 		cur_frm.refresh_fields();	
 
 	}
@@ -306,15 +310,29 @@ cur_frm.cscript.pagar_servicos = function(frm,cdt,cdn) {
 			//Gestao_quarto status Fechado ... Ja nao se pode alterar.
 			frappe.model.set_value(cdt,cdn,'servico_pago_por',c.priority)
 			frappe.model.set_value(cdt,cdn,'status_reserva',"Fechado")
-
 			cur_frm.refresh_fields("status_reserva");	
+
 		} else if (c.priority=="3-Conta-Corrente") {
 			//Gestao_quarto status Fechado ... Ja nao se pode alterar.
 			//Contas ou valores para a Conta corrente do cliente.
+			frappe.model.set_value(cur_frm.doctype,cur_frm.docname,'status_reserva',"Fechado")
+			frappe.model.set_value(cur_frm.doctype,cur_frm.docname,'pagamento_por',"Conta-Corrente")
+			frappe.model.set_value(cur_frm.doctype,cur_frm.docname,'conta_corrente',"nome do cliente")
+			frappe.model.set_value(cur_frm.doctype,cur_frm.docname,'valor_pago',cur_frm.doc.total_servicos)
+			frappe.model.set_value(cdt,cdn,'servico_pago_por',c.priority)
+
+			cur_frm.refresh_fields("status_reserva");	
+
 
 			//Dialog a pedir o Cliente
-			frappe.model.set_value(cdt,cdn,'servico_pago_por',c.priority)
-			frappe.model.set_value(cdt,cdn,'status_reserva',"Fechado")
+			if (cur_frm.doc.nome_cliente=="Diversos"){
+				// Verifica se nome_cliente is empty e pede para selecionar o Cliente autorizado (MEMBROS ONLY!!!!)
+				avancar = true	
+				CC_nomecliente()	
+				//cur_frm.toggle_enable("pagamento_botao",false)		
+			}
+
+
 
 			cur_frm.refresh_fields("status_reserva");	
 
@@ -372,6 +390,23 @@ frappe.ui.form.on("GESTAO_QUARTOS","pagamento_por",function(frm,cdt,cdn){
 	// Pedir o Cliente e se o mesmo for membro e autorizado ...
  
 		alert("Somente Membros podem ter Conta-corrente")
+		//Gestao_quarto status Fechado ... Ja nao se pode alterar.
+		//Contas ou valores para a Conta corrente do cliente.
+		//frappe.model.set_value(cur_frm.doctype,cur_frm.docname,'status_reserva',"Fechado")
+		frappe.model.set_value(cur_frm.doctype,cur_frm.docname,'pagamento_por',"Conta-Corrente")
+		frappe.model.set_value(cur_frm.doctype,cur_frm.docname,'conta_corrente',"nome do cliente")
+		frappe.model.set_value(cur_frm.doctype,cur_frm.docname,'valor_pago',cur_frm.doc.total_servicos)
+//		frappe.model.set_value(cdt,cdn,'servico_pago_por',c.priority)
+
+		cur_frm.refresh_fields("status_reserva");	
+
+		//Dialog a pedir o Cliente
+		if (cur_frm.doc.nome_cliente=="Diversos"){
+			// Verifica se nome_cliente is empty e pede para selecionar o Cliente autorizado (MEMBROS ONLY!!!!)
+			avancar = true	
+			CC_nomecliente()	
+			//cur_frm.toggle_enable("pagamento_botao",false)		
+		}
 
 	
 	}
@@ -400,4 +435,57 @@ var servicos_ = function(frm,cdt,cdn){
 
 
 	});
+}
+
+
+var CC_nomecliente = function(frm,cdt,cdn){
+	var listaclientes= []
+	if (lista.statusText=="OK"){
+		for (x in lista.responseJSON.message){
+			if (lista.responseJSON.message[x] != "Diversos" && lista.responseJSON.message[x] != undefined){
+				listaclientes[x]= lista.responseJSON.message[x]
+			}
+		}
+	}
+
+	if (avancar==true){
+		var dd = frappe.prompt([
+			{label:__("Nome do Cliente: "),fieldtype:"Select",fieldname:"pcliente",options: [listaclientes[0],listaclientes[1],listaclientes[2],listaclientes[3],listaclientes[4]]},
+	        ],
+        	function(values){
+	        	var cc = dd.get_values();
+            		var mee = this;
+			show_alert("Selecionado : " + cc.pcliente,5)
+			if (cc.pcliente !=""){
+				cur_frm.set_value(cdt,cdn,'status_reserva',"Fechado")
+				cur_frm.set_value(cdt,cdn,'pagamento_por',"Conta-Corrente")
+				cur_frm.set_value('conta_corrente',cc.pcliente)
+				cur_frm.set_value('servico_pago_por',"Conta-Corrente")
+
+				cur_frm.refresh_fields("status_reserva","conta_corrente");	
+				//Click SAVE				
+//				cur_frm.page.btn_primary.click()
+				this.cur_page.page.frm._save()
+				cur_frm.page.clear_primary_action()
+				cur_frm.page.clear_secondary_action()
+
+
+
+				cur_frm.page.set_primary_action(__("Imprimir"), function() {
+//					html = frappe.render_template("Recibo_Bar_Restaurante", {"nome_mesa": cur_frm.doc.nome_mesa})
+					frappe.get_print("Print Format","GESTAO_QUARTOS_1",cur_frm.doc.numero_quarto)
+					print_document(html)
+				})
+
+				//alert("Cliente " + cc.pcliente + " selecionado")
+			}
+		},
+			'Lista de Clientes Membros',
+			'Processar Conta-Corrente'
+		);
+
+	}
+
+
+
 }

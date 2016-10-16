@@ -37,11 +37,12 @@ frappe.listview_settings['GESTAO_QUARTOS'] = {
 		
 		}
 	},
-	colwidths: {"subject": 3.8, "indicator": 9},
+	colwidths: {"subject": 3, "indicator": 9},
 
 	onload: function(listview){
 		frappe.route_options = {
-			"status_reserva":"Ocupado"
+			'status_reserva':['in','Ocupado, Ativo']
+
 		};
 	},
 
