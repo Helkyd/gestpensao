@@ -213,14 +213,14 @@ frappe.ui.form.on('GESTAO_QUARTOS', {
 			//disable Horas and set 1; disable hora_entrada and calculate as from now until 
 	//		frappe.model.set_value(cdt,cdn,'horas',1);
 		//	frappe.model.set_value(cdt,cdn,'hora_entrada',frappe.utils.data.now_datetime());
-			frappe.model.set_value(cdt,cdn,'hora_saida',moment(cur_frm.doc.hora_entrada).add(12,'hours'));
-			frappe.model.set_value(cdt,cdn,'total',frm.doc.preco*1)
+			cur_frm.doc.hora_saida= moment(cur_frm.doc.hora_entrada).add(12,'hours');
+			cur_frm.doc.total=frm.doc.preco*1
 		}else if (frm.doc.hora_diaria_noite =="Diaria"){
 			// Horas set 1 Dia; 
 			//frappe.model.set_value(cdt,cdn,'horas',1);
 		//	frappe.model.set_value(cdt,cdn,'hora_entrada',frappe.utils.data.now_datetime());
-			frappe.model.set_value(cdt,cdn,'hora_saida',frappe.datetime.add_days(cur_frm.doc.hora_entrada, frm.doc.horas));
-			frappe.model.set_value(cdt,cdn,'total',frm.doc.preco*frm.doc.horas)
+			cur_frm.doc.hora_saida=frappe.datetime.add_days(cur_frm.doc.hora_entrada, frm.doc.horas);
+			cur_frm.doc.total=frm.doc.preco*frm.doc.horas
 
 		}else{
 			cur_frm.doc.hora_saida=moment(moment(frm.doc.hora_entrada).add(frm.doc.horas,'hours'));

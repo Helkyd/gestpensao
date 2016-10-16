@@ -208,7 +208,8 @@ frappe.ui.form.on("RESERVAS_Services","quantidade",function(frm,cdt,cdn){
 frappe.ui.form.on('GESTAO_QUARTOS', {
 	validate: function(frm) {
 		
-		alert("Validando dados ...")
+
+		show_alert("Validando Dados...",3)
 		if (frm.doc.hora_diaria_noite =="Noite"){
 			//disable Horas and set 1; disable hora_entrada and calculate as from now until 
 	//		frappe.model.set_value(cdt,cdn,'horas',1);
