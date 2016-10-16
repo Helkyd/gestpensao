@@ -58,8 +58,20 @@ class GESTAO_QUARTOS(Document):
 
 	def Check_ContaCorrente(self):
 		# Not yet Implemented...
-		if (self.servico_pago_por=="3-Conta-Corrente"):
-			frappe.throw(_("Modulo nao funcional de momento."))
+		if (self.servico_pago_por=="Conta-Corrente"):
+			self.nome_cliente = self.conta_corrente
+			if (self.conta_corrente == "") or (self.conta_corrente == "nome do cliente"):
+				validated= False
+				frappe.throw(_("Nao foi selecionado o Cliente para Conta-Corrente."))
+
+#			validated= False
+#			frappe.throw(_("Modulo nao funcional de momento."))
+
+		if (self.pagamento_por=="Conta-Corrente"):
+			if (self.conta_corrente == "") or (self.conta_corrente == "nome do cliente"):
+				validated= False
+				frappe.throw(_("Nao foi selecionado o Cliente para Conta-Corrente."))
+
 
 	def Sethoras_Quarto(self):
 		
@@ -77,4 +89,8 @@ class GESTAO_QUARTOS(Document):
 def empresa_load():
 	return frappe.db.get_value("Empresa",None,"moeda_default")
 
+@frappe.whitelist()
+def lista_clientes():
+
+	return frappe.db.sql("""select name from `tabCLIENTES` WHERE cliente_tipo ='Membro' """, as_dict=False)
 

@@ -32,6 +32,8 @@ frappe.listview_settings['GESTAO_QUARTOS'] = {
 			return [__("Livre  " ), "green"]
 		} else if (doc.status_reserva== "Ocupado" ) {
 			return [__("Ocupado * " + doc.hora_diaria_noite + " * SAIDA =>" + frappe.format(doc.hora_saida,{"fieldtype":"Date"})), "red"]
+		} else if (doc.status_reserva== "Ativo" ) {
+			return [__("Ativo * " + doc.hora_diaria_noite + " * SAIDA =>" + frappe.format(doc.hora_saida,{"fieldtype":"Date"})), "blue"]
 		} else if (doc.status_reserva== "Fechado" ) {
 			return [__("Fechado" ), "orange"]
 		
@@ -41,7 +43,8 @@ frappe.listview_settings['GESTAO_QUARTOS'] = {
 
 	onload: function(listview){
 		frappe.route_options = {
-			"status_reserva":"Ocupado"
+			'status_reserva':['in','Ocupado, Ativo']
+
 		};
 	},
 

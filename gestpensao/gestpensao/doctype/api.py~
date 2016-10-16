@@ -50,7 +50,7 @@ def verifica_check_in():
 				print " Numer " + ddd
 				frappe.db.sql("INSERT into tabCommunication  (name,docstatus,seen,unread_notification_sent,subject,reference_name,reference_doctype,sent_or_received,content,communication_type,creation,modified) values (%s,0,0,0,'RESERVA Cancelada ',%s,'RESERVAS','Sent','RESERVA Cancelada  <!-- markdown -->','Comment',%s,%s) ",(ddd,d.codigo,frappe.utils.now(),frappe.utils.now()))
 
-				reser._comments =[{"comment": "Reserva " + d.codigo + " " + str(d.check_in) + " Cancelada por mais de " + dd + " horas <!-- markdown -->","by": "Scheduler", "name":ddd}]
+				reser._comments =[{"comment": "Reserva " + d.codigo + " " + str(d.check_in) + " Cancelada por mais de " + datetime.datetime.fromtimestamp(dd).strftime('%H:%M:%S') + " horas <!-- markdown -->","by": "Scheduler", "name":ddd}]
 
 				print " AGORA " + frappe.utils.now()
 				print " CHECK IN " + str(d.check_in)
@@ -58,7 +58,7 @@ def verifica_check_in():
 				reser.reservation_status="Cancelada"
 				reser.save()
 				#frappe.redirect_to_message(_('INFORMACAO RESERVAS'),"<div>RESERVA " + d.codigo + " FOI CANCELADA </div>")	
-				frappe.publish_realtime(event='msgprint', message='RESERVA ' + d.codigo + ' ' + str(d.check_in) + ' Cancelada por mais de ' + dd + ' horas', user=frappe.session.user,doctype='RESERVAS')	
+				frappe.publish_realtime(event='msgprint', message='RESERVA ' + d.codigo + ' ' + str(d.check_in) + ' Cancelada por mais de ' + datetime.datetime.fromtimestamp(dd).strftime('%H:%M:%S') + ' horas', user=frappe.session.user,doctype='RESERVAS')	
 
 
 @frappe.whitelist()

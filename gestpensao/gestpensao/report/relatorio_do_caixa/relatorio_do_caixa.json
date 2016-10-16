@@ -1,5 +1,5 @@
 {
- "add_total_row": 0, 
+ "add_total_row": 1, 
  "apply_user_permissions": 1, 
  "creation": "2016-10-06 00:32:24.222699", 
  "disabled": 0, 
@@ -7,12 +7,12 @@
  "doctype": "Report", 
  "idx": 0, 
  "is_standard": "Yes", 
- "modified": "2016-10-15 21:24:19.395882", 
+ "modified": "2016-10-16 17:06:39.020955", 
  "modified_by": "Administrator", 
  "module": "Gestpensao", 
  "name": "Relatorio do Caixa", 
  "owner": "Administrator", 
- "query": "SELECT \ntabCAIXA_Registadora.abertura_fecho as 'Movimento:data:80',\ntabCAIXA_Registadora.data_hora as 'Data Movimento:datetime:120', \ntabCAIXA_Registadora.amount_init as 'Valor de Abertura:Currency:120', \ntabCAIXA_Registadora.amount_caixa as 'Valor de Fecho:Currency:120', \ntabCAIXA_Registadora.status_caixa as 'Status do Caixa:data:100', \ntabCAIXA_Registadora.usuario_caixa as 'Feito por:data:100'\nFROM tabCAIXA_Registadora;", 
+ "query": "SELECT \ntabCAIXA_Registadora.abertura_fecho as 'Movimento:data:80',\ntabCAIXA_Registadora.data_hora as 'Data Movimento:datetime:120', \ntabCAIXA_Registadora.amount_init as 'Valor de Abertura:Currency:120', \ntabCAIXA_Registadora.amount_tpa as 'Valor TPA:Currency:120', \ntabCAIXA_Registadora.amount_conta_corrente as 'Valor Conta-Corrente:Currency:120', \ntabCAIXA_Registadora.amount_caixa as 'Valor de Fecho:Currency:120', \ntabCAIXA_Registadora.status_caixa as 'Status do Caixa:data:100', \ntabCAIXA_Registadora.usuario_caixa as 'Feito por:data:100'\nFROM tabCAIXA_Registadora;", 
  "ref_doctype": "CAIXA_Registadora", 
  "report_name": "Relatorio do Caixa", 
  "report_type": "Query Report"

@@ -23,7 +23,7 @@ class GESTAO_QUARTOS(Document):
 	def validate(self):
 		self.Validar_Numero_Dias()
 		self.Check_ContaCorrente()
-		self.horas_quarto1()
+		self.Sethoras_Quarto()
 
 	def Validar_Numero_Dias(self):
 		if self.horas <= 0:
@@ -58,34 +58,26 @@ class GESTAO_QUARTOS(Document):
 
 	def Check_ContaCorrente(self):
 		# Not yet Implemented...
-		if (self.servico_pago_por=="3-Conta-Corrente"):
+		if (self.servico_pago_por=="Conta-Corrente"):
+			self.nome_cliente = self.conta_corrente
+			validated= False
 			frappe.throw(_("Modulo nao funcional de momento."))
 
-	def horas_quarto1(self):
+		if (self.pagamento_por=="Conta-Corrente"):
+			if (self.conta_corrente == "") or (self.conta_corrente == "nome do cliente"):
+				validated= False
+				frappe.throw(_("Nao foi selecionado o Cliente para Conta-Corrente."))
 
-		print "HORASSSSSSSSS"
 
-		print self.hora_entrada
-
-		print self.hora_saida
-		print "Saida deve ser" 
-		print get_datetime(self.hora_entrada) + timedelta(hours=self.horas)
-		print (str(self.hora_entrada) + str(timedelta(hours=self.horas)))
-		print self.horas
-		print self.preco
-		print "STATUS"
-		print self.status_reserva
+	def Sethoras_Quarto(self):
 		
 		if self.hora_diaria_noite == "Noite":			
-			self.hora_saida= get_datetime(self.hora_entrada) + timedelta(hours=12)
-			
+			self.hora_saida= get_datetime(self.hora_entrada) + timedelta(hours=12)			
 		elif self.hora_diaria_noite == "Diaria":
 			self.hora_saida= get_datetime(self.hora_entrada) + timedelta(days=self.horas)
-
 		elif self.hora_diaria_noite == "Hora":
-#			self.hora_saida=self.hora_entrada + timedelta(hours=self.horas) #moment(self.hora_entrada).add(self.horas,'hours')
-			print "Resultad"
 			self.hora_saida = get_datetime(self.hora_entrada) + timedelta(hours=self.horas)
+
 		print "DEPOIS DE CALCULAR"
 		print self.hora_saida
 
@@ -93,4 +85,8 @@ class GESTAO_QUARTOS(Document):
 def empresa_load():
 	return frappe.db.get_value("Empresa",None,"moeda_default")
 
+@frappe.whitelist()
+def lista_clientes():
+
+	return frappe.db.sql("""select name from `tabCLIENTES` WHERE cliente_tipo ='Membro' """, as_dict=False)
 
