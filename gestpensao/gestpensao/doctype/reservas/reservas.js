@@ -7,7 +7,7 @@ frappe.ui.form.on('RESERVAS', {
 	onload: function(frm) {
 
 //		cur_frm.call({method:"verifica_check_in",args:{"start":"0"}})
-
+		cur_frm.enable_save()
 		if (frm.doc.reservation_status=="Nova" && frm.doc.pay_advance !="Sim" && frm.doc.numero_cliente ==undefined){
 			cur_frm.toggle_enable("booked_by",true)
 			cur_frm.toggle_enable("numero_cliente",true)	
@@ -48,6 +48,23 @@ frappe.ui.form.on('RESERVAS', {
 			cur_frm.toggle_enable("number_days",false)
 			cur_frm.toggle_enable("preco_quarto",false)
 
+		}else if (frm.doc.reservation_status=="Fechada" ){
+			cur_frm.toggle_enable("booked_by",false)	
+			cur_frm.toggle_enable("check_in",false)	
+			cur_frm.toggle_enable("check_out",false)	
+			cur_frm.toggle_enable("num_adults",false)	
+			cur_frm.toggle_enable("num_childs",false)	
+			cur_frm.toggle_enable("num_infants",false)	
+			cur_frm.toggle_enable("numero_quarto",false)	
+			cur_frm.toggle_enable("numero_cliente",false)	
+			cur_frm.toggle_enable("reservation_status",false)
+			cur_frm.toggle_enable("pay_advance",false)		
+			cur_frm.toggle_enable("number_days",false)
+			cur_frm.toggle_enable("preco_quarto",false)
+			cur_frm.toggle_enable("quarto_tipo",false)
+			cur_frm.toggle_enable("paid_type",false)
+			cur_frm.toggle_enable("valor_pago",false)
+			cur_frm.disable_save()
 		}
 
 

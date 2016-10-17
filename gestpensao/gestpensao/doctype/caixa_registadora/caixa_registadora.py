@@ -55,4 +55,18 @@ def caixa_stat():
 
 	return frappe.get_value("CAIXA_Registadora",{'status_caixa':'Em Curso'},'status_caixa')
 
+@frappe.whitelist()
+def check_user_acesso():
+	tem_acesso = False
+	for regra in frappe.utils.user.get_roles(frappe.session.user):
+		print "ACESSOOOO"
+		print frappe.session.user
+		print regra
+		if (regra == "GesPensao"):
+			tem_acesso = True
+			return "GesPensao"
+		
+
+
+
 

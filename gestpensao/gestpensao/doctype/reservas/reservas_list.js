@@ -14,6 +14,9 @@ frappe.listview_settings['RESERVAS'] = {
 			return [__("Pago "+doc.numero_quarto), "green", "reservation_status,=,Pago"]
 		} else if (doc.reservation_status== "Cancelada") {
 			return [__("Cancelada "+doc.numero_quarto), "blue", "reservation_status,=,Cancelada"]
+		} else if (doc.reservation_status== "Fechada") {
+			return [__("Fechada "+doc.numero_quarto), "black", "reservation_status,=,Fechada"]
+
 		}
 	},
 	colwidths: {"subject": 3, "indicator": 3,"Data de Entrada": 3},

@@ -6,6 +6,9 @@ cx_aberto =cur_frm.call({method:"caixa_aberto",args:{"start":"none"}})
 cur_frm.call({method:"empresa_load",args:{"start":"moeda"}})
 
 mesas_open =cur_frm.call({method:"mesas_abertas",args:{"start":"none"}})
+
+tem_acesso = cur_frm.call({method:"check_user_acesso",args:{"start":"none"}})
+
 var caixa_upd=0
 var caix = 0
 
@@ -301,12 +304,27 @@ frappe.ui.form.on('CAIXA_Registadora', {
 frappe.ui.form.on("CAIXA_Registadora","status_caixa",function(frm,cdt,cdn){
 
 	var me = this;
+//	var tem_acesso = true	
 	if (cur_frm.doc.status_caixa=="Fechado"){
 		if (frappe.session.user != cur_frm.doc.usuario_caixa){
-
-			alert("FECHO DE CAIXA SO PODE SER FEITO PELO USUARIO " + cur_frm.doc.usuario_caixa)
-			frappe.model.set_value(cdt,cdn,'status_caixa','Em Curso')
-			cur_frm.reload_doc()
+			//Verify if GESTAO_PENSAO group than Admin is allowed otherwise 
+			if (tem_acesso.responseJSON.message == "GesPensao"){	
+//			for (regra in frappe.utils.user.get_roles(frappe.session.user)){
+//				if (regra[0] == "GesPensao"){
+					//Tem Acesso
+				alert("ESTE USUARIO PODE FAZER O FECHO DE CAIXA " + frappe.session.user)	
+				frappe.model.set_value(cdt,cdn,'usuario_caixa_fecho',frappe.session.user)				
+//					tem_acesso = true
+//				}else{
+//					tem_acesso = false
+//				}
+//			}
+			}else{
+				alert("FECHO DE CAIXA SO PODE SER FEITO PELO USUARIO " + cur_frm.doc.usuario_caixa)
+				frappe.model.set_value(cdt,cdn,'status_caixa','Em Curso')
+				cur_frm.reload_doc()
+			}
+			
 
 		}else{	
 		    	show_alert("Verificando Mesas Abertas...",2)

@@ -82,18 +82,18 @@ def verifica_hora_saida():
 				reser = frappe.get_doc("GESTAO_QUARTOS",d.name)
 				print reser.numero_quarto
 #				dd= datetime.datetime.fromtimestamp(frappe.utils.data.time_diff_in_seconds(frappe.utils.now(),datetime.datetime(2016, 10, 15, 20, 34, 2))).strftime('%M:%S')
-				dd= datetime.datetime.fromtimestamp(frappe.utils.data.time_diff_in_seconds(frappe.utils.now(),d.hora_entrada)).strftime('%M:%S')
+				dd= datetime.datetime.fromtimestamp(frappe.utils.data.time_diff_in_seconds(frappe.utils.now(),d.hora_entrada)).strftime('%H:%M:%S')
 # str(frappe.utils.data.time_diff_in_seconds(frappe.utils.now(),d.hora_entrada))
 				ddd = make_autoname(d.name +'AVISO/' + '.###')
 				frappe.db.sql("INSERT into tabCommunication  (name,docstatus,seen,unread_notification_sent,subject,reference_name,reference_doctype,sent_or_received,content,communication_type,creation,modified) values (%s,0,0,0,'HORA DE SAIDA Expirada ',%s,'GESTAO_QUARTOS','Sent','HORA SAIDA Expirada  <!-- markdown -->','Comment',%s,%s) ",(ddd,d.name,frappe.utils.now(),frappe.utils.now()))
 
-				reser._comments = "Hora de Saida por mais de " + dd + " minutos"
+				reser._comments = "Hora de Saida por mais de " + dd + " Minutos/Horas"
 				print " AGORA " + frappe.utils.now()
 				print " hora_saida " + str(d.hora_saida)
 				print "QUARTO " + d.numero_quarto + " " + str(d.hora_saida) + " Cancelada por mais de " + dd + " horas"
 				print " USER " + frappe.session.user
 				reser.save()
-				frappe.publish_realtime(event='msgprint', message='QUARTO ' + d.numero_quarto + ' ' + str(d.hora_saida) + ' Cancelada por mais de ' + dd + ' Horas/Minutos', user=frappe.session.user,doctype='GESTAO_QUARTOS')
+				frappe.publish_realtime(event='msgprint', message='QUARTO ' + d.numero_quarto + ' ' + str(d.hora_saida) + ' Cancelada por mais de ' + dd + ' Minutos/Minutos', user=frappe.session.user,doctype='GESTAO_QUARTOS')
 
 
 

@@ -211,7 +211,12 @@ frappe.ui.form.on('BAR_RESTAURANTE', {
 //			cx_open =cur_frm.call({method:"check_caixa_aberto",args:{"start":"none"}})
 //			d = frappe.get_list("CAIXA_Registadora",filters={'status_caixa':'Aberto'},fields=['name','status_caixa'])
 //			alert(d[0].status_caixa)
-			if (caixaaber.responseJSON.message[0].status_caixa != "Aberto" && caixacur.responseJSON.message[0].status_caixa != "Em Curso"){
+			if (caixaaber.responseText != "{}"){
+				//Caixa Status ABERTO
+			}else if (caixacur.responseText != "{}"){
+				//Caixa Status EM CURSO
+			}else{
+//			if (caixaaber.responseJSON.message[0].status_caixa != "Aberto" && caixacur.responseJSON.message[0].status_caixa != "Em Curso"){
 //			if (d[0].status_caixa !="Aberto"){
 				alert("Por favor abrir o Caixa antes de qualquer movimento. " + cx_open.readyState)
 //			cur_frm.disable_save()
