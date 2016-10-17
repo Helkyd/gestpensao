@@ -1,5 +1,5 @@
 {
- "add_total_row": 0, 
+ "add_total_row": 1, 
  "apply_user_permissions": 1, 
  "creation": "2016-10-16 16:02:14.398286", 
  "disabled": 0, 
@@ -7,12 +7,12 @@
  "doctype": "Report", 
  "idx": 0, 
  "is_standard": "Yes", 
- "modified": "2016-10-16 16:02:14.398286", 
+ "modified": "2016-10-18 00:11:35.017534", 
  "modified_by": "Administrator", 
  "module": "Gestpensao", 
  "name": "Relatorio de Contas-Correntes (Gestao Quartos)", 
  "owner": "Administrator", 
- "query": "SELECT IF(ISNULL(tabGESTAO_QUARTOS.conta_corrente)=1,'Total Geral',QUOTE(tabGESTAO_QUARTOS.conta_corrente)),\ntabGESTAO_QUARTOS.conta_corrente as 'Cliente:data:100',\ntabCLIENTES.cliente_tipo as 'Tipo de Cliente:data:100', \ntabGESTAO_QUARTOS.numero_quarto as 'Quarto Numero:data:100', \ntabGESTAO_QUARTOS.hora_entrada as 'Hora Atendida:datetime:100', \ntabGESTAO_QUARTOS.usuario_quarto as 'Operador:data:100',\nsum(tabGESTAO_QUARTOS.total) as 'Total:Currency:120',\nsum(tabGESTAO_QUARTOS.total_servicos) as 'Total dos Servicos:Currency:120'\nFROM tabGESTAO_QUARTOS INNER JOIN tabCLIENTES ON tabGESTAO_QUARTOS.conta_corrente = tabCLIENTES.nome_cliente GROUP BY tabGESTAO_QUARTOS.conta_corrente WITH ROLLUP;\n", 
+ "query": "SELECT tabGESTAO_QUARTOS.conta_corrente as 'Cliente:data:100',\ntabCLIENTES.cliente_tipo as 'Tipo de Cliente:data:100', \ntabGESTAO_QUARTOS.numero_quarto as 'Quarto Numero:data:100', \ntabGESTAO_QUARTOS.hora_entrada as 'Hora Atendida:datetime:100', \ntabGESTAO_QUARTOS.usuario_quarto as 'Operador:data:100',\nsum(tabGESTAO_QUARTOS.total) as 'Total:Currency:120',\nsum(tabGESTAO_QUARTOS.total_servicos) as 'Total dos Servicos:Currency:120'\nFROM tabGESTAO_QUARTOS INNER JOIN tabCLIENTES ON tabGESTAO_QUARTOS.conta_corrente = tabCLIENTES.nome_cliente GROUP BY tabGESTAO_QUARTOS.conta_corrente;\n", 
  "ref_doctype": "GESTAO_QUARTOS", 
  "report_name": "Relatorio de Contas-Correntes (Gestao Quartos)", 
  "report_type": "Query Report"

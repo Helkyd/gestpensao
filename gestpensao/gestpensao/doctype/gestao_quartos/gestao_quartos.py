@@ -37,6 +37,7 @@ class GESTAO_QUARTOS(Document):
 
 	def on_update(self):
 		self.Quartos_Status()
+		self.Reservas_Status()
 		#self.valor_pago = self.total_servicos
 
 
@@ -55,6 +56,15 @@ class GESTAO_QUARTOS(Document):
 			quarto.status_quarto = "Livre"
 
 		quarto.save()		
+
+	def Reservas_Status(self):
+		#Change Reservas status
+		if (self.status_reserva == "Fechado") and  (self.reserva_numero != None) :
+			reserva = frappe.get_doc("RESERVAS",self.reserva_numero)
+			reserva.reservation_status = "Fechada"
+			reserva.save()
+			
+			
 
 	def Check_ContaCorrente(self):
 		# Not yet Implemented...

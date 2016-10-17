@@ -15,12 +15,6 @@ frappe.listview_settings['CLIENTES'] = {
 		
 		}
 	},
-	onload: function(listview){
-		frappe.route_options = {
-			'cliente_tipo':['in','Membro, Não-Membro']
-
-		};
-	},	
 
 	
 };
