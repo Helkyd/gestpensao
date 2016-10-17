@@ -23,6 +23,7 @@ frappe.ui.form.on('BAR_RESTAURANTE', {
 //		}
 
 		show_alert("Verificando CAIXA ABERTO...",3)
+		cur_frm.enable_save()
 //		if (cx_open.statusText=="OK" ){
 		if ((cur_frm.docname.substring(0,3)=="New" || cur_frm.docname.substring(0,3)=="Nov") && cx_open.responseText != "{}"){
 			//CAIXA aberto ...
