@@ -1,0 +1,19 @@
+{
+ "add_total_row": 1, 
+ "apply_user_permissions": 1, 
+ "creation": "2016-10-16 16:43:52.515115", 
+ "disabled": 0, 
+ "docstatus": 0, 
+ "doctype": "Report", 
+ "idx": 0, 
+ "is_standard": "Yes", 
+ "modified": "2016-10-19 17:02:15.254888", 
+ "modified_by": "Administrator", 
+ "module": "Gestpensao", 
+ "name": "Contas-Correntes por Cliente", 
+ "owner": "Administrator", 
+ "query": "select tabCLIENTES.nome_cliente as 'Nome do Cliente:data:100',\ntabBAR_RESTAURANTE.nome_mesa as 'Numero da Mesa:data:100',\ntabBAR_RESTAURANTE.hora_atendimento as 'Hora Atendida:datetime:120', \ntabBAR_RESTAURANTE.total_servicos as 'Total dos Servicos:Currency:120', \ntabGESTAO_QUARTOS.numero_quarto as 'Numero Quarto:data:100', \ntabGESTAO_QUARTOS.hora_entrada as 'Hora Atendida:datetime:100', \ntabGESTAO_QUARTOS.total as 'Total:Currency:120', \ntabGESTAO_QUARTOS.total_servicos as 'Total Servicos:Currency:120'\nfrom tabCLIENTES INNER JOIN tabBAR_RESTAURANTE ON tabBAR_RESTAURANTE.conta_corrente = tabCLIENTES.nome_cliente INNER JOIN tabGESTAO_QUARTOS ON tabGESTAO_QUARTOS.conta_corrente = tabCLIENTES.nome_cliente;", 
+ "ref_doctype": "CLIENTES", 
+ "report_name": "Contas-Correntes por Cliente", 
+ "report_type": "Query Report"
+}
