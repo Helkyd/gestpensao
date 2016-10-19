@@ -47,6 +47,11 @@ frappe.ui.form.on('RESERVAS', {
 			cur_frm.toggle_enable("pay_advance",false)
 			cur_frm.toggle_enable("number_days",false)
 			cur_frm.toggle_enable("preco_quarto",false)
+			cur_frm.toggle_enable("quarto_tipo",false)
+			cur_frm.toggle_enable("paid_type",false)
+			cur_frm.toggle_enable("valor_pago",false)
+			cur_frm.disable_save()
+
 
 		}else if (frm.doc.reservation_status=="Fechada" ){
 			cur_frm.toggle_enable("booked_by",false)	
@@ -83,6 +88,9 @@ frappe.ui.form.on('RESERVAS', {
 		}
 		if (cur_frm.doc.reservation_status=="Ativo"){
 			frm.set_df_property("reservation_status","options","Ativo\nPago")
+		}else if (cur_frm.doc.reservation_status=="Nova"){
+			frm.set_df_property("reservation_status","options","Nova\nAtivo\nCancelada")
+
 		}
 		cur_frm.refresh_fields()
 
@@ -175,10 +183,11 @@ frappe.ui.form.on('RESERVAS','reservation_status',function(frm,cdt,cdn){
 			callback: function(r) {
 //				msgprint(r.message)
 				if (r.message !=undefined){
-					alert("Ocupado ou Ativo")
+					alert("Ocupado ou Ativo. Nao por ser cancelado!!!")
+					frappe.model.set_value(cdt,cdn,'reservation_status',"Ativo")
 					return
 				}else{
-					alert("Pode ser Cancelado")
+					alert("Salve o registo Cancelar.")
 				}
 
 			}
@@ -186,7 +195,7 @@ frappe.ui.form.on('RESERVAS','reservation_status',function(frm,cdt,cdn){
 
 	}else if (frm.doc.reservation_status =="Ativo") {
 	//Cria na Gestao_quartos...
-		 msgprint("Mudando o status do Quarto para Ocupado depois de SALVAR O REGISTO")
+		 show_alert("Status do Quarto Ocupado depois de SALVAR O REGISTO...",2)
 
 	}	
 });

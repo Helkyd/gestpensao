@@ -1,5 +1,5 @@
 {
- "add_total_row": 0, 
+ "add_total_row": 1, 
  "apply_user_permissions": 1, 
  "creation": "2016-07-26 20:11:12.782390", 
  "disabled": 0, 
@@ -7,7 +7,7 @@
  "doctype": "Report", 
  "idx": 0, 
  "is_standard": "Yes", 
- "modified": "2016-07-26 20:22:12.602996", 
+ "modified": "2016-10-19 16:43:58.935316", 
  "modified_by": "Administrator", 
  "module": "Gestpensao", 
  "name": "Movimento de Quartos", 

@@ -72,6 +72,8 @@ frappe.ui.form.on('GESTAO_QUARTOS', {
 			frm.set_df_property("status_reserva","options","Ocupado\nFechado")
 		}else if (cur_frm.doc.status_reserva=="Ocupado"){
 			frm.set_df_property("status_reserva","options","Ocupado\nFechado")
+		}else if (cur_frm.doc.status_reserva=="Ativo"){
+			frm.set_df_property("status_reserva","options","Ativo\nFechado")
 
 		}
 		
@@ -370,6 +372,7 @@ frappe.ui.form.on("GESTAO_QUARTOS","status_reserva",function(frm,cdt,cdn){
 			show_alert("QUARTO LIVRE. Sem servicos por pagar...",3)
 			this.cur_page.page.frm._save()
 			cur_frm.reload_doc()
+			cur_frm.refresh_fields()
 		} else {
 			// Esta vazio .....
 			alert("Nao pode Fechar pois ainda nao foram feitos os pagamentos...")	
@@ -377,11 +380,12 @@ frappe.ui.form.on("GESTAO_QUARTOS","status_reserva",function(frm,cdt,cdn){
 //			frappe.model.set_value(cdt,cdn,'status',"Ocupado")
 //			cur_frm.refresh_fields("status");	
 		}
-	}else if ((frm.doc.status_reserva=="Ativo") && (frm.doc.reserva_numero !="")){
+//	}else if ((frm.doc.status_reserva=="Ativo") && (frm.doc.reserva_numero !="")){
+	//ATIVO only from RESERVAS
 //		alert("Quarto Ativo... por favor Salvar registo")
-		show_alert("QUARTO ATIVO. Salvando registo...",3)
-		this.cur_page.page.frm._save()	
-		cur_frm.reload_doc()	
+//		show_alert("QUARTO ATIVO. Salvando registo...",3)
+//		this.cur_page.page.frm._save()	
+//		cur_frm.reload_doc()	
 	}
 
 });
