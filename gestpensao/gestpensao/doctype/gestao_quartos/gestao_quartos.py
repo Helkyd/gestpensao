@@ -21,6 +21,8 @@ class GESTAO_QUARTOS(Document):
 		self.nome_empresa= frappe.db.get_value("Empresa",None,"nome_empresa")
 
 	def validate(self):
+		print "DOC STATUS"
+		print self.docstatus
 		self.Validar_Numero_Dias()
 		self.Check_ContaCorrente()
 		self.Sethoras_Quarto()

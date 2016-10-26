@@ -21,6 +21,7 @@ class GESTAO_QUARTOS(Document):
 		self.nome_empresa= frappe.db.get_value("Empresa",None,"nome_empresa")
 
 	def validate(self):
+		print self.docstatus
 		self.Validar_Numero_Dias()
 		self.Check_ContaCorrente()
 		self.Sethoras_Quarto()
@@ -59,7 +60,7 @@ class GESTAO_QUARTOS(Document):
 
 	def Reservas_Status(self):
 		#Change Reservas status
-		if (self.status_reserva == "Fechado") and  (self.reserva_numero != "") :
+		if (self.status_reserva == "Fechado") and  (self.reserva_numero != None) :
 			reserva = frappe.get_doc("RESERVAS",self.reserva_numero)
 			reserva.reservation_status = "Fechada"
 			reserva.save()
