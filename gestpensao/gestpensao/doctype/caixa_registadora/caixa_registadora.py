@@ -24,6 +24,8 @@ class CAIXA_Registadora(Document):
 			if (d[0][0] != self.name):
 				validated=False
 				frappe.throw(_("CAIXA JA ESTA ABERTO!!! NAO PODE TER MAIS QUE UM ABERTO"))
+		if self.status_caixa =="Aberto":
+			self.status_caixa ="Em Curso"
 
 
 @frappe.whitelist()

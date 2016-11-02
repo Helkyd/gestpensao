@@ -58,6 +58,7 @@ frappe.ui.form.on('CAIXA_Registadora', {
 				cur_frm.toggle_enable("movimentos_caixa",false)	
 				cur_frm.toggle_enable("amount_init",false)
 				cur_frm.toggle_enable("data_hora",false)
+				cur_frm.toggle_enable("data_hora_fecho",false)
 				cur_frm.toggle_enable("status_caixa",false)
 				cur_frm.toggle_enable("amount_caixa",false)
 				cur_frm.toggle_enable("amount_tpa",false)
@@ -69,6 +70,7 @@ frappe.ui.form.on('CAIXA_Registadora', {
 				cur_frm.toggle_enable("movimentos_caixa",false)	
 				cur_frm.toggle_enable("amount_init",true)
 				cur_frm.toggle_enable("data_hora",false)
+				cur_frm.toggle_enable("data_hora_fecho",false)
 				cur_frm.toggle_enable("amount_caixa",false)
 				cur_frm.toggle_enable("amount_tpa",false)
 				cur_frm.toggle_enable("amount_conta_corrente",false)
@@ -85,6 +87,7 @@ frappe.ui.form.on('CAIXA_Registadora', {
 //			}
 		}else if (cur_frm.doc.status_caixa=="Em Curso"){
 			cur_frm.toggle_enable("data_hora",false)
+			cur_frm.toggle_enable("data_hora_fecho",false)
 			cur_frm.toggle_enable("amount_init",false)
 			cur_frm.toggle_enable("amount_caixa",false)
 			cur_frm.toggle_enable("amount_tpa",false)
@@ -99,6 +102,7 @@ frappe.ui.form.on('CAIXA_Registadora', {
 
 		}else if (cur_frm.doc.status_caixa=="Fechado"){
 			cur_frm.toggle_enable("data_hora",false)
+			cur_frm.toggle_enable("data_hora_fecho",false)
 			cur_frm.toggle_enable("amount_init",false)
 			cur_frm.toggle_enable("amount_caixa",false)
 			cur_frm.toggle_enable("amount_tpa",false)
@@ -122,6 +126,7 @@ frappe.ui.form.on('CAIXA_Registadora', {
 //			if (d[0].status_caixa =="Aberto"){
 				//Ja tem caixa Aberto
 				cur_frm.toggle_enable("data_hora",false)
+				cur_frm.toggle_enable("data_hora_fecho",false)
 				cur_frm.toggle_enable("amount_init",false)
 				cur_frm.toggle_enable("amount_caixa",false)
 				cur_frm.toggle_enable("amount_tpa",false)
@@ -134,6 +139,7 @@ frappe.ui.form.on('CAIXA_Registadora', {
 					//Ja tem caixa Aberto	
 //					alert("O CAIXA ja foi aberto")				
 					cur_frm.toggle_enable("data_hora",false)
+					cur_frm.toggle_enable("data_hora_fecho",false)
 					cur_frm.toggle_enable("amount_init",false)
 					cur_frm.toggle_enable("amount_caixa",false)
 					cur_frm.toggle_enable("amount_tpa",false)
@@ -157,6 +163,7 @@ frappe.ui.form.on('CAIXA_Registadora', {
 
 		}else if (cur_frm.doc.status_caixa=="Aberto"){
 			cur_frm.toggle_enable("data_hora",false)
+			cur_frm.toggle_enable("data_hora_fecho",false)
 			cur_frm.toggle_enable("amount_init",false)
 			cur_frm.toggle_enable("amount_caixa",false)
 			cur_frm.toggle_enable("amount_tpa",false)
@@ -185,6 +192,7 @@ frappe.ui.form.on('CAIXA_Registadora', {
 				alert("O CAIXA ja esta aberto")	
 				cur_frm.toggle_enable("amount_init",true)
 				cur_frm.toggle_enable("data_hora",false)
+				cur_frm.toggle_enable("data_hora_fecho",false)
 				cur_frm.toggle_enable("amount_caixa",false)
 				cur_frm.toggle_enable("amount_tpa",false)
 				cur_frm.toggle_enable("amount_conta_corrente",false)
@@ -199,6 +207,7 @@ frappe.ui.form.on('CAIXA_Registadora', {
 				cur_frm.toggle_enable("movimentos_caixa",false)	
 				cur_frm.toggle_enable("amount_init",true)
 				cur_frm.toggle_enable("data_hora",false)
+				cur_frm.toggle_enable("data_hora_fecho",false)
 				cur_frm.toggle_enable("amount_caixa",false)
 				cur_frm.toggle_enable("amount_tpa",false)
 				cur_frm.toggle_enable("amount_conta_corrente",false)
@@ -208,6 +217,7 @@ frappe.ui.form.on('CAIXA_Registadora', {
 
 		}else if (cur_frm.doc.status_caixa=="Fechado"){
 			cur_frm.toggle_enable("data_hora",false)
+			cur_frm.toggle_enable("data_hora_fecho",false)
 			cur_frm.toggle_enable("amount_init",false)
 			cur_frm.toggle_enable("amount_caixa",false)
 			cur_frm.toggle_enable("amount_tpa",false)
@@ -224,6 +234,7 @@ frappe.ui.form.on('CAIXA_Registadora', {
 		}else if (cur_frm.doc.docstatus ==1 && frm.doc.status_caixa=="Aberto" && caix[0] !=[]){
 			alert("O CAIXA ja foi aberto!!!")	
 			cur_frm.toggle_enable("data_hora",false)
+			cur_frm.toggle_enable("data_hora_fecho",false)
 			cur_frm.toggle_enable("amount_init",false)
 			cur_frm.toggle_enable("amount_caixa",false)
 			cur_frm.toggle_enable("amount_tpa",false)
@@ -242,6 +253,7 @@ frappe.ui.form.on('CAIXA_Registadora', {
 				cur_frm.disable_save()
 			}
 			cur_frm.toggle_enable("data_hora",false)
+			cur_frm.toggle_enable("data_hora_fecho",false)
 			cur_frm.toggle_enable("amount_init",false)
 			cur_frm.toggle_enable("amount_caixa",false)
 			cur_frm.toggle_enable("amount_tpa",false)
@@ -265,6 +277,7 @@ frappe.ui.form.on('CAIXA_Registadora', {
 			cur_frm.toggle_enable("amount_conta_corrente",false)
 
 			cur_frm.toggle_enable("data_hora",false)
+			cur_frm.toggle_enable("data_hora_fecho",false)
 			cur_frm.toggle_enable("amount_caixa",false)
 		}
 
@@ -314,6 +327,7 @@ frappe.ui.form.on("CAIXA_Registadora","status_caixa",function(frm,cdt,cdn){
 					//Tem Acesso
 				alert("ESTE USUARIO PODE FAZER O FECHO DE CAIXA " + frappe.session.user)	
 				frappe.model.set_value(cdt,cdn,'usuario_caixa_fecho',frappe.session.user)				
+				frappe.model.set_value(cdt,cdn,'data_hora_fecho',frappe.datetime.nowdate())
 //					tem_acesso = true
 //				}else{
 //					tem_acesso = false
@@ -344,8 +358,7 @@ frappe.ui.form.on("CAIXA_Registadora","status_caixa",function(frm,cdt,cdn){
 
 				}else{
 				// Mesas Fechadas during open Caixa time to add ...
-	//				show_alert("Processando Movimento do dia!!! Por favor aguarde...",3)
-	//				cur_frm.reload_doc()
+					frappe.model.set_value(cdt,cdn,'data_hora_fecho',frappe.datetime.nowdate())
 					this.cur_page.page.frm._save()
 					//movimentos_add(frm)
 
