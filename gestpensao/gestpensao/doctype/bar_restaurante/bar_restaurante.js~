@@ -35,7 +35,7 @@ frappe.ui.form.on('BAR_RESTAURANTE', {
 				if (r.message) {
 					$.each(r.message, function(i,d) {
 						console.log(i.toString() + ": " + d.status_caixa);
-						caixaopen = d.status_caixa
+						caixaopen = d.status_caixa;
 					});
 				}
 			}
