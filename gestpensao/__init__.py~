@@ -5,6 +5,7 @@ from __future__ import unicode_literals
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 __version__ = '0.0.12'
 =======
 __version__ = '0.0.13'
@@ -17,5 +18,8 @@ __version__ = '0.0.14'
 >>>>>>> develop01
 =======
 __version__ = '0.0.15'
+>>>>>>> develop01
+=======
+__version__ = '0.0.16'
 >>>>>>> develop01
 

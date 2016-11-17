@@ -18,6 +18,7 @@ frappe.ui.form.on('GESTAO_QUARTOS', {
 			cur_frm.set_df_property("reserva_numero","hidden",true)
 			cur_frm.set_df_property("servico_pago_por","hidden",true)
 			cur_frm.toggle_enable("nome_cliente",false)
+			cur_frm.toggle_enable("conta_corrente_status",false)
 
 		}else if (frm.doc.status_reserva=="Ocupado" && frm.doc.horas ==undefined){
 			cur_frm.toggle_enable("status_reserva",false)	
@@ -38,6 +39,11 @@ frappe.ui.form.on('GESTAO_QUARTOS', {
 			cur_frm.set_df_property("servico_pago_por","hidden",true)
 			cur_frm.set_df_property("pagar_servicos","hidden",true)
 			cur_frm.toggle_enable("nome_cliente",false)
+			if (frm.doc.conta_corrente_status =="Pago"){
+				cur_frm.toggle_enable("conta_corrente_status",false)
+			}else{
+				cur_frm.toggle_enable("conta_corrente_status",true)
+			}
 
 		}else if (frm.doc.status_reserva=="Ativo"){
 			cur_frm.set_df_property("horas","label","Dias")
@@ -80,6 +86,25 @@ frappe.ui.form.on('GESTAO_QUARTOS', {
 	}
 });
 
+frappe.ui.form.on("GESTAO_QUARTOS","conta_corrente_status",function(frm,cdt,cdn){
+	if (cur_frm.doc.conta_corrente_status == "Pago"){
+		frappe.confirm('Confirma que pagamento foi feito?' ,
+			function(){
+				//update Conta-correntes table
+	
+				ccorrente = cur_frm.call({method:"atualiza_ccorrente",args:{"cliente":cur_frm.doc.conta_corrente,"recibo":cur_frm.doc.name}})
+				cur_frm.save()
+				cur_frm.disable_save()
+//				cur_frm.print_doc()
+
+			},	
+			function(){
+				show_alert("Pagamento Cancelado !!!",5)
+			}		
+		);
+		
+	}
+});
 
 frappe.ui.form.on('GESTAO_QUARTOS','tipo_quarto',function(frm,cdt,cdn){
 
@@ -261,6 +286,26 @@ frappe.ui.form.on('GESTAO_QUARTOS', {
 	}
 
 	
+});
+
+frappe.ui.form.on("GESTAO_QUARTOS","conta_corrente_status",function(frm,cdt,cdn){
+	if (cur_frm.doc.conta_corrente_status == "Pago"){
+		frappe.confirm('Confirma que pagamento foi feito?' ,
+			function(){
+				//update Conta-correntes table
+	
+				ccorrente = cur_frm.call({method:"atualiza_ccorrente",args:{"cliente":cur_frm.doc.conta_corrente,"recibo":cur_frm.doc.name}})
+				cur_frm.save()
+				cur_frm.disable_save()
+//				cur_frm.print_doc()
+
+			},	
+			function(){
+				show_alert("Pagamento Cancelado !!!",5)
+			}		
+		);
+		
+	}
 });
 
 var calculate_totals = function(frm, cdt,cdn) {
