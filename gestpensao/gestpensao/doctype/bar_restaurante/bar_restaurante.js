@@ -242,7 +242,7 @@ frappe.ui.form.on('BAR_RESTAURANTE', {
 		// ++++++ POR RESOLVER 
 //			alert(caixaload)
 			if (caixaaber.readyState == 1){			
-				//alert("Verificando se o CAIXA Ja esta aberto....")
+				alert("Verificando se o CAIXA Ja esta aberto....")
 				console.log("Verificando se o CAIXA Ja esta aberto....")
 
 			}
