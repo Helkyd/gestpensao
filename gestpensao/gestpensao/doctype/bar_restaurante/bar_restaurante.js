@@ -22,15 +22,39 @@ frappe.ui.form.on('BAR_RESTAURANTE', {
 //			d = frappe.get_list("CAIXA_Registadora",filters={'status_caixa':'Em Curso'},fields=['name','status_caixa'])
 //		}
 
+		frappe.call({
+			method:"frappe.client.get_list",
+			args:{
+				doctype:"CAIXA_Registadora",
+				filters: {
+						status_caixa:['in', 'Aberto, Em Curso']
+				},
+				fields: ["status_caixa"]
+			},
+			callback: function(r) {
+				if (r.message) {
+					$.each(r.message, function(i,d) {
+						console.log(i.toString() + ": " + d.status_caixa);
+						caixaopen = d.status_caixa;
+					});
+				}
+			}
+		});
+
+
+
 		show_alert("Verificando CAIXA ABERTO...",3)
 		cur_frm.enable_save()
 //		if (cx_open.statusText=="OK" ){
+
 		if ((cur_frm.docname.substring(0,3)=="New" || cur_frm.docname.substring(0,3)=="Nov") && cx_open.responseText != "{}"){
 			//CAIXA aberto ...
 
+
+
 			if (cx_open.responseText == undefined){
 
-				show_alert("Abertura de CAIXA nessaria...",3)
+				show_alert("É necessário fazer a Abertura do CAIXA...",3)
 			}else if (frm.doc.status_atendimento=="Ocupado" && frm.doc.bar_tender ==undefined && cx_open.responseText != undefined){
 
 				//Novo Registo 
@@ -57,6 +81,11 @@ frappe.ui.form.on('BAR_RESTAURANTE', {
 				cur_frm.toggle_enable("status_atendimento",false)
 				cur_frm.toggle_enable("extras_item",false)
 				cur_frm.toggle_enable("pagamento_botao",false)
+				if (frm.doc.conta_corrente_status =="Pago"){
+					cur_frm.toggle_enable("conta_corrente_status",false)
+				}else{
+					cur_frm.toggle_enable("conta_corrente_status",true)
+				}
 	
 		//			cur_frm.toggle_enable("status_reserva",false)	
 		//			cur_frm.set_df_property("reserva_numero","hidden",true)
@@ -83,7 +112,11 @@ frappe.ui.form.on('BAR_RESTAURANTE', {
 			cur_frm.toggle_enable("nome_cliente",false)
 			cur_frm.toggle_enable("extras_item",false)
 			cur_frm.toggle_enable("status_atendimento",false)
-
+			if (frm.doc.conta_corrente_status =="Pago"){
+				cur_frm.toggle_enable("conta_corrente_status",false)
+			}else{
+				cur_frm.toggle_enable("conta_corrente_status",true)
+			}
 			
 			return
 
@@ -149,7 +182,7 @@ frappe.ui.form.on('BAR_RESTAURANTE', {
 		//				cur_frm.page.clear_primary_action()
 		//				cur_frm.page.clear_secondary_action()
 		//				cur_frm.page.set_primary_action()
-						cur_frm.page.clear_user_actions()
+//TEMP DISABLED						cur_frm.page.clear_user_actions()
 
 					}else if (cur_frm.doc.docstatus==0 &&  frm.doc.status_atendimento !="Fechado" &&  frm.doc.pagamento_por =="None") {
 						cur_frm.page.set_secondary_action(__("PAGAMENTO"), function() {
@@ -168,18 +201,19 @@ frappe.ui.form.on('BAR_RESTAURANTE', {
 
 						}, "octicon octicon-credit-card");
 					}else if(cur_frm.doc.docstatus == 1) {
-						cur_frm.page.set_primary_action(__("Imprimir"), function() {
+//TEMP DISABLED
+//						cur_frm.page.set_primary_action(__("Imprimir"), function() {
 		//					html = frappe.render_template("Recibo_Bar_Restaurante", {"nome_mesa": cur_frm.doc.nome_mesa})
-							frappe.get_print("Print Format","Recibo_Bar_Restaurante",cur_frm.doc.nome_mesa)
-							print_document(html)
-						})
+//							frappe.get_print("Print Format","Recibo_Bar_Restaurante",cur_frm.doc.nome_mesa)
+//							print_document(html)
+//						})
 					}else if (frm.doc.status_atendimento !="Fechado") {
 		//				cur_frm.page.clear_primary_action()
 						//cur_frm.page.set_primary_action()
-						cur_frm.page.clear_user_actions()
+//TEMP DISABLED						cur_frm.page.clear_user_actions()
 					}else{
-						cur_frm.page.clear_primary_action()
-						cur_frm.page.clear_secondary_action()
+//TEMP DISABLED						cur_frm.page.clear_primary_action()
+//TEMP DISABLED						cur_frm.page.clear_secondary_action()
 					}
 
 		//			cur_frm.page.set_secondary_action(__("Save"), function() {
@@ -207,15 +241,21 @@ frappe.ui.form.on('BAR_RESTAURANTE', {
 		}else if (cx_open.readyState==1 ){
 		// ++++++ POR RESOLVER 
 //			alert(caixaload)
-			alert("Verificando se o CAIXA Ja esta aberto....")
+			if (caixaaber.readyState == 1){			
+				//alert("Verificando se o CAIXA Ja esta aberto....")
+				console.log("Verificando se o CAIXA Ja esta aberto....")
+
+			}
 //			frappe.get_meta("CAIXA_Registadora")
 //			cx_open =cur_frm.call({method:"check_caixa_aberto",args:{"start":"none"}})
 //			d = frappe.get_list("CAIXA_Registadora",filters={'status_caixa':'Aberto'},fields=['name','status_caixa'])
 //			alert(d[0].status_caixa)
 			if (caixaaber.responseText != "{}"){
 				//Caixa Status ABERTO
+				console.log("caixaaber ....")
 			}else if (caixacur.responseText != "{}"){
 				//Caixa Status EM CURSO
+				console.log("caixacur ....")
 			}else{
 //			if (caixaaber.responseJSON.message[0].status_caixa != "Aberto" && caixacur.responseJSON.message[0].status_caixa != "Em Curso"){
 //			if (d[0].status_caixa !="Aberto"){
@@ -241,6 +281,26 @@ var print_document = function(html){
 	}, 1000)
 }
 
+frappe.ui.form.on("BAR_RESTAURANTE","conta_corrente_status",function(frm,cdt,cdn){
+	if (cur_frm.doc.conta_corrente_status == "Pago"){
+		frappe.confirm('Confirma que pagamento foi feito?' ,
+			function(){
+				//update Conta-correntes table
+	
+				ccorrente = cur_frm.call({method:"atualiza_ccorrente",args:{"cliente":cur_frm.doc.conta_corrente,"recibo":cur_frm.doc.name}})
+				cur_frm.save()
+				cur_frm.disable_save()
+//				cur_frm.print_doc()
+
+			},	
+			function(){
+				show_alert("Pagamento Cancelado !!!",5)
+			}		
+		);
+		
+	}
+});
+
 frappe.ui.form.on("BAR_RESTAURANTE","nome_mesa",function(frm,cdt,cdn){
 
 	if (cx_open.statusText=="OK" ){
@@ -259,6 +319,8 @@ frappe.ui.form.on("BAR_RESTAURANTE","nome_mesa",function(frm,cdt,cdn){
 		}
 			
 	}
+
+	cur_frm.toggle_enable("status_atendimento",false)
 
 });
 
@@ -441,15 +503,18 @@ cur_frm.cscript.pagamento_botao = function() {
 //			cur_frm.toggle_enable("pagamento_botao",false)
 
 //			cur_frm.page.btn_primary.click()
-			this.cur_page.page.frm._save()
-			cur_frm.page.clear_primary_action()
-			cur_frm.page.clear_secondary_action()
+			cur_frm.save() //this.cur_page.page.frm._save()
+			cur_frm.disable_save()
+			cur_frm.print_doc()
 
-			cur_frm.page.set_primary_action(__("Imprimir"), function() {
+//TEMP DISABLED			cur_frm.page.clear_primary_action()
+//TEMP DISABLED			cur_frm.page.clear_secondary_action()
+
+//			cur_frm.page.set_primary_action(__("Imprimir"), function() {
 //					html = frappe.render_template("Recibo_Bar_Restaurante", {"nome_mesa": cur_frm.doc.nome_mesa})
-				frappe.get_print("Print Format","Recibo_Bar_Restaurante",cur_frm.doc.nome_mesa)
-				print_document(html)
-			})
+//				frappe.get_print("Print Format","Recibo_Bar_Restaurante",cur_frm.doc.nome_mesa)
+//				print_document(html)
+//			})
 			
 
 		} else if (c.priority=="Conta-Corrente") {
@@ -507,17 +572,22 @@ var CC_nomecliente = function(frm,cdt,cdn){
 				cur_frm.refresh_fields("status_atendimento","conta_corrente");	
 				//Click SAVE				
 //				cur_frm.page.btn_primary.click()
-				this.cur_page.page.frm._save()
-				cur_frm.page.clear_primary_action()
-				cur_frm.page.clear_secondary_action()
+				cur_frm.save() //this.cur_page.page.frm._save()
+				cur_frm.disable_save()
+				cur_frm.print_doc()
 
 
 
-				cur_frm.page.set_primary_action(__("Imprimir"), function() {
+//TEMP DISABLED				cur_frm.page.clear_primary_action()
+//TEMP DISABLED				cur_frm.page.clear_secondary_action()
+
+
+
+//				cur_frm.page.set_primary_action(__("Imprimir"), function() {
 //					html = frappe.render_template("Recibo_Bar_Restaurante", {"nome_mesa": cur_frm.doc.nome_mesa})
-					frappe.get_print("Print Format","Recibo_Bar_Restaurante",cur_frm.doc.nome_mesa)
-					print_document(html)
-				})
+//					frappe.get_print("Print Format","Recibo_Bar_Restaurante",cur_frm.doc.nome_mesa)
+//					print_document(html)
+//				})
 
 				//alert("Cliente " + cc.pcliente + " selecionado")
 			}
@@ -595,13 +665,17 @@ var pagamento_cash = function(prioridade){
 	frappe.model.set_value(cur_frm.doctype,cur_frm.docname,'valor_pago',cur_frm.doc.total_servicos)
 	cur_frm.refresh_fields("status_atendimento");	
 	cur_frm.doc.docstatus = 1 
-	this.cur_page.page.frm._save()
-	cur_frm.page.clear_primary_action()
-	cur_frm.page.clear_secondary_action()
-	cur_frm.page.set_primary_action(__("Imprimir"), function() {
+	cur_frm.save() //this.cur_page.page.frm._save()
+	cur_frm.disable_save()	
+	cur_frm.print_doc()
+
+// TEMP DISABLED
+//	cur_frm.page.clear_primary_action()
+//	cur_frm.page.clear_secondary_action()
+//	cur_frm.page.set_primary_action(__("Imprimir"), function() {
 	//					html = frappe.render_template("Recibo_Bar_Restaurante", {"nome_mesa": cur_frm.doc.nome_mesa})
-		frappe.get_print("Print Format","Recibo_Bar_Restaurante",cur_frm.doc.nome_mesa)
-		print_document(html)
-	})
+//		frappe.get_print("Print Format","Recibo_Bar_Restaurante",cur_frm.doc.nome_mesa)
+//		print_document(html)
+//	})
 
 }

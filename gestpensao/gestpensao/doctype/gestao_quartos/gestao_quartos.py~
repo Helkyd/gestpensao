@@ -6,7 +6,7 @@ from __future__ import unicode_literals
 import frappe
 from frappe import _
 from datetime import datetime, timedelta
-from frappe.utils import cstr, get_datetime, getdate, cint, get_datetime_str
+from frappe.utils import cstr, get_datetime, getdate, cint, get_datetime_str, flt
 from frappe.model.document import Document
 from frappe.model.naming import make_autoname
 
@@ -21,10 +21,12 @@ class GESTAO_QUARTOS(Document):
 		self.nome_empresa= frappe.db.get_value("Empresa",None,"nome_empresa")
 
 	def validate(self):
+		print "DOC STATUS"
 		print self.docstatus
 		self.Validar_Numero_Dias()
 		self.Check_ContaCorrente()
 		self.Sethoras_Quarto()
+		self.Contas_Correntes()
 
 	def Validar_Numero_Dias(self):
 		if self.horas <= 0:
@@ -96,6 +98,83 @@ class GESTAO_QUARTOS(Document):
 		print "DEPOIS DE CALCULAR"
 		print self.hora_saida
 
+
+	def Contas_Correntes(self):
+				#aproveita criar ja o registo no Conta-correntes
+		if (self.conta_corrente !="nome do cliente") and (self.conta_corrente !=None) and (self.status_reserva == "Fechado") and (self.conta_corrente_status == "Não Pago") :
+			if (frappe.db.sql("""select cc_nome_cliente from `tabCONTAS_CORRENTES` WHERE cc_nome_cliente =%s """,self.conta_corrente, as_dict=False)) != ():
+				#existe faz os calculos da divida
+				print " CLIENTE JA EXISTE"
+				ccorrente = frappe.get_doc("CONTAS_CORRENTES", self.conta_corrente)
+				print "CLIENTE"
+				print ccorrente.name
+#				ccorrente.cc_conta_corrente = self.conta_corrente
+#				ccorrente.cc_status_conta_corrente = "Não Pago"
+
+				totalextra = 0
+				#for extras in frappe.db.sql(""" SELECT nome_servico,total_extra from `tabExtras_item` where parent = %s """,self.name,as_dict=True):
+
+				cc_detalhes = frappe.new_doc("CC_detalhes")
+				cc_detalhes.parent = ccorrente.name
+				cc_detalhes.parentfield = "cc_bar_restaurante"
+				cc_detalhes.parenttype = "CONTAS_CORRENTES"
+					
+				#	print extras.nome_servico
+				#	print self.name
+				cc_detalhes.descricao_servico = self.name #extras.nome_servico
+				cc_detalhes.name = self.name
+				cc_detalhes.numero_registo = self.name
+				cc_detalhes.total = self.total #extras.total_extra
+				cc_detalhes.total_servicos = self.total_servicos #extras.total_extra
+				cc_detalhes.data_registo = self.hora_entrada
+				totalextra = totalextra + self.total_servicos  + self.total #extras.total_extra
+
+				cc_detalhes.status_conta_corrente = "Não Pago"
+				cc_detalhes.tipo = "Quarto"
+				cc_detalhes.idx += 1	
+					
+				cc_detalhes.insert()
+
+				print (ccorrente.cc_valor_divida + totalextra)
+				ccorrente.cc_valor_divida = flt(ccorrente.cc_valor_divida) + totalextra
+				#ccorrente.save()
+
+			else:
+				#novo
+				print " CLIENTE NAO EXISTE"
+				print self.conta_corrente
+				ccorrente = frappe.new_doc("CONTAS_CORRENTES")
+				ccorrente.cc_nome_cliente = self.conta_corrente
+				ccorrente.name = self.conta_corrente
+				ccorrente.cc_status_conta_corrente = "Não Pago"
+				ccorrente.insert()
+
+				print "CONTAS CORRENTES FEITA !!!!!!"
+
+				totalextra = 0
+				#for extras in frappe.db.sql(""" SELECT nome_servico,total_extra from `tabExtras_item` where parent = %s """,self.name,as_dict=True):
+
+				cc_detalhes = frappe.new_doc("CC_detalhes")
+				cc_detalhes.parent =ccorrente.name
+				cc_detalhes.parentfield = "cc_bar_restaurante"
+				cc_detalhes.parenttype = "CONTAS_CORRENTES"
+
+					#print extras.nome_servico
+				cc_detalhes.descricao_servico = self.name #extras.nome_servico
+				cc_detalhes.name = self.name
+				cc_detalhes.numero_registo = self.name
+				cc_detalhes.total = self.total #extras.total_extra
+				cc_detalhes.total_servicos = self.total_servicos #extras.total_extra
+				cc_detalhes.data_registo = self.hora_entrada
+				totalextra = totalextra + self.total_servicos  + self.total #extras.total_extra
+
+				cc_detalhes.status_conta_corrente = "Não Pago"
+				cc_detalhes.tipo = "Quarto"
+				cc_detalhes.insert()
+
+				ccorrente.cc_valor_divida = flt(ccorrente.cc_valor_divida) + totalextra
+				#ccorrente.save()
+
 @frappe.whitelist()
 def empresa_load():
 	return frappe.db.get_value("Empresa",None,"moeda_default")
@@ -104,4 +183,25 @@ def empresa_load():
 def lista_clientes():
 
 	return frappe.db.sql("""select name from `tabCLIENTES` WHERE cliente_tipo ='Membro' """, as_dict=False)
+
+@frappe.whitelist()
+def atualiza_ccorrente(cliente,recibo):
+
+	print cliente
+	print recibo
+	for ccorrente1 in frappe.db.sql("""SELECT name,numero_registo,parent,status_conta_corrente from `tabCC_detalhes` where numero_registo = %s and parent = %s """, (recibo,cliente), as_dict=True):
+		print ccorrente1.name
+		print "CAMPOS !!!!!"
+
+		reset_idx = frappe.get_doc("CC_detalhes",ccorrente1.name)
+	#	print reset_idx.name
+	#	print reset_idx.parent
+	#	print reset_idx.status_conta_corrente
+
+		reset_idx.status_conta_corrente = "Pago"
+	#	ccorrente1.status_conta_corrente = "Pago"
+	#	ccorrente1.save()
+
+		reset_idx.save()
+
 
