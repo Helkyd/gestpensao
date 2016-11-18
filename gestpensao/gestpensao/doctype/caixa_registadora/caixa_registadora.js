@@ -185,6 +185,15 @@ frappe.ui.form.on('CAIXA_Registadora', {
 			//Nao pode insert novo Caixa
 //			cur_frm.toggle_enable("status_caixa",false)
 //			cur_frm.disable_save())
+
+		cur_frm.page.set_secondary_action(__("ACTUALIZAR CAIXA"), function() {
+			//Actualiza o CAIXA
+			movimentos_add(frm)
+			cur_frm.reload_doc()
+		}, "");
+
+
+
 		if (cur_frm.doc.docstatus ==1 && caix[0] !=[] ) { //cx_aberto.statusText=="OK"){
 //			alert("Caixa Registadora ja esta aberta!!!")
 //			cur_frm.page.clear_primary_action()
@@ -282,6 +291,7 @@ frappe.ui.form.on('CAIXA_Registadora', {
 		}
 
 		if (cur_frm.doc.status_caixa=="Em Curso"){
+			show_alert("Caro " + frappe.session.user + "\n Antes fazer o Fecho de CAIXA, melhor ATUALIZAR O CAIXA/SALDO",4)	
 			frm.set_df_property("status_caixa","options","Em Curso\nFechado")
 		}else if (cur_frm.doc.status_caixa=="Aberto"){
 			frm.set_df_property("status_caixa","options","Aberto\nEm Curso")
@@ -319,6 +329,7 @@ frappe.ui.form.on("CAIXA_Registadora","status_caixa",function(frm,cdt,cdn){
 	var me = this;
 //	var tem_acesso = true	
 	if (cur_frm.doc.status_caixa=="Fechado"){
+//		alert("Caro " + frappe.session.user + " Antes fechar o CAIXA o melhor é ATUALIZAR O CAIXA")	
 		if (frappe.session.user != cur_frm.doc.usuario_caixa){
 			//Verify if GESTAO_PENSAO group than Admin is allowed otherwise 
 			if (tem_acesso.responseJSON.message == "GesPensao"){	
