@@ -25,12 +25,14 @@ frappe.ui.form.on('CONTAS_CORRENTES', {
 		cur_frm.toggle_enable("cc_valor_divida",false)	
 		cur_frm.toggle_enable("cc_valores_pagos",false)	
 
+
 		frappe.utils.filter_dict(frm.fields_dict["cc_bar_restaurante"].grid.docfields, {"fieldname": "numero_registo"})[0].read_only = true;	
 		frappe.utils.filter_dict(frm.fields_dict["cc_bar_restaurante"].grid.docfields, {"fieldname": "descricao_servico"})[0].read_only = true;	
 		frappe.utils.filter_dict(frm.fields_dict["cc_bar_restaurante"].grid.docfields, {"fieldname": "total"})[0].read_only = true;	
 		frappe.utils.filter_dict(frm.fields_dict["cc_bar_restaurante"].grid.docfields, {"fieldname": "total_servicos"})[0].read_only = true;	
 		frappe.utils.filter_dict(frm.fields_dict["cc_bar_restaurante"].grid.docfields, {"fieldname": "data_registo"})[0].read_only = true;	
 
+		frappe.utils.filter_dict(frm.fields_dict["cc_bar_restaurante"].grid.docfields, {"fieldname": "cc_tipo"})[0].read_only = true;	
 
 //		cur_frm.set_query("numero_registo","cc_bar_restaurante",function(doc,cdt,cdn){
 //			var d = locals[cdt][cdn]
@@ -154,7 +156,12 @@ frappe.ui.form.on("CC_detalhes","status_conta_corrente",function(doc,cdt,cdn){
 	//Needs to update the Record from BAR or Quarto to PAGO
 	var d =locals[cdt][cdn];
 	if (d.status_conta_corrente == "Pago"){	
-		alert("aqui")
+
+		if (d.cc_tipo == "Bar"){
+			qq = cur_frm.call({method:"set_bar_cc",args:{"cliente":d.numero_registo}})
+		}else if  (d.cc_tipo == "Quarto"){
+			qq = cur_frm.call({method:"set_quartos_cc",args:{"cliente":d.numero_registo}})
+		}
 	}	
 });
 
